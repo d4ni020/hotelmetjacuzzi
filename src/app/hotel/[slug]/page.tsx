@@ -264,13 +264,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (!hotel) {
     return {
-      title: 'Hotel niet gevonden | JacuzziHotels',
+      title: 'Hotel niet gevonden | Hotelmetjacuzzi.net',
       description: 'Het opgevraagde hotel kon niet worden gevonden.'
     }
   }
 
   return {
-    title: `${hotel.name} – romantische suite met jacuzzi in ${hotel.province} | JacuzziHotels`,
+    title: `${hotel.name} – romantische suite met jacuzzi in ${hotel.province} | Hotelmetjacuzzi.net`,
     description: `Ontdek ${hotel.name}, een prachtig hotel met jacuzzi in ${hotel.city}, ${hotel.province}. Boek uw romantische verblijf met privé jacuzzi vanaf ${hotel.priceRange.split(' - ')[0]}.`,
     keywords: `${hotel.name}, hotel met jacuzzi ${hotel.city}, romantisch hotel ${hotel.province}, wellness hotel, jacuzzi op kamer, ${hotel.city} hotel`,
     openGraph: {

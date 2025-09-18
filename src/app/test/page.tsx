@@ -8,7 +8,7 @@ export default function TestPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <nav className="flex justify-between items-center mb-6">
             <Link href="/" className="text-3xl font-bold text-romantic-pink-600">
-              💕 JacuzziHotels
+              💕 Hotelmetjacuzzi.net
             </Link>
             <div className="space-x-8">
               <Link href="/" className="text-light-gray-600 hover:text-romantic-pink-500 font-medium transition-colors duration-200">Home</Link>
@@ -69,7 +69,7 @@ export default function TestPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
             <p className="text-sm text-light-gray-500 mb-2">
-              © 2024 JacuzziHotels. Test pagina voor styling verificatie.
+              © 2024 Hotelmetjacuzzi.net. Test pagina voor styling verificatie.
             </p>
             <p className="text-xs text-light-gray-400">
               💕 Gemaakt met liefde voor romantische getaways

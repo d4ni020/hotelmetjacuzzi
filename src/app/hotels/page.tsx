@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import HotelCard from '@/components/HotelCard'
 
 export const metadata: Metadata = {
-  title: 'Alle Hotels met Jacuzzi | JacuzziHotels',
+  title: 'Alle Hotels met Jacuzzi | Hotelmetjacuzzi.net',
   description: 'Ontdek alle hotels met jacuzzi in Nederland. Vergelijk prijzen, faciliteiten en boek direct via onze partners voor de beste deals.',
 }
 

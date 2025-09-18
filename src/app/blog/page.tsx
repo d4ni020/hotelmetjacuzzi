@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Wellness Blog | Tips voor Jacuzzi Hotels | JacuzziHotels',
+  title: 'Wellness Blog | Tips voor Jacuzzi Hotels | Hotelmetjacuzzi.net',
   description: 'Ontdek tips, inspiratie en gidsen voor de perfecte wellness overnachting. Alles over jacuzzi hotels, spa behandelingen en romantische uitjes.',
 }
 

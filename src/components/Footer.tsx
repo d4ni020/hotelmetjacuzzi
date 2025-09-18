@@ -22,7 +22,7 @@ const Footer = () => {
   ]
 
   const informationLinks = [
-    { href: '/over-ons', label: 'Over ons', description: 'Meer over JacuzziHotels.nl' },
+    { href: '/over-ons', label: 'Over ons', description: 'Meer over Hotelmetjacuzzi.net' },
     { href: '/privacy', label: 'Privacybeleid', description: 'Hoe wij omgaan met je gegevens' },
     { href: '/disclaimer', label: 'Disclaimer', description: 'Algemene voorwaarden' },
     { href: '/affiliate-disclaimer', label: 'Affiliate Disclaimer', description: 'Transparantie over affiliate links' }
@@ -245,7 +245,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-brand-navy-300">
             <div className="mb-2 md:mb-0">
-              © {currentYear} JacuzziHotels.nl - Alle rechten voorbehouden
+              © {currentYear} Hotelmetjacuzzi.net - Alle rechten voorbehouden
             </div>
             <div className="flex items-center space-x-4">
               <span>Powered by</span>

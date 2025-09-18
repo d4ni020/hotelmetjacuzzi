@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Hotels met Jacuzzi per Provincie | JacuzziHotels',
+  title: 'Hotels met Jacuzzi per Provincie | Hotelmetjacuzzi.net',
   description: 'Ontdek alle provincies van Nederland met de beste hotels met jacuzzi. Van Limburg tot Friesland, vind jouw perfecte wellness overnachting.',
 }
 

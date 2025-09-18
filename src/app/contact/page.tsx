@@ -3,8 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Contact | JacuzziHotels',
-  description: 'Neem contact op met JacuzziHotels voor vragen over hotels, boekingen of partnerships. We helpen je graag bij het vinden van jouw perfecte wellness overnachting.',
+  title: 'Contact | Hotelmetjacuzzi.net',
+  description: 'Neem contact op met Hotelmetjacuzzi.net voor vragen over hotels, boekingen of partnerships. We helpen je graag bij het vinden van jouw perfecte wellness overnachting.',
 }
 
 export default function ContactPage() {
@@ -15,7 +15,7 @@ export default function ContactPage() {
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=1600&auto=format&fit=crop"
-            alt="Contact JacuzziHotels - Wellness customer service"
+            alt="Contact Hotelmetjacuzzi.net - Wellness customer service"
             fill
             className="object-cover opacity-30"
             sizes="100vw"
@@ -194,7 +194,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-brand-navy-900">Social Media</h3>
-                    <p className="text-brand-navy-600">@JacuzziHotelsNL</p>
+                    <p className="text-brand-navy-600">@HotelmetjacuzziNL</p>
                     <p className="text-sm text-brand-navy-500">Volg ons voor daily inspiration</p>
                   </div>
                 </div>

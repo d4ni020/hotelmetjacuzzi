@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Affiliate Disclaimer | JacuzziHotels',
-  description: 'Transparante informatie over onze affiliate partnerships en hoe JacuzziHotels.nl werkt met boekingspartners.',
+  title: 'Affiliate Disclaimer | Hotelmetjacuzzi.net',
+  description: 'Transparante informatie over onze affiliate partnerships en hoe Hotelmetjacuzzi.net werkt met boekingspartners.',
 }
 
 export default function AffiliateDisclaimerPage() {
@@ -24,7 +24,7 @@ export default function AffiliateDisclaimerPage() {
                 Belangrijke mededeling
               </h2>
               <p className="text-brand-orange-700">
-                JacuzziHotels.nl bevat affiliate links naar onze partners. Wanneer u via 
+                Hotelmetjacuzzi.net bevat affiliate links naar onze partners. Wanneer u via 
                 onze links boekt, ontvangen wij een commissie zonder extra kosten voor u.
               </p>
             </div>
@@ -43,7 +43,7 @@ export default function AffiliateDisclaimerPage() {
               Onze affiliate partners
             </h2>
             <p>
-              JacuzziHotels.nl werkt samen met de volgende betrouwbare boekingspartners:
+              Hotelmetjacuzzi.net werkt samen met de volgende betrouwbare boekingspartners:
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4 mt-4">
               <li><strong>Booking.com</strong> - Wereldwijde marktleider in online hotelboekingen</li>
@@ -56,7 +56,7 @@ export default function AffiliateDisclaimerPage() {
             </h2>
             <div className="bg-brand-navy-50 p-6 rounded-lg">
               <ol className="list-decimal list-inside space-y-3">
-                <li>U vindt een hotel op JacuzziHotels.nl dat u interesseert</li>
+                <li>U vindt een hotel op Hotelmetjacuzzi.net dat u interesseert</li>
                 <li>U klikt op "Bekijk beschikbaarheid" of een vergelijkbare knop</li>
                 <li>U wordt doorgestuurd naar onze partner (bijv. Booking.com)</li>
                 <li>U maakt uw boeking tegen de normale prijs</li>

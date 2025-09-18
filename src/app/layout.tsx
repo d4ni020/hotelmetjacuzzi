@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Hotels met Jacuzzi | Beste hoteltips & deals',
   description: 'Ontdek de mooiste hotels met jacuzzi op de kamer of spa. Vergelijk prijzen, bekijk foto\'s en klik door naar aanbieders met de beste deals.',
   keywords: 'hotels met jacuzzi, wellness hotels, romantische hotels, spa hotels, jacuzzi op kamer',
-  authors: [{ name: 'JacuzziHotels' }],
+  authors: [{ name: 'Hotelmetjacuzzi.net' }],
   openGraph: {
     title: 'Hotels met Jacuzzi | Beste hoteltips & deals',
     description: 'Ontdek de mooiste hotels met jacuzzi op de kamer of spa. Vergelijk prijzen, bekijk foto\'s en klik door naar aanbieders met de beste deals.',

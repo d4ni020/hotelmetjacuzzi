@@ -584,7 +584,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!province) return {}
 
-  const title = `Hotels met jacuzzi in ${province.name} - Romantisch verblijf | JacuzziHotels`
+  const title = `Hotels met jacuzzi in ${province.name} - Romantisch verblijf | Hotelmetjacuzzi.net`
   const description = province.seo_text?.substring(0, 160) || `Ontdek de beste hotels met jacuzzi in ${province.name}. Luxe suites met privé wellness, spa faciliteiten en romantische arrangementen. Boek nu!`
 
   return {

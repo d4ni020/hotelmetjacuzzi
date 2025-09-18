@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacybeleid | JacuzziHotels',
-  description: 'Lees ons privacybeleid en ontdek hoe JacuzziHotels.nl omgaat met jouw persoonlijke gegevens en privacy.',
+  title: 'Privacybeleid | Hotelmetjacuzzi.net',
+  description: 'Lees ons privacybeleid en ontdek hoe Hotelmetjacuzzi.net omgaat met jouw persoonlijke gegevens en privacy.',
 }
 
 export default function PrivacyPage() {
@@ -20,7 +20,7 @@ export default function PrivacyPage() {
             </p>
 
             <p>
-              JacuzziHotels.nl ("wij", "ons", "onze") respecteert uw privacy en is toegewijd aan 
+              Hotelmetjacuzzi.net ("wij", "ons", "onze") respecteert uw privacy en is toegewijd aan 
               het beschermen van uw persoonlijke gegevens. Dit privacybeleid legt uit hoe wij 
               informatie verzamelen, gebruiken en beschermen wanneer u onze website bezoekt.
             </p>
@@ -134,7 +134,7 @@ export default function PrivacyPage() {
             </p>
             <div className="mt-4 p-4 bg-brand-navy-50 rounded-lg">
               <p><strong>E-mail:</strong> privacy@jacuzzihotels.nl</p>
-              <p><strong>Adres:</strong> JacuzziHotels.nl, Nederland</p>
+              <p><strong>Adres:</strong> Hotelmetjacuzzi.net, Nederland</p>
             </div>
 
             <h2 className="text-2xl font-bold text-brand-navy-900 mt-8 mb-4">

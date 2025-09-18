@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Over Ons | JacuzziHotels',
-  description: 'Ontdek wie wij zijn en waarom JacuzziHotels.nl jouw beste keuze is voor het vinden van de perfecte wellness overnachting met jacuzzi.',
+  title: 'Over Ons | Hotelmetjacuzzi.net',
+  description: 'Ontdek wie wij zijn en waarom Hotelmetjacuzzi.net jouw beste keuze is voor het vinden van de perfecte wellness overnachting met jacuzzi.',
 }
 
 export default function OverOnsPage() {
@@ -11,12 +11,12 @@ export default function OverOnsPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-pure-white rounded-2xl shadow-lg p-8 lg:p-12">
           <h1 className="text-4xl md:text-5xl font-bold text-brand-navy-900 mb-6">
-            Over JacuzziHotels.nl
+            Over Hotelmetjacuzzi.net
           </h1>
           
           <div className="prose prose-lg max-w-none text-brand-navy-700 space-y-6">
             <p className="text-xl text-brand-navy-600 mb-8">
-              Welkom bij JacuzziHotels.nl - jouw specialist in romantische en luxueuze wellness overnachtingen 
+              Welkom bij Hotelmetjacuzzi.net - jouw specialist in romantische en luxueuze wellness overnachtingen 
               in Nederland. Sinds onze oprichting zijn wij toegewijd aan het helpen van stellen en 
               wellness-liefhebbers bij het vinden van de perfecte accommodatie.
             </p>
@@ -47,7 +47,7 @@ export default function OverOnsPage() {
 
             <h2 className="text-2xl font-bold text-brand-navy-900 mt-8 mb-4">Transparantie</h2>
             <p>
-              JacuzziHotels.nl werkt samen met betrouwbare boekingspartners zoals Booking.com 
+              Hotelmetjacuzzi.net werkt samen met betrouwbare boekingspartners zoals Booking.com 
               en Hotelspecials.nl. Wanneer je via onze links boekt, ontvangen wij een kleine 
               commissie zonder extra kosten voor jou. Deze commissie stelt ons in staat om 
               onze service gratis aan te bieden en continu te verbeteren.

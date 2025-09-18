@@ -1099,7 +1099,7 @@ export default function HomePage() {
               <span className="text-pink-600">📸</span>
               <span className="text-sm font-bold text-gray-700">Instagram Inspiratie</span>
             </div>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">#JacuzziHotels Moments</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">#Hotelmetjacuzzi.net Moments</h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Zie hoe onze gasten genieten van hun romantische verblijven - tag ons voor een kans op gratis verblijf!
             </p>
@@ -1223,7 +1223,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
             <p className="text-sm text-gray-500 mb-2">
-            © 2024 JacuzziHotels. Sommige links zijn affiliate links; wij kunnen commissie ontvangen zonder extra kosten voor jou.
+            © 2024 Hotelmetjacuzzi.net. Sommige links zijn affiliate links; wij kunnen commissie ontvangen zonder extra kosten voor jou.
           </p>
             <p className="text-xs text-gray-400">
               💕 Gemaakt met liefde voor romantische getaways
@@ -1239,7 +1239,7 @@ export default function HomePage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'TravelAgency',
-            name: 'JacuzziHotels Nederland',
+            name: 'Hotelmetjacuzzi.net Nederland',
             description: 'Specialist in romantische hotels met jacuzzi. Vind de perfecte wellness accommodatie voor een onvergetelijk verblijf.',
             url: 'https://jacuzzihotels.nl',
             telephone: '+31-20-123-4567',
@@ -1316,7 +1316,7 @@ export default function HomePage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebSite',
-            name: 'JacuzziHotels Nederland',
+            name: 'Hotelmetjacuzzi.net Nederland',
             url: 'https://jacuzzihotels.nl',
             potentialAction: {
               '@type': 'SearchAction',

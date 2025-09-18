@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Disclaimer | JacuzziHotels',
-  description: 'Lees onze algemene voorwaarden en disclaimer voor het gebruik van JacuzziHotels.nl.',
+  title: 'Disclaimer | Hotelmetjacuzzi.net',
+  description: 'Lees onze algemene voorwaarden en disclaimer voor het gebruik van Hotelmetjacuzzi.net.',
 }
 
 export default function DisclaimerPage() {
@@ -23,7 +23,7 @@ export default function DisclaimerPage() {
               Algemene voorwaarden
             </h2>
             <p>
-              Door gebruik te maken van JacuzziHotels.nl ("de website") gaat u akkoord met 
+              Door gebruik te maken van Hotelmetjacuzzi.net ("de website") gaat u akkoord met 
               deze disclaimer en algemene voorwaarden. Lees deze zorgvuldig door voordat u 
               onze diensten gebruikt.
             </p>
@@ -32,7 +32,7 @@ export default function DisclaimerPage() {
               Aard van de dienst
             </h2>
             <p>
-              JacuzziHotels.nl is een informatieve website die fungiert als tussenpersoon 
+              Hotelmetjacuzzi.net is een informatieve website die fungiert als tussenpersoon 
               tussen bezoekers en hotels. Wij zijn geen reisbureau en verzorgen geen directe 
               boekingen. Alle reserveringen worden gemaakt via onze partners zoals Booking.com 
               en Hotelspecials.nl.
@@ -53,7 +53,7 @@ export default function DisclaimerPage() {
               Aansprakelijkheid
             </h2>
             <p>
-              JacuzziHotels.nl sluit, voor zover wettelijk toegestaan, elke aansprakelijkheid uit voor:
+              Hotelmetjacuzzi.net sluit, voor zover wettelijk toegestaan, elke aansprakelijkheid uit voor:
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4 mt-4">
               <li>Directe of indirecte schade door gebruik van de website</li>
@@ -68,7 +68,7 @@ export default function DisclaimerPage() {
             </h2>
             <p>
               Voor alle boekingen, wijzigingen en annuleringen gelden de voorwaarden van 
-              de betreffende boekingspartner of het hotel. JacuzziHotels.nl heeft geen 
+              de betreffende boekingspartner of het hotel. Hotelmetjacuzzi.net heeft geen 
               invloed op en neemt geen verantwoordelijkheid voor:
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4 mt-4">
@@ -82,8 +82,8 @@ export default function DisclaimerPage() {
               Intellectueel eigendom
             </h2>
             <p>
-              Alle content op JacuzziHotels.nl, inclusief teksten, afbeeldingen, logo's en 
-              ontwerp, is eigendom van JacuzziHotels.nl of wordt gebruikt onder licentie. 
+              Alle content op Hotelmetjacuzzi.net, inclusief teksten, afbeeldingen, logo's en 
+              ontwerp, is eigendom van Hotelmetjacuzzi.net of wordt gebruikt onder licentie. 
               Ongeautoriseerd gebruik is niet toegestaan.
             </p>
 
@@ -114,7 +114,7 @@ export default function DisclaimerPage() {
               Toepasselijk recht
             </h2>
             <p>
-              Op deze disclaimer en het gebruik van JacuzziHotels.nl is Nederlands recht 
+              Op deze disclaimer en het gebruik van Hotelmetjacuzzi.net is Nederlands recht 
               van toepassing. Geschillen worden voorgelegd aan de bevoegde Nederlandse rechter.
             </p>
 
@@ -122,7 +122,7 @@ export default function DisclaimerPage() {
               Wijzigingen
             </h2>
             <p>
-              JacuzziHotels.nl behoudt zich het recht voor om deze disclaimer en algemene 
+              Hotelmetjacuzzi.net behoudt zich het recht voor om deze disclaimer en algemene 
               voorwaarden te wijzigen zonder voorafgaande kennisgeving. De meest actuele 
               versie is altijd beschikbaar op deze pagina.
             </p>

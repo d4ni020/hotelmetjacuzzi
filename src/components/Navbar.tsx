@@ -57,7 +57,7 @@ const Navbar = () => {
               <Link 
                 href="/" 
                 className="group flex items-center space-x-3"
-                aria-label="JacuzziHotels - Terug naar startpagina"
+                aria-label="Hotelmetjacuzzi.net - Terug naar startpagina"
               >
                 <div className="relative">
                   {/* Professional Logo SVG Icon */}
@@ -86,7 +86,7 @@ const Navbar = () => {
                 </div>
                 <div className="text-pure-white">
                   <span className="text-xl font-bold group-hover:text-brand-orange-600 transition-colors duration-300">
-                    JacuzziHotels
+                    Hotelmetjacuzzi.net
                   </span>
                   <div className="text-xs text-brand-navy-300 font-medium">
                     Nederland

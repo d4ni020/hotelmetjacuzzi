@@ -820,13 +820,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (!article) {
     return {
-      title: 'Artikel niet gevonden | JacuzziHotels Blog',
+      title: 'Artikel niet gevonden | Hotelmetjacuzzi.net Blog',
       description: 'Het opgevraagde blogartikel kon niet worden gevonden.'
     }
   }
 
   return {
-    title: `${article.title} | JacuzziHotels Blog`,
+    title: `${article.title} | Hotelmetjacuzzi.net Blog`,
     description: article.subtitle,
     openGraph: {
       title: article.title,
@@ -1189,11 +1189,11 @@ export default async function BlogArticlePage({ params }: Props) {
             "image": article.image,
             "author": {
               "@type": "Organization",
-              "name": "JacuzziHotels"
+              "name": "Hotelmetjacuzzi.net"
             },
             "publisher": {
               "@type": "Organization",
-              "name": "JacuzziHotels",
+              "name": "Hotelmetjacuzzi.net",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://jacuzzihotels.nl/logo.png"
