@@ -54,6 +54,23 @@ export default function HotelCard({ hotel }: HotelCardProps) {
     window.location.href = `/api/out/${hotel.id}`
   }
 
+  // Top 10 hotels lijst (gebaseerd op de Top 10 sectie van de homepage)
+  const top10Hotels = [
+    "Van der Valk Hotel Amsterdam",
+    "Olympic Hotel", 
+    "Kasteel Bloemendal",
+    "Fletcher Wellness Hotel",
+    "Inntel Hotels Amsterdam Centre",
+    "Rotterdam Marina Hotel",
+    "Utrecht Central Wellness",
+    "Van der Valk Akersloot",
+    "Eindhoven Design Hotel",
+    "Van der Valk Schiphol"
+  ]
+
+  // Check of dit hotel in de Top 10 staat
+  const isTop10Hotel = top10Hotels.includes(hotel.name)
+
   // Functie om de locatie op te halen
   const getLocation = () => {
     if (!hotel.city_id || !hotel.province_id) return null
@@ -70,6 +87,15 @@ export default function HotelCard({ hotel }: HotelCardProps) {
   return (
     <article className="group relative bg-pure-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-brand-navy-200 hover:border-brand-orange-600 hover:-translate-y-1 flex flex-col h-full">
       
+      {/* Top 10 Badge - Rechtsboven op de card */}
+      {isTop10Hotel && (
+        <div className="absolute top-4 right-4 z-20">
+          <div className="bg-brand-orange-600 hover:bg-[#D95E1B] text-pure-white rounded-lg px-3 py-1.5 transition-colors duration-300 shadow-lg">
+            <span className="text-sm font-bold">Top 10</span>
+          </div>
+        </div>
+      )}
+
       <div className="relative h-56 overflow-hidden rounded-t-2xl">
         <Image
           src={hotel.image_url}
@@ -81,7 +107,7 @@ export default function HotelCard({ hotel }: HotelCardProps) {
         <div className="absolute inset-0 bg-brand-navy-900" style={{opacity: 0.2}}></div>
         <div className="absolute inset-0 bg-brand-navy-900 opacity-0 group-hover:opacity-10 transition-all duration-300"></div>
         
-        <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
+        <div className="absolute top-4 left-4 right-16 flex justify-between items-start">
           {hotel.popular && (
             <div className="bg-brand-orange-600 text-pure-white rounded-lg px-2 py-1 shadow-lg">
               <span className="text-xs font-bold uppercase">Meest geboekt deze maand</span>
@@ -101,6 +127,12 @@ export default function HotelCard({ hotel }: HotelCardProps) {
           <h3 className="text-xl font-bold text-brand-navy-900 mb-2 leading-tight group-hover/link:text-brand-orange-600 transition-colors duration-300 cursor-pointer">
             {hotel.name}
           </h3>
+          {/* Top 10 subtiele tekst */}
+          {isTop10Hotel && (
+            <p className="text-xs mb-2 italic" style={{ color: '#6B7280' }}>
+              Dit hotel staat in de top 10 jacuzzi hotels in Nederland
+            </p>
+          )}
           <p className="text-sm mb-2" style={{ color: '#4A6A8A' }}>
             {hotel.city_id && hotel.province_id ? 
               `${mockCities.find(c => c.id === hotel.city_id)?.name || 'Unknown City'}, ${mockProvinces.find(p => p.id === hotel.province_id)?.name || 'Unknown Province'}` 
