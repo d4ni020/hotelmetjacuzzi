@@ -54,22 +54,23 @@ export default function HotelCard({ hotel }: HotelCardProps) {
     window.location.href = `/api/out/${hotel.id}`
   }
 
-  // Top 10 hotels lijst (gebaseerd op de Top 10 sectie van de homepage)
-  const top10Hotels = [
-    "Van der Valk Hotel Amsterdam",
-    "Olympic Hotel", 
-    "Kasteel Bloemendal",
-    "Fletcher Wellness Hotel",
-    "Inntel Hotels Amsterdam Centre",
-    "Rotterdam Marina Hotel",
-    "Utrecht Central Wellness",
-    "Van der Valk Akersloot",
-    "Eindhoven Design Hotel",
-    "Van der Valk Schiphol"
-  ]
+  // Top 10 hotels ranking (gebaseerd op de Top 10 sectie van de homepage)
+  const top10HotelsRanking: { [key: string]: number } = {
+    "Van der Valk Hotel Amsterdam": 1,
+    "Olympic Hotel": 2,
+    "Kasteel Bloemendal": 3,
+    "Fletcher Wellness Hotel": 4,
+    "Inntel Hotels Amsterdam Centre": 5,
+    "Rotterdam Marina Hotel": 6,
+    "Utrecht Central Wellness": 7,
+    "Van der Valk Akersloot": 8,
+    "Eindhoven Design Hotel": 9,
+    "Van der Valk Schiphol": 10
+  }
 
-  // Check of dit hotel in de Top 10 staat
-  const isTop10Hotel = top10Hotels.includes(hotel.name)
+  // Check of dit hotel in de Top 10 staat en krijg de ranking positie
+  const hotelRanking = top10HotelsRanking[hotel.name]
+  const isTop10Hotel = hotelRanking !== undefined
 
   // Functie om de locatie op te halen
   const getLocation = () => {
@@ -87,11 +88,11 @@ export default function HotelCard({ hotel }: HotelCardProps) {
   return (
     <article className="group relative bg-pure-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-brand-navy-200 hover:border-brand-orange-600 hover:-translate-y-1 flex flex-col h-full">
       
-      {/* Top 10 Badge - Rechtsboven op de card */}
-      {isTop10Hotel && (
+      {/* Ranking Badge - Rechtsboven op de card */}
+      {isTop10Hotel && hotelRanking && (
         <div className="absolute top-4 right-4 z-20">
-          <div className="bg-brand-orange-600 hover:bg-[#D95E1B] text-pure-white rounded-lg px-3 py-1.5 transition-colors duration-300 shadow-lg">
-            <span className="text-sm font-bold">Top 10</span>
+          <div className="bg-brand-orange-600 hover:bg-[#D95E1B] text-pure-white rounded-full w-12 h-12 flex items-center justify-center transition-colors duration-300">
+            <span className="text-lg font-bold">#{hotelRanking}</span>
           </div>
         </div>
       )}
@@ -130,10 +131,10 @@ export default function HotelCard({ hotel }: HotelCardProps) {
           <h3 className="text-xl font-bold text-brand-navy-900 mb-2 leading-tight group-hover/link:text-brand-orange-600 transition-colors duration-300 cursor-pointer">
             {hotel.name}
           </h3>
-          {/* Top 10 subtiele tekst */}
-          {isTop10Hotel && (
+          {/* Ranking subtiele tekst */}
+          {isTop10Hotel && hotelRanking && (
             <p className="text-xs mb-2 italic" style={{ color: '#6B7280' }}>
-              Dit hotel staat in de top 10 jacuzzi hotels in Nederland
+              Dit hotel staat op positie #{hotelRanking} in de top 10 jacuzzi hotels van Nederland
             </p>
           )}
           <p className="text-sm mb-2" style={{ color: '#4A6A8A' }}>
