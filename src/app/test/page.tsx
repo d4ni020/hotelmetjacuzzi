@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function TestPage() {
   return (
     <div className="min-h-screen bg-light-gray-50">
@@ -5,12 +7,12 @@ export default function TestPage() {
       <header className="bg-white/80 backdrop-blur-sm shadow-lg border-b border-romantic-pink-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <nav className="flex justify-between items-center mb-6">
-            <a href="/" className="text-3xl font-bold text-romantic-pink-600">
+            <Link href="/" className="text-3xl font-bold text-romantic-pink-600">
               💕 JacuzziHotels
-            </a>
+            </Link>
             <div className="space-x-8">
-              <a href="/" className="text-light-gray-600 hover:text-romantic-pink-500 font-medium transition-colors duration-200">Home</a>
-              <a href="/test" className="text-light-gray-600 hover:text-romantic-pink-500 font-medium transition-colors duration-200">Test</a>
+              <Link href="/" className="text-light-gray-600 hover:text-romantic-pink-500 font-medium transition-colors duration-200">Home</Link>
+              <Link href="/test" className="text-light-gray-600 hover:text-romantic-pink-500 font-medium transition-colors duration-200">Test</Link>
             </div>
           </nav>
           <div className="text-center">

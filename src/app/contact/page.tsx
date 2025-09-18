@@ -151,7 +151,7 @@ export default function ContactPage() {
                   className="mt-1 h-4 w-4 text-brand-orange-600 border-brand-navy-200 rounded focus:ring-brand-orange-600"
                 />
                 <label htmlFor="privacy" className="ml-2 text-sm text-brand-navy-600">
-                  Ik ga akkoord met het <a href="/privacy" className="text-brand-orange-600 hover:underline">privacybeleid</a> en de verwerking van mijn gegevens. *
+                  Ik ga akkoord met het <Link href="/privacy" className="text-brand-orange-600 hover:underline">privacybeleid</Link> en de verwerking van mijn gegevens. *
                 </label>
               </div>
 
