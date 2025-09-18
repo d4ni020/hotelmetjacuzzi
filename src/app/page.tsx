@@ -881,8 +881,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Current Date Widget - Moved under filter */}
-          <div className="flex items-center justify-center mb-8">
+          {/* Current Date Widget - Left aligned */}
+          <div className="flex items-center mb-8">
             <div className="bg-pure-white border border-brand-navy-200 rounded-lg px-4 py-2 shadow-sm">
               <div className="flex items-center space-x-2 text-brand-navy-600">
                 <svg width="16" height="16" viewBox="0 0 16 16" className="text-brand-orange-600">
