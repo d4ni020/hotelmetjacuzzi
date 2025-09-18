@@ -107,15 +107,18 @@ export default function HotelCard({ hotel }: HotelCardProps) {
         <div className="absolute inset-0 bg-brand-navy-900" style={{opacity: 0.2}}></div>
         <div className="absolute inset-0 bg-brand-navy-900 opacity-0 group-hover:opacity-10 transition-all duration-300"></div>
         
-        <div className="absolute top-4 left-4 right-16 flex justify-between items-start">
+        <div className={`absolute top-4 left-4 ${isTop10Hotel ? 'right-20' : 'right-4'} flex justify-between items-start`}>
           {hotel.popular && (
             <div className="bg-brand-orange-600 text-pure-white rounded-lg px-2 py-1 shadow-lg">
               <span className="text-xs font-bold uppercase">Meest geboekt deze maand</span>
             </div>
           )}
-          <div className="bg-pure-white text-brand-navy-800 rounded-lg px-3 py-1 shadow-lg" style={{opacity: 0.95}}>
-            <span className="text-sm font-semibold">Direct boekbaar</span>
-          </div>
+          {/* Direct boekbaar badge - alleen tonen als hotel NIET in Top 10 staat */}
+          {!isTop10Hotel && (
+            <div className="bg-pure-white text-brand-navy-800 rounded-lg px-3 py-1 shadow-lg" style={{opacity: 0.95}}>
+              <span className="text-sm font-semibold">Direct boekbaar</span>
+            </div>
+          )}
         </div>
       </div>
       
