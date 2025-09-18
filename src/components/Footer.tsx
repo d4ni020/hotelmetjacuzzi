@@ -250,12 +250,15 @@ const Footer = () => {
             <div className="flex items-center space-x-4">
               <span>Powered by</span>
               <div className="flex items-center space-x-2">
-                <svg width="16" height="16" viewBox="0 0 16 16" className="text-brand-orange-600">
-                  <circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" strokeWidth="1.5"/>
-                  <circle cx="6" cy="7" r="1" fill="currentColor"/>
-                  <circle cx="10" cy="7" r="1" fill="currentColor"/>
-                  <circle cx="8" cy="10" r="0.5" fill="currentColor"/>
-                </svg>
+                  <svg width="16" height="16" viewBox="0 0 105 105" className="text-brand-orange-600">
+                    {/* Mini Jacuzzi Icon */}
+                    <ellipse cx="52.5" cy="70" rx="35" ry="15" fill="currentColor" opacity="0.6"/>
+                    <ellipse cx="52.5" cy="65" rx="30" ry="12" fill="#FFFFFF" opacity="0.9"/>
+                    <circle cx="45" cy="62" r="2" fill="currentColor" opacity="0.8"/>
+                    <circle cx="55" cy="60" r="1.5" fill="currentColor" opacity="0.7"/>
+                    <circle cx="60" cy="65" r="1.2" fill="currentColor" opacity="0.9"/>
+                    <circle cx="50" cy="68" r="1" fill="currentColor" opacity="0.6"/>
+                  </svg>
                 <span className="font-medium">Nederlandse Wellness Experts</span>
               </div>
             </div>
