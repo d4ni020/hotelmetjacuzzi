@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simplified favicon version -->
+  
+  <!-- Background -->
+  <circle cx="16" cy="16" r="15" fill="#1A2637"/>
+  
+  <!-- Hotel shape simplified -->
+  <path d="M8 21 L12 17 L20 17 L24 21 L24 26 L8 26 Z" fill="#F36F21"/>
+  
+  <!-- Roof -->
+  <path d="M10 17 L16 12 L22 17 Z" fill="#F36F21"/>
+  
+  <!-- Jacuzzi -->
+  <ellipse cx="16" cy="19.5" rx="6.5" ry="3" fill="#FFFFFF" opacity="0.9"/>
+  <ellipse cx="16" cy="19.5" rx="5" ry="2" fill="#F36F21" opacity="0.4"/>
+  
+  <!-- Key bubbles -->
+  <circle cx="13" cy="18" r="0.8" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="19" cy="18" r="0.6" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="16" cy="16.5" r="0.5" fill="#FFFFFF" opacity="0.9"/>
+  
+  <!-- Small heart -->
+  <path d="M20 14 C20 13, 21 12, 22 13 C23 12, 24 13, 24 14 C24 15, 22 17, 22 17 C22 17, 20 15, 20 14 Z" fill="#F36F21" opacity="0.8"/>
+</svg>

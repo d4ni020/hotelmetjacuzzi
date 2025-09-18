@@ -1,0 +1,137 @@
+# Cursor Rules – Hotel met Jacuzzi Affiliate Website
+
+> **Doel:** Bouw een snelle, SEO-sterke affiliate site die hotels met jacuzzi’s presenteert **per provincie** en **per stad**, met snelle filters, kwalitatieve content en correcte affiliate-tracking.
+
+---
+
+## 1) Schrijfstijl & Contentkwaliteit
+- Taal: **Nederlands**. Doelgroep = Nederlandse bezoekers.
+- SEO-copy: gebruik H1/H2/H3, interne links en pakkende meta-descriptions (≤ 160 tekens).
+- **Unieke intro per pagina**:
+  - Stad- en provinciepagina’s: **min. 300–600 woorden** (niet herhalen, geen boilerplate).
+  - AI schrijft SEO-teksten, maar altijd **waarheidsgetrouw, feitelijk correct en niet overdreven**.
+- Content-template voor AI:
+  - Intro (romantisch + ontspannen sfeer, afgestemd op {stad}/{provincie}).
+  - Highlights van de omgeving.
+  - Suggesties voor romantisch verblijf.
+  - Top 3–5 hotels in de regio.
+  - FAQ (2–3 vragen met schema.org `FAQPage`).
+- Variaties van zoektermen natuurlijk verwerken: “hotel met jacuzzi”, “jacuzzi op kamer”, “privé wellness”, “wellness suite”.
+- **Affiliate disclosure**: duidelijk vermelden dat links affiliate-links zijn.
+- Geen claims over actuele prijzen/beschikbaarheid (altijd verwijzen naar Booking.com of Hotelspecials.nl).
+
+---
+
+## 2) Projectscope
+- **In scope**:
+  - Overzicht per **provincie** en **stad**.
+  - Snelle filters (provincie, stad, prijsklasse).
+  - Hotel-detailpagina’s.
+  - Blog/tips met interne links.
+- **Out of scope**:
+  - Eigen boekingssysteem.
+  - Betaalproviders of reserveringen opslaan.
+- **Stack**: Next.js (App Router), TypeScript, Tailwind, Supabase.
+- **Hosting**: Vercel of vergelijkbaar (edge-caching waar mogelijk).
+- **Affiliate partners**: Booking.com + Hotelspecials.nl.
+
+---
+
+## 3) Routing, URL’s & Slugs
+- Canonieke, stabiele paden:
+  - Provincie: `/provincie/<provincie-slug>`
+  - Stad: `/stad/<stad-slug>`
+  - Hotel: `/hotel/<hotel-slug>`
+  - Outbound click: `/out/<hotel-id>` → registreert event → 302 redirect naar affiliate link.
+- **Slugregels**: lowercase, spaties→`-`, diacritics strippen (bv. “’s-Hertogenbosch” → `s-hertogenbosch`).
+- **Canonical tags** verplicht.
+- **Noindex** voor lege/thin filtercombinaties.
+
+---
+
+## 4) SEO Techniek
+- **ISR/SSG** voor stad/provincie/hotelpagina’s (revalidate 24h).
+- **Sitemap** + **robots.txt** genereren; aparte sitemaps voor /provincie, /stad, /hotel.
+- **Structured Data (schema.org)**:
+  - `BreadcrumbList` op alle dieptepagina’s.
+  - `Hotel` op hotelpagina’s (naam, locatie, afbeelding, rating).
+  - `ItemList` op overzichtspagina’s.
+  - `FAQPage` op stad/provinciepagina’s.
+- **Open Graph / Twitter Cards**: afbeeldingen met romantische maar frisse uitstraling.
+- **Interne linking**:
+  - Home → top provincies/steden.
+  - Provincie → steden en hotels.
+  - Stad → hotels en nabije steden/provincies.
+  - Blog → relevante stad/provincie/hotels.
+
+---
+
+## 5) Performance & UX
+- **Core Web Vitals target**: LCP < 2.5s, CLS < 0.1, TBT < 200ms, Lighthouse ≥ 90.
+- `next/image` met lazy-loading en juiste `sizes`.
+- Edge-caching voor SSG/ISR routes.
+- **Filters**:
+  - Direct zichtbaar op home.
+  - Dropdowns/knoppen voor provincie, stad, prijsklasse.
+  - Snelle, soepele filterervaring (client-side updates).
+- Toegankelijkheid: semantische headings, `alt`-teksten, toetsenbord-navigatie.
+
+---
+
+## 6) Design & Branding
+- **Uitstraling**: romantisch en sfeervol, met frisse en lichte kleuren.
+- **Kleurenpalet**:
+  - Zacht roze (romantisch accent).
+  - Pastelblauw (fris, luchtig).
+  - Wit en lichtgrijs (basis en achtergrond).
+- Stijl: afgeronde hoeken, zachte schaduwen, ruime witruimte.
+- Mobile-first.
+
+### UI Styling regels
+- Geen gradients gebruiken (geen `bg-gradient-*`, `from-*`, `to-*`, `bg-clip-text`, `text-transparent`).
+- Altijd effen Tailwind kleuren toepassen (`text-*`, `bg-*`, `border-*`).
+
+---
+
+## 7) Data-model (Supabase)
+**Tabellen**
+- `provinces` (id, name, slug, seo_text)
+- `cities` (id, name, slug, province_id→provinces.id, seo_text)
+- `hotels` (id, name, slug, description, province_id, city_id, price_range, facilities jsonb, affiliate_link, image_url, rating numeric, created_at)
+
+**Indexen**
+- `hotels(province_id)`, `hotels(city_id)`, `hotels(price_range)`, unieke slugs.
+
+**Beheer**
+- AI kan hotels + teksten toevoegen, maar altijd **gebaseerd op waarheid** (feitelijk correct).
+
+---
+
+## 8) Click Tracking
+- Outbound links via `/out/[hotel-id]`.
+- Bij click:
+  - Event loggen in Supabase (`click_events`: id, hotel_id, source, created_at).
+  - Redirect met 302 naar affiliate link (Booking.com / Hotelspecials.nl).
+- Analytics: GA4 event `affiliate_click` (hotel_id, hotel_slug, provincie, stad).
+
+---
+
+## 9) Code Conventies & Kwaliteit
+- TypeScript, ESLint (Next.js preset) + Prettier.
+- Commit: **Conventional Commits** (`feat:`, `fix:`, `chore:`).
+- Naamgeving: variabelen **camelCase**, componenten **PascalCase**.
+- Geen inline styles; gebruik **Tailwind**.
+- Documenteer complexe functies met JSDoc.
+- Loading- en error states verplicht.
+
+---
+
+## 10) Definition of Done (DoD)
+- **Home**: direct filteren op provincie, stad en prijsklasse; snelle UX.
+- **Provincie/Stad**: unieke SEO-tekst (≥ 300 woorden), lijst + interne links, FAQ schema.
+- **Hotel**: duidelijke CTA “Bekijk prijs & beschikbaarheid” (affiliate link naar Booking.com of Hotelspecials.nl), schema.org `Hotel`.
+- **SEO**: sitemap, robots, meta-tags, structured data valid.
+- **Performance**: vitals-targets gehaald (desktop + mobiel).
+- **Design**: romantische maar frisse uitstraling (licht kleurenpalet).
+- **Content**: door AI geschreven, maar altijd waarheid en feitelijk correct.
+
