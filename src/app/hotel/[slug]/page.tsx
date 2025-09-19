@@ -229,6 +229,39 @@ const mockHotels: Record<string, Hotel> = {
         affiliateLink: 'https://booking.com/olympic-hotel-deluxe'
       }
     ]
+  },
+  'kasteel-bloemendal': {
+    id: 3,
+    name: 'Kasteel Bloemendal',
+    location: 'Vaals, Limburg',
+    city: 'Vaals',
+    province: 'Limburg',
+    priceRange: '€249 - €389',
+    jacuzziType: 'Luxe kasteel suite jacuzzi',
+    facilities: ['Luxe Suites', 'Kasteel Ambiance', 'Fine Dining', 'Spa & Wellness', 'Historische Tuinen', 'Premium Service'],
+    rating: 4.6,
+    reviewCount: 543,
+    heroImage: 'https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=1600&auto=format&fit=crop',
+    description: `Kasteel Bloemendal is een historisch kasteel hotel dat luxe en romantiek combineert in de prachtige heuvels van Zuid-Limburg. Dit unieke kasteel met jacuzzi suites biedt een koninklijke ervaring in een authentieke setting.
+
+    Onze signature Deluxe Suite met Kingsize bed en luxe jacuzzi biedt een onvergetelijke kasteel ervaring. Met eeuwenoude charme, moderne luxury en een romantische ambiance die perfect is voor bijzondere momenten.
+    
+    Perfect voor romantische uitjes, jubilea en speciale gelegenheden waar u zich als koningschap wilt voelen in de prachtige natuur van Limburg.`,
+    coordinates: [6.0167, 50.7667], // Vaals coordinates
+    address: 'Bloemendalstraat 150, 6291 CM Vaals',
+    affiliateLink: 'https://booking.com/kasteel-bloemendal',
+    popularThisMonth: false,
+    rooms: [
+      {
+        id: 1,
+        name: 'Deluxe Suite met Kingsize bed',
+        image: 'https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=1600&auto=format&fit=crop',
+        description: 'Koninklijke deluxe suite met luxe jacuzzi en kingsize bed in authentieke kasteel setting. Het summum van romantische luxe.',
+        features: ['Luxe jacuzzi', 'Kingsize bed', 'Kasteel ambiance', 'Historische details', 'Premium amenities', 'Tuinzicht'],
+        priceRange: '€249 - €389',
+        affiliateLink: 'https://booking.com/kasteel-bloemendal-deluxe-suite'
+      }
+    ]
   }
 }
 
@@ -1176,6 +1209,317 @@ export default async function HotelDetailPage({ params }: Props) {
               "@type": "Hotel",
               "name": hotel.name,
               "description": `${hotel.name} - Sportieve luxe hotel met jacuzzi kamers en olympische faciliteiten in Amsterdam. Perfect voor sporters en wellness liefhebbers.`,
+              "image": hotel.heroImage,
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": hotel.address.split(',')[0],
+                "addressLocality": hotel.city,
+                "addressRegion": hotel.province,
+                "addressCountry": "NL"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": hotel.coordinates[1],
+                "longitude": hotel.coordinates[0]
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": hotel.rating,
+                "reviewCount": hotel.reviewCount,
+                "bestRating": 5
+              },
+              "priceRange": hotel.priceRange,
+              "amenityFeature": hotel.facilities.map(facility => ({
+                "@type": "LocationFeatureSpecification",
+                "name": facility
+              })),
+              "url": `https://jacuzzihotels.nl/hotel/${awaited.slug}`
+            })
+          }}
+        />
+      </div>
+    )
+  }
+
+  // Special template for Kasteel Bloemendal
+  if (awaited.slug === 'kasteel-bloemendal') {
+    return (
+      <div className="min-h-screen bg-light-gray">
+        {/* SVG Pattern Background */}
+        <WavePattern />
+        
+        {/* Hero Section - Castle Theme */}
+        <section className="relative bg-brand-navy-900 text-pure-white overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                {/* Breadcrumbs */}
+                <nav className="text-sm text-brand-navy-200 mb-6">
+                  <Link href="/" className="hover:text-brand-orange-600 transition-colors">Home</Link>
+                  <span className="mx-2">/</span>
+                  <Link href="/provincie/limburg" className="hover:text-brand-orange-600 transition-colors">
+                    Limburg
+                  </Link>
+                  <span className="mx-2">/</span>
+                  <span className="text-pure-white font-medium">{hotel.name}</span>
+                </nav>
+
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                  Kasteel Bloemendal – koninklijke suites met jacuzzi
+                </h1>
+                <p className="text-xl md:text-2xl text-brand-navy-200 mb-8 leading-relaxed">
+                  Ervaar koninklijke luxe in een authentiek kasteel. Onze Deluxe Suite met Kingsize bed 
+                  en luxe jacuzzi biedt een onvergetelijke romantische ervaring in Zuid-Limburg.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a 
+                    href="#rooms" 
+                    className="bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
+                  >
+                    Bekijk Deluxe Suite
+                  </a>
+                  <Link 
+                    href="/provincie/limburg" 
+                    className="border-2 border-brand-orange-600 text-brand-orange-600 hover:bg-brand-orange-600 hover:text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
+                  >
+                    Meer kastelen
+                  </Link>
+                </div>
+              </div>
+              <div className="relative">
+                <Image
+                  src="/images/Kasteel Bloemendal.jpg"
+                  alt="Kasteel Bloemendal - Historisch kasteel hotel exterior"
+                  width={600}
+                  height={400}
+                  className="rounded-2xl shadow-2xl"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+                {/* Top 10 Ranking Badge */}
+                <div className="absolute top-4 right-4 z-20">
+                  <div className="bg-brand-orange-600 hover:bg-[#D95E1B] text-pure-white rounded-full w-12 h-12 flex items-center justify-center transition-colors duration-300">
+                    <span className="text-lg font-bold">#3</span>
+                  </div>
+                </div>
+                {/* Suite Badge */}
+                <div className="absolute top-4 left-4 z-20">
+                  <div className="bg-brand-navy-800 text-pure-white rounded-lg px-3 py-1 shadow-lg" style={{opacity: 0.95}}>
+                    <span className="text-sm font-semibold">Luxe Suites</span>
+                  </div>
+                </div>
+                <div className="absolute -bottom-6 -right-6 bg-brand-orange-600 text-pure-white p-6 rounded-2xl shadow-xl">
+                  <div className="text-2xl font-bold">1</div>
+                  <div className="text-sm">Deluxe Suite</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Room Overview Section */}
+        <section id="rooms" className="py-16 bg-pure-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+                Onze Koninklijke Suite met Jacuzzi
+              </h2>
+              <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto">
+                Ervaar kasteel luxe in onze signature Deluxe Suite, uitgerust met kingsize bed, luxe jacuzzi en authentieke kasteel ambiance.
+              </p>
+              
+              {/* Top 10 Ranking Text */}
+              <p className="text-xs mt-4 italic" style={{ color: '#6B7280' }}>
+                Dit hotel staat op positie #3 in de top 10 jacuzzi hotels van Nederland
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 max-w-2xl mx-auto">
+              {hotel.rooms?.map((room) => (
+                <RoomCard key={room.id} room={room} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Castle Features Section */}
+        <section className="py-16 bg-light-gray">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+                Kasteel Faciliteiten & Historische Charme
+              </h2>
+              <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
+                Ontdek de unieke combinatie van historische elegantie en moderne luxe in ons authentieke kasteel in Zuid-Limburg.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-pure-white rounded-2xl p-8 shadow-lg">
+                <div className="text-brand-orange-600 mb-4">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Kasteel Ambiance</h3>
+                <p className="text-brand-navy-600">Authentieke kasteel setting met historische details en koninklijke sfeer voor een unieke ervaring.</p>
+              </div>
+
+              <div className="bg-pure-white rounded-2xl p-8 shadow-lg">
+                <div className="text-brand-orange-600 mb-4">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1z"/>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Fine Dining</h3>
+                <p className="text-brand-navy-600">Exclusief restaurant met verfijnde keuken en kasteel ambiance voor culinaire hoogtepunten.</p>
+              </div>
+
+              <div className="bg-pure-white rounded-2xl p-8 shadow-lg">
+                <div className="text-brand-orange-600 mb-4">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.54 0 3-.35 4.31-.99l1.38 1.38c.39.39 1.02.39 1.41 0s.39-1.02 0-1.41l-1.38-1.38C21.65 15 22 13.54 22 12c0-5.52-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Historische Tuinen</h3>
+                <p className="text-brand-navy-600">Prachtige kasteeltuinen met eeuwenoude bomen en romantische wandelpaden door de natuur.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Location Section */}
+        <section className="py-16 bg-pure-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+                Locatie van Kasteel Bloemendal
+              </h2>
+              <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
+                Gelegen in de prachtige heuvels van Zuid-Limburg, nabij Vaals en de Duitse grens. Perfect voor een romantische ontsnapping.
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <MapboxMap
+                longitude={hotel.coordinates[0]}
+                latitude={hotel.coordinates[1]}
+                hotelName={hotel.name}
+                address={hotel.address}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-light-gray">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Facilities */}
+              <div>
+                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">
+                  Kasteel Faciliteiten
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {hotel.facilities.map((facility, index) => (
+                    <div key={index} className="flex items-center p-4 bg-pure-white rounded-lg shadow-sm">
+                      <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 text-brand-orange-600 flex-shrink-0">
+                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
+                      </svg>
+                      <span className="text-brand-navy-700 font-medium">{facility}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* FAQ */}
+              <div>
+                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">
+                  Veelgestelde Vragen
+                </h3>
+                <div className="space-y-6">
+                  <div className="bg-pure-white rounded-lg p-6 shadow-sm">
+                    <h4 className="font-bold text-brand-navy-900 mb-2">
+                      Wat maakt Kasteel Bloemendal uniek?
+                    </h4>
+                    <p className="text-brand-navy-700">
+                      Onze unieke combinatie van authentieke kasteel geschiedenis en moderne luxe, inclusief jacuzzi suites in een romantische setting.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-pure-white rounded-lg p-6 shadow-sm">
+                    <h4 className="font-bold text-brand-navy-900 mb-2">
+                      Is het kasteel geschikt voor romantische verblijven?
+                    </h4>
+                    <p className="text-brand-navy-700">
+                      Absoluut! Ons kasteel is perfect voor romantische uitjes, jubilea en speciale gelegenheden met luxe suites en historische ambiance.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-pure-white rounded-lg p-6 shadow-sm">
+                    <h4 className="font-bold text-brand-navy-900 mb-2">
+                      Welke activiteiten zijn er in de omgeving?
+                    </h4>
+                    <p className="text-brand-navy-700">
+                      Kasteel wandelingen, Zuid-Limburg verkennen, grensoverschrijdend naar Duitsland en België, en natuurwandelingen in de heuvels.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Internal Links */}
+            <div className="mt-12 pt-8 border-t border-brand-navy-200 text-center">
+              <p className="text-brand-navy-600 mb-6">
+                Bekijk ook onze andere <Link href="/hotel-met-jacuzzi-op-kamer" className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">kasteel hotels met jacuzzi</Link> of 
+                ontdek meer <Link href="/provincie/limburg" className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">romantische hotels in Limburg</Link>.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Hotels */}
+        <section className="py-16 bg-pure-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+                Andere romantische hotels met jacuzzi in Limburg
+              </h2>
+              <p className="text-lg text-brand-navy-600">
+                Ontdek meer prachtige hotels met jacuzzi in de provincie Limburg
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {relatedHotels.slice(0, 3).map((relatedHotel) => (
+                <HotelCard key={relatedHotel.id} hotel={relatedHotel} />
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Link 
+                href="/provincie/limburg"
+                className="inline-flex items-center bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Bekijk alle hotels in Limburg
+                <svg width="20" height="20" viewBox="0 0 20 20" className="ml-2">
+                  <path d="M7 3l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Schema.org Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Hotel",
+              "name": hotel.name,
+              "description": `${hotel.name} - Historisch kasteel hotel met luxe jacuzzi suites in Zuid-Limburg. Perfect voor romantische verblijven en speciale gelegenheden.`,
               "image": hotel.heroImage,
               "address": {
                 "@type": "PostalAddress",
