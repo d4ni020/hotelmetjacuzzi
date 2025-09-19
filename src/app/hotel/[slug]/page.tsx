@@ -196,6 +196,39 @@ const mockHotels: Record<string, Hotel> = {
         affiliateLink: 'https://booking.com/inntel-amsterdam-centre-suite'
       }
     ]
+  },
+  'olympic-hotel': {
+    id: 2,
+    name: 'Olympic Hotel',
+    location: 'Amsterdam, Noord-Holland',
+    city: 'Amsterdam',
+    province: 'Noord-Holland',
+    priceRange: '€189 - €289',
+    jacuzziType: 'Luxe jacuzzi suite',
+    facilities: ['Jacuzzi Suite', 'Olympisch Zwembad', 'Fitness Center', 'Spa & Wellness', 'Restaurant', 'Bar'],
+    rating: 4.4,
+    reviewCount: 892,
+    heroImage: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1600&auto=format&fit=crop',
+    description: `Olympic Hotel Amsterdam combineert sportieve excellentie met luxe wellness in het hart van Amsterdam. Dit unieke hotel met jacuzzi biedt een perfecte balans tussen actieve ontspanning en romantische momenten.
+
+    Onze signature Deluxe Kamers zijn uitgerust met luxe jacuzzi's en bieden een serene ontsnapping na een dag vol Amsterdamse avonturen. Met olympische faciliteiten en wellness amenities voor een complete ervaring.
+    
+    Perfect voor sporters, wellness liefhebbers en koppels die op zoek zijn naar een unieke combinatie van activiteit en ontspanning in Amsterdam.`,
+    coordinates: [4.8952, 52.3702], // Amsterdam coordinates
+    address: 'PC Hooftstraat 138-140, 1071 CC Amsterdam',
+    affiliateLink: 'https://booking.com/olympic-hotel-amsterdam',
+    popularThisMonth: false,
+    rooms: [
+      {
+        id: 1,
+        name: 'Deluxe Kamer',
+        image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1600&auto=format&fit=crop',
+        description: 'Luxueuze deluxe kamer met premium jacuzzi en olympische sfeer. Ideaal voor een sportieve wellness ervaring.',
+        features: ['Premium jacuzzi', 'Olympische thema', 'Sportieve inrichting', 'Minibar', 'Smart TV', 'Fitness amenities'],
+        priceRange: '€189 - €289',
+        affiliateLink: 'https://booking.com/olympic-hotel-deluxe'
+      }
+    ]
   }
 }
 
@@ -838,6 +871,311 @@ export default async function HotelDetailPage({ params }: Props) {
               "@type": "Hotel",
               "name": hotel.name,
               "description": `${hotel.name} - Modern design hotel met jacuzzi kamers in Amsterdam centrum. Perfect voor romantische citytrips en zakelijke verblijven.`,
+              "image": hotel.heroImage,
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": hotel.address.split(',')[0],
+                "addressLocality": hotel.city,
+                "addressRegion": hotel.province,
+                "addressCountry": "NL"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": hotel.coordinates[1],
+                "longitude": hotel.coordinates[0]
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": hotel.rating,
+                "reviewCount": hotel.reviewCount,
+                "bestRating": 5
+              },
+              "priceRange": hotel.priceRange,
+              "amenityFeature": hotel.facilities.map(facility => ({
+                "@type": "LocationFeatureSpecification",
+                "name": facility
+              })),
+              "url": `https://jacuzzihotels.nl/hotel/${awaited.slug}`
+            })
+          }}
+        />
+      </div>
+    )
+  }
+
+  // Special template for Olympic Hotel
+  if (awaited.slug === 'olympic-hotel') {
+    return (
+      <div className="min-h-screen bg-light-gray">
+        {/* SVG Pattern Background */}
+        <WavePattern />
+        
+        {/* Hero Section - Olympic Theme */}
+        <section className="relative bg-brand-navy-900 text-pure-white overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                {/* Breadcrumbs */}
+                <nav className="text-sm text-brand-navy-200 mb-6">
+                  <Link href="/" className="hover:text-brand-orange-600 transition-colors">Home</Link>
+                  <span className="mx-2">/</span>
+                  <Link href="/provincie/noord-holland" className="hover:text-brand-orange-600 transition-colors">
+                    Noord-Holland
+                  </Link>
+                  <span className="mx-2">/</span>
+                  <span className="text-pure-white font-medium">{hotel.name}</span>
+                </nav>
+
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                  Olympic Hotel Amsterdam – sportieve luxe met jacuzzi
+                </h1>
+                <p className="text-xl md:text-2xl text-brand-navy-200 mb-8 leading-relaxed">
+                  Ervaar de perfecte combinatie van olympische excellentie en wellness luxe. 
+                  Onze Deluxe Kamers bieden een unieke jacuzzi-ervaring voor sporters en wellness liefhebbers.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a 
+                    href="#rooms" 
+                    className="bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
+                  >
+                    Bekijk Deluxe Kamer
+                  </a>
+                  <Link 
+                    href="/provincie/noord-holland" 
+                    className="border-2 border-brand-orange-600 text-brand-orange-600 hover:bg-brand-orange-600 hover:text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
+                  >
+                    Meer hotels
+                  </Link>
+                </div>
+              </div>
+              <div className="relative">
+                <Image
+                  src="/images/Olympic Hotel.jpg"
+                  alt="Olympic Hotel Amsterdam - Sportieve luxe hotel exterior"
+                  width={600}
+                  height={400}
+                  className="rounded-2xl shadow-2xl"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+                {/* Top 10 Ranking Badge */}
+                <div className="absolute top-4 right-4 z-20">
+                  <div className="bg-brand-orange-600 hover:bg-[#D95E1B] text-pure-white rounded-full w-12 h-12 flex items-center justify-center transition-colors duration-300">
+                    <span className="text-lg font-bold">#2</span>
+                  </div>
+                </div>
+                <div className="absolute -bottom-6 -right-6 bg-brand-orange-600 text-pure-white p-6 rounded-2xl shadow-xl">
+                  <div className="text-2xl font-bold">1</div>
+                  <div className="text-sm">Deluxe Kamer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Room Overview Section */}
+        <section id="rooms" className="py-16 bg-pure-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+                Onze Deluxe Kamer met Jacuzzi
+              </h2>
+              <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto">
+                Ervaar olympische luxe in onze signature Deluxe Kamer, uitgerust met premium jacuzzi en sportieve elegantie.
+              </p>
+              
+              {/* Top 10 Ranking Text */}
+              <p className="text-xs mt-4 italic" style={{ color: '#6B7280' }}>
+                Dit hotel staat op positie #2 in de top 10 jacuzzi hotels van Nederland
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 max-w-2xl mx-auto">
+              {hotel.rooms?.map((room) => (
+                <RoomCard key={room.id} room={room} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Olympic Features Section */}
+        <section className="py-16 bg-light-gray">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+                Olympische Faciliteiten & Wellness
+              </h2>
+              <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
+                Ontdek onze unieke combinatie van sportieve excellentie en wellness luxe in het hart van Amsterdam.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-pure-white rounded-2xl p-8 shadow-lg">
+                <div className="text-brand-orange-600 mb-4">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17 4h-10c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h10c1.11 0 2-.89 2-2v-12c0-1.11-.89-2-2-2zm-5 14.5c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Olympisch Zwembad</h3>
+                <p className="text-brand-navy-600">Professioneel zwembad voor training en ontspanning met olympische afmetingen.</p>
+              </div>
+
+              <div className="bg-pure-white rounded-2xl p-8 shadow-lg">
+                <div className="text-brand-orange-600 mb-4">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Fitness Center</h3>
+                <p className="text-brand-navy-600">State-of-the-art fitnessruimte met professionele apparatuur voor optimale training.</p>
+              </div>
+
+              <div className="bg-pure-white rounded-2xl p-8 shadow-lg">
+                <div className="text-brand-orange-600 mb-4">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Spa & Wellness</h3>
+                <p className="text-brand-navy-600">Luxe wellness faciliteiten inclusief sauna, stoomcabine en professionele spa behandelingen.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Location Section */}
+        <section className="py-16 bg-pure-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+                Locatie van Olympic Hotel Amsterdam
+              </h2>
+              <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
+                Gelegen in de prestigieuze PC Hooftstraat, nabij Vondelpark en de belangrijkste shopping districts van Amsterdam.
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <MapboxMap
+                longitude={hotel.coordinates[0]}
+                latitude={hotel.coordinates[1]}
+                hotelName={hotel.name}
+                address={hotel.address}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-light-gray">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Facilities */}
+              <div>
+                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">
+                  Olympic Hotel Faciliteiten
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {hotel.facilities.map((facility, index) => (
+                    <div key={index} className="flex items-center p-4 bg-pure-white rounded-lg shadow-sm">
+                      <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 text-brand-orange-600 flex-shrink-0">
+                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
+                      </svg>
+                      <span className="text-brand-navy-700 font-medium">{facility}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* FAQ */}
+              <div>
+                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">
+                  Veelgestelde Vragen
+                </h3>
+                <div className="space-y-6">
+                  <div className="bg-pure-white rounded-lg p-6 shadow-sm">
+                    <h4 className="font-bold text-brand-navy-900 mb-2">
+                      Wat maakt Olympic Hotel uniek?
+                    </h4>
+                    <p className="text-brand-navy-700">
+                      Onze unieke combinatie van olympische sportfaciliteiten en luxe wellness, inclusief jacuzzi kamers en professioneel zwembad.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-pure-white rounded-lg p-6 shadow-sm">
+                    <h4 className="font-bold text-brand-navy-900 mb-2">
+                      Welke sportfaciliteiten zijn er beschikbaar?
+                    </h4>
+                    <p className="text-brand-navy-700">
+                      Olympisch zwembad, moderne fitness center, spa & wellness faciliteiten en professionele trainingsruimtes.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-pure-white rounded-lg p-6 shadow-sm">
+                    <h4 className="font-bold text-brand-navy-900 mb-2">
+                      Is het hotel geschikt voor sporters?
+                    </h4>
+                    <p className="text-brand-navy-700">
+                      Absoluut! Ons hotel is speciaal ontworpen voor sporters met professionele faciliteiten en herstel amenities.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Internal Links */}
+            <div className="mt-12 pt-8 border-t border-brand-navy-200 text-center">
+              <p className="text-brand-navy-600 mb-6">
+                Bekijk ook onze andere <Link href="/hotel-met-jacuzzi-op-kamer" className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">hotels met jacuzzi op de kamer</Link> of 
+                ontdek meer <Link href="/provincie/noord-holland" className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">sportieve hotels in Noord-Holland</Link>.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Hotels */}
+        <section className="py-16 bg-pure-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+                Andere top hotels met jacuzzi in Noord-Holland
+              </h2>
+              <p className="text-lg text-brand-navy-600">
+                Ontdek meer prachtige hotels met jacuzzi in de provincie Noord-Holland
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {noordHollandHotels.slice(0, 3).map((relatedHotel) => (
+                <HotelCard key={relatedHotel.id} hotel={relatedHotel} />
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Link 
+                href="/provincie/noord-holland"
+                className="inline-flex items-center bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Bekijk alle hotels in Noord-Holland
+                <svg width="20" height="20" viewBox="0 0 20 20" className="ml-2">
+                  <path d="M7 3l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Schema.org Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Hotel",
+              "name": hotel.name,
+              "description": `${hotel.name} - Sportieve luxe hotel met jacuzzi kamers en olympische faciliteiten in Amsterdam. Perfect voor sporters en wellness liefhebbers.`,
               "image": hotel.heroImage,
               "address": {
                 "@type": "PostalAddress",
