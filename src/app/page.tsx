@@ -1246,7 +1246,7 @@ export default function HomePage() {
               <div className="flex flex-col lg:flex-row">
                 <div className="lg:w-1/3 h-48 lg:h-auto relative">
                   <Image
-                    src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Van der Valk De Bilt - Utrecht.jpg"
                     alt="Van der Valk Hotel Amsterdam - Jacuzzi op kamer"
                     fill
                     className="object-cover"
@@ -1331,7 +1331,7 @@ export default function HomePage() {
               <div className="flex flex-col lg:flex-row">
                 <div className="lg:w-1/3 h-48 lg:h-auto relative">
                   <Image
-                    src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Kasteel Bloemendal.jpg"
                     alt="Kasteel Bloemendal - Jacuzzi op kamer"
                     fill
                     className="object-cover"
@@ -1371,7 +1371,7 @@ export default function HomePage() {
               <div className="flex flex-col lg:flex-row">
                 <div className="lg:w-1/3 h-48 lg:h-auto relative">
                   <Image
-                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Fletcher Hotel-Restaurant Jan Van Scorel.jpg"
                     alt="Fletcher Wellness Hotel - Jacuzzi op kamer"
                     fill
                     className="object-cover"
@@ -1451,7 +1451,7 @@ export default function HomePage() {
               <div className="flex flex-col lg:flex-row">
                 <div className="lg:w-1/3 h-48 lg:h-auto relative">
                   <Image
-                    src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Wellness-Hotel Trivium.jpg"
                     alt="Rotterdam Marina Hotel - Jacuzzi op kamer"
                     fill
                     className="object-cover"
@@ -1491,7 +1491,7 @@ export default function HomePage() {
               <div className="flex flex-col lg:flex-row">
                 <div className="lg:w-1/3 h-48 lg:h-auto relative">
                   <Image
-                    src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Mitland Hotel Utrecht.jpg"
                     alt="Utrecht Central Wellness - Jacuzzi op kamer"
                     fill
                     className="object-cover"
@@ -1571,7 +1571,7 @@ export default function HomePage() {
               <div className="flex flex-col lg:flex-row">
                 <div className="lg:w-1/3 h-48 lg:h-auto relative">
                   <Image
-                    src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Inntel Hotels Utrecht Centre.jpg"
                     alt="Eindhoven Design Hotel - Jacuzzi op kamer"
                     fill
                     className="object-cover"
