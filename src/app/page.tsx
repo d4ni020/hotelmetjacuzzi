@@ -286,7 +286,7 @@ const mockHotels: Hotel[] = [
       price_range: "Vanaf €189",
       facilities: ["Luchthaven nabij", "Jacuzzi", "Business", "Wellness", "24/7 Service", "Shuttle service"],
       affiliate_link: "https://booking.com/vandervalk-schiphol",
-      image_url: "https://images.unsplash.com/photo-1587385789092-ee287051bc73?q=80&w=1600&auto=format&fit=crop",
+      image_url: "/images/van-der-valk-schiphol-exterior.jpg",
       rating: 4.5,
       created_at: "2024-01-01"
     },
@@ -699,7 +699,7 @@ export default function HomePage() {
               Of je nu zoekt naar een <strong>goedkoop hotel met jacuzzi</strong>, een <strong>wellness hotel met jacuzzi in Nederland</strong>, 
               of een <strong>romantisch hotel met jacuzzi</strong> - wij hebben de perfecte accommodatie voor jouw droomvakantie.
             </p>
-          </div>
+            </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Goedkoop hotel met jacuzzi */}
@@ -717,7 +717,7 @@ export default function HomePage() {
                     <span className="bg-brand-navy-900 text-pure-white px-3 py-1 rounded-full text-xs font-semibold">
                       Budget Vriendelijk
                     </span>
-                  </div>
+        </div>
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300">
@@ -822,11 +822,11 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-6">
               Uitgelichte Hotels met Jacuzzi
-            </h2>
+          </h2>
             <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
               Onze top selectie van romantische hotels voor een perfecte wellness overnachting ({filteredHotels.length} hotels)
             </p>
-          </div>
+        </div>
 
 
           {/* Filter Section */}
@@ -912,8 +912,8 @@ export default function HomePage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredHotels.slice(0, visibleHotels).map((hotel) => (
                   <HotelCard key={hotel.id} hotel={hotel} />
-                ))}
-              </div>
+            ))}
+          </div>
               
               {/* Load More Button - Only show if there are more hotels to load */}
               {visibleHotels < filteredHotels.length && (
@@ -927,8 +927,8 @@ export default function HomePage() {
                 </div>
               )}
             </>
-          ) : (
-            <div className="text-center py-12">
+        ) : (
+          <div className="text-center py-12">
               <div className="text-brand-orange-600 text-6xl mb-6">🏨</div>
               <h3 className="text-2xl font-bold text-brand-navy-900 mb-4">
                 Geen hotels gevonden
@@ -942,8 +942,8 @@ export default function HomePage() {
               >
                 Reset filters
               </button>
-            </div>
-          )}
+          </div>
+        )}
         </div>
       </section>
 
@@ -956,8 +956,8 @@ export default function HomePage() {
             </h2>
             <p className="text-lg text-brand-navy-600">
               Verken de beste hotels met jacuzzi in elke provincie van Nederland
-            </p>
-          </div>
+          </p>
+        </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {mockProvinces.map((province) => (
@@ -968,7 +968,7 @@ export default function HomePage() {
               >
                 <div className="text-2xl font-bold text-brand-navy-900 mb-2 group-hover:text-brand-orange-600 transition-colors">
                   {province.name}
-                </div>
+    </div>
                 <div className="text-brand-navy-600 text-sm">
                   Ontdek hotels →
                 </div>
@@ -1291,7 +1291,7 @@ export default function HomePage() {
               <div className="flex flex-col lg:flex-row">
                 <div className="lg:w-1/3 h-48 lg:h-auto relative">
                   <Image
-                    src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Olympic Hotel.jpg"
                     alt="Olympic Hotel - Jacuzzi op kamer"
                     fill
                     className="object-cover"
@@ -1411,7 +1411,7 @@ export default function HomePage() {
               <div className="flex flex-col lg:flex-row">
                 <div className="lg:w-1/3 h-48 lg:h-auto relative">
                   <Image
-                    src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Inntel Hotels Amsterdam Centre.jpg"
                     alt="Inntel Hotels Amsterdam Centre - Jacuzzi op kamer"
                     fill
                     className="object-cover"
@@ -1531,7 +1531,7 @@ export default function HomePage() {
               <div className="flex flex-col lg:flex-row">
                 <div className="lg:w-1/3 h-48 lg:h-auto relative">
                   <Image
-                    src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Van der Valk Akersloot.jpg"
                     alt="Van der Valk Akersloot - Jacuzzi op kamer"
                     fill
                     className="object-cover"
@@ -1611,7 +1611,7 @@ export default function HomePage() {
               <div className="flex flex-col lg:flex-row">
                 <div className="lg:w-1/3 h-48 lg:h-auto relative">
                   <Image
-                    src="https://images.unsplash.com/photo-1587385789092-ee287051bc73?q=80&w=600&auto=format&fit=crop"
+                    src="/images/van-der-valk-schiphol-exterior.jpg"
                     alt="Van der Valk Schiphol - Jacuzzi op kamer"
                     fill
                     className="object-cover"
