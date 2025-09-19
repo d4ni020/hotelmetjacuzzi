@@ -145,6 +145,57 @@ const mockHotels: Record<string, Hotel> = {
         affiliateLink: 'https://booking.com/van-der-valk-schiphol-deluxe-suite'
       }
     ]
+  },
+  'inntel-hotels-amsterdam-centre': {
+    id: 5,
+    name: 'Inntel Hotels Amsterdam Centre',
+    location: 'Amsterdam, Noord-Holland',
+    city: 'Amsterdam',
+    province: 'Noord-Holland',
+    priceRange: '€195 - €349',
+    jacuzziType: 'Wellness suite jacuzzi',
+    facilities: ['Jacuzzi Suite', 'Wellness Center', 'Centrum locatie', 'Restaurant', 'Business Center', '24/7 Service'],
+    rating: 4.3,
+    reviewCount: 687,
+    heroImage: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop',
+    description: `Inntel Hotels Amsterdam Centre is een modern stadshotel met unieke design kamers en luxueuze wellness faciliteiten in het hart van Amsterdam. Dit elegante hotel met jacuzzi combineert hedendaagse architectuur met comfort.
+
+    Onze specialty wellness kamers zijn uitgerust met privé jacuzzi's en bieden een serene ontsnapping in de bruisende hoofdstad. Met een centrale locatie nabij alle belangrijke attracties en het karakteristieke design van Inntel Hotels.
+    
+    Perfect voor een romantische citytrip met wellness ervaring. Geniet van de dynamiek van Amsterdam overdag en kom tot rust in uw privé wellness suite met jacuzzi.`,
+    coordinates: [4.9041, 52.3676], // Amsterdam coordinates
+    address: 'Nieuwezijds Voorburgwal 67, 1012 RE Amsterdam',
+    affiliateLink: 'https://booking.com/inntel-hotels-amsterdam-centre',
+    popularThisMonth: false,
+    rooms: [
+      {
+        id: 1,
+        name: 'Spa Kamer',
+        image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop',
+        description: 'Moderne spa kamer met design jacuzzi en stadsbeeld. Ideaal voor ontspanning in het hart van Amsterdam.',
+        features: ['Design jacuzzi', 'Stadsbeeld', 'Modern design', 'Minibar', 'Flatscreen TV', 'Gratis wifi'],
+        priceRange: '€195 - €249',
+        affiliateLink: 'https://booking.com/inntel-amsterdam-centre-spa'
+      },
+      {
+        id: 2,
+        name: 'Wellness Kamer',
+        image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1600&auto=format&fit=crop',
+        description: 'Ruime wellness kamer met grote jacuzzi en wellness amenities. Complete ontspanningservaring in de stad.',
+        features: ['Grote jacuzzi', 'Wellness amenities', 'Extra ruim', 'Koffiehoek', 'Premium beddengoed', 'Balkon'],
+        priceRange: '€249 - €299',
+        affiliateLink: 'https://booking.com/inntel-amsterdam-centre-wellness'
+      },
+      {
+        id: 3,
+        name: 'Suite',
+        image: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop',
+        description: 'Luxueuze suite met separate woonkamer en premium jacuzzi. Het ultieme in comfort en stijl.',
+        features: ['Premium jacuzzi', 'Separate woonkamer', 'Design meubilair', 'Business desk', 'Room service', 'Panorama uitzicht'],
+        priceRange: '€299 - €349',
+        affiliateLink: 'https://booking.com/inntel-amsterdam-centre-suite'
+      }
+    ]
   }
 }
 
@@ -352,14 +403,6 @@ export default async function HotelDetailPage({ params }: Props) {
                     Meer hotels
                   </Link>
                 </div>
-                
-                {hotel.popularThisMonth && (
-                  <div className="inline-block mt-6">
-                    <div className="bg-brand-orange-600 text-pure-white rounded-full px-6 py-2 shadow-lg">
-                      <span className="text-sm font-bold uppercase">Meest geboekt deze maand</span>
-                    </div>
-                  </div>
-                )}
               </div>
               <div className="relative">
                 <Image
@@ -371,6 +414,13 @@ export default async function HotelDetailPage({ params }: Props) {
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
+                {hotel.popularThisMonth && (
+                  <div className="absolute top-4 right-4 z-10">
+                    <div className="bg-brand-orange-600 text-pure-white rounded-lg px-3 py-1 shadow-lg">
+                      <span className="text-xs font-bold uppercase">Meest geboekt deze maand</span>
+                    </div>
+                  </div>
+                )}
                 <div className="absolute -bottom-6 -right-6 bg-brand-orange-600 text-pure-white p-6 rounded-2xl shadow-xl">
                   <div className="text-2xl font-bold">{hotel.rooms?.length || 2}+</div>
                   <div className="text-sm">Jacuzzi kamers</div>
@@ -532,6 +582,262 @@ export default async function HotelDetailPage({ params }: Props) {
               "@type": "Hotel",
               "name": hotel.name,
               "description": `${hotel.name} - Luxueuze airport hotel met kamers met jacuzzi bij Schiphol. Perfect voor romantische verblijven en zakelijke trips.`,
+              "image": hotel.heroImage,
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": hotel.address.split(',')[0],
+                "addressLocality": hotel.city,
+                "addressRegion": hotel.province,
+                "addressCountry": "NL"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": hotel.coordinates[1],
+                "longitude": hotel.coordinates[0]
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": hotel.rating,
+                "reviewCount": hotel.reviewCount,
+                "bestRating": 5
+              },
+              "priceRange": hotel.priceRange,
+              "amenityFeature": hotel.facilities.map(facility => ({
+                "@type": "LocationFeatureSpecification",
+                "name": facility
+              })),
+              "url": `https://jacuzzihotels.nl/hotel/${awaited.slug}`
+            })
+          }}
+        />
+      </div>
+    )
+  }
+
+  // Special template for Inntel Hotels Amsterdam Centre
+  if (awaited.slug === 'inntel-hotels-amsterdam-centre') {
+    return (
+      <div className="min-h-screen bg-light-gray">
+        {/* SVG Pattern Background */}
+        <WavePattern />
+        
+        {/* Hero Section - Homepage Layout */}
+        <section className="relative bg-brand-navy-900 text-pure-white overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                {/* Breadcrumbs */}
+                <nav className="text-sm text-brand-navy-200 mb-6">
+                  <Link href="/" className="hover:text-brand-orange-600 transition-colors">Home</Link>
+                  <span className="mx-2">/</span>
+                  <Link href="/provincie/noord-holland" className="hover:text-brand-orange-600 transition-colors">
+                    Noord-Holland
+                  </Link>
+                  <span className="mx-2">/</span>
+                  <span className="text-pure-white font-medium">{hotel.name}</span>
+                </nav>
+
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                  Inntel Hotels Amsterdam Centre – design kamers met jacuzzi
+                </h1>
+                <p className="text-xl md:text-2xl text-brand-navy-200 mb-8 leading-relaxed">
+                  Ontdek onze unieke design kamers met wellness faciliteiten in het hart van Amsterdam. 
+                  Perfect voor een romantische citytrip met luxe comfort.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a 
+                    href="#rooms" 
+                    className="bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
+                  >
+                    Bekijk kamers
+                  </a>
+                  <Link 
+                    href="/provincie/noord-holland" 
+                    className="border-2 border-brand-orange-600 text-brand-orange-600 hover:bg-brand-orange-600 hover:text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
+                  >
+                    Meer hotels
+                  </Link>
+                </div>
+              </div>
+              <div className="relative">
+                <Image
+                  src="/images/Inntel Hotels Amsterdam Centre.jpg"
+                  alt="Inntel Hotels Amsterdam Centre - Modern design hotel exterior"
+                  width={600}
+                  height={400}
+                  className="rounded-2xl shadow-2xl"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+                {hotel.popularThisMonth && (
+                  <div className="absolute top-4 right-4 z-10">
+                    <div className="bg-brand-orange-600 text-pure-white rounded-lg px-3 py-1 shadow-lg">
+                      <span className="text-xs font-bold uppercase">Meest geboekt deze maand</span>
+                    </div>
+                  </div>
+                )}
+                <div className="absolute -bottom-6 -right-6 bg-brand-orange-600 text-pure-white p-6 rounded-2xl shadow-xl">
+                  <div className="text-2xl font-bold">{hotel.rooms?.length || 3}+</div>
+                  <div className="text-sm">Design kamers</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Room Overview Section */}
+        <section id="rooms" className="py-16 bg-pure-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+                Onze Design Kamers met Wellness
+              </h2>
+              <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto">
+                Kies uit onze unieke kamers en suites, alle uitgerust met design jacuzzi voor een bijzondere ervaring.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {hotel.rooms?.map((room) => (
+                <RoomCard key={room.id} room={room} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Location Section */}
+        <section className="py-16 bg-light-gray">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+                Locatie van Inntel Hotels Amsterdam Centre
+              </h2>
+              <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
+                Perfect gelegen in het historische centrum van Amsterdam, op loopafstand van alle belangrijke 
+                attracties, musea en het bruisende nachtleven.
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <MapboxMap
+                longitude={hotel.coordinates[0]}
+                latitude={hotel.coordinates[1]}
+                hotelName={hotel.name}
+                address={hotel.address}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Extra Info Block */}
+        <section className="py-16 bg-pure-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Facilities */}
+              <div>
+                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">
+                  Hotel Faciliteiten
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {hotel.facilities.map((facility, index) => (
+                    <div key={index} className="flex items-center p-4 bg-brand-navy-50 rounded-lg">
+                      <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 text-brand-orange-600 flex-shrink-0">
+                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
+                      </svg>
+                      <span className="text-brand-navy-700 font-medium">{facility}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* FAQ */}
+              <div>
+                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">
+                  Veelgestelde Vragen
+                </h3>
+                <div className="space-y-6">
+                  <div className="bg-brand-navy-50 rounded-lg p-6">
+                    <h4 className="font-bold text-brand-navy-900 mb-2">
+                      Welke kamers hebben een jacuzzi?
+                    </h4>
+                    <p className="text-brand-navy-700">
+                      Onze Spa Kamers, Wellness Kamers en Suites zijn alle uitgerust met design jacuzzi's. Standaard kamers hebben deze faciliteit niet.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-brand-navy-50 rounded-lg p-6">
+                    <h4 className="font-bold text-brand-navy-900 mb-2">
+                      Hoe ver is het hotel van de belangrijkste attracties?
+                    </h4>
+                    <p className="text-brand-navy-700">
+                      Het hotel ligt in het centrum van Amsterdam, op loopafstand van de Jordaan, Anne Frank Huis en de Negen Straatjes.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-brand-navy-50 rounded-lg p-6">
+                    <h4 className="font-bold text-brand-navy-900 mb-2">
+                      Wat maakt dit hotel bijzonder?
+                    </h4>
+                    <p className="text-brand-navy-700">
+                      Ons unieke design en de combinatie van moderne wellness faciliteiten in een historisch pand maken dit hotel perfect voor een citytrip.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Internal Links */}
+            <div className="mt-12 pt-8 border-t border-brand-navy-200 text-center">
+              <p className="text-brand-navy-600 mb-6">
+                Bekijk ook onze andere <Link href="/hotel-met-jacuzzi-op-kamer" className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">hotels met jacuzzi op de kamer</Link> of 
+                ontdek meer <Link href="/provincie/noord-holland" className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">hotels in Noord-Holland</Link>.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Hotels */}
+        <section className="py-16 bg-light-gray">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+                Andere hotels met jacuzzi in Noord-Holland
+              </h2>
+              <p className="text-lg text-brand-navy-600">
+                Ontdek meer prachtige hotels met jacuzzi in de provincie Noord-Holland
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {noordHollandHotels.slice(0, 3).map((relatedHotel) => (
+                <HotelCard key={relatedHotel.id} hotel={relatedHotel} />
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Link 
+                href="/provincie/noord-holland"
+                className="inline-flex items-center bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Bekijk alle hotels in Noord-Holland
+                <svg width="20" height="20" viewBox="0 0 20 20" className="ml-2">
+                  <path d="M7 3l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Schema.org Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Hotel",
+              "name": hotel.name,
+              "description": `${hotel.name} - Modern design hotel met jacuzzi kamers in Amsterdam centrum. Perfect voor romantische citytrips en zakelijke verblijven.`,
               "image": hotel.heroImage,
               "address": {
                 "@type": "PostalAddress",
