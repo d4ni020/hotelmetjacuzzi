@@ -646,12 +646,12 @@ export default function HomePage() {
                 vind het perfecte hotel met jacuzzi voor een onvergetelijke ervaring.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a 
-                  href="#filters" 
+                <button 
+                  onClick={() => document.getElementById('filters')?.scrollIntoView({ behavior: 'smooth' })}
                   className="bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
                 >
                   Vind jouw hotel
-                </a>
+                </button>
                 <a 
                   href="#provincies" 
                   className="border-2 border-brand-orange-600 text-brand-orange-600 hover:bg-brand-orange-600 hover:text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
@@ -830,7 +830,7 @@ export default function HomePage() {
 
 
           {/* Filter Section */}
-          <div className="bg-pure-white rounded-2xl shadow-lg p-6 mb-8 border border-brand-navy-200">
+          <div id="filters" className="bg-pure-white rounded-2xl shadow-lg p-6 mb-8 border border-brand-navy-200">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Province filter */}
               <select
