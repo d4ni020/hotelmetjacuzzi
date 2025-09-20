@@ -46,19 +46,39 @@ const mockHotels: Record<string, Hotel> = {
     province: 'Limburg',
     priceRange: '€225 - €395',
     jacuzziType: 'Privé jacuzzi suite',
-    facilities: ['Sauna', 'Wellness spa', 'Fine dining restaurant', 'Gratis parking', 'Room service'],
+    facilities: ['Sauna', 'Wellness spa', 'Fine dining restaurant', 'Gratis parking', 'Room service', 'Kasteel tuin', 'Romantisch'],
     rating: 4.8,
     reviewCount: 342,
-    heroImage: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop',
+    heroImage: '/images/Kasteel Bloemendal.jpg',
     description: `Kasteel Bloemendal is een prachtig gerestaureerd kasteel uit de 18e eeuw, gelegen in het hart van Limburg. Dit romantische hotel met jacuzzi biedt luxueuze suites met privé jacuzzi faciliteiten en een adembenemend uitzicht op de kasteetuin.
 
     Elke suite is elegant ingericht met antieke meubels en moderne voorzieningen. De privé jacuzzi's zijn geplaatst op strategische locaties om optimaal te genieten van de rust en privacy. Perfect voor een romantische escapade of een wellness weekend.
     
-    Het kasteel beschikt over een uitgebreide spa, een bekroond restaurant en prachtige wandelpaden door het landgoed. Voor een onvergetelijke ervaring in Zuid-Limburg.`,
+    Het kasteel beschikt over een uitgebreide spa, een bekroond restaurant en prachtige wandelpaden door het landgoed. Voor een onvergetelijke ervaring in Zuid-Limburg met de perfecte combinatie van historie en moderne luxe.`,
     coordinates: [5.6913, 50.8514], // Maastricht coordinates
     address: 'Bloemendalstraat 150, 6291 CM Vaals',
     affiliateLink: 'https://booking.com/kasteel-bloemendal',
-    popularThisMonth: true
+    popularThisMonth: true,
+    rooms: [
+      {
+        id: 1,
+        name: 'Kasteel Suite',
+        image: '/images/Kasteel Bloemendal.jpg',
+        description: 'Luxueuze kasteel suite met antieke inrichting en moderne jacuzzi. Geniet van het historische karakter en uitzicht op de kasteeltuin.',
+        features: ['Privé jacuzzi', 'Antieke inrichting', 'Kasteeltuin uitzicht', 'King-size bed', 'Minibar', 'Room service'],
+        priceRange: '€225 - €295',
+        affiliateLink: 'https://booking.com/kasteel-bloemendal-suite'
+      },
+      {
+        id: 2,
+        name: 'Royal Kamer',
+        image: '/images/Kasteel Bloemendal.jpg',
+        description: 'Elegante royal kamer met jacuzzi en historische details. Perfect voor een romantisch verblijf in een authentiek kasteel.',
+        features: ['Jacuzzi bad', 'Historische details', 'Balkon', 'Flatscreen TV', 'Koffie/thee faciliteiten', 'Gratis WiFi'],
+        priceRange: '€195 - €245',
+        affiliateLink: 'https://booking.com/kasteel-bloemendal-royal'
+      }
+    ]
   },
   'van-der-valk-amsterdam': {
     id: 2,
@@ -68,19 +88,39 @@ const mockHotels: Record<string, Hotel> = {
     province: 'Noord-Holland',
     priceRange: '€189 - €329',
     jacuzziType: 'Wellness suite jacuzzi',
-    facilities: ['Fitness center', 'Spa', 'Restaurant', 'Bar', 'Gratis wifi'],
+    facilities: ['Fitness center', 'Spa', 'Restaurant', 'Bar', 'Gratis wifi', 'Centrum locatie', 'Business center'],
     rating: 4.6,
     reviewCount: 578,
-    heroImage: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1600&auto=format&fit=crop',
+    heroImage: '/images/Van der Valk Akersloot.jpg',
     description: `Van der Valk Hotel Amsterdam combineert moderne luxe met traditionele Nederlandse gastvrijheid. Dit stijlvolle hotel met jacuzzi ligt in het bruisende hart van Amsterdam, op loopafstand van de beroemde grachten en musea.
 
     De wellness suites zijn voorzien van ruime jacuzzi's en moderne voorzieningen. Geniet van het panoramische uitzicht over de stad terwijl u ontspant in uw privé jacuzzi. Het hotel beschikt over een modern spa complex en een bekroond restaurant.
     
-    Perfect gelegen voor zowel zakelijke als romantische verblijven. Ontdek Amsterdam overdag en kom tot rust in uw luxueuze suite met jacuzzi.`,
+    Perfect gelegen voor zowel zakelijke als romantische verblijven. Ontdek Amsterdam overdag en kom tot rust in uw luxueuze suite met jacuzzi. De ideale combinatie van stadsbelevenis en wellness ontspanning.`,
     coordinates: [4.9041, 52.3676], // Amsterdam coordinates
     address: 'Weteringschans 136, 1017 XV Amsterdam',
     affiliateLink: 'https://booking.com/van-der-valk-amsterdam',
-    popularThisMonth: false
+    popularThisMonth: false,
+    rooms: [
+      {
+        id: 1,
+        name: 'Deluxe Wellness Suite',
+        image: '/images/Van der Valk Akersloot.jpg',
+        description: 'Luxueuze wellness suite met panoramisch uitzicht over Amsterdam en privé jacuzzi. Perfect voor een romantische citytrip.',
+        features: ['Privé jacuzzi', 'Stads panorama', 'Separate woonkamer', 'King-size bed', 'Minibar', 'Business desk'],
+        priceRange: '€229 - €329',
+        affiliateLink: 'https://booking.com/van-der-valk-amsterdam-deluxe'
+      },
+      {
+        id: 2,
+        name: 'Superior Jacuzzi Kamer',
+        image: '/images/Van der Valk Akersloot.jpg',
+        description: 'Moderne superior kamer met jacuzzi en alle comfort. Ideaal voor een luxe verblijf in het hart van Amsterdam.',
+        features: ['Jacuzzi bad', 'Grachten uitzicht', 'Flatscreen TV', 'Koffie/thee faciliteiten', 'Gratis WiFi', 'Room service'],
+        priceRange: '€189 - €249',
+        affiliateLink: 'https://booking.com/van-der-valk-amsterdam-superior'
+      }
+    ]
   },
   'fletcher-wellness-hotel': {
     id: 3,
@@ -90,19 +130,39 @@ const mockHotels: Record<string, Hotel> = {
     province: 'Gelderland',
     priceRange: '€159 - €279',
     jacuzziType: 'Wellness jacuzzi',
-    facilities: ['Uitgebreide spa', 'Zwembad', 'Sauna', 'Massages', 'Restaurant'],
+    facilities: ['Uitgebreide spa', 'Zwembad', 'Sauna', 'Massages', 'Restaurant', 'Natuur locatie', 'Gratis parkeren'],
     rating: 4.5,
     reviewCount: 423,
-    heroImage: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop',
+    heroImage: '/images/Fletcher Hotel-Restaurant Jan Van Scorel.jpg',
     description: `Fletcher Wellness Hotel in Arnhem is een oase van rust en ontspanning in de prachtige Veluweregio. Dit moderne wellness hotel met jacuzzi biedt de perfecte combinatie van luxe accommodatie en uitgebreide spa faciliteiten.
 
     De elegante kamers en suites zijn voorzien van privé jacuzzi's en bieden een serene omgeving voor ontspanning. Het hotel beschikt over een uitgebreid wellness center met verschillende sauna's, een zwembad en professionele massagebehandelingen.
     
-    Gelegen nabij het Nationaal Park De Hoge Veluwe, is dit de ideale uitvalsbasis voor natuur- en cultuurliefhebbers die willen genieten van luxe wellness faciliteiten.`,
+    Gelegen nabij het Nationaal Park De Hoge Veluwe, is dit de ideale uitvalsbasis voor natuur- en cultuurliefhebbers die willen genieten van luxe wellness faciliteiten. Perfect voor een rustgevende wellness break in de natuur.`,
     coordinates: [5.8985, 51.9851], // Arnhem coordinates
     address: 'Velperweg 28, 6824 BZ Arnhem',
     affiliateLink: 'https://booking.com/fletcher-wellness-hotel',
-    popularThisMonth: false
+    popularThisMonth: false,
+    rooms: [
+      {
+        id: 1,
+        name: 'Wellness Suite',
+        image: '/images/Fletcher Hotel-Restaurant Jan Van Scorel.jpg',
+        description: 'Ruime wellness suite met luxe jacuzzi en directe toegang tot het spa center. Omgeven door de natuur van de Veluwe.',
+        features: ['Luxe jacuzzi', 'Spa toegang', 'Natuur uitzicht', 'King-size bed', 'Balkon', 'Minibar'],
+        priceRange: '€199 - €279',
+        affiliateLink: 'https://booking.com/fletcher-wellness-suite'
+      },
+      {
+        id: 2,
+        name: 'Comfort Wellness Kamer',
+        image: '/images/Fletcher Hotel-Restaurant Jan Van Scorel.jpg',
+        description: 'Comfortabele wellness kamer met jacuzzi en moderne amenities. Ideaal voor een ontspannen verblijf in de natuur.',
+        features: ['Jacuzzi bad', 'Wellness amenities', 'Flatscreen TV', 'Koffie/thee faciliteiten', 'Gratis WiFi', 'Parkeerplaats'],
+        priceRange: '€159 - €219',
+        affiliateLink: 'https://booking.com/fletcher-wellness-comfort'
+      }
+    ]
   },
   'van-der-valk-schiphol': {
     id: 4,
@@ -129,7 +189,7 @@ const mockHotels: Record<string, Hotel> = {
       {
         id: 1,
         name: 'Deluxe Plus Kamer',
-        image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop',
+        image: '/images/Inntel Hotels Amsterdam Centre.jpg',
         description: 'Luxueuze kamer met king-size bed en privé jacuzzi. Perfect voor een romantische ervaring met uitzicht op de start- en landingsbanen.',
         features: ['Privé jacuzzi', 'King-size bed', 'Uitzicht op runway', 'Minibar', 'Flatscreen TV', 'Gratis wifi'],
         priceRange: '€189 - €249',
@@ -138,7 +198,7 @@ const mockHotels: Record<string, Hotel> = {
       {
         id: 2,
         name: 'Deluxe Plus Suite',
-        image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1600&auto=format&fit=crop',
+        image: '/images/Inntel Hotels Amsterdam Centre.jpg',
         description: 'Ruime suite met separate woonkamer en extra grote jacuzzi. Ideaal voor een luxe verblijf met alle comfort en privacy.',
         features: ['Extra grote jacuzzi', 'Separate woonkamer', 'Business desk', 'Koffiehoek', 'Premium beddengoed', 'Balkon'],
         priceRange: '€269 - €349',
@@ -157,7 +217,7 @@ const mockHotels: Record<string, Hotel> = {
     facilities: ['Jacuzzi Suite', 'Wellness Center', 'Centrum locatie', 'Restaurant', 'Business Center', '24/7 Service'],
     rating: 4.3,
     reviewCount: 687,
-    heroImage: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop',
+    heroImage: '/images/Inntel Hotels Amsterdam Centre.jpg',
     description: `Inntel Hotels Amsterdam Centre is een modern stadshotel met unieke design kamers en luxueuze wellness faciliteiten in het hart van Amsterdam. Dit elegante hotel met jacuzzi combineert hedendaagse architectuur met comfort.
 
     Onze specialty wellness kamers zijn uitgerust met privé jacuzzi's en bieden een serene ontsnapping in de bruisende hoofdstad. Met een centrale locatie nabij alle belangrijke attracties en het karakteristieke design van Inntel Hotels.
@@ -171,7 +231,7 @@ const mockHotels: Record<string, Hotel> = {
       {
         id: 1,
         name: 'Spa Kamer',
-        image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop',
+        image: '/images/Inntel Hotels Amsterdam Centre.jpg',
         description: 'Moderne spa kamer met design jacuzzi en stadsbeeld. Ideaal voor ontspanning in het hart van Amsterdam.',
         features: ['Design jacuzzi', 'Stadsbeeld', 'Modern design', 'Minibar', 'Flatscreen TV', 'Gratis wifi'],
         priceRange: '€195 - €249',
@@ -180,7 +240,7 @@ const mockHotels: Record<string, Hotel> = {
       {
         id: 2,
         name: 'Wellness Kamer',
-        image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1600&auto=format&fit=crop',
+        image: '/images/Inntel Hotels Amsterdam Centre.jpg',
         description: 'Ruime wellness kamer met grote jacuzzi en wellness amenities. Complete ontspanningservaring in de stad.',
         features: ['Grote jacuzzi', 'Wellness amenities', 'Extra ruim', 'Koffiehoek', 'Premium beddengoed', 'Balkon'],
         priceRange: '€249 - €299',
@@ -205,15 +265,15 @@ const mockHotels: Record<string, Hotel> = {
     province: 'Noord-Holland',
     priceRange: '€189 - €289',
     jacuzziType: 'Luxe jacuzzi suite',
-    facilities: ['Jacuzzi Suite', 'Olympisch Zwembad', 'Fitness Center', 'Spa & Wellness', 'Restaurant', 'Bar'],
+    facilities: ['Jacuzzi Suite', 'Olympisch Zwembad', 'Fitness Center', 'Spa & Wellness', 'Restaurant', 'Bar', 'Centrum locatie'],
     rating: 4.4,
     reviewCount: 892,
-    heroImage: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1600&auto=format&fit=crop',
+    heroImage: '/images/Olympic Hotel.jpg',
     description: `Olympic Hotel Amsterdam combineert sportieve excellentie met luxe wellness in het hart van Amsterdam. Dit unieke hotel met jacuzzi biedt een perfecte balans tussen actieve ontspanning en romantische momenten.
 
     Onze signature Deluxe Kamers zijn uitgerust met luxe jacuzzi's en bieden een serene ontsnapping na een dag vol Amsterdamse avonturen. Met olympische faciliteiten en wellness amenities voor een complete ervaring.
     
-    Perfect voor sporters, wellness liefhebbers en koppels die op zoek zijn naar een unieke combinatie van activiteit en ontspanning in Amsterdam.`,
+    Perfect voor sporters, wellness liefhebbers en koppels die op zoek zijn naar een unieke combinatie van activiteit en ontspanning in Amsterdam. De ideale keuze voor een actief en romantisch weekend.`,
     coordinates: [4.8952, 52.3702], // Amsterdam coordinates
     address: 'PC Hooftstraat 138-140, 1071 CC Amsterdam',
     affiliateLink: 'https://booking.com/olympic-hotel-amsterdam',
@@ -221,16 +281,25 @@ const mockHotels: Record<string, Hotel> = {
     rooms: [
       {
         id: 1,
-        name: 'Deluxe Kamer',
-        image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1600&auto=format&fit=crop',
-        description: 'Luxueuze deluxe kamer met premium jacuzzi en olympische sfeer. Ideaal voor een sportieve wellness ervaring.',
-        features: ['Premium jacuzzi', 'Olympische thema', 'Sportieve inrichting', 'Minibar', 'Smart TV', 'Fitness amenities'],
-        priceRange: '€189 - €289',
-        affiliateLink: 'https://booking.com/olympic-hotel-deluxe'
+        name: 'Olympic Deluxe Suite',
+        image: '/images/Olympic Hotel.jpg',
+        description: 'Luxueuze Olympic suite met privé jacuzzi en toegang tot alle sportfaciliteiten. Perfect voor een actieve en romantische ervaring.',
+        features: ['Privé jacuzzi', 'Zwembad toegang', 'Fitness access', 'King-size bed', 'Minibar', 'Balkon'],
+        priceRange: '€229 - €289',
+        affiliateLink: 'https://booking.com/olympic-hotel-deluxe-suite'
+      },
+      {
+        id: 2,
+        name: 'Spa Jacuzzi Kamer',
+        image: '/images/Olympic Hotel.jpg',
+        description: 'Moderne spa kamer met jacuzzi en wellness amenities. Ideaal voor ontspanning na een actieve dag in Amsterdam.',
+        features: ['Jacuzzi bad', 'Spa amenities', 'Sportfaciliteiten', 'Flatscreen TV', 'Gratis WiFi', 'Room service'],
+        priceRange: '€189 - €239',
+        affiliateLink: 'https://booking.com/olympic-hotel-spa-jacuzzi'
       }
     ]
   },
-  'kasteel-bloemendal': {
+  'kasteel-bloemendal-detail': {
     id: 3,
     name: 'Kasteel Bloemendal',
     location: 'Vaals, Limburg',
@@ -260,6 +329,48 @@ const mockHotels: Record<string, Hotel> = {
         features: ['Luxe jacuzzi', 'Kingsize bed', 'Kasteel ambiance', 'Historische details', 'Premium amenities', 'Tuinzicht'],
         priceRange: '€249 - €389',
         affiliateLink: 'https://booking.com/kasteel-bloemendal-deluxe-suite'
+      }
+    ]
+  },
+  'van-der-valk-akersloot': {
+    id: 5,
+    name: 'Van der Valk Akersloot',
+    location: 'Akersloot, Noord-Holland',
+    city: 'Akersloot',
+    province: 'Noord-Holland',
+    priceRange: '€169 - €289',
+    jacuzziType: 'Wellness kamers met jacuzzi',
+    facilities: ['Wellness Center', 'Restaurant', 'Bar', 'Fitness', 'Gratis Wifi', 'Gratis Parkeren', 'Terras'],
+    rating: 4.5,
+    reviewCount: 647,
+    heroImage: '/images/Van der Valk Akersloot.jpg',
+    description: `Van der Valk Akersloot is een rustig gelegen wellness hotel in het groene hart van Noord-Holland, perfect voor een ontspannen verblijf met jacuzzi kamers. Dit moderne hotel combineert de rust van de natuur met luxe wellness faciliteiten.
+
+    Onze Deluxe Wellness kamers zijn uitgerust met privé jacuzzi's en bieden een serene ontsnapping van de drukte van het dagelijks leven. Gelegen tussen Amsterdam en Alkmaar, bent u binnen 20 minuten in beide steden.
+    
+    Perfect voor een romantisch weekend of een wellness break. Geniet van onze uitstekende service, moderne faciliteiten en de unieke rust die een jacuzzi op de kamer biedt in een natuurlijke omgeving.`,
+    coordinates: [4.7333, 52.5667], // Akersloot coordinates
+    address: 'Geesterweg 1A, 1921 NV Akersloot',
+    affiliateLink: 'https://booking.com/van-der-valk-akersloot',
+    popularThisMonth: false,
+    rooms: [
+      {
+        id: 1,
+        name: 'Deluxe Tweepersoonskamer',
+        image: '/images/Van der Valk Akersloot.jpg',
+        description: 'Ruime deluxe kamer met moderne jacuzzi en comfortabel tweepersoonsbed. Perfect voor een romantisch verblijf in de natuur.',
+        features: ['Privé jacuzzi', 'Tweepersoonsbed', 'Flatscreen TV', 'Minibar', 'Gratis WiFi', 'Uitzicht op natuur'],
+        priceRange: '€169 - €229',
+        affiliateLink: 'https://booking.com/van-der-valk-akersloot-deluxe'
+      },
+      {
+        id: 2,
+        name: 'Comfort Tweepersoonskamer',
+        image: '/images/Van der Valk Akersloot.jpg',
+        description: 'Comfortabele kamer met bubbelbad en alle moderne voorzieningen. Ideaal voor een ontspannen verblijf.',
+        features: ['Bubbelbad', 'Tweepersoonsbed', 'Flatscreen TV', 'Koffie/thee faciliteiten', 'Gratis WiFi', 'Balkon'],
+        priceRange: '€149 - €189',
+        affiliateLink: 'https://booking.com/van-der-valk-akersloot-comfort'
       }
     ]
   }
@@ -424,8 +535,236 @@ export default async function HotelDetailPage({ params }: Props) {
     notFound()
   }
 
-  // Special template for Van der Valk Schiphol
-  if (awaited.slug === 'van-der-valk-schiphol') {
+  // Special template for hotels with rooms
+  if (hotel.rooms && hotel.rooms.length > 0) {
+    return (
+      <div className="min-h-screen bg-light-gray">
+        {/* SVG Pattern Background */}
+        <WavePattern />
+        
+        {/* Hero Section - Homepage Layout */}
+        <section className="relative bg-brand-navy-900 text-pure-white overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                {/* Breadcrumbs */}
+                <nav className="text-sm text-brand-navy-200 mb-6">
+                  <Link href="/" className="hover:text-brand-orange-600 transition-colors">Home</Link>
+                  <span className="mx-2">/</span>
+                  <Link href={`/provincie/${hotel.province.toLowerCase().replace(' ', '-')}`} className="hover:text-brand-orange-600 transition-colors">
+                    {hotel.province}
+                  </Link>
+                  <span className="mx-2">/</span>
+                  <Link href={`/stad/${hotel.city.toLowerCase().replace(' ', '-')}`} className="hover:text-brand-orange-600 transition-colors">
+                    {hotel.city}
+                  </Link>
+                  <span className="mx-2">/</span>
+                  <span className="text-pure-white font-medium">{hotel.name}</span>
+                </nav>
+
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                  {hotel.name} – romantische suite met jacuzzi in {hotel.province}
+                </h1>
+                <p className="text-xl md:text-2xl text-brand-navy-200 mb-8 leading-relaxed">
+                  {hotel.description.split('\n\n')[0]}
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link 
+                    href="#rooms"
+                    className="bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
+                  >
+                    Bekijk kamers
+                  </Link>
+                  <Link 
+                    href={hotel.affiliateLink}
+                    className="border-2 border-brand-orange-600 text-brand-orange-600 hover:bg-brand-orange-600 hover:text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
+                  >
+                    Boek nu vanaf {hotel.priceRange.split(' - ')[0]}
+                  </Link>
+                </div>
+              </div>
+              <div className="relative">
+                <Image
+                  src={hotel.heroImage}
+                  alt={`${hotel.name} - Wellness hotel met jacuzzi`}
+                  width={600}
+                  height={400}
+                  className="rounded-2xl shadow-2xl"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+                <div className="absolute -bottom-6 -right-6 bg-brand-orange-600 text-pure-white p-6 rounded-2xl shadow-xl">
+                  <div className="text-2xl font-bold">★ {hotel.rating}</div>
+                  <div className="text-sm">{hotel.reviewCount} reviews</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Room Overview Section */}
+        <section id="rooms" className="py-16 bg-pure-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+                Onze Wellness Kamers met Jacuzzi
+              </h2>
+              <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto">
+                Kies uit onze comfortabele kamers, alle uitgerust met jacuzzi of bubbelbad voor een ontspannen verblijf in de natuur.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {hotel.rooms?.map((room) => (
+                <RoomCard key={room.id} room={room} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Location Section */}
+        <section className="py-16 bg-light-gray">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+                Locatie van {hotel.name}
+              </h2>
+              <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
+                Gelegen in {hotel.city}, {hotel.province}. Een prachtige locatie voor een ontspannen verblijf met uitstekende bereikbaarheid.
+              </p>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <MapboxMap
+                longitude={hotel.coordinates[0]}
+                latitude={hotel.coordinates[1]}
+                hotelName={hotel.name}
+                address={hotel.address}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Wellness Features Section */}
+        <section className="py-16 bg-pure-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+                Wellness & Ontspanning
+              </h2>
+              <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
+                {hotel.name} biedt de perfecte combinatie van comfort en wellness faciliteiten 
+                voor een onvergetelijk verblijf in {hotel.province}.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-brand-navy-50 rounded-2xl p-8 text-center border border-brand-navy-200">
+                <div className="text-4xl mb-4">🛁</div>
+                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Privé Jacuzzi</h3>
+                <p className="text-brand-navy-600">Ontspan in uw eigen privé jacuzzi met moderne voorzieningen en natuurlijk uitzicht.</p>
+              </div>
+              
+              <div className="bg-brand-navy-50 rounded-2xl p-8 text-center border border-brand-navy-200">
+                <div className="text-4xl mb-4">🌿</div>
+                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Natuurlijke Omgeving</h3>
+                <p className="text-brand-navy-600">Gelegen in het groene hart van Noord-Holland, omringd door rust en natuur.</p>
+              </div>
+              
+              <div className="bg-brand-navy-50 rounded-2xl p-8 text-center border border-brand-navy-200">
+                <div className="text-4xl mb-4">🍽️</div>
+                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Restaurant & Bar</h3>
+                <p className="text-brand-navy-600">Geniet van heerlijke gerechten en drankjes in ons gezellige restaurant en bar.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Hotels Section */}
+        <section className="py-16 bg-light-gray">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+                Andere Hotels in Noord-Holland
+              </h2>
+              <p className="text-lg text-brand-navy-600">
+                Ontdek ook deze prachtige jacuzzi hotels in Noord-Holland
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {noordHollandHotels.filter(h => h.slug !== 'van-der-valk-akersloot').slice(0, 3).map((relatedHotel) => (
+                <div key={relatedHotel.id} className="bg-pure-white rounded-2xl shadow-lg overflow-hidden border border-brand-navy-200 hover:shadow-xl hover:border-brand-orange-600 transition-all duration-300">
+                  <div className="relative h-48">
+                    <Image
+                      src={relatedHotel.image_url}
+                      alt={relatedHotel.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-brand-navy-900 mb-2">{relatedHotel.name}</h3>
+                    <p className="text-brand-navy-600 mb-4 line-clamp-2">{relatedHotel.description}</p>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-lg font-bold text-brand-navy-900">{relatedHotel.price_range}</span>
+                      <span className="text-sm text-brand-orange-600 font-semibold">★ {relatedHotel.rating}/5</span>
+                    </div>
+                    <Link 
+                      href={`/hotel/${relatedHotel.slug}`}
+                      className="block w-full bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 text-center"
+                    >
+                      Bekijk hotel
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Hotel',
+              name: hotel.name,
+              description: hotel.description,
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: hotel.address.split(',')[0],
+                addressLocality: hotel.city,
+                addressRegion: hotel.province,
+                addressCountry: 'NL'
+              },
+              geo: {
+                '@type': 'GeoCoordinates',
+                longitude: hotel.coordinates[0],
+                latitude: hotel.coordinates[1]
+              },
+              starRating: {
+                '@type': 'Rating',
+                ratingValue: hotel.rating,
+                bestRating: 5
+              },
+              priceRange: hotel.priceRange,
+              amenityFeature: hotel.facilities.map(facility => ({
+                '@type': 'LocationFeatureSpecification',
+                name: facility
+              }))
+            })
+          }}
+        />
+      </div>
+    )
+  }
+
+  // Secondary template check (should not be reached)
+  if (false) {
     return (
       <div className="min-h-screen bg-light-gray">
         {/* SVG Pattern Background */}
@@ -612,10 +951,10 @@ export default async function HotelDetailPage({ params }: Props) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Andere hotels met jacuzzi in Noord-Holland
+                Andere hotels met jacuzzi in {hotel.province}
               </h2>
               <p className="text-lg text-brand-navy-600">
-                Ontdek meer prachtige hotels met jacuzzi in de provincie Noord-Holland
+                Ontdek meer prachtige hotels met jacuzzi in de provincie {hotel.province}
               </p>
             </div>
 
@@ -868,10 +1207,10 @@ export default async function HotelDetailPage({ params }: Props) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Andere hotels met jacuzzi in Noord-Holland
+                Andere hotels met jacuzzi in {hotel.province}
               </h2>
               <p className="text-lg text-brand-navy-600">
-                Ontdek meer prachtige hotels met jacuzzi in de provincie Noord-Holland
+                Ontdek meer prachtige hotels met jacuzzi in de provincie {hotel.province}
               </p>
             </div>
 
