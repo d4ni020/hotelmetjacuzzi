@@ -8,8 +8,8 @@ interface Hotel {
   id: number
   name: string
   slug: string
-  city: string
-  province: string
+  city?: string
+  province?: string
   price_range: string
   rating: number
   description: string
@@ -17,6 +17,8 @@ interface Hotel {
   facilities: string[]
   city_id?: number
   province_id?: number
+  affiliate_link: string
+  created_at: string
 }
 
 // Mock data voor goedkope jacuzzi hotels
