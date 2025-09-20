@@ -802,65 +802,19 @@ const relatedHotels = [
   }
 ]
 
-// Noord-Holland related hotels (for Schiphol page)
-const noordHollandHotels = [
-  {
-    id: 7,
-    name: "Van der Valk Akersloot",
-    slug: "van-der-valk-akersloot",
-    description: "Rustig gelegen hotel met moderne wellness faciliteiten en jacuzzi kamers nabij Amsterdam.",
-    province_id: 2,
-    city_id: 20,
-    price_range: "Vanaf €169",
-    facilities: ["Jacuzzi Kamers", "Wellness", "Restaurant", "Bar"],
-    affiliate_link: "https://booking.com/van-der-valk-akersloot",
-    image_url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
-    rating: 4.5,
-    created_at: "2024-01-01"
-  },
-  {
-    id: 8,
-    name: "Olympic Hotel Amsterdam",
-    slug: "olympic-hotel",
-    description: "Stijlvol Olympic Hotel in Amsterdam met luxe wellness faciliteiten en privé jacuzzi's.",
-    province_id: 2,
-    city_id: 2,
-    price_range: "Vanaf €199",
-    facilities: ["Privé Jacuzzi", "Wellness", "Restaurant", "Centrum"],
-    affiliate_link: "https://booking.com/olympic-hotel",
-    image_url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1600&auto=format&fit=crop",
-    rating: 4.7,
-    created_at: "2024-01-01"
-  },
-  {
-    id: 9,
-    name: "Inntel Hotels Amsterdam Centre",
-    slug: "inntel-hotels-amsterdam-centre",
-    description: "Modern hotel in Amsterdam centrum met unieke design kamers en jacuzzi faciliteiten.",
-    province_id: 2,
-    city_id: 2,
-    price_range: "Vanaf €219",
-    facilities: ["Jacuzzi Kamers", "Design", "Restaurant", "Centrum"],
-    affiliate_link: "https://booking.com/inntel-hotels-amsterdam-centre",
-    image_url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
-    rating: 4.8,
-    created_at: "2024-01-01"
-  },
-  {
-    id: 10,
-    name: "Fletcher Hotel-Restaurant Jan Van Scorel",
-    slug: "fletcher-hotel-restaurant-jan-van-scorel",
-    description: "Uniek hotel met uitzicht op de Schoorlse Duinen en luxe jacuzzi suites.",
-    province_id: 2,
-    city_id: 2,
-    price_range: "Vanaf €199",
-    facilities: ["Jacuzzi Suites", "Duinzicht", "Wellness", "Natuur"],
-    affiliate_link: "https://booking.com/fletcher-hotel-restaurant-jan-van-scorel",
-    image_url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
-    rating: 4.7,
-    created_at: "2024-01-01"
-  }
-]
+// SVG Pattern Component
+const WavePattern = () => (
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <svg width="100%" height="100%" viewBox="0 0 100 20" className="absolute top-0 left-0 text-brand-navy-100 opacity-50">
+      <defs>
+        <pattern id="wave" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+          <circle cx="10" cy="10" r="1" fill="currentColor" opacity="0.3"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#wave)" />
+    </svg>
+  </div>
+)
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -878,34 +832,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${hotel.name} – romantische suite met jacuzzi in ${hotel.province} | Hotelmetjacuzzi.net`,
-    description: `Ontdek ${hotel.name}, een prachtig hotel met jacuzzi in ${hotel.city}, ${hotel.province}. Boek uw romantische verblijf met privé jacuzzi vanaf ${hotel.priceRange.split(' - ')[0]}.`,
-    keywords: `${hotel.name}, hotel met jacuzzi ${hotel.city}, romantisch hotel ${hotel.province}, wellness hotel, jacuzzi op kamer, ${hotel.city} hotel`,
+    title: `${hotel.name} | Luxe hotel met jacuzzi in ${hotel.province}`,
+    description: `${hotel.description.substring(0, 155)}...`,
+    keywords: [`${hotel.name}`, `hotel met jacuzzi ${hotel.city}`, `wellness hotel ${hotel.province}`, 'jacuzzi kamer', 'romantisch hotel'],
     openGraph: {
-      title: `${hotel.name} | Romantisch Hotel met Jacuzzi`,
-      description: `Romantisch hotel met jacuzzi in ${hotel.city}, ${hotel.province}. ${hotel.description.substring(0, 100)}...`,
+      title: `${hotel.name} - Luxe hotel met jacuzzi`,
+      description: hotel.description.substring(0, 155),
       images: [hotel.heroImage],
-      type: 'website'
-    }
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${hotel.name} - Luxe hotel met jacuzzi`,
+      description: hotel.description.substring(0, 155),
+      images: [hotel.heroImage],
+    },
   }
 }
-
-export async function generateStaticParams() {
-  return Object.keys(mockHotels).map((slug) => ({
-    slug
-  }))
-}
-
-// SVG Pattern Component
-const WavePattern = () => (
-  <div 
-    className="absolute inset-0 pointer-events-none"
-    style={{
-      opacity: 0.03,
-      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='wave-pattern' patternUnits='userSpaceOnUse' width='60' height='60'%3E%3Cg fill='none' stroke='%23F36F21' stroke-width='0.5'%3E%3C!-- Wave lijnen --%3E%3Cpath d='M0 30 Q15 20 30 30 T60 30'/%3E%3Cpath d='M0 40 Q15 30 30 40 T60 40'/%3E%3Cpath d='M0 20 Q15 10 30 20 T60 20'/%3E%3Cpath d='M0 50 Q15 40 30 50 T60 50'/%3E%3C!-- Verticale lijnen --%3E%3Cline x1='15' y1='0' x2='15' y2='60'/%3E%3Cline x1='45' y1='0' x2='45' y2='60'/%3E%3C!-- Accent cirkels --%3E%3Ccircle cx='15' cy='30' r='2' fill='%23F36F21' opacity='0.4'/%3E%3Ccircle cx='45' cy='30' r='2' fill='%23F36F21' opacity='0.4'/%3E%3Ccircle cx='30' cy='15' r='1' fill='%23F36F21' opacity='0.6'/%3E%3Ccircle cx='30' cy='45' r='1' fill='%23F36F21' opacity='0.6'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23wave-pattern)'/%3E%3C/svg%3E")`
-    }}
-  />
-)
 
 export default async function HotelDetailPage({ params }: Props) {
   const awaited = await params
@@ -915,19 +858,19 @@ export default async function HotelDetailPage({ params }: Props) {
     notFound()
   }
 
-  // Special template for hotels with rooms
+  // Universal template for all hotels with rooms
   if (hotel.rooms && hotel.rooms.length > 0) {
     return (
       <div className="min-h-screen bg-light-gray">
         {/* SVG Pattern Background */}
         <WavePattern />
         
-        {/* Hero Section - Homepage Layout */}
+        {/* Hero Section */}
         <section className="relative bg-brand-navy-900 text-pure-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                {/* Breadcrumbs */}
+                {/* Dynamic Breadcrumbs */}
                 <nav className="text-sm text-brand-navy-200 mb-6">
                   <Link href="/" className="hover:text-brand-orange-600 transition-colors">Home</Link>
                   <span className="mx-2">/</span>
@@ -942,61 +885,69 @@ export default async function HotelDetailPage({ params }: Props) {
                   <span className="text-pure-white font-medium">{hotel.name}</span>
                 </nav>
 
+                {/* Dynamic Hero Title */}
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                   {hotel.name} – romantische suite met jacuzzi in {hotel.province}
                 </h1>
+                
+                {/* Dynamic Hero Description */}
                 <p className="text-xl md:text-2xl text-brand-navy-200 mb-8 leading-relaxed">
                   {hotel.description.split('\n\n')[0]}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link 
-                    href="#rooms"
+                  {/* Dynamic CTA Button */}
+                  <a 
+                    href={hotel.affiliateLink}
                     className="bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
                   >
-                    Bekijk kamers
-                  </Link>
+                    Boek nu vanaf {hotel.priceRange.split(' - ')[0]}
+                  </a>
                   <Link 
-                    href={hotel.affiliateLink}
+                    href={`/provincie/${hotel.province.toLowerCase().replace(' ', '-')}`}
                     className="border-2 border-brand-orange-600 text-brand-orange-600 hover:bg-brand-orange-600 hover:text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
                   >
-                    Boek nu vanaf {hotel.priceRange.split(' - ')[0]}
+                    Meer hotels
                   </Link>
                 </div>
               </div>
               <div className="relative">
+                {/* Dynamic Hero Image */}
                 <Image
                   src={hotel.heroImage}
-                  alt={`${hotel.name} - Wellness hotel met jacuzzi`}
+                  alt={`${hotel.name} - romantische suite met jacuzzi`}
                   width={600}
                   height={400}
                   className="rounded-2xl shadow-2xl"
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
                 />
-                <div className="absolute -bottom-6 -right-6 bg-brand-orange-600 text-pure-white p-6 rounded-2xl shadow-xl">
-                  <div className="text-2xl font-bold">★ {hotel.rating}</div>
-                  <div className="text-sm">{hotel.reviewCount} reviews</div>
+                
+                {/* Dynamic Rating */}
+                <div className="absolute -bottom-6 -right-6 bg-brand-orange-600 text-pure-white p-6 rounded-xl shadow-xl">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold">★ {hotel.rating}</div>
+                    <div className="text-sm">({hotel.reviewCount} reviews)</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Room Overview Section */}
+        {/* Rooms Section */}
         <section id="rooms" className="py-16 bg-pure-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Onze Wellness Kamers met Jacuzzi
+                Onze Kamers met Jacuzzi
               </h2>
-              <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto">
-                Kies uit onze comfortabele kamers, alle uitgerust met jacuzzi of bubbelbad voor een ontspannen verblijf in de natuur.
+              <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
+                Geniet van luxe en comfort in onze exclusieve kamers, elk met een privé jacuzzi voor de ultieme ontspanningservaring
               </p>
             </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {hotel.rooms?.map((room) => (
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {hotel.rooms.map((room) => (
                 <RoomCard key={room.id} room={room} />
               ))}
             </div>
@@ -1007,9 +958,11 @@ export default async function HotelDetailPage({ params }: Props) {
         <section className="py-16 bg-light-gray">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
+              {/* Dynamic Location Title */}
               <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
                 Locatie van {hotel.name}
               </h2>
+              {/* Dynamic Location Description */}
               <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
                 Gelegen in {hotel.city}, {hotel.province}. Een prachtige locatie voor een ontspannen verblijf met uitstekende bereikbaarheid.
               </p>
@@ -1030,33 +983,69 @@ export default async function HotelDetailPage({ params }: Props) {
         <section className="py-16 bg-pure-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
+              {/* Dynamic Wellness Title */}
               <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Wellness & Ontspanning
+                {hotel.name} biedt de perfecte combinatie van luxe en ontspanning in {hotel.province}
               </h2>
-              <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
-                {hotel.name} biedt de perfecte combinatie van comfort en wellness faciliteiten 
-                voor een onvergetelijk verblijf in {hotel.province}.
+              <p className="text-lg text-brand-navy-600 max-w-4xl mx-auto mb-8">
+                {hotel.description.split('\n\n')[0]}
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-brand-navy-50 rounded-2xl p-8 text-center border border-brand-navy-200">
-                <div className="text-4xl mb-4">🛁</div>
-                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Privé Jacuzzi</h3>
-                <p className="text-brand-navy-600">Ontspan in uw eigen privé jacuzzi met moderne voorzieningen en natuurlijk uitzicht.</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">
+                  Faciliteiten & Voorzieningen
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {hotel.facilities.map((facility, index) => (
+                    <div key={index} className="flex items-center space-x-3 p-3 bg-brand-navy-50 rounded-lg border border-brand-navy-200">
+                      <div className="w-2 h-2 bg-brand-orange-600 rounded-full flex-shrink-0"></div>
+                      <span className="text-brand-navy-700 font-medium">{facility}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="mt-8 p-6 bg-brand-navy-50 rounded-xl border border-brand-navy-200">
+                  <h4 className="text-lg font-bold text-brand-navy-900 mb-3">Locatie Voordelen</h4>
+                  <ul className="space-y-2 text-brand-navy-600">
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-brand-orange-600 rounded-full mr-3"></span>
+                      Uitstekende bereikbaarheid
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-brand-orange-600 rounded-full mr-3"></span>
+                      Centrale ligging in {hotel.city}
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-brand-orange-600 rounded-full mr-3"></span>
+                      Perfecte uitvalsbasis voor {hotel.province}
+                    </li>
+                  </ul>
+                </div>
               </div>
               
-              <div className="bg-brand-navy-50 rounded-2xl p-8 text-center border border-brand-navy-200">
-                <div className="text-4xl mb-4">🌿</div>
-                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Natuurlijke Omgeving</h3>
-                <p className="text-brand-navy-600">Gelegen in het groene hart van Noord-Holland, omringd door rust en natuur.</p>
+              <div className="relative">
+                <Image
+                  src={hotel.heroImage}
+                  alt={`${hotel.name} - wellness faciliteiten`}
+                  width={600}
+                  height={500}
+                  className="rounded-2xl shadow-xl"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute top-4 right-4 bg-brand-orange-600 text-pure-white px-4 py-2 rounded-lg font-bold">
+                  {hotel.jacuzziType}
+                </div>
               </div>
-              
-              <div className="bg-brand-navy-50 rounded-2xl p-8 text-center border border-brand-navy-200">
-                <div className="text-4xl mb-4">🍽️</div>
-                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Restaurant & Bar</h3>
-                <p className="text-brand-navy-600">Geniet van heerlijke gerechten en drankjes in ons gezellige restaurant en bar.</p>
-              </div>
+            </div>
+
+            {/* Internal Links */}
+            <div className="mt-12 pt-8 border-t border-brand-navy-200 text-center">
+              <p className="text-brand-navy-600 mb-6">
+                Bekijk ook onze andere <Link href="/hotel-met-jacuzzi-op-kamer" className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">hotels met jacuzzi op de kamer</Link> of 
+                ontdek meer <Link href={`/provincie/${hotel.province.toLowerCase().replace(' ', '-')}`} className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">hotels in {hotel.province}</Link>.
+              </p>
             </div>
           </div>
         </section>
@@ -1065,25 +1054,27 @@ export default async function HotelDetailPage({ params }: Props) {
         <section className="py-16 bg-light-gray">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
+              {/* Dynamic Related Hotels Title */}
               <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Andere Hotels in Noord-Holland
+                Andere hotels met jacuzzi in {hotel.province}
               </h2>
               <p className="text-lg text-brand-navy-600">
-                Ontdek ook deze prachtige jacuzzi hotels in Noord-Holland
+                Ontdek ook deze prachtige jacuzzi hotels in {hotel.province}
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {noordHollandHotels.filter(h => h.slug !== 'van-der-valk-akersloot').slice(0, 3).map((relatedHotel) => (
-                <div key={relatedHotel.id} className="bg-pure-white rounded-2xl shadow-lg overflow-hidden border border-brand-navy-200 hover:shadow-xl hover:border-brand-orange-600 transition-all duration-300">
-                  <div className="relative h-48">
+              {relatedHotels.slice(0, 3).map((relatedHotel) => (
+                <div key={relatedHotel.id} className="bg-pure-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-brand-navy-200">
+                  <div className="relative h-64">
                     <Image
                       src={relatedHotel.image_url}
                       alt={relatedHotel.name}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-navy-900/20 to-transparent" />
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-brand-navy-900 mb-2">{relatedHotel.name}</h3>
@@ -1101,6 +1092,18 @@ export default async function HotelDetailPage({ params }: Props) {
                   </div>
                 </div>
               ))}
+            </div>
+            
+            <div className="text-center mt-12">
+              <Link 
+                href={`/provincie/${hotel.province.toLowerCase().replace(' ', '-')}`}
+                className="inline-flex items-center bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Bekijk alle hotels in {hotel.province}
+                <svg width="20" height="20" viewBox="0 0 20 20" className="ml-2">
+                  <path d="M7 3l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+              </Link>
             </div>
           </div>
         </section>
@@ -1143,1359 +1146,16 @@ export default async function HotelDetailPage({ params }: Props) {
     )
   }
 
-  // Secondary template check (should not be reached)
-  if (false) {
-    return (
-      <div className="min-h-screen bg-light-gray">
-        {/* SVG Pattern Background */}
-        <WavePattern />
-        
-        {/* Hero Section - Homepage Layout */}
-        <section className="relative bg-brand-navy-900 text-pure-white overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                {/* Breadcrumbs */}
-                <nav className="text-sm text-brand-navy-200 mb-6">
-                  <Link href="/" className="hover:text-brand-orange-600 transition-colors">Home</Link>
-                  <span className="mx-2">/</span>
-                  <Link href="/provincie/noord-holland" className="hover:text-brand-orange-600 transition-colors">
-                    Noord-Holland
-                  </Link>
-                  <span className="mx-2">/</span>
-                  <span className="text-pure-white font-medium">{hotel.name}</span>
-                </nav>
-
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                  Van der Valk Schiphol – hotelkamers met jacuzzi
-                </h1>
-                <p className="text-xl md:text-2xl text-brand-navy-200 mb-8 leading-relaxed">
-                  Ontdek onze luxueuze kamers met jacuzzi bij Schiphol Airport. Perfect voor een romantische stopover of een 
-                  ontspannen verblijf voorafgaand aan uw vakantie.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a 
-                    href="#rooms" 
-                    className="bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
-                  >
-                    Bekijk kamers
-                  </a>
-                  <Link 
-                    href="/provincie/noord-holland" 
-                    className="border-2 border-brand-orange-600 text-brand-orange-600 hover:bg-brand-orange-600 hover:text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
-                  >
-                    Meer hotels
-                  </Link>
-                </div>
-              </div>
-              <div className="relative">
-                <Image
-                  src="/images/van-der-valk-schiphol-exterior.jpg"
-                  alt="Van der Valk Hotel Schiphol - Modern hotel exterior"
-                  width={600}
-                  height={400}
-                  className="rounded-2xl shadow-2xl"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
-                />
-                {hotel.popularThisMonth && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <div className="bg-brand-orange-600 text-pure-white rounded-lg px-3 py-1 shadow-lg">
-                      <span className="text-xs font-bold uppercase">Meest geboekt deze maand</span>
-                    </div>
-                  </div>
-                )}
-                <div className="absolute -bottom-6 -right-6 bg-brand-orange-600 text-pure-white p-6 rounded-2xl shadow-xl">
-                  <div className="text-2xl font-bold">{hotel.rooms?.length || 2}+</div>
-                  <div className="text-sm">Jacuzzi kamers</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Room Overview Section */}
-        <section id="rooms" className="py-16 bg-pure-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Onze Kamers met Jacuzzi
-              </h2>
-              <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto">
-                Kies uit onze luxueuze kamers en suites, alle uitgerust met privé jacuzzi voor een onvergetelijke ervaring.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {hotel.rooms?.map((room) => (
-                <RoomCard key={room.id} room={room} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Location Section */}
-        <section className="py-16 bg-light-gray">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Locatie van Van der Valk Schiphol
-              </h2>
-              <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
-                Strategisch gelegen nabij Schiphol Airport met directe verbindingen naar Amsterdam centrum. 
-                Perfect bereikbaar voor zowel zakelijke als leisure reizigers.
-              </p>
-            </div>
-
-            <div className="max-w-4xl mx-auto">
-              <MapboxMap
-                longitude={hotel.coordinates[0]}
-                latitude={hotel.coordinates[1]}
-                hotelName={hotel.name}
-                address={hotel.address}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Extra Info Block */}
-        <section className="py-16 bg-pure-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Facilities */}
-              <div>
-                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">
-                  Hotel Faciliteiten
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {hotel.facilities.map((facility, index) => (
-                    <div key={index} className="flex items-center p-4 bg-brand-navy-50 rounded-lg">
-                      <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 text-brand-orange-600 flex-shrink-0">
-                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
-                      </svg>
-                      <span className="text-brand-navy-700 font-medium">{facility}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* FAQ */}
-              <div>
-                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">
-                  Veelgestelde Vragen
-                </h3>
-                <div className="space-y-6">
-                  <div className="bg-brand-navy-50 rounded-lg p-6">
-                    <h4 className="font-bold text-brand-navy-900 mb-2">
-                      Zijn alle kamers uitgerust met een jacuzzi?
-                    </h4>
-                    <p className="text-brand-navy-700">
-                      Onze Deluxe Plus kamers en suites zijn uitgerust met privé jacuzzi's. Standaard kamers hebben deze faciliteit niet.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-brand-navy-50 rounded-lg p-6">
-                    <h4 className="font-bold text-brand-navy-900 mb-2">
-                      Hoe ver is het hotel van Schiphol Airport?
-                    </h4>
-                    <p className="text-brand-navy-700">
-                      Het hotel ligt op slechts 5 minuten rijden van Schiphol Airport. Wij bieden een gratis shuttle service naar de luchthaven.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-brand-navy-50 rounded-lg p-6">
-                    <h4 className="font-bold text-brand-navy-900 mb-2">
-                      Is het hotel geschikt voor een romantisch verblijf?
-                    </h4>
-                    <p className="text-brand-navy-700">
-                      Absoluut! Onze kamers met jacuzzi zijn perfect voor romantische momenten. Wij kunnen ook arrangementen verzorgen op verzoek.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Internal Links */}
-            <div className="mt-12 pt-8 border-t border-brand-navy-200 text-center">
-              <p className="text-brand-navy-600 mb-6">
-                Bekijk ook onze andere <Link href="/hotel-met-jacuzzi-op-kamer" className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">hotels met jacuzzi op de kamer</Link> of 
-                ontdek meer <Link href="/provincie/noord-holland" className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">hotels in Noord-Holland</Link>.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Related Hotels */}
-        <section className="py-16 bg-light-gray">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Andere hotels met jacuzzi in {hotel.province}
-              </h2>
-              <p className="text-lg text-brand-navy-600">
-                Ontdek meer prachtige hotels met jacuzzi in de provincie {hotel.province}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {noordHollandHotels.slice(0, 3).map((relatedHotel) => (
-                <HotelCard key={relatedHotel.id} hotel={relatedHotel} />
-              ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <Link 
-                href="/provincie/noord-holland"
-                className="inline-flex items-center bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Bekijk alle hotels in Noord-Holland
-                <svg width="20" height="20" viewBox="0 0 20 20" className="ml-2">
-                  <path d="M7 3l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Schema.org Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Hotel",
-              "name": hotel.name,
-              "description": `${hotel.name} - Luxueuze airport hotel met kamers met jacuzzi bij Schiphol. Perfect voor romantische verblijven en zakelijke trips.`,
-              "image": hotel.heroImage,
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": hotel.address.split(',')[0],
-                "addressLocality": hotel.city,
-                "addressRegion": hotel.province,
-                "addressCountry": "NL"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": hotel.coordinates[1],
-                "longitude": hotel.coordinates[0]
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": hotel.rating,
-                "reviewCount": hotel.reviewCount,
-                "bestRating": 5
-              },
-              "priceRange": hotel.priceRange,
-              "amenityFeature": hotel.facilities.map(facility => ({
-                "@type": "LocationFeatureSpecification",
-                "name": facility
-              })),
-              "url": `https://jacuzzihotels.nl/hotel/${awaited.slug}`
-            })
-          }}
-        />
-      </div>
-    )
-  }
-
-  // Special template for Inntel Hotels Amsterdam Centre
-  if (awaited.slug === 'inntel-hotels-amsterdam-centre') {
-    return (
-      <div className="min-h-screen bg-light-gray">
-        {/* SVG Pattern Background */}
-        <WavePattern />
-        
-        {/* Hero Section - Homepage Layout */}
-        <section className="relative bg-brand-navy-900 text-pure-white overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                {/* Breadcrumbs */}
-                <nav className="text-sm text-brand-navy-200 mb-6">
-                  <Link href="/" className="hover:text-brand-orange-600 transition-colors">Home</Link>
-                  <span className="mx-2">/</span>
-                  <Link href="/provincie/noord-holland" className="hover:text-brand-orange-600 transition-colors">
-                    Noord-Holland
-                  </Link>
-                  <span className="mx-2">/</span>
-                  <span className="text-pure-white font-medium">{hotel.name}</span>
-                </nav>
-
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                  Inntel Hotels Amsterdam Centre – design kamers met jacuzzi
-                </h1>
-                <p className="text-xl md:text-2xl text-brand-navy-200 mb-8 leading-relaxed">
-                  Ontdek onze unieke design kamers met wellness faciliteiten in het hart van Amsterdam. 
-                  Perfect voor een romantische citytrip met luxe comfort.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a 
-                    href="#rooms" 
-                    className="bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
-                  >
-                    Bekijk kamers
-                  </a>
-                  <Link 
-                    href="/provincie/noord-holland" 
-                    className="border-2 border-brand-orange-600 text-brand-orange-600 hover:bg-brand-orange-600 hover:text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
-                  >
-                    Meer hotels
-                  </Link>
-                </div>
-              </div>
-              <div className="relative">
-                <Image
-                  src="/images/Inntel Hotels Amsterdam Centre.jpg"
-                  alt="Inntel Hotels Amsterdam Centre - Modern design hotel exterior"
-                  width={600}
-                  height={400}
-                  className="rounded-2xl shadow-2xl"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
-                />
-                {hotel.popularThisMonth && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <div className="bg-brand-orange-600 text-pure-white rounded-lg px-3 py-1 shadow-lg">
-                      <span className="text-xs font-bold uppercase">Meest geboekt deze maand</span>
-                    </div>
-                  </div>
-                )}
-                <div className="absolute -bottom-6 -right-6 bg-brand-orange-600 text-pure-white p-6 rounded-2xl shadow-xl">
-                  <div className="text-2xl font-bold">{hotel.rooms?.length || 3}+</div>
-                  <div className="text-sm">Design kamers</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Room Overview Section */}
-        <section id="rooms" className="py-16 bg-pure-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Onze Design Kamers met Wellness
-              </h2>
-              <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto">
-                Kies uit onze unieke kamers en suites, alle uitgerust met design jacuzzi voor een bijzondere ervaring.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {hotel.rooms?.map((room) => (
-                <RoomCard key={room.id} room={room} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Location Section */}
-        <section className="py-16 bg-light-gray">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Locatie van Inntel Hotels Amsterdam Centre
-              </h2>
-              <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
-                Perfect gelegen in het historische centrum van Amsterdam, op loopafstand van alle belangrijke 
-                attracties, musea en het bruisende nachtleven.
-              </p>
-            </div>
-
-            <div className="max-w-4xl mx-auto">
-              <MapboxMap
-                longitude={hotel.coordinates[0]}
-                latitude={hotel.coordinates[1]}
-                hotelName={hotel.name}
-                address={hotel.address}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Extra Info Block */}
-        <section className="py-16 bg-pure-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Facilities */}
-              <div>
-                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">
-                  Hotel Faciliteiten
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {hotel.facilities.map((facility, index) => (
-                    <div key={index} className="flex items-center p-4 bg-brand-navy-50 rounded-lg">
-                      <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 text-brand-orange-600 flex-shrink-0">
-                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
-                      </svg>
-                      <span className="text-brand-navy-700 font-medium">{facility}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* FAQ */}
-              <div>
-                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">
-                  Veelgestelde Vragen
-                </h3>
-                <div className="space-y-6">
-                  <div className="bg-brand-navy-50 rounded-lg p-6">
-                    <h4 className="font-bold text-brand-navy-900 mb-2">
-                      Welke kamers hebben een jacuzzi?
-                    </h4>
-                    <p className="text-brand-navy-700">
-                      Onze Spa Kamers, Wellness Kamers en Suites zijn alle uitgerust met design jacuzzi's. Standaard kamers hebben deze faciliteit niet.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-brand-navy-50 rounded-lg p-6">
-                    <h4 className="font-bold text-brand-navy-900 mb-2">
-                      Hoe ver is het hotel van de belangrijkste attracties?
-                    </h4>
-                    <p className="text-brand-navy-700">
-                      Het hotel ligt in het centrum van Amsterdam, op loopafstand van de Jordaan, Anne Frank Huis en de Negen Straatjes.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-brand-navy-50 rounded-lg p-6">
-                    <h4 className="font-bold text-brand-navy-900 mb-2">
-                      Wat maakt dit hotel bijzonder?
-                    </h4>
-                    <p className="text-brand-navy-700">
-                      Ons unieke design en de combinatie van moderne wellness faciliteiten in een historisch pand maken dit hotel perfect voor een citytrip.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Internal Links */}
-            <div className="mt-12 pt-8 border-t border-brand-navy-200 text-center">
-              <p className="text-brand-navy-600 mb-6">
-                Bekijk ook onze andere <Link href="/hotel-met-jacuzzi-op-kamer" className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">hotels met jacuzzi op de kamer</Link> of 
-                ontdek meer <Link href="/provincie/noord-holland" className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">hotels in Noord-Holland</Link>.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Related Hotels */}
-        <section className="py-16 bg-light-gray">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Andere hotels met jacuzzi in {hotel.province}
-              </h2>
-              <p className="text-lg text-brand-navy-600">
-                Ontdek meer prachtige hotels met jacuzzi in de provincie {hotel.province}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {noordHollandHotels.slice(0, 3).map((relatedHotel) => (
-                <HotelCard key={relatedHotel.id} hotel={relatedHotel} />
-              ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <Link 
-                href="/provincie/noord-holland"
-                className="inline-flex items-center bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Bekijk alle hotels in Noord-Holland
-                <svg width="20" height="20" viewBox="0 0 20 20" className="ml-2">
-                  <path d="M7 3l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Schema.org Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Hotel",
-              "name": hotel.name,
-              "description": `${hotel.name} - Modern design hotel met jacuzzi kamers in Amsterdam centrum. Perfect voor romantische citytrips en zakelijke verblijven.`,
-              "image": hotel.heroImage,
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": hotel.address.split(',')[0],
-                "addressLocality": hotel.city,
-                "addressRegion": hotel.province,
-                "addressCountry": "NL"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": hotel.coordinates[1],
-                "longitude": hotel.coordinates[0]
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": hotel.rating,
-                "reviewCount": hotel.reviewCount,
-                "bestRating": 5
-              },
-              "priceRange": hotel.priceRange,
-              "amenityFeature": hotel.facilities.map(facility => ({
-                "@type": "LocationFeatureSpecification",
-                "name": facility
-              })),
-              "url": `https://jacuzzihotels.nl/hotel/${awaited.slug}`
-            })
-          }}
-        />
-      </div>
-    )
-  }
-
-  // Special template for Olympic Hotel
-  if (awaited.slug === 'olympic-hotel') {
-    return (
-      <div className="min-h-screen bg-light-gray">
-        {/* SVG Pattern Background */}
-        <WavePattern />
-        
-        {/* Hero Section - Olympic Theme */}
-        <section className="relative bg-brand-navy-900 text-pure-white overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                {/* Breadcrumbs */}
-                <nav className="text-sm text-brand-navy-200 mb-6">
-                  <Link href="/" className="hover:text-brand-orange-600 transition-colors">Home</Link>
-                  <span className="mx-2">/</span>
-                  <Link href="/provincie/noord-holland" className="hover:text-brand-orange-600 transition-colors">
-                    Noord-Holland
-                  </Link>
-                  <span className="mx-2">/</span>
-                  <span className="text-pure-white font-medium">{hotel.name}</span>
-                </nav>
-
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                  Olympic Hotel Amsterdam – sportieve luxe met jacuzzi
-                </h1>
-                <p className="text-xl md:text-2xl text-brand-navy-200 mb-8 leading-relaxed">
-                  Ervaar de perfecte combinatie van olympische excellentie en wellness luxe. 
-                  Onze Deluxe Kamers bieden een unieke jacuzzi-ervaring voor sporters en wellness liefhebbers.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a 
-                    href="#rooms" 
-                    className="bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
-                  >
-                    Bekijk Deluxe Kamer
-                  </a>
-                  <Link 
-                    href="/provincie/noord-holland" 
-                    className="border-2 border-brand-orange-600 text-brand-orange-600 hover:bg-brand-orange-600 hover:text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
-                  >
-                    Meer hotels
-                  </Link>
-                </div>
-              </div>
-              <div className="relative">
-                <Image
-                  src="/images/Olympic Hotel.jpg"
-                  alt="Olympic Hotel Amsterdam - Sportieve luxe hotel exterior"
-                  width={600}
-                  height={400}
-                  className="rounded-2xl shadow-2xl"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
-                />
-                {/* Top 10 Ranking Badge */}
-                <div className="absolute top-4 right-4 z-20">
-                  <div className="bg-brand-orange-600 hover:bg-[#D95E1B] text-pure-white rounded-full w-12 h-12 flex items-center justify-center transition-colors duration-300">
-                    <span className="text-lg font-bold">#2</span>
-                  </div>
-                </div>
-                <div className="absolute -bottom-6 -right-6 bg-brand-orange-600 text-pure-white p-6 rounded-2xl shadow-xl">
-                  <div className="text-2xl font-bold">1</div>
-                  <div className="text-sm">Deluxe Kamer</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Room Overview Section */}
-        <section id="rooms" className="py-16 bg-pure-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Onze Deluxe Kamer met Jacuzzi
-              </h2>
-              <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto">
-                Ervaar olympische luxe in onze signature Deluxe Kamer, uitgerust met premium jacuzzi en sportieve elegantie.
-              </p>
-              
-              {/* Top 10 Ranking Text */}
-              <p className="text-xs mt-4 italic" style={{ color: '#6B7280' }}>
-                Dit hotel staat op positie #2 in de top 10 jacuzzi hotels van Nederland
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 max-w-2xl mx-auto">
-              {hotel.rooms?.map((room) => (
-                <RoomCard key={room.id} room={room} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Olympic Features Section */}
-        <section className="py-16 bg-light-gray">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Olympische Faciliteiten & Wellness
-              </h2>
-              <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
-                Ontdek onze unieke combinatie van sportieve excellentie en wellness luxe in het hart van Amsterdam.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-pure-white rounded-2xl p-8 shadow-lg">
-                <div className="text-brand-orange-600 mb-4">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17 4h-10c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h10c1.11 0 2-.89 2-2v-12c0-1.11-.89-2-2-2zm-5 14.5c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Olympisch Zwembad</h3>
-                <p className="text-brand-navy-600">Professioneel zwembad voor training en ontspanning met olympische afmetingen.</p>
-              </div>
-
-              <div className="bg-pure-white rounded-2xl p-8 shadow-lg">
-                <div className="text-brand-orange-600 mb-4">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Fitness Center</h3>
-                <p className="text-brand-navy-600">State-of-the-art fitnessruimte met professionele apparatuur voor optimale training.</p>
-              </div>
-
-              <div className="bg-pure-white rounded-2xl p-8 shadow-lg">
-                <div className="text-brand-orange-600 mb-4">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Spa & Wellness</h3>
-                <p className="text-brand-navy-600">Luxe wellness faciliteiten inclusief sauna, stoomcabine en professionele spa behandelingen.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Location Section */}
-        <section className="py-16 bg-pure-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Locatie van Olympic Hotel Amsterdam
-              </h2>
-              <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
-                Gelegen in de prestigieuze PC Hooftstraat, nabij Vondelpark en de belangrijkste shopping districts van Amsterdam.
-              </p>
-            </div>
-
-            <div className="max-w-4xl mx-auto">
-              <MapboxMap
-                longitude={hotel.coordinates[0]}
-                latitude={hotel.coordinates[1]}
-                hotelName={hotel.name}
-                address={hotel.address}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-16 bg-light-gray">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Facilities */}
-              <div>
-                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">
-                  Olympic Hotel Faciliteiten
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {hotel.facilities.map((facility, index) => (
-                    <div key={index} className="flex items-center p-4 bg-pure-white rounded-lg shadow-sm">
-                      <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 text-brand-orange-600 flex-shrink-0">
-                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
-                      </svg>
-                      <span className="text-brand-navy-700 font-medium">{facility}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* FAQ */}
-              <div>
-                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">
-                  Veelgestelde Vragen
-                </h3>
-                <div className="space-y-6">
-                  <div className="bg-pure-white rounded-lg p-6 shadow-sm">
-                    <h4 className="font-bold text-brand-navy-900 mb-2">
-                      Wat maakt Olympic Hotel uniek?
-                    </h4>
-                    <p className="text-brand-navy-700">
-                      Onze unieke combinatie van olympische sportfaciliteiten en luxe wellness, inclusief jacuzzi kamers en professioneel zwembad.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-pure-white rounded-lg p-6 shadow-sm">
-                    <h4 className="font-bold text-brand-navy-900 mb-2">
-                      Welke sportfaciliteiten zijn er beschikbaar?
-                    </h4>
-                    <p className="text-brand-navy-700">
-                      Olympisch zwembad, moderne fitness center, spa & wellness faciliteiten en professionele trainingsruimtes.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-pure-white rounded-lg p-6 shadow-sm">
-                    <h4 className="font-bold text-brand-navy-900 mb-2">
-                      Is het hotel geschikt voor sporters?
-                    </h4>
-                    <p className="text-brand-navy-700">
-                      Absoluut! Ons hotel is speciaal ontworpen voor sporters met professionele faciliteiten en herstel amenities.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Internal Links */}
-            <div className="mt-12 pt-8 border-t border-brand-navy-200 text-center">
-              <p className="text-brand-navy-600 mb-6">
-                Bekijk ook onze andere <Link href="/hotel-met-jacuzzi-op-kamer" className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">hotels met jacuzzi op de kamer</Link> of 
-                ontdek meer <Link href="/provincie/noord-holland" className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">sportieve hotels in Noord-Holland</Link>.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Related Hotels */}
-        <section className="py-16 bg-pure-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Andere top hotels met jacuzzi in Noord-Holland
-              </h2>
-              <p className="text-lg text-brand-navy-600">
-                Ontdek meer prachtige hotels met jacuzzi in de provincie Noord-Holland
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {noordHollandHotels.slice(0, 3).map((relatedHotel) => (
-                <HotelCard key={relatedHotel.id} hotel={relatedHotel} />
-              ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <Link 
-                href="/provincie/noord-holland"
-                className="inline-flex items-center bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Bekijk alle hotels in Noord-Holland
-                <svg width="20" height="20" viewBox="0 0 20 20" className="ml-2">
-                  <path d="M7 3l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Schema.org Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Hotel",
-              "name": hotel.name,
-              "description": `${hotel.name} - Sportieve luxe hotel met jacuzzi kamers en olympische faciliteiten in Amsterdam. Perfect voor sporters en wellness liefhebbers.`,
-              "image": hotel.heroImage,
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": hotel.address.split(',')[0],
-                "addressLocality": hotel.city,
-                "addressRegion": hotel.province,
-                "addressCountry": "NL"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": hotel.coordinates[1],
-                "longitude": hotel.coordinates[0]
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": hotel.rating,
-                "reviewCount": hotel.reviewCount,
-                "bestRating": 5
-              },
-              "priceRange": hotel.priceRange,
-              "amenityFeature": hotel.facilities.map(facility => ({
-                "@type": "LocationFeatureSpecification",
-                "name": facility
-              })),
-              "url": `https://jacuzzihotels.nl/hotel/${awaited.slug}`
-            })
-          }}
-        />
-      </div>
-    )
-  }
-
-  // Special template for Kasteel Bloemendal
-  if (awaited.slug === 'kasteel-bloemendal') {
-    return (
-      <div className="min-h-screen bg-light-gray">
-        {/* SVG Pattern Background */}
-        <WavePattern />
-        
-        {/* Hero Section - Castle Theme */}
-        <section className="relative bg-brand-navy-900 text-pure-white overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                {/* Breadcrumbs */}
-                <nav className="text-sm text-brand-navy-200 mb-6">
-                  <Link href="/" className="hover:text-brand-orange-600 transition-colors">Home</Link>
-                  <span className="mx-2">/</span>
-                  <Link href="/provincie/limburg" className="hover:text-brand-orange-600 transition-colors">
-                    Limburg
-                  </Link>
-                  <span className="mx-2">/</span>
-                  <span className="text-pure-white font-medium">{hotel.name}</span>
-                </nav>
-
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                  Kasteel Bloemendal – koninklijke suites met jacuzzi
-                </h1>
-                <p className="text-xl md:text-2xl text-brand-navy-200 mb-8 leading-relaxed">
-                  Ervaar koninklijke luxe in een authentiek kasteel. Onze Deluxe Suite met Kingsize bed 
-                  en luxe jacuzzi biedt een onvergetelijke romantische ervaring in Zuid-Limburg.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a 
-                    href="#rooms" 
-                    className="bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
-                  >
-                    Bekijk Deluxe Suite
-                  </a>
-                  <Link 
-                    href="/provincie/limburg" 
-                    className="border-2 border-brand-orange-600 text-brand-orange-600 hover:bg-brand-orange-600 hover:text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
-                  >
-                    Meer kastelen
-                  </Link>
-                </div>
-              </div>
-              <div className="relative">
-                <Image
-                  src="/images/Kasteel Bloemendal.jpg"
-                  alt="Kasteel Bloemendal - Historisch kasteel hotel exterior"
-                  width={600}
-                  height={400}
-                  className="rounded-2xl shadow-2xl"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  priority
-                />
-                {/* Top 10 Ranking Badge */}
-                <div className="absolute top-4 right-4 z-20">
-                  <div className="bg-brand-orange-600 hover:bg-[#D95E1B] text-pure-white rounded-full w-12 h-12 flex items-center justify-center transition-colors duration-300">
-                    <span className="text-lg font-bold">#3</span>
-                  </div>
-                </div>
-                {/* Suite Badge */}
-                <div className="absolute top-4 left-4 z-20">
-                  <div className="bg-brand-navy-800 text-pure-white rounded-lg px-3 py-1 shadow-lg" style={{opacity: 0.95}}>
-                    <span className="text-sm font-semibold">Luxe Suites</span>
-                  </div>
-                </div>
-                <div className="absolute -bottom-6 -right-6 bg-brand-orange-600 text-pure-white p-6 rounded-2xl shadow-xl">
-                  <div className="text-2xl font-bold">1</div>
-                  <div className="text-sm">Deluxe Suite</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Room Overview Section */}
-        <section id="rooms" className="py-16 bg-pure-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Onze Koninklijke Suite met Jacuzzi
-              </h2>
-              <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto">
-                Ervaar kasteel luxe in onze signature Deluxe Suite, uitgerust met kingsize bed, luxe jacuzzi en authentieke kasteel ambiance.
-              </p>
-              
-              {/* Top 10 Ranking Text */}
-              <p className="text-xs mt-4 italic" style={{ color: '#6B7280' }}>
-                Dit hotel staat op positie #3 in de top 10 jacuzzi hotels van Nederland
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 max-w-2xl mx-auto">
-              {hotel.rooms?.map((room) => (
-                <RoomCard key={room.id} room={room} />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Castle Features Section */}
-        <section className="py-16 bg-light-gray">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Kasteel Faciliteiten & Historische Charme
-              </h2>
-              <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
-                Ontdek de unieke combinatie van historische elegantie en moderne luxe in ons authentieke kasteel in Zuid-Limburg.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-pure-white rounded-2xl p-8 shadow-lg">
-                <div className="text-brand-orange-600 mb-4">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Kasteel Ambiance</h3>
-                <p className="text-brand-navy-600">Authentieke kasteel setting met historische details en koninklijke sfeer voor een unieke ervaring.</p>
-              </div>
-
-              <div className="bg-pure-white rounded-2xl p-8 shadow-lg">
-                <div className="text-brand-orange-600 mb-4">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1z"/>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Fine Dining</h3>
-                <p className="text-brand-navy-600">Exclusief restaurant met verfijnde keuken en kasteel ambiance voor culinaire hoogtepunten.</p>
-              </div>
-
-              <div className="bg-pure-white rounded-2xl p-8 shadow-lg">
-                <div className="text-brand-orange-600 mb-4">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.54 0 3-.35 4.31-.99l1.38 1.38c.39.39 1.02.39 1.41 0s.39-1.02 0-1.41l-1.38-1.38C21.65 15 22 13.54 22 12c0-5.52-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-brand-navy-900 mb-3">Historische Tuinen</h3>
-                <p className="text-brand-navy-600">Prachtige kasteeltuinen met eeuwenoude bomen en romantische wandelpaden door de natuur.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Location Section */}
-        <section className="py-16 bg-pure-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Locatie van Kasteel Bloemendal
-              </h2>
-              <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
-                Gelegen in de prachtige heuvels van Zuid-Limburg, nabij Vaals en de Duitse grens. Perfect voor een romantische ontsnapping.
-              </p>
-            </div>
-
-            <div className="max-w-4xl mx-auto">
-              <MapboxMap
-                longitude={hotel.coordinates[0]}
-                latitude={hotel.coordinates[1]}
-                hotelName={hotel.name}
-                address={hotel.address}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-16 bg-light-gray">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Facilities */}
-              <div>
-                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">
-                  Kasteel Faciliteiten
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {hotel.facilities.map((facility, index) => (
-                    <div key={index} className="flex items-center p-4 bg-pure-white rounded-lg shadow-sm">
-                      <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 text-brand-orange-600 flex-shrink-0">
-                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
-                      </svg>
-                      <span className="text-brand-navy-700 font-medium">{facility}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* FAQ */}
-              <div>
-                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">
-                  Veelgestelde Vragen
-                </h3>
-                <div className="space-y-6">
-                  <div className="bg-pure-white rounded-lg p-6 shadow-sm">
-                    <h4 className="font-bold text-brand-navy-900 mb-2">
-                      Wat maakt Kasteel Bloemendal uniek?
-                    </h4>
-                    <p className="text-brand-navy-700">
-                      Onze unieke combinatie van authentieke kasteel geschiedenis en moderne luxe, inclusief jacuzzi suites in een romantische setting.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-pure-white rounded-lg p-6 shadow-sm">
-                    <h4 className="font-bold text-brand-navy-900 mb-2">
-                      Is het kasteel geschikt voor romantische verblijven?
-                    </h4>
-                    <p className="text-brand-navy-700">
-                      Absoluut! Ons kasteel is perfect voor romantische uitjes, jubilea en speciale gelegenheden met luxe suites en historische ambiance.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-pure-white rounded-lg p-6 shadow-sm">
-                    <h4 className="font-bold text-brand-navy-900 mb-2">
-                      Welke activiteiten zijn er in de omgeving?
-                    </h4>
-                    <p className="text-brand-navy-700">
-                      Kasteel wandelingen, Zuid-Limburg verkennen, grensoverschrijdend naar Duitsland en België, en natuurwandelingen in de heuvels.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Internal Links */}
-            <div className="mt-12 pt-8 border-t border-brand-navy-200 text-center">
-              <p className="text-brand-navy-600 mb-6">
-                Bekijk ook onze andere <Link href="/hotel-met-jacuzzi-op-kamer" className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">kasteel hotels met jacuzzi</Link> of 
-                ontdek meer <Link href="/provincie/limburg" className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">romantische hotels in Limburg</Link>.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Related Hotels */}
-        <section className="py-16 bg-pure-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-                Andere romantische hotels met jacuzzi in Limburg
-              </h2>
-              <p className="text-lg text-brand-navy-600">
-                Ontdek meer prachtige hotels met jacuzzi in de provincie Limburg
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {relatedHotels.slice(0, 3).map((relatedHotel) => (
-                <HotelCard key={relatedHotel.id} hotel={relatedHotel} />
-              ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <Link 
-                href="/provincie/limburg"
-                className="inline-flex items-center bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Bekijk alle hotels in Limburg
-                <svg width="20" height="20" viewBox="0 0 20 20" className="ml-2">
-                  <path d="M7 3l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Schema.org Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Hotel",
-              "name": hotel.name,
-              "description": `${hotel.name} - Historisch kasteel hotel met luxe jacuzzi suites in Zuid-Limburg. Perfect voor romantische verblijven en speciale gelegenheden.`,
-              "image": hotel.heroImage,
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": hotel.address.split(',')[0],
-                "addressLocality": hotel.city,
-                "addressRegion": hotel.province,
-                "addressCountry": "NL"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": hotel.coordinates[1],
-                "longitude": hotel.coordinates[0]
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": hotel.rating,
-                "reviewCount": hotel.reviewCount,
-                "bestRating": 5
-              },
-              "priceRange": hotel.priceRange,
-              "amenityFeature": hotel.facilities.map(facility => ({
-                "@type": "LocationFeatureSpecification",
-                "name": facility
-              })),
-              "url": `https://jacuzzihotels.nl/hotel/${awaited.slug}`
-            })
-          }}
-        />
-      </div>
-    )
-  }
-
-  // Default template for other hotels
+  // Fallback for hotels without rooms data
   return (
-    <div className="min-h-screen bg-light-gray">
-      {/* SVG Pattern Background */}
-      <WavePattern />
-      
-      {/* Hero Section */}
-      <section className="relative py-16 bg-pure-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumbs */}
-          <nav className="text-sm text-brand-navy-600 mb-6">
-            <Link href="/" className="hover:text-brand-orange-600 transition-colors">Home</Link>
-            <span className="mx-2">/</span>
-            <Link href={`/provincie/${hotel.province.toLowerCase().replace(' ', '-')}`} className="hover:text-brand-orange-600 transition-colors">
-              {hotel.province}
-            </Link>
-            <span className="mx-2">/</span>
-            <span className="text-brand-navy-900 font-medium">{hotel.name}</span>
-          </nav>
-
-          {/* Hotel Title */}
-          <div className="text-center mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-brand-navy-900 mb-4">
-              {hotel.name} – romantische suite met jacuzzi in {hotel.province}
-            </h1>
-            <p className="text-xl text-brand-navy-600">
-              {hotel.city}, {hotel.province}
-            </p>
-          </div>
-
-          {/* Hero Image */}
-          <div className="relative mb-16">
-            <div className="aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src={hotel.heroImage}
-                alt={`${hotel.name} - romantische suite met jacuzzi`}
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-              />
-            </div>
-            {hotel.popularThisMonth && (
-              <div className="absolute top-6 left-6">
-                <div className="bg-brand-orange-600 text-pure-white rounded-lg px-4 py-2 shadow-lg">
-                  <span className="text-sm font-bold uppercase">Meest geboekt deze maand</span>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Hotel Info Block */}
-      <section className="py-16 bg-light-gray relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Left: Description */}
-            <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold text-brand-navy-900 mb-6">
-                Over {hotel.name}
-              </h2>
-              <div className="prose prose-lg prose-brand-navy max-w-none">
-                {hotel.description.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="text-brand-navy-700 leading-relaxed mb-6">
-                    {paragraph.trim()}
-                  </p>
-                ))}
-              </div>
-              
-              {/* Internal Links */}
-              <div className="mt-8 pt-6 border-t border-brand-navy-200">
-                <p className="text-brand-navy-600 mb-4">
-                  Bekijk ook andere <Link href={`/provincie/${hotel.province.toLowerCase().replace(' ', '-')}`} className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">hotels met jacuzzi in {hotel.province}</Link> of ontdek onze <Link href="/hotel-met-jacuzzi" className="text-brand-orange-600 hover:text-brand-orange-700 font-medium">complete collectie romantische hotels</Link>.
-                </p>
-              </div>
-            </div>
-
-            {/* Right: Info Card */}
-            <div className="lg:col-span-1">
-              <div className="bg-pure-white rounded-2xl shadow-lg p-8 border border-brand-navy-200 sticky top-8">
-                <div className="text-center mb-6">
-                  <div className="text-3xl font-bold text-brand-navy-900 mb-2">
-                    {hotel.priceRange}
-                  </div>
-                  <div className="text-brand-navy-600">per nacht</div>
-                </div>
-
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-center justify-between py-3 border-b border-brand-navy-100">
-                    <span className="text-brand-navy-600">Type jacuzzi:</span>
-                    <span className="font-medium text-brand-navy-900">{hotel.jacuzziType}</span>
-                  </div>
-                  
-                  <div className="py-3 border-b border-brand-navy-100">
-                    <span className="text-brand-navy-600 block mb-2">Faciliteiten:</span>
-                    <div className="space-y-1">
-                      {hotel.facilities.map((facility, index) => (
-                        <div key={index} className="flex items-center text-sm">
-                          <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 text-brand-orange-600 flex-shrink-0">
-                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" fill="currentColor"/>
-                          </svg>
-                          <span className="text-brand-navy-700">{facility}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between py-3">
-                    <span className="text-brand-navy-600">Beoordeling:</span>
-                    <div className="flex items-center">
-                      <div className="flex items-center mr-2">
-                        {[...Array(5)].map((_, i) => (
-                          <svg key={i} width="16" height="16" viewBox="0 0 16 16" className={`${i < Math.floor(hotel.rating) ? 'text-brand-orange-600' : 'text-brand-navy-300'}`}>
-                            <path d="M8 12l-4.7 2.472.898-5.236L.392 5.564l5.258-.764L8 0l2.35 4.8 5.258.764-3.806 3.672.898 5.236z" fill="currentColor"/>
-                          </svg>
-                        ))}
-                      </div>
-                      <span className="font-medium text-brand-navy-900">{hotel.rating}</span>
-                      <span className="text-sm text-brand-navy-600 ml-1">({hotel.reviewCount})</span>
-                    </div>
-                  </div>
-                </div>
-
-                <BookingButton className="w-full bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                  Bekijk deal →
-                </BookingButton>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="py-16 bg-pure-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-              Locatie van {hotel.name}
-            </h2>
-            <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto">
-              Ontdek de prachtige ligging van dit romantische hotel met jacuzzi in {hotel.city}, {hotel.province}.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <MapboxMap
-              longitude={hotel.coordinates[0]}
-              latitude={hotel.coordinates[1]}
-              hotelName={hotel.name}
-              address={hotel.address}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Related Hotels */}
-      <section className="py-16 bg-light-gray">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
-              Andere hotels met jacuzzi in {hotel.province}
-            </h2>
-            <p className="text-lg text-brand-navy-600">
-              Ontdek meer romantische hotels met jacuzzi in de regio
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {relatedHotels.slice(0, 3).map((relatedHotel) => (
-              <HotelCard key={relatedHotel.id} hotel={relatedHotel} />
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link 
-              href={`/provincie/${hotel.province.toLowerCase().replace(' ', '-')}`}
-              className="inline-flex items-center bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Bekijk alle hotels in {hotel.province}
-              <svg width="20" height="20" viewBox="0 0 20 20" className="ml-2">
-                <path d="M7 3l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Schema.org Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Hotel",
-            "name": hotel.name,
-            "description": hotel.description.split('\n\n')[0],
-            "image": hotel.heroImage,
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": hotel.address.split(',')[0],
-              "addressLocality": hotel.city,
-              "addressRegion": hotel.province,
-              "addressCountry": "NL"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": hotel.coordinates[1],
-              "longitude": hotel.coordinates[0]
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": hotel.rating,
-              "reviewCount": hotel.reviewCount,
-              "bestRating": 5
-            },
-            "priceRange": hotel.priceRange,
-            "amenityFeature": hotel.facilities.map(facility => ({
-              "@type": "LocationFeatureSpecification",
-              "name": facility
-            })),
-            "url": `https://jacuzzihotels.nl/hotel/${awaited.slug}`
-          })
-        }}
-      />
+    <div className="min-h-screen bg-light-gray flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-2xl font-bold text-brand-navy-900 mb-4">Hotel details worden bijgewerkt</h1>
+        <p className="text-brand-navy-600">Dit hotel wordt momenteel bijgewerkt met nieuwe informatie.</p>
+        <Link href="/" className="inline-block mt-4 bg-brand-orange-600 text-pure-white px-6 py-3 rounded-lg">
+          Terug naar overzicht
+        </Link>
+      </div>
     </div>
   )
 }
