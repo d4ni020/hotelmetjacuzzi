@@ -1,8 +1,23 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Hotel } from '@/types'
 import HotelCard from '@/components/HotelCard'
+
+// Hotel interface
+interface Hotel {
+  id: number
+  name: string
+  slug: string
+  city: string
+  province: string
+  price_range: string
+  rating: number
+  description: string
+  image_url: string
+  facilities: string[]
+  city_id?: number
+  province_id?: number
+}
 
 // Mock data voor goedkope jacuzzi hotels
 const budgetJacuzziHotels: Hotel[] = [
