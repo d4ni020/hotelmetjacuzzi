@@ -563,6 +563,196 @@ const mockHotels: Record<string, Hotel> = {
         affiliateLink: 'https://booking.com/valk-sassenheim-superior'
       }
     ]
+  },
+  'van-der-valk-leiden': {
+    id: 113,
+    name: 'Van der Valk Leiden',
+    location: 'Leiden, Zuid-Holland',
+    city: 'Leiden',
+    province: 'Zuid-Holland',
+    priceRange: '€159 - €229',
+    jacuzziType: 'Wellness jacuzzi kamer',
+    facilities: ['Wellness jacuzzi', 'Historische locatie', 'Restaurant', 'Fitness', 'Gratis WiFi', 'Business center', 'Centrum nabij'],
+    rating: 4.3,
+    reviewCount: 287,
+    heroImage: '/images/Van der Valk Leiden.jpg',
+    description: 'Modern Van der Valk hotel in het hart van Leiden met luxe wellness faciliteiten en jacuzzi kamers. Perfect gelegen nabij de historische binnenstad en universiteit.',
+    coordinates: [4.4924, 52.1601],
+    address: 'Haagse Schouwweg 14, 2332 KG Leiden',
+    affiliateLink: 'https://booking.com/van-der-valk-leiden',
+    popularThisMonth: false,
+    rooms: [
+      {
+        id: 1,
+        name: 'Van der Valk Comfort Jacuzzi',
+        image: '/images/Van der Valk Leiden.jpg',
+        description: 'Comfortabele kamer met wellness jacuzzi en moderne voorzieningen. Perfect voor een ontspannen verblijf in Leiden.',
+        features: ['Wellness jacuzzi', 'Moderne inrichting', 'Flatscreen TV', 'Koffie/thee faciliteiten', 'Gratis WiFi', 'Stadszicht'],
+        priceRange: '€159 - €189',
+        affiliateLink: 'https://booking.com/van-der-valk-leiden-comfort'
+      },
+      {
+        id: 2,
+        name: 'Van der Valk Superior Wellness',
+        image: '/images/Van der Valk Leiden.jpg',
+        description: 'Superior kamer met extra grote jacuzzi en premium amenities. Ideaal voor een luxe verblijf in het centrum van Leiden.',
+        features: ['Extra grote jacuzzi', 'Premium amenities', 'Balkon', 'Room service', 'Luxe beddengoed', 'Business desk'],
+        priceRange: '€189 - €229',
+        affiliateLink: 'https://booking.com/van-der-valk-leiden-superior'
+      }
+    ]
+  },
+  'van-der-valk-den-haag-wassenaar': {
+    id: 114,
+    name: 'Van der Valk Den Haag - Wassenaar',
+    location: 'Wassenaar, Zuid-Holland',
+    city: 'Wassenaar',
+    province: 'Zuid-Holland',
+    priceRange: '€179 - €269',
+    jacuzziType: 'Premium jacuzzi suite',
+    facilities: ['Premium jacuzzi', 'Spa faciliteiten', 'Kust nabij', 'Restaurant', 'Wellness', 'Gratis parking', 'Luxe amenities'],
+    rating: 4.4,
+    reviewCount: 312,
+    heroImage: '/images/Van der Valk Den Haag - Wassenaar.jpg',
+    description: 'Elegant Van der Valk hotel in Wassenaar met premium jacuzzi suites en spa faciliteiten. Rustige ligging nabij Den Haag en de kust.',
+    coordinates: [4.4017, 52.1458],
+    address: 'Zijdeweg 54, 2244 BZ Wassenaar',
+    affiliateLink: 'https://booking.com/van-der-valk-wassenaar',
+    popularThisMonth: true,
+    rooms: [
+      {
+        id: 1,
+        name: 'Van der Valk Premium Jacuzzi',
+        image: '/images/Van der Valk Den Haag - Wassenaar.jpg',
+        description: 'Premium kamer met luxe jacuzzi en elegante inrichting. Perfect voor een stijlvol verblijf nabij de kust.',
+        features: ['Premium jacuzzi', 'Elegante inrichting', 'Flatscreen TV', 'Minibar', 'Gratis WiFi', 'Terras'],
+        priceRange: '€179 - €219',
+        affiliateLink: 'https://booking.com/van-der-valk-wassenaar-premium'
+      },
+      {
+        id: 2,
+        name: 'Van der Valk Spa Suite',
+        image: '/images/Van der Valk Den Haag - Wassenaar.jpg',
+        description: 'Luxe spa suite met extra grote jacuzzi en toegang tot spa faciliteiten. Het ultieme in wellness en comfort.',
+        features: ['Extra grote jacuzzi', 'Spa toegang', 'Wellness amenities', 'Separate woonkamer', 'Butler service', 'Premium beddengoed'],
+        priceRange: '€219 - €269',
+        affiliateLink: 'https://booking.com/van-der-valk-wassenaar-spa'
+      }
+    ]
+  },
+  'van-der-valk-den-haag-nootdorp': {
+    id: 115,
+    name: 'Van der Valk Den Haag - Nootdorp',
+    location: 'Nootdorp, Zuid-Holland',
+    city: 'Nootdorp',
+    province: 'Zuid-Holland',
+    priceRange: '€149 - €209',
+    jacuzziType: 'Wellness jacuzzi kamer',
+    facilities: ['Wellness jacuzzi', 'Modern design', 'Restaurant', 'Bar', 'Fitness', 'Gratis WiFi', 'Business center'],
+    rating: 4.2,
+    reviewCount: 234,
+    heroImage: '/images/Van der Valk Den Haag - Nootdorp.jpg',
+    description: 'Comfortabel Van der Valk hotel in Nootdorp met moderne wellness kamers en jacuzzi faciliteiten. Ideale uitvalsbasis voor Den Haag en omgeving.',
+    coordinates: [4.3906, 52.0386],
+    address: 'Laan van Vredenoord 180, 2271 TK Nootdorp',
+    affiliateLink: 'https://booking.com/van-der-valk-nootdorp',
+    popularThisMonth: false,
+    rooms: [
+      {
+        id: 1,
+        name: 'Van der Valk Modern Jacuzzi',
+        image: '/images/Van der Valk Den Haag - Nootdorp.jpg',
+        description: 'Moderne kamer met wellness jacuzzi en contemporary design. Perfect voor een comfortabel verblijf.',
+        features: ['Wellness jacuzzi', 'Modern design', 'Flatscreen TV', 'Koffie/thee faciliteiten', 'Gratis WiFi', 'Balkon'],
+        priceRange: '€149 - €179',
+        affiliateLink: 'https://booking.com/van-der-valk-nootdorp-modern'
+      },
+      {
+        id: 2,
+        name: 'Van der Valk Business Jacuzzi',
+        image: '/images/Van der Valk Den Haag - Nootdorp.jpg',
+        description: 'Business kamer met jacuzzi en werkruimte. Ideaal voor zakenreizigers die comfort en wellness combineren.',
+        features: ['Business jacuzzi', 'Werkruimte', 'Business desk', 'Meeting faciliteiten', 'Premium WiFi', 'Room service'],
+        priceRange: '€179 - €209',
+        affiliateLink: 'https://booking.com/van-der-valk-nootdorp-business'
+      }
+    ]
+  },
+  'van-der-valk-ridderkerk': {
+    id: 116,
+    name: 'Van der Valk Ridderkerk',
+    location: 'Ridderkerk, Zuid-Holland',
+    city: 'Ridderkerk',
+    province: 'Zuid-Holland',
+    priceRange: '€139 - €199',
+    jacuzziType: 'Jacuzzi kamer',
+    facilities: ['Jacuzzi kamers', 'Centraal gelegen', 'Restaurant', 'Business center', 'Fitness', 'Gratis parking', 'Modern'],
+    rating: 4.1,
+    reviewCount: 198,
+    heroImage: '/images/Van der Valk Ridderkerk.jpg',
+    description: 'Centraal gelegen Van der Valk hotel in Ridderkerk met jacuzzi kamers en uitstekende faciliteiten. Perfect voor zowel business als leisure gasten.',
+    coordinates: [4.6073, 51.8706],
+    address: 'Rijksstraatweg 480, 2988 BC Ridderkerk',
+    affiliateLink: 'https://booking.com/van-der-valk-ridderkerk',
+    popularThisMonth: false,
+    rooms: [
+      {
+        id: 1,
+        name: 'Van der Valk Standard Jacuzzi',
+        image: '/images/Van der Valk Ridderkerk.jpg',
+        description: 'Standaard kamer met jacuzzi en alle comfort. Uitstekende prijs-kwaliteitverhouding voor een ontspannen verblijf.',
+        features: ['Jacuzzi bad', 'Standaard comfort', 'Flatscreen TV', 'Koffie/thee faciliteiten', 'Gratis WiFi', 'Parkeerplaats'],
+        priceRange: '€139 - €169',
+        affiliateLink: 'https://booking.com/van-der-valk-ridderkerk-standard'
+      },
+      {
+        id: 2,
+        name: 'Van der Valk Comfort Plus',
+        image: '/images/Van der Valk Ridderkerk.jpg',
+        description: 'Comfort kamer met verbeterde jacuzzi en extra amenities. Perfect voor gasten die wat meer luxe zoeken.',
+        features: ['Verbeterde jacuzzi', 'Extra amenities', 'Balkon', 'Room service', 'Premium beddengoed', 'Business facilities'],
+        priceRange: '€169 - €199',
+        affiliateLink: 'https://booking.com/van-der-valk-ridderkerk-comfort'
+      }
+    ]
+  },
+  'van-der-valk-dordrecht': {
+    id: 117,
+    name: 'Van der Valk Dordrecht',
+    location: 'Dordrecht, Zuid-Holland',
+    city: 'Dordrecht',
+    province: 'Zuid-Holland',
+    priceRange: '€169 - €249',
+    jacuzziType: 'Luxe jacuzzi suite',
+    facilities: ['Luxe jacuzzi suites', 'Wellness centrum', 'Historische stad', 'Restaurant', 'Spa', 'Gratis WiFi', 'Premium service'],
+    rating: 4.5,
+    reviewCount: 356,
+    heroImage: '/images/Van der Valk Dordrecht.jpg',
+    description: 'Stijlvol Van der Valk hotel in historisch Dordrecht met luxe jacuzzi suites en wellness centrum. Perfecte combinatie van historie en modern comfort.',
+    coordinates: [4.6751, 51.8132],
+    address: 'Laan van Europa 1600, 3317 LT Dordrecht',
+    affiliateLink: 'https://booking.com/van-der-valk-dordrecht',
+    popularThisMonth: true,
+    rooms: [
+      {
+        id: 1,
+        name: 'Van der Valk Heritage Jacuzzi',
+        image: '/images/Van der Valk Dordrecht.jpg',
+        description: 'Luxe kamer met jacuzzi en uitzicht op de historische stad. Perfect voor een romantisch verblijf in Dordrecht.',
+        features: ['Luxe jacuzzi', 'Historisch uitzicht', 'Premium inrichting', 'Flatscreen TV', 'Minibar', 'Gratis WiFi'],
+        priceRange: '€169 - €209',
+        affiliateLink: 'https://booking.com/van-der-valk-dordrecht-heritage'
+      },
+      {
+        id: 2,
+        name: 'Van der Valk Wellness Suite',
+        image: '/images/Van der Valk Dordrecht.jpg',
+        description: 'Ultra-luxe wellness suite met spa jacuzzi en toegang tot wellness centrum. Het ultieme in comfort en ontspanning.',
+        features: ['Spa jacuzzi', 'Wellness toegang', 'Suite inrichting', 'Separate woonkamer', 'Butler service', 'Premium facilities'],
+        priceRange: '€209 - €249',
+        affiliateLink: 'https://booking.com/van-der-valk-dordrecht-wellness'
+      }
+    ]
   }
 }
 

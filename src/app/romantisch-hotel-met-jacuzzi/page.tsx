@@ -190,6 +190,39 @@ export default function RomantischHotelMetJacuzziPage() {
       description: "Charmant boutique hotel in historisch pand met stijlvolle jacuzzi kamers en persoonlijke service. Een unieke ervaring in het hart van Den Haag.",
       image_url: "/images/Boutique Hotel Corona Den Haag.jpg",
       facilities: ["Boutique jacuzzi", "Persoonlijke service", "Historic charm", "Romantisch", "Concierge"]
+    },
+    {
+      id: 16,
+      name: "Van der Valk Leiden",
+      city: "Leiden",
+      province: "Zuid-Holland",
+      price_range: "Vanaf €159",
+      rating: 4.3,
+      description: "Modern Van der Valk hotel in het hart van Leiden met luxe wellness faciliteiten en jacuzzi kamers. Perfect gelegen nabij de historische binnenstad.",
+      image_url: "/images/Van der Valk Leiden.jpg",
+      facilities: ["Wellness jacuzzi", "Historische locatie", "Restaurant", "Fitness", "Romantisch"]
+    },
+    {
+      id: 17,
+      name: "Van der Valk Den Haag - Wassenaar",
+      city: "Wassenaar",
+      province: "Zuid-Holland",
+      price_range: "Vanaf €179",
+      rating: 4.4,
+      description: "Elegant Van der Valk hotel in Wassenaar met premium jacuzzi suites en spa faciliteiten. Rustige ligging nabij Den Haag en de kust.",
+      image_url: "/images/Van der Valk Den Haag - Wassenaar.jpg",
+      facilities: ["Premium jacuzzi", "Spa faciliteiten", "Kust nabij", "Restaurant", "Romantisch"]
+    },
+    {
+      id: 18,
+      name: "Van der Valk Dordrecht",
+      city: "Dordrecht",
+      province: "Zuid-Holland",
+      price_range: "Vanaf €169",
+      rating: 4.5,
+      description: "Stijlvol Van der Valk hotel in historisch Dordrecht met luxe jacuzzi suites en wellness centrum. Perfecte combinatie van historie en modern comfort.",
+      image_url: "/images/Van der Valk Dordrecht.jpg",
+      facilities: ["Luxe jacuzzi suites", "Wellness centrum", "Historische stad", "Restaurant", "Romantisch"]
     }
   ]
 

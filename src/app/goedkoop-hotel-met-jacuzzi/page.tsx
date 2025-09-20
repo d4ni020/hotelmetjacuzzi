@@ -190,6 +190,34 @@ const budgetJacuzziHotels: Hotel[] = [
     image_url: "/images/Van der Valk Hotel Sassenheim - Leiden 2020.jpg",
     rating: 4.1,
     created_at: "2024-01-01"
+  },
+  {
+    id: 110,
+    name: "Van der Valk Ridderkerk",
+    slug: "van-der-valk-ridderkerk",
+    description: "Centraal gelegen Van der Valk hotel in Ridderkerk met jacuzzi kamers en uitstekende faciliteiten. Perfect voor zowel business als leisure.",
+    province_id: 4,
+    city_id: 44,
+    price_range: "Vanaf €139",
+    facilities: ["Jacuzzi kamers", "Centraal gelegen", "Restaurant", "Business"],
+    affiliate_link: "https://booking.com/van-der-valk-ridderkerk",
+    image_url: "/images/Van der Valk Ridderkerk.jpg",
+    rating: 4.1,
+    created_at: "2024-01-01"
+  },
+  {
+    id: 111,
+    name: "Van der Valk Den Haag - Nootdorp",
+    slug: "van-der-valk-den-haag-nootdorp",
+    description: "Comfortabel Van der Valk hotel in Nootdorp met moderne wellness kamers en jacuzzi faciliteiten. Ideale uitvalsbasis voor Den Haag en omgeving.",
+    province_id: 4,
+    city_id: 43,
+    price_range: "Vanaf €149",
+    facilities: ["Wellness jacuzzi", "Modern design", "Restaurant", "Bar"],
+    affiliate_link: "https://booking.com/van-der-valk-nootdorp",
+    image_url: "/images/Van der Valk Den Haag - Nootdorp.jpg",
+    rating: 4.2,
+    created_at: "2024-01-01"
   }
 ]
 
