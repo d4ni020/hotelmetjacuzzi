@@ -157,6 +157,39 @@ export default function RomantischHotelMetJacuzziPage() {
       description: "Uniek kloosterhotel met authentieke charme en romantische wellness kamers met jacuzzi.",
       image_url: "/images/Kloosterhotel Willibrordhaeghe.jpg",
       facilities: ["Klooster charme", "Romantisch", "Authentiek", "Wellness", "Rust"]
+    },
+    {
+      id: 13,
+      name: "Hotel-Restaurant Carlton",
+      city: "Den Haag",
+      province: "Zuid-Holland",
+      price_range: "Vanaf €169",
+      rating: 4.4,
+      description: "Elegant hotel in het hart van Den Haag met verfijnde jacuzzi kamers en uitstekend restaurant. Perfect gelegen voor zowel zakelijke als romantische verblijven.",
+      image_url: "/images/Hotel-Restaurant Carlton.jpg",
+      facilities: ["Privé jacuzzi", "Fine dining", "Centrum locatie", "Business center", "Romantisch"]
+    },
+    {
+      id: 14,
+      name: "Mainport Design Hotel Rotterdam",
+      city: "Rotterdam",
+      province: "Zuid-Holland",
+      price_range: "Vanaf €199",
+      rating: 4.6,
+      description: "Iconisch design hotel aan de Maas met luxe jacuzzi suites en spectaculair uitzicht over Rotterdam. Perfecte combinatie van modern design en wellness.",
+      image_url: "/images/Mainport Design Hotel Rotterdam .jpg",
+      facilities: ["Designer jacuzzi", "Spa center", "Fine dining", "Maas uitzicht", "Design interieur"]
+    },
+    {
+      id: 15,
+      name: "Boutique Hotel Corona Den Haag",
+      city: "Den Haag",
+      province: "Zuid-Holland",
+      price_range: "Vanaf €159",
+      rating: 4.3,
+      description: "Charmant boutique hotel in historisch pand met stijlvolle jacuzzi kamers en persoonlijke service. Een unieke ervaring in het hart van Den Haag.",
+      image_url: "/images/Boutique Hotel Corona Den Haag.jpg",
+      facilities: ["Boutique jacuzzi", "Persoonlijke service", "Historic charm", "Romantisch", "Concierge"]
     }
   ]
 

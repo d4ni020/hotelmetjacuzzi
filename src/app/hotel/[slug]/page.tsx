@@ -373,6 +373,196 @@ const mockHotels: Record<string, Hotel> = {
         affiliateLink: 'https://booking.com/van-der-valk-akersloot-comfort'
       }
     ]
+  },
+  'hotel-restaurant-carlton': {
+    id: 7,
+    name: 'Hotel-Restaurant Carlton',
+    location: 'Den Haag, Zuid-Holland',
+    city: 'Den Haag',
+    province: 'Zuid-Holland',
+    priceRange: '€169 - €249',
+    jacuzziType: 'Privé jacuzzi kamer',
+    facilities: ['Privé jacuzzi', 'Fine dining restaurant', 'Centrum locatie', 'Business center', 'Gratis WiFi', 'Room service', 'Parkeerservice'],
+    rating: 4.4,
+    reviewCount: 325,
+    heroImage: '/images/Hotel-Restaurant Carlton.jpg',
+    description: 'Elegant hotel in het hart van Den Haag met verfijnde jacuzzi kamers en uitstekend restaurant. Perfect gelegen voor zowel zakelijke als romantische verblijven nabij het regeringscentrum.',
+    coordinates: [4.3007, 52.0705],
+    address: 'Lange Voorhout 27, 2514 EC Den Haag',
+    affiliateLink: 'https://booking.com/hotel-restaurant-carlton',
+    popularThisMonth: true,
+    rooms: [
+      {
+        id: 1,
+        name: 'Carlton Executive Jacuzzi Kamer',
+        image: '/images/Hotel-Restaurant Carlton.jpg',
+        description: 'Elegante executive kamer met luxe jacuzzi en uitzicht op het Lange Voorhout. Perfecte combinatie van stijl en comfort.',
+        features: ['Luxe jacuzzi', 'Lange Voorhout uitzicht', 'Executive amenities', 'Flatscreen TV', 'Premium beddengoed', 'Gratis WiFi'],
+        priceRange: '€169 - €219',
+        affiliateLink: 'https://booking.com/carlton-executive-jacuzzi'
+      },
+      {
+        id: 2,
+        name: 'Carlton Business Suite met Jacuzzi',
+        image: '/images/Hotel-Restaurant Carlton.jpg',
+        description: 'Ruime business suite met separate woonkamer en jacuzzi. Ideaal voor zakelijke gasten die luxe en ontspanning combineren.',
+        features: ['Jacuzzi bad', 'Separate woonkamer', 'Business desk', 'Meeting faciliteiten', 'Premium WiFi', 'Room service'],
+        priceRange: '€219 - €249',
+        affiliateLink: 'https://booking.com/carlton-business-suite'
+      }
+    ]
+  },
+  'stadshotel-den-haag': {
+    id: 8,
+    name: 'Stadshotel Den Haag',
+    location: 'Den Haag, Zuid-Holland',
+    city: 'Den Haag',
+    province: 'Zuid-Holland',
+    priceRange: '€139 - €199',
+    jacuzziType: 'Wellness jacuzzi kamer',
+    facilities: ['Wellness jacuzzi', 'Fitness center', 'Restaurant', 'Bar', 'Gratis WiFi', 'Parkeergarage', 'Centrum locatie'],
+    rating: 4.2,
+    reviewCount: 278,
+    heroImage: '/images/Stadshotel Den Haag.jpg',
+    description: 'Modern stadshotel in Den Haag met comfortabele wellness kamers en jacuzzi faciliteiten. Uitstekende uitvalsbasis voor het verkennen van de hofstad.',
+    coordinates: [4.3017, 52.0799],
+    address: 'Stationsplein 8, 2515 BX Den Haag',
+    affiliateLink: 'https://booking.com/stadshotel-den-haag',
+    popularThisMonth: false,
+    rooms: [
+      {
+        id: 1,
+        name: 'Wellness Comfort Kamer',
+        image: '/images/Stadshotel Den Haag.jpg',
+        description: 'Comfortabele kamer met wellness jacuzzi en moderne amenities. Perfect voor een ontspannen verblijf in de hofstad.',
+        features: ['Wellness jacuzzi', 'Moderne inrichting', 'Flatscreen TV', 'Koffie/thee faciliteiten', 'Gratis WiFi', 'Stadszicht'],
+        priceRange: '€139 - €169',
+        affiliateLink: 'https://booking.com/stadshotel-wellness-comfort'
+      },
+      {
+        id: 2,
+        name: 'Superior Jacuzzi Kamer',
+        image: '/images/Stadshotel Den Haag.jpg',
+        description: 'Ruimere superior kamer met extra grote jacuzzi en premium voorzieningen. Ideaal voor een luxere ervaring.',
+        features: ['Extra grote jacuzzi', 'Premium amenities', 'Balkon', 'Room service', 'Luxe beddengoed', 'Gratis WiFi'],
+        priceRange: '€169 - €199',
+        affiliateLink: 'https://booking.com/stadshotel-superior-jacuzzi'
+      }
+    ]
+  },
+  'mainport-design-hotel-rotterdam': {
+    id: 9,
+    name: 'Mainport Design Hotel Rotterdam',
+    location: 'Rotterdam, Zuid-Holland',
+    city: 'Rotterdam',
+    province: 'Zuid-Holland',
+    priceRange: '€199 - €329',
+    jacuzziType: 'Designer jacuzzi suite',
+    facilities: ['Designer jacuzzi', 'Spa center', 'Fine dining', 'Maas uitzicht', 'Fitness', 'Room service', 'Design interieur'],
+    rating: 4.6,
+    reviewCount: 412,
+    heroImage: '/images/Mainport Design Hotel Rotterdam .jpg',
+    description: 'Iconisch design hotel aan de Maas met luxe jacuzzi suites en spectaculair uitzicht over Rotterdam. Perfecte combinatie van modern design en wellness.',
+    coordinates: [4.4777, 51.9108],
+    address: 'Leuvehaven 77, 3011 EA Rotterdam',
+    affiliateLink: 'https://booking.com/mainport-design-hotel',
+    popularThisMonth: true,
+    rooms: [
+      {
+        id: 1,
+        name: 'Design River View Jacuzzi Suite',
+        image: '/images/Mainport Design Hotel Rotterdam .jpg',
+        description: 'Stijlvolle designer suite met jacuzzi en spectaculair uitzicht over de Maas en Rotterdamse skyline.',
+        features: ['Designer jacuzzi', 'Maas uitzicht', 'Design meubilair', 'Skyline zicht', 'Premium amenities', 'Balkon'],
+        priceRange: '€199 - €279',
+        affiliateLink: 'https://booking.com/mainport-river-view-suite'
+      },
+      {
+        id: 2,
+        name: 'Mainport Signature Spa Suite',
+        image: '/images/Mainport Design Hotel Rotterdam .jpg',
+        description: 'Ultra-luxe spa suite met extra grote jacuzzi en toegang tot het exclusieve spa center. Het ultieme in design en wellness.',
+        features: ['Ultra-luxe jacuzzi', 'Spa toegang', 'Butler service', 'Designer interieur', 'Panorama uitzicht', 'Premium facilities'],
+        priceRange: '€279 - €329',
+        affiliateLink: 'https://booking.com/mainport-signature-spa'
+      }
+    ]
+  },
+  'boutique-hotel-corona-den-haag': {
+    id: 10,
+    name: 'Boutique Hotel Corona Den Haag',
+    location: 'Den Haag, Zuid-Holland',
+    city: 'Den Haag',
+    province: 'Zuid-Holland',
+    priceRange: '€159 - €229',
+    jacuzziType: 'Boutique jacuzzi kamer',
+    facilities: ['Boutique jacuzzi', 'Persoonlijke service', 'Restaurant', 'Lounge bar', 'Gratis WiFi', 'Concierge', 'Historic charm'],
+    rating: 4.3,
+    reviewCount: 267,
+    heroImage: '/images/Boutique Hotel Corona Den Haag.jpg',
+    description: 'Charmant boutique hotel in historisch pand met stijlvolle jacuzzi kamers en persoonlijke service. Een unieke ervaring in het hart van Den Haag.',
+    coordinates: [4.3147, 52.0767],
+    address: 'Buitenhof 39-42, 2513 AH Den Haag',
+    affiliateLink: 'https://booking.com/boutique-hotel-corona',
+    popularThisMonth: false,
+    rooms: [
+      {
+        id: 1,
+        name: 'Corona Heritage Jacuzzi Kamer',
+        image: '/images/Boutique Hotel Corona Den Haag.jpg',
+        description: 'Authentieke kamer in historisch pand met moderne jacuzzi en boutique charme. Perfect voor romantische verblijven.',
+        features: ['Historische jacuzzi', 'Authentieke details', 'Boutique styling', 'Flatscreen TV', 'Luxe amenities', 'Gratis WiFi'],
+        priceRange: '€159 - €189',
+        affiliateLink: 'https://booking.com/corona-heritage-jacuzzi'
+      },
+      {
+        id: 2,
+        name: 'Corona Deluxe Suite',
+        image: '/images/Boutique Hotel Corona Den Haag.jpg',
+        description: 'Ruime deluxe suite met luxe jacuzzi en separate woonkamer. Historische charme met moderne luxe.',
+        features: ['Luxe jacuzzi', 'Separate woonkamer', 'Historische details', 'Premium service', 'Lounge toegang', 'Butler service'],
+        priceRange: '€189 - €229',
+        affiliateLink: 'https://booking.com/corona-deluxe-suite'
+      }
+    ]
+  },
+  'van-der-valk-sassenheim-leiden': {
+    id: 11,
+    name: 'Van der Valk Sassenheim-Leiden',
+    location: 'Sassenheim, Zuid-Holland',
+    city: 'Sassenheim',
+    province: 'Zuid-Holland',
+    priceRange: '€149 - €219',
+    jacuzziType: 'Wellness jacuzzi kamer',
+    facilities: ['Wellness jacuzzi', 'Fitness center', 'Restaurant', 'Bowling', 'Gratis parking', 'Gratis WiFi', 'Business center'],
+    rating: 4.1,
+    reviewCount: 356,
+    heroImage: '/images/Van der Valk Hotel Sassenheim - Leiden 2020.jpg',
+    description: 'Comfortabel Van der Valk hotel nabij Leiden met moderne wellness faciliteiten en jacuzzi kamers. Ideaal voor zowel zakelijke als leisure gasten.',
+    coordinates: [4.5167, 52.2167],
+    address: 'Warmonderweg 8, 2171 AH Sassenheim',
+    affiliateLink: 'https://booking.com/van-der-valk-sassenheim',
+    popularThisMonth: false,
+    rooms: [
+      {
+        id: 1,
+        name: 'Van der Valk Comfort Jacuzzi',
+        image: '/images/Van der Valk Hotel Sassenheim - Leiden 2020.jpg',
+        description: 'Comfortabele kamer met moderne jacuzzi en alle Van der Valk comfort. Perfect voor een ontspannen verblijf.',
+        features: ['Moderne jacuzzi', 'Comfort amenities', 'Flatscreen TV', 'Koffie/thee faciliteiten', 'Gratis WiFi', 'Airconditioning'],
+        priceRange: '€149 - €179',
+        affiliateLink: 'https://booking.com/valk-sassenheim-comfort'
+      },
+      {
+        id: 2,
+        name: 'Van der Valk Superior Wellness',
+        image: '/images/Van der Valk Hotel Sassenheim - Leiden 2020.jpg',
+        description: 'Superior kamer met extra grote jacuzzi en wellness amenities. Ideaal voor gasten die extra luxe zoeken.',
+        features: ['Extra grote jacuzzi', 'Wellness amenities', 'Superior comfort', 'Room service', 'Premium beddengoed', 'Balkon'],
+        priceRange: '€179 - €219',
+        affiliateLink: 'https://booking.com/valk-sassenheim-superior'
+      }
+    ]
   }
 }
 

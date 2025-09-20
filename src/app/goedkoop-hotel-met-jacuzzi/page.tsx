@@ -162,6 +162,34 @@ const budgetJacuzziHotels: Hotel[] = [
     image_url: "/images/Van der Valk Amersfoort.jpeg",
     rating: 4.2,
     created_at: "2024-01-01"
+  },
+  {
+    id: 108,
+    name: "Stadshotel Den Haag",
+    slug: "stadshotel-den-haag",
+    description: "Modern stadshotel in Den Haag met comfortabele wellness kamers en jacuzzi faciliteiten. Uitstekende uitvalsbasis voor het verkennen van de hofstad.",
+    province_id: 3,
+    city_id: 15,
+    price_range: "Vanaf €139",
+    facilities: ["Wellness jacuzzi", "Fitness center", "Restaurant", "Centrum"],
+    affiliate_link: "https://booking.com/stadshotel-den-haag",
+    image_url: "/images/Stadshotel Den Haag.jpg",
+    rating: 4.2,
+    created_at: "2024-01-01"
+  },
+  {
+    id: 109,
+    name: "Van der Valk Sassenheim-Leiden",
+    slug: "van-der-valk-sassenheim-leiden",
+    description: "Comfortabel Van der Valk hotel nabij Leiden met moderne wellness faciliteiten en jacuzzi kamers. Ideaal voor zowel zakelijke als leisure gasten.",
+    province_id: 3,
+    city_id: 25,
+    price_range: "Vanaf €149",
+    facilities: ["Wellness jacuzzi", "Fitness", "Restaurant", "Bowling"],
+    affiliate_link: "https://booking.com/van-der-valk-sassenheim",
+    image_url: "/images/Van der Valk Hotel Sassenheim - Leiden 2020.jpg",
+    rating: 4.1,
+    created_at: "2024-01-01"
   }
 ]
 
