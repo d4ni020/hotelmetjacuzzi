@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle for stability -->
+  <circle cx="90" cy="90" r="85" fill="#1A2637" stroke="none"/>
+  
+  <!-- Hotel/house silhouette base -->
+  <path d="M45 117 L67.5 94.5 L112.5 94.5 L135 117 L135 146.25 L45 146.25 Z" fill="#F36F21"/>
+  
+  <!-- Roof/top of hotel -->
+  <path d="M56.25 94.5 L90 67.5 L123.75 94.5 Z" fill="#F36F21"/>
+  
+  <!-- Jacuzzi basin -->
+  <ellipse cx="90" cy="108" rx="36" ry="18" fill="#FFFFFF" opacity="0.9"/>
+  <ellipse cx="90" cy="108" rx="31.5" ry="13.5" fill="#1A2637" opacity="0.1"/>
+  
+  <!-- Water surface with subtle ripple -->
+  <ellipse cx="90" cy="105.75" rx="27" ry="9" fill="#F36F21" opacity="0.3"/>
+  
+  <!-- Bubbles -->
+  <circle cx="72" cy="101.25" r="3.375" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="81" cy="94.5" r="2.25" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="99" cy="96.75" r="2.7" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="108" cy="101.25" r="2.25" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="90" cy="90" r="1.8" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="76.5" cy="87.75" r="1.35" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="103.5" cy="92.25" r="1.575" fill="#FFFFFF" opacity="0.6"/>
+  
+  <!-- Heart accent for romance -->
+  <path d="M112.5 78.75 C112.5 74.25, 117 69.75, 121.5 74.25 C126 69.75, 130.5 74.25, 130.5 78.75 C130.5 83.25, 121.5 92.25, 121.5 92.25 C121.5 92.25, 112.5 83.25, 112.5 78.75 Z" fill="#F36F21" opacity="0.8"/>
+</svg>
