@@ -69,7 +69,6 @@ const mockCities: City[] = [
   { id: 55, name: "Dwingeloo", slug: "dwingeloo", province_id: 9, seo_text: "", created_at: "2024-01-01" },
   { id: 56, name: "Hoogersmilde", slug: "hoogersmilde", province_id: 9, seo_text: "", created_at: "2024-01-01" },
   { id: 57, name: "Almelo", slug: "almelo", province_id: 10, seo_text: "", created_at: "2024-01-01" },
-  { id: 58, name: "Deventer", slug: "deventer", province_id: 10, seo_text: "", created_at: "2024-01-01" },
   { id: 59, name: "Hellendoorn", slug: "hellendoorn", province_id: 10, seo_text: "", created_at: "2024-01-01" }
 ]
 

@@ -78,7 +78,6 @@ const mockCities = [
   { id: 55, name: "Dwingeloo", province_id: 9 },
   { id: 56, name: "Hoogersmilde", province_id: 9 },
   { id: 57, name: "Almelo", province_id: 10 },
-  { id: 58, name: "Deventer", province_id: 10 },
   { id: 59, name: "Hellendoorn", province_id: 10 }
 ]
 
