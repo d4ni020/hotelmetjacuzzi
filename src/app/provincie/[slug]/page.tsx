@@ -815,7 +815,7 @@ export default async function ProvincePage({ params }: { params: Promise<{ slug:
       'Noord-Holland': 'https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?q=80&w=1600&auto=format&fit=crop', // Amsterdam canal golden hour - verified working
       'Limburg': 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop', // Historic Dutch architecture - verified working
       'Zeeland': '/images/Zeeland-Hero.jpg', // Local Zeeland hero image
-      'Zuid-Holland': 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1600&auto=format&fit=crop', // Dutch nature landscape - verified working
+      'Zuid-Holland': '/images/Zuid-Hollad-Erasmus.jpg', // Local Zuid-Holland Erasmus bridge hero image
       'Utrecht': '/images/Domtoren-Utrecht-Hero.jpg', // Local Utrecht Domtoren hero image
       'Noord-Brabant': 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop' // Historic Dutch architecture - verified working
     }
