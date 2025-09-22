@@ -51,7 +51,9 @@ export default function StedenPage() {
     { name: 'Emmen', slug: 'emmen', province: 'Drenthe', provinceSlug: 'drenthe', description: 'Groene stad in Drenthe met natuur en karakteristieke Zeegser Duinen' },
     { name: 'Assen', slug: 'assen', province: 'Drenthe', provinceSlug: 'drenthe', description: 'Hoofdstad van Drenthe met authentieke Drentse gastvrijheid en charme' },
     { name: 'Dwingeloo', slug: 'dwingeloo', province: 'Drenthe', provinceSlug: 'drenthe', description: 'Rustig dorp bij de Hunzebergen met wellness en prachtige natuur' },
-    { name: 'Hoogersmilde', slug: 'hoogersmilde', province: 'Drenthe', provinceSlug: 'drenthe', description: 'Kleine gemeente met landelijke charme en ontspanning in het groen' }
+    { name: 'Hoogersmilde', slug: 'hoogersmilde', province: 'Drenthe', provinceSlug: 'drenthe', description: 'Kleine gemeente met landelijke charme en ontspanning in het groen' },
+    { name: 'Almelo', slug: 'almelo', province: 'Overijssel', provinceSlug: 'overijssel', description: 'Theatrale stad in Overijssel met culturele accommodaties en wellness hotels' },
+    { name: 'Deventer', slug: 'deventer', province: 'Overijssel', provinceSlug: 'overijssel', description: 'Historische Hanzestad met landgoedhotels en wellness in natuurlijke omgeving' }
   ]
 
   // Group cities by province

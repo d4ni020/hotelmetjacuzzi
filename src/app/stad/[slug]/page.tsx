@@ -66,7 +66,9 @@ const mockCities: (City & { provinces?: Province })[] = [
   { id: 53, name: "Emmen", slug: "emmen", province_id: 9, seo_text: "", created_at: "2024-01-01", provinces: { id: 9, name: "Drenthe", slug: "drenthe", seo_text: "", created_at: "2024-01-01" } },
   { id: 54, name: "Assen", slug: "assen", province_id: 9, seo_text: "", created_at: "2024-01-01", provinces: { id: 9, name: "Drenthe", slug: "drenthe", seo_text: "", created_at: "2024-01-01" } },
   { id: 55, name: "Dwingeloo", slug: "dwingeloo", province_id: 9, seo_text: "", created_at: "2024-01-01", provinces: { id: 9, name: "Drenthe", slug: "drenthe", seo_text: "", created_at: "2024-01-01" } },
-  { id: 56, name: "Hoogersmilde", slug: "hoogersmilde", province_id: 9, seo_text: "", created_at: "2024-01-01", provinces: { id: 9, name: "Drenthe", slug: "drenthe", seo_text: "", created_at: "2024-01-01" } }
+  { id: 56, name: "Hoogersmilde", slug: "hoogersmilde", province_id: 9, seo_text: "", created_at: "2024-01-01", provinces: { id: 9, name: "Drenthe", slug: "drenthe", seo_text: "", created_at: "2024-01-01" } },
+  { id: 57, name: "Almelo", slug: "almelo", province_id: 10, seo_text: "", created_at: "2024-01-01", provinces: { id: 10, name: "Overijssel", slug: "overijssel", seo_text: "", created_at: "2024-01-01" } },
+  { id: 58, name: "Deventer", slug: "deventer", province_id: 10, seo_text: "", created_at: "2024-01-01", provinces: { id: 10, name: "Overijssel", slug: "overijssel", seo_text: "", created_at: "2024-01-01" } }
 ]
 
 const mockHotels: Hotel[] = [
@@ -832,6 +834,35 @@ const mockHotels: Hotel[] = [
     affiliate_link: "https://booking.com/van-der-valk-emmen",
     image_url: "/images/Van der Valk Emmen.jpg",
     rating: 4.2,
+    created_at: "2024-01-01"
+  },
+  {
+    id: 129,
+    name: "Landgoed de Uitkijk",
+    slug: "landgoed-de-uitkijk",
+    description: "Prachtig landgoedhotel gelegen op een historisch landgoed met luxe jacuzzi suites en uitgebreide wellness faciliteiten.",
+    province_id: 10,
+    city_id: 58,
+    price_range: "Vanaf €179",
+    facilities: ["Luxe jacuzzi suites", "Landgoed omgeving", "Wellness centrum", "Fine dining", "Historische charme", "Natuur wandelingen"],
+    affiliate_link: "https://booking.com/landgoed-de-uitkijk",
+    image_url: "/images/Landgoed de Uitkijk.jpg",
+    rating: 4.4,
+    popular: true,
+    created_at: "2024-01-01"
+  },
+  {
+    id: 130,
+    name: "Theaterhotel Almelo",
+    slug: "theaterhotel-almelo",
+    description: "Uniek theaterhotel in het centrum van Almelo met stijlvolle jacuzzi kamers en culturele ambiance.",
+    province_id: 10,
+    city_id: 57,
+    price_range: "Vanaf €139",
+    facilities: ["Jacuzzi kamers", "Theater toegang", "Culturele activiteiten", "Centrum locatie", "Restaurant", "Gratis WiFi"],
+    affiliate_link: "https://booking.com/theaterhotel-almelo",
+    image_url: "/images/Theaterhotel Almelo.jpg",
+    rating: 4.1,
     created_at: "2024-01-01"
   }
 ]

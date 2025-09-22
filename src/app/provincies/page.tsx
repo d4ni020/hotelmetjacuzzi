@@ -18,6 +18,7 @@ export default function ProvinciesPage() {
     { name: 'Zeeland', slug: 'zeeland', description: 'Kustprovincie met strandhotels en wellness aan zee' },
     { name: 'Groningen', slug: 'groningen', description: 'Noordelijke provincie met landgoedhotels en rustgevende wellness' },
     { name: 'Drenthe', slug: 'drenthe', description: 'Groene provincie met authentieke gastvrijheid en wellness in natuurlijke rust' },
+    { name: 'Overijssel', slug: 'overijssel', description: 'Historische provincie met landgoedhotels en culturele wellness accommodaties' },
     { name: 'Flevoland', slug: 'flevoland', description: 'Jongste provincie van Nederland met moderne hotels en unieke poldernatuur' },
     { name: 'Friesland', slug: 'friesland', description: 'Authentieke provincie met Friese meren, cultuur en gastvrije wellness hotels' }
   ]

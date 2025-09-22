@@ -1162,6 +1162,81 @@ const mockHotels: Record<string, Hotel> = {
         affiliateLink: 'https://booking.com/van-der-valk-emmen-superior'
       }
     ]
+  },
+  'landgoed-de-uitkijk': {
+    id: 129,
+    name: 'Landgoed de Uitkijk',
+    location: 'Deventer, Overijssel',
+    city: 'Deventer',
+    province: 'Overijssel',
+    priceRange: '€179 - €249',
+    jacuzziType: 'Luxe jacuzzi suites',
+    facilities: ['Luxe jacuzzi suites', 'Landgoed omgeving', 'Wellness centrum', 'Fine dining', 'Historische charme', 'Natuur wandelingen'],
+    rating: 4.4,
+    reviewCount: 312,
+    heroImage: '/images/Landgoed de Uitkijk.jpg',
+    description: 'Prachtig landgoedhotel gelegen op een historisch landgoed met luxe jacuzzi suites en uitgebreide wellness faciliteiten. Perfect voor een romantisch verblijf in de rijke natuur van Overijssel.',
+    coordinates: [6.1639, 52.2551],
+    address: 'Landgoedweg 15, 7411 GK Deventer',
+    affiliateLink: 'https://booking.com/landgoed-de-uitkijk',
+    popularThisMonth: true,
+    rooms: [
+      {
+        id: 1,
+        name: 'Landgoed Heritage Suite',
+        image: '/images/Landgoed de Uitkijk.jpg',
+        description: 'Historische suite met luxe jacuzzi en uitzicht op het prachtige landgoed.',
+        features: ['Heritage jacuzzi', 'Landgoed uitzicht', 'Historische details', 'Fine dining access', 'Natuur terrassen', 'Wellness toegang'],
+        priceRange: '€179 - €219',
+        affiliateLink: 'https://booking.com/landgoed-de-uitkijk-heritage'
+      },
+      {
+        id: 2,
+        name: 'Landgoed Premium Suite',
+        image: '/images/Landgoed de Uitkijk.jpg',
+        description: 'Premium suite met wellness jacuzzi en exclusieve toegang tot landgoed faciliteiten.',
+        features: ['Premium wellness jacuzzi', 'Exclusieve toegang', 'Separate woonkamer', 'Personal butler', 'Private dining', 'Wandelpaden'],
+        priceRange: '€219 - €249',
+        affiliateLink: 'https://booking.com/landgoed-de-uitkijk-premium'
+      }
+    ]
+  },
+  'theaterhotel-almelo': {
+    id: 130,
+    name: 'Theaterhotel Almelo',
+    location: 'Almelo, Overijssel',
+    city: 'Almelo',
+    province: 'Overijssel',
+    priceRange: '€139 - €189',
+    jacuzziType: 'Culturele jacuzzi kamers',
+    facilities: ['Jacuzzi kamers', 'Theater toegang', 'Culturele activiteiten', 'Centrum locatie', 'Restaurant', 'Gratis WiFi'],
+    rating: 4.1,
+    reviewCount: 198,
+    heroImage: '/images/Theaterhotel Almelo.jpg',
+    description: 'Uniek theaterhotel in het centrum van Almelo met stijlvolle jacuzzi kamers en culturele ambiance. Een perfect verblijf waar theater, cultuur en luxe wellness samenkomen.',
+    coordinates: [6.6591, 52.3561],
+    address: 'Theaterplein 1, 7607 AS Almelo',
+    affiliateLink: 'https://booking.com/theaterhotel-almelo',
+    rooms: [
+      {
+        id: 1,
+        name: 'Theater Standard',
+        image: '/images/Theaterhotel Almelo.jpg',
+        description: 'Comfortable kamer met jacuzzi en theater thema voor een culturele ervaring.',
+        features: ['Theater jacuzzi', 'Culturele inrichting', 'Theater toegang', 'Centrum locatie', 'Restaurant toegang', 'WiFi'],
+        priceRange: '€139 - €159',
+        affiliateLink: 'https://booking.com/theaterhotel-almelo-standard'
+      },
+      {
+        id: 2,
+        name: 'Theater Deluxe',
+        image: '/images/Theaterhotel Almelo.jpg',
+        description: 'Deluxe kamer met wellness jacuzzi en exclusieve theater faciliteiten.',
+        features: ['Deluxe wellness jacuzzi', 'VIP theater toegang', 'Cultural concierge', 'Premium inrichting', 'Room service', 'Balkon'],
+        priceRange: '€169 - €189',
+        affiliateLink: 'https://booking.com/theaterhotel-almelo-deluxe'
+      }
+    ]
   }
 }
 

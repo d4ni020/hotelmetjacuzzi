@@ -76,7 +76,9 @@ const mockCities = [
   { id: 53, name: "Emmen", province_id: 9 },
   { id: 54, name: "Assen", province_id: 9 },
   { id: 55, name: "Dwingeloo", province_id: 9 },
-  { id: 56, name: "Hoogersmilde", province_id: 9 }
+  { id: 56, name: "Hoogersmilde", province_id: 9 },
+  { id: 57, name: "Almelo", province_id: 10 },
+  { id: 58, name: "Deventer", province_id: 10 }
 ]
 
 export default function HotelCard({ hotel }: HotelCardProps) {
