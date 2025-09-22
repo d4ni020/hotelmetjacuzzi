@@ -16,6 +16,7 @@ interface Room {
   features: string[]
   priceRange: string
   affiliateLink: string
+  thumbnails?: string[]
 }
 
 interface Hotel {
@@ -885,12 +886,16 @@ const mockHotels: Record<string, Hotel> = {
     rooms: [
       {
         id: 1,
-        name: 'Van der Valk Water View',
-        image: '/images/Van der Valk Sneek.jpg',
+        name: 'Deluxe Tweepersoonskamer met Uitzicht op de Tuin',
+        image: '/images/Deluxe Tweepersoonskamer met Uitzicht op de Tuin.jpg',
         description: 'Kamer met jacuzzi en prachtig uitzicht op de Friese meren. Perfect voor waterliefhebbers.',
         features: ['Meren jacuzzi', 'Water uitzicht', 'Watersport toegang', 'Balkon', 'Gratis WiFi', 'Bootje verhuur'],
         priceRange: '€169 - €189',
-        affiliateLink: 'https://booking.com/van-der-valk-sneek-water'
+        affiliateLink: 'https://booking.com/van-der-valk-sneek-water',
+        thumbnails: [
+          '/images/Deluxe Tweepersoonskamer met Uitzicht op de Tuin - foto1.jpg',
+          '/images/Deluxe Tweepersoonskamer met Uitzicht op de Tuin - foto2.jpg'
+        ]
       },
       {
         id: 2,

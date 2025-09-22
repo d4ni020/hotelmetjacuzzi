@@ -10,6 +10,7 @@ interface Room {
   features: string[]
   priceRange: string
   affiliateLink: string
+  thumbnails?: string[]
 }
 
 interface RoomCardProps {
@@ -51,6 +52,26 @@ export default function RoomCard({ room }: RoomCardProps) {
           </div>
         </div>
       </div>
+      
+      {/* Thumbnails */}
+      {room.thumbnails && room.thumbnails.length > 0 && (
+        <div className="px-6 py-3 bg-light-gray border-b border-brand-navy-200">
+          <div className="flex gap-2 overflow-x-auto">
+            {room.thumbnails.map((thumbnail, index) => (
+              <div key={index} className="flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border border-brand-navy-200">
+                <Image
+                  src={thumbnail}
+                  alt={`${room.name} extra foto ${index + 1}`}
+                  width={64}
+                  height={64}
+                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                  sizes="64px"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
       
       {/* Room Content */}
       <div className="relative p-6 flex flex-col flex-1">
