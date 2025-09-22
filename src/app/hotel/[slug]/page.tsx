@@ -34,7 +34,7 @@ interface Hotel {
   coordinates: [number, number]
   address: string
   affiliateLink: string
-  popularThisMonth: boolean
+  popularThisMonth?: boolean
   rooms?: Room[]
 }
 const mockHotels: Record<string, Hotel> = {
