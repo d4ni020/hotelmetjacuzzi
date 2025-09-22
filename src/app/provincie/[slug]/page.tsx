@@ -817,6 +817,7 @@ export default async function ProvincePage({ params }: { params: Promise<{ slug:
       'Zeeland': '/images/Zeeland-Hero.jpg', // Local Zeeland hero image
       'Zuid-Holland': '/images/Zuid-Hollad-Erasmus.jpg', // Local Zuid-Holland Erasmus bridge hero image
       'Utrecht': '/images/Domtoren-Utrecht-Hero.jpg', // Local Utrecht Domtoren hero image
+      'Groningen': '/images/Groningen - Hero.jpg', // Local Groningen hero image
       'Noord-Brabant': 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop' // Historic Dutch architecture - verified working
     }
     return images[provinceName as keyof typeof images] || images['Noord-Brabant']
