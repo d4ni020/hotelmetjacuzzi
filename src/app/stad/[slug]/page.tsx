@@ -60,7 +60,9 @@ const mockCities: (City & { provinces?: Province })[] = [
   { id: 47, name: "Sneek", slug: "sneek", province_id: 12, seo_text: "", created_at: "2024-01-01", provinces: { id: 12, name: "Friesland", slug: "friesland", seo_text: "", created_at: "2024-01-01" } },
   { id: 48, name: "Heerenveen", slug: "heerenveen", province_id: 12, seo_text: "", created_at: "2024-01-01", provinces: { id: 12, name: "Friesland", slug: "friesland", seo_text: "", created_at: "2024-01-01" } },
   { id: 49, name: "Drachten", slug: "drachten", province_id: 12, seo_text: "", created_at: "2024-01-01", provinces: { id: 12, name: "Friesland", slug: "friesland", seo_text: "", created_at: "2024-01-01" } },
-  { id: 50, name: "Wolvega", slug: "wolvega", province_id: 12, seo_text: "", created_at: "2024-01-01", provinces: { id: 12, name: "Friesland", slug: "friesland", seo_text: "", created_at: "2024-01-01" } }
+  { id: 50, name: "Wolvega", slug: "wolvega", province_id: 12, seo_text: "", created_at: "2024-01-01", provinces: { id: 12, name: "Friesland", slug: "friesland", seo_text: "", created_at: "2024-01-01" } },
+  { id: 51, name: "Emmeloord", slug: "emmeloord", province_id: 8, seo_text: "", created_at: "2024-01-01", provinces: { id: 8, name: "Flevoland", slug: "flevoland", seo_text: "", created_at: "2024-01-01" } },
+  { id: 52, name: "Almere", slug: "almere", province_id: 8, seo_text: "", created_at: "2024-01-01", provinces: { id: 8, name: "Flevoland", slug: "flevoland", seo_text: "", created_at: "2024-01-01" } }
 ]
 
 const mockHotels: Hotel[] = [
@@ -741,6 +743,34 @@ const mockHotels: Hotel[] = [
     affiliate_link: "https://booking.com/van-der-valk-leeuwarden",
     image_url: "/images/Van der Valk Leeuwarden.jpg",
     rating: 4.4,
+    created_at: "2024-01-01"
+  },
+  {
+    id: 123,
+    name: "Van der Valk Emmeloord",
+    slug: "van-der-valk-emmeloord",
+    description: "Modern Van der Valk hotel in het hart van Flevoland met comfortabele jacuzzi kamers en uitstekende bereikbaarheid.",
+    province_id: 8,
+    city_id: 51,
+    price_range: "Vanaf €139",
+    facilities: ["Jacuzzi kamers", "Restaurant", "Wellness faciliteiten", "Gratis WiFi", "Parkeren", "Bar"],
+    affiliate_link: "https://booking.com/van-der-valk-emmeloord",
+    image_url: "/images/Van der Valk Emmeloord.jpg",
+    rating: 4.2,
+    created_at: "2024-01-01"
+  },
+  {
+    id: 124,
+    name: "Van der Valk Almere",
+    slug: "van-der-valk-almere",
+    description: "Stijlvol Van der Valk hotel in moderne stad Almere met luxe jacuzzi suites en wellness centrum.",
+    province_id: 8,
+    city_id: 52,
+    price_range: "Vanaf €159",
+    facilities: ["Luxe jacuzzi suites", "Wellness centrum", "Restaurant", "Fitness", "Gratis WiFi", "Business faciliteiten"],
+    affiliate_link: "https://booking.com/van-der-valk-almere",
+    image_url: "/images/Van der Valk Almere.jpg",
+    rating: 4.3,
     created_at: "2024-01-01"
   }
 ]

@@ -939,6 +939,80 @@ const mockHotels: Record<string, Hotel> = {
         affiliateLink: 'https://booking.com/van-der-valk-leeuwarden-cultural'
       }
     ]
+  },
+  'van-der-valk-emmeloord': {
+    id: 123,
+    name: 'Van der Valk Emmeloord',
+    location: 'Emmeloord, Flevoland',
+    city: 'Emmeloord',
+    province: 'Flevoland',
+    priceRange: '€139 - €189',
+    jacuzziType: 'Comfortabele jacuzzi kamers',
+    facilities: ['Jacuzzi kamers', 'Restaurant', 'Wellness faciliteiten', 'Gratis WiFi', 'Parkeren', 'Bar', 'Poldernatuur'],
+    rating: 4.2,
+    reviewCount: 245,
+    heroImage: '/images/Van der Valk Emmeloord.jpg',
+    description: 'Modern Van der Valk hotel in het hart van Flevoland met comfortabele jacuzzi kamers en uitstekende bereikbaarheid. Perfect voor ontspanning in de unieke poldernatuur van de jongste provincie van Nederland.',
+    coordinates: [5.7467, 52.7111],
+    address: 'Espelerweg 80, 8302 DB Emmeloord',
+    affiliateLink: 'https://booking.com/van-der-valk-emmeloord',
+    rooms: [
+      {
+        id: 1,
+        name: 'Van der Valk Polder Comfort',
+        image: '/images/Van der Valk Emmeloord.jpg',
+        description: 'Comfortabele kamer met jacuzzi en uitzicht op de unieke poldernatuur van Flevoland.',
+        features: ['Jacuzzi bad', 'Polderuitzicht', 'Modern comfort', 'Koffie/thee faciliteiten', 'Gratis WiFi', 'Parkeerplaats'],
+        priceRange: '€139 - €159',
+        affiliateLink: 'https://booking.com/van-der-valk-emmeloord-comfort'
+      },
+      {
+        id: 2,
+        name: 'Van der Valk Wellness Plus',
+        image: '/images/Van der Valk Emmeloord.jpg',
+        description: 'Wellness kamer met verbeterde jacuzzi en toegang tot alle wellness faciliteiten.',
+        features: ['Wellness jacuzzi', 'Spa toegang', 'Balkon', 'Room service', 'Premium beddengoed', 'Wellness faciliteiten'],
+        priceRange: '€169 - €189',
+        affiliateLink: 'https://booking.com/van-der-valk-emmeloord-wellness'
+      }
+    ]
+  },
+  'van-der-valk-almere': {
+    id: 124,
+    name: 'Van der Valk Almere',
+    location: 'Almere, Flevoland',
+    city: 'Almere',
+    province: 'Flevoland',
+    priceRange: '€159 - €219',
+    jacuzziType: 'Luxe jacuzzi suites',
+    facilities: ['Luxe jacuzzi suites', 'Wellness centrum', 'Restaurant', 'Fitness', 'Gratis WiFi', 'Business faciliteiten', 'Moderne stad'],
+    rating: 4.3,
+    reviewCount: 312,
+    heroImage: '/images/Van der Valk Almere.jpg',
+    description: 'Stijlvol Van der Valk hotel in moderne stad Almere met luxe jacuzzi suites en wellness centrum. Ideale combinatie van stedelijke voorzieningen en natuurlijke rust in de innovatieve planstad.',
+    coordinates: [5.2647, 52.3676],
+    address: 'Veluwedreef 11, 1327 AE Almere',
+    affiliateLink: 'https://booking.com/van-der-valk-almere',
+    rooms: [
+      {
+        id: 1,
+        name: 'Van der Valk Modern City',
+        image: '/images/Van der Valk Almere.jpg',
+        description: 'Moderne kamer met jacuzzi in het hart van Almere. Perfect voor stadse comfort en wellness.',
+        features: ['Stads jacuzzi', 'Modern design', 'Stad uitzicht', 'Business facilities', 'Gratis WiFi', 'Fitness toegang'],
+        priceRange: '€159 - €179',
+        affiliateLink: 'https://booking.com/van-der-valk-almere-city'
+      },
+      {
+        id: 2,
+        name: 'Van der Valk Luxury Suite',
+        image: '/images/Van der Valk Almere.jpg',
+        description: 'Luxe suite met spa jacuzzi en toegang tot alle hotel faciliteiten en wellness centrum.',
+        features: ['Luxe spa jacuzzi', 'Suite inrichting', 'Separate woonkamer', 'Wellness centrum', 'Premium service', 'Business packages'],
+        priceRange: '€199 - €219',
+        affiliateLink: 'https://booking.com/van-der-valk-almere-luxury'
+      }
+    ]
   }
 }
 

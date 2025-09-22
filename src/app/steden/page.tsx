@@ -45,7 +45,9 @@ export default function StedenPage() {
     { name: 'Sneek', slug: 'sneek', province: 'Friesland', provinceSlug: 'friesland', description: 'Watersportstad aan de Friese meren met luxe jacuzzi hotels' },
     { name: 'Heerenveen', slug: 'heerenveen', province: 'Friesland', provinceSlug: 'friesland', description: 'Modern centrum van Friesland met comfortabele wellness accommodaties' },
     { name: 'Drachten', slug: 'drachten', province: 'Friesland', provinceSlug: 'friesland', description: 'Bruisende Friese stad met moderne jacuzzi hotels en business faciliteiten' },
-    { name: 'Wolvega', slug: 'wolvega', province: 'Friesland', provinceSlug: 'friesland', description: 'Rustige Friese gemeente met landelijke charme en wellness hotels' }
+    { name: 'Wolvega', slug: 'wolvega', province: 'Friesland', provinceSlug: 'friesland', description: 'Rustige Friese gemeente met landelijke charme en wellness hotels' },
+    { name: 'Emmeloord', slug: 'emmeloord', province: 'Flevoland', provinceSlug: 'flevoland', description: 'Centraal gelegen poldergemeente met moderne accommodaties en poldernatuur' },
+    { name: 'Almere', slug: 'almere', province: 'Flevoland', provinceSlug: 'flevoland', description: 'Innovatieve planstad met hedendaagse hotels en unieke architectuur' }
   ]
 
   // Group cities by province
