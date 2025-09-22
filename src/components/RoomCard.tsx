@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { useState } from 'react'
 
 interface Room {
   id: number
@@ -18,9 +19,15 @@ interface RoomCardProps {
 }
 
 export default function RoomCard({ room }: RoomCardProps) {
+  const [currentImage, setCurrentImage] = useState(room.image)
+  
   const handleBooking = () => {
     // Track affiliate click
     window.open(room.affiliateLink, '_blank')
+  }
+  
+  const handleThumbnailClick = (thumbnailImage: string) => {
+    setCurrentImage(thumbnailImage)
   }
 
   return (
@@ -29,7 +36,7 @@ export default function RoomCard({ room }: RoomCardProps) {
       {/* Room Image */}
       <div className="relative h-56 overflow-hidden rounded-t-2xl">
         <Image
-          src={room.image}
+          src={currentImage}
           alt={`${room.name} met jacuzzi`}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -53,21 +60,52 @@ export default function RoomCard({ room }: RoomCardProps) {
         </div>
       </div>
       
-      {/* Thumbnails */}
+      {/* Thumbnails Gallery */}
       {room.thumbnails && room.thumbnails.length > 0 && (
-        <div className="px-6 py-3 bg-light-gray border-b border-brand-navy-200">
-          <div className="flex gap-2 overflow-x-auto">
+        <div className="px-6 py-4 bg-gradient-to-r from-brand-navy-50 to-light-gray border-b border-brand-navy-200">
+          <div className="text-center mb-3">
+            <span className="text-sm font-semibold text-brand-navy-700">Extra foto's</span>
+          </div>
+          <div className="flex gap-3 justify-center overflow-x-auto pb-2">
+            {/* Main image thumbnail */}
+            <button
+              onClick={() => handleThumbnailClick(room.image)}
+              className={`flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden border-2 transition-all duration-300 hover:shadow-lg hover:scale-105 ${
+                currentImage === room.image 
+                  ? 'border-brand-orange-600 shadow-lg ring-2 ring-brand-orange-600 ring-opacity-50' 
+                  : 'border-brand-navy-200 hover:border-brand-orange-600'
+              }`}
+            >
+              <Image
+                src={room.image}
+                alt={`${room.name} hoofdfoto`}
+                width={80}
+                height={80}
+                className="object-cover w-full h-full transition-transform duration-300"
+                sizes="80px"
+              />
+            </button>
+            
+            {/* Additional thumbnails */}
             {room.thumbnails.map((thumbnail, index) => (
-              <div key={index} className="flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border border-brand-navy-200">
+              <button
+                key={index}
+                onClick={() => handleThumbnailClick(thumbnail)}
+                className={`flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden border-2 transition-all duration-300 hover:shadow-lg hover:scale-105 ${
+                  currentImage === thumbnail 
+                    ? 'border-brand-orange-600 shadow-lg ring-2 ring-brand-orange-600 ring-opacity-50' 
+                    : 'border-brand-navy-200 hover:border-brand-orange-600'
+                }`}
+              >
                 <Image
                   src={thumbnail}
                   alt={`${room.name} extra foto ${index + 1}`}
-                  width={64}
-                  height={64}
-                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-                  sizes="64px"
+                  width={80}
+                  height={80}
+                  className="object-cover w-full h-full transition-transform duration-300"
+                  sizes="80px"
                 />
-              </div>
+              </button>
             ))}
           </div>
         </div>
