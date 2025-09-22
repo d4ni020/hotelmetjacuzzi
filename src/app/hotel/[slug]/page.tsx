@@ -1240,51 +1240,31 @@ const mockHotels: Record<string, Hotel> = {
   }
 }
 
-// Related hotels data
-const relatedHotels = [
-  {
-    id: 4,
-    name: "Château St. Gerlach",
-    slug: "chateau-st-gerlach",
-    description: "Luxe kasteel met spa en jacuzzi in historische setting.",
-    province_id: 1,
-    city_id: 1,
-    price_range: "Vanaf €295",
-    facilities: ["Privé Jacuzzi", "Spa", "Restaurant", "Wellness"],
-    affiliate_link: "https://booking.com/chateau-st-gerlach",
-    image_url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1600&auto=format&fit=crop",
-    rating: 4.9,
-    created_at: "2024-01-01"
-  },
-  {
-    id: 5,
-    name: "Thermae 2000 Hotel",
-    slug: "thermae-2000-hotel",
-    description: "Wellness resort met thermale baden en jacuzzi faciliteiten.",
-    province_id: 1,
-    city_id: 1,
-    price_range: "Vanaf €199",
-    facilities: ["Thermale baden", "Jacuzzi", "Spa", "Restaurant"],
-    affiliate_link: "https://booking.com/thermae-2000",
-    image_url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1600&auto=format&fit=crop",
-    rating: 4.7,
-    created_at: "2024-01-01"
-  },
-  {
-    id: 6,
-    name: "Hotel Château Neercanne",
-    slug: "hotel-chateau-neercanne",
-    description: "Romantisch kasteel hotel met luxe jacuzzi suites.",
-    province_id: 1,
-    city_id: 1,
-    price_range: "Vanaf €249",
-    facilities: ["Jacuzzi suites", "Fine dining", "Wijngaard", "Terrassen"],
-    affiliate_link: "https://booking.com/chateau-neercanne",
-    image_url: "https://images.unsplash.com/photo-1587385789092-ee287051bc73?q=80&w=1600&auto=format&fit=crop",
-    rating: 4.8,
-    created_at: "2024-01-01"
-  }
-]
+// Function to get related hotels from the same province
+const getRelatedHotels = (currentHotel: Hotel) => {
+  // Convert mockHotels object to array and filter by province
+  const allHotels = Object.values(mockHotels)
+  
+  return allHotels
+    .filter(hotel => 
+      hotel.province === currentHotel.province && 
+      hotel.id !== currentHotel.id // Exclude current hotel
+    )
+    .map(hotel => ({
+      id: hotel.id,
+      name: hotel.name,
+      slug: Object.keys(mockHotels).find(key => mockHotels[key].id === hotel.id) || '',
+      description: hotel.description.split('\n')[0], // First paragraph only
+      province: hotel.province,
+      city: hotel.city,
+      price_range: hotel.priceRange,
+      facilities: hotel.facilities,
+      affiliate_link: hotel.affiliateLink,
+      image_url: hotel.heroImage,
+      rating: hotel.rating,
+      created_at: "2024-01-01"
+    }))
+}
 
 // SVG Pattern Component
 const WavePattern = () => (
@@ -1341,6 +1321,9 @@ export default async function HotelDetailPage({ params }: Props) {
   if (!hotel) {
     notFound()
   }
+
+  // Get related hotels from the same province
+  const relatedHotels = getRelatedHotels(hotel)
 
   // Universal template for all hotels with rooms
   if (hotel.rooms && hotel.rooms.length > 0) {
