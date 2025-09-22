@@ -55,7 +55,7 @@ const mockCities: (City & { provinces?: Province })[] = [
   { id: 17, name: "Renesse", slug: "renesse", province_id: 11, seo_text: "", created_at: "2024-01-01", provinces: { id: 11, name: "Zeeland", slug: "zeeland", seo_text: "", created_at: "2024-01-01" } },
   { id: 18, name: "Middelburg", slug: "middelburg", province_id: 11, seo_text: "", created_at: "2024-01-01", provinces: { id: 11, name: "Zeeland", slug: "zeeland", seo_text: "", created_at: "2024-01-01" } },
   { id: 19, name: "Goes", slug: "goes", province_id: 11, seo_text: "", created_at: "2024-01-01", provinces: { id: 11, name: "Zeeland", slug: "zeeland", seo_text: "", created_at: "2024-01-01" } },
-  { id: 25, name: "Groningen", slug: "groningen-stad", province_id: 7, seo_text: "", created_at: "2024-01-01", provinces: { id: 7, name: "Groningen", slug: "groningen", seo_text: "", created_at: "2024-01-01" } }
+  { id: 25, name: "Groningen", slug: "groningen", province_id: 7, seo_text: "", created_at: "2024-01-01", provinces: { id: 7, name: "Groningen", slug: "groningen", seo_text: "", created_at: "2024-01-01" } }
 ]
 
 const mockHotels: Hotel[] = [
@@ -774,7 +774,7 @@ function generateCityContent(city: City & { provinces?: Province }) {
 // City-specific hero images
 const getCityHeroImage = (citySlug: string) => {
   const images = {
-    'groningen-stad': '/images/Groningen-Hero.jpg', // Local Groningen city hero image
+    'groningen': '/images/Groningen-Hero.jpg', // Local Groningen city hero image
   }
   return images[citySlug as keyof typeof images] || null
 }

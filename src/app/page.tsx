@@ -712,7 +712,7 @@ export default function HomePage() {
     { id: 22, name: "Spaarnwoude", slug: "spaarnwoude", province_id: 2, seo_text: "", created_at: "2024-01-01" },
     { id: 23, name: "Heiloo", slug: "heiloo", province_id: 2, seo_text: "", created_at: "2024-01-01" },
     { id: 24, name: "Schiphol", slug: "schiphol", province_id: 2, seo_text: "", created_at: "2024-01-01" },
-    { id: 25, name: "Groningen", slug: "groningen-stad", province_id: 7, seo_text: "", created_at: "2024-01-01" }
+    { id: 25, name: "Groningen", slug: "groningen", province_id: 7, seo_text: "", created_at: "2024-01-01" }
   ]
 
   // Filter logic when filters change

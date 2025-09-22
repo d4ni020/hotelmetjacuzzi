@@ -26,7 +26,7 @@ export default function StedenPage() {
     { name: 'Breukelen', slug: 'breukelen', province: 'Utrecht', provinceSlug: 'utrecht', description: 'Historische stad aan de Vecht met romantische hotels' },
     { name: 'De Bilt', slug: 'de-bilt', province: 'Utrecht', provinceSlug: 'utrecht', description: 'Rustige gemeente nabij Utrecht centrum' },
     { name: 'Amersfoort', slug: 'amersfoort', province: 'Utrecht', provinceSlug: 'utrecht', description: 'Historische stad met moderne wellness faciliteiten' },
-    { name: 'Groningen', slug: 'groningen-stad', province: 'Groningen', provinceSlug: 'groningen', description: 'Bruisende noordelijke stad met unieke landgoed hotels' },
+    { name: 'Groningen', slug: 'groningen', province: 'Groningen', provinceSlug: 'groningen', description: 'Bruisende noordelijke stad met unieke landgoed hotels' },
     { name: 'Arnhem', slug: 'arnhem', province: 'Gelderland', provinceSlug: 'gelderland', description: 'Natuur en cultuur in de Veluwe' },
     { name: 'Eindhoven', slug: 'eindhoven', province: 'Noord-Brabant', provinceSlug: 'noord-brabant', description: 'Design en technologie stad' },
     { name: 'Tilburg', slug: 'tilburg', province: 'Noord-Brabant', provinceSlug: 'noord-brabant', description: 'Bruisende Brabantse stad met moderne wellness hotels' },

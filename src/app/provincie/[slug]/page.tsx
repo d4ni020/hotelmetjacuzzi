@@ -52,7 +52,7 @@ const mockCities: City[] = [
   { id: 7, name: "Veluwe", slug: "veluwe", province_id: 3, seo_text: "", created_at: "2024-01-01" },
   { id: 8, name: "Oosterbeek", slug: "oosterbeek", province_id: 3, seo_text: "", created_at: "2024-01-01" },
   { id: 9, name: "Nijmegen", slug: "nijmegen", province_id: 3, seo_text: "", created_at: "2024-01-01" },
-  { id: 25, name: "Groningen", slug: "groningen-stad", province_id: 7, seo_text: "", created_at: "2024-01-01" }
+  { id: 25, name: "Groningen", slug: "groningen", province_id: 7, seo_text: "", created_at: "2024-01-01" }
 ]
 
 const mockHotels: Hotel[] = [
