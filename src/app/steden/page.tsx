@@ -53,7 +53,8 @@ export default function StedenPage() {
     { name: 'Dwingeloo', slug: 'dwingeloo', province: 'Drenthe', provinceSlug: 'drenthe', description: 'Rustig dorp bij de Hunzebergen met wellness en prachtige natuur' },
     { name: 'Hoogersmilde', slug: 'hoogersmilde', province: 'Drenthe', provinceSlug: 'drenthe', description: 'Kleine gemeente met landelijke charme en ontspanning in het groen' },
     { name: 'Almelo', slug: 'almelo', province: 'Overijssel', provinceSlug: 'overijssel', description: 'Theatrale stad in Overijssel met culturele accommodaties en wellness hotels' },
-    { name: 'Deventer', slug: 'deventer', province: 'Overijssel', provinceSlug: 'overijssel', description: 'Historische Hanzestad met landgoedhotels en wellness in natuurlijke omgeving' }
+    { name: 'Deventer', slug: 'deventer', province: 'Overijssel', provinceSlug: 'overijssel', description: 'Historische Hanzestad met landgoedhotels en wellness in natuurlijke omgeving' },
+    { name: 'Hellendoorn', slug: 'hellendoorn', province: 'Overijssel', provinceSlug: 'overijssel', description: 'Natuurrijke gemeente met luxe landgoedhotels en wellness in groene omgeving' }
   ]
 
   // Group cities by province

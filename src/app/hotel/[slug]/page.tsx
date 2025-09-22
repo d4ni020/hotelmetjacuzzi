@@ -1166,8 +1166,8 @@ const mockHotels: Record<string, Hotel> = {
   'landgoed-de-uitkijk': {
     id: 129,
     name: 'Landgoed de Uitkijk',
-    location: 'Deventer, Overijssel',
-    city: 'Deventer',
+    location: 'Hellendoorn, Overijssel',
+    city: 'Hellendoorn',
     province: 'Overijssel',
     priceRange: '€179 - €249',
     jacuzziType: 'Luxe jacuzzi suites',
@@ -1176,8 +1176,8 @@ const mockHotels: Record<string, Hotel> = {
     reviewCount: 312,
     heroImage: '/images/Landgoed de Uitkijk.jpg',
     description: 'Prachtig landgoedhotel gelegen op een historisch landgoed met luxe jacuzzi suites en uitgebreide wellness faciliteiten. Perfect voor een romantisch verblijf in de rijke natuur van Overijssel.',
-    coordinates: [6.1639, 52.2551],
-    address: 'Landgoedweg 15, 7411 GK Deventer',
+    coordinates: [6.4208, 52.3858],
+    address: 'Landgoedweg 15, 7447 GK Hellendoorn',
     affiliateLink: 'https://booking.com/landgoed-de-uitkijk',
     popularThisMonth: true,
     rooms: [

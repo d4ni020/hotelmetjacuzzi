@@ -819,7 +819,7 @@ const mockHotels: Hotel[] = [
       slug: "landgoed-de-uitkijk",
       description: "Prachtig landgoedhotel gelegen op een historisch landgoed met luxe jacuzzi suites en uitgebreide wellness faciliteiten.",
       province_id: 10,
-      city_id: 58,
+      city_id: 59,
       price_range: "Vanaf €179",
       facilities: ["Luxe jacuzzi suites", "Landgoed omgeving", "Wellness centrum", "Fine dining", "Historische charme", "Natuur wandelingen"],
       affiliate_link: "https://booking.com/landgoed-de-uitkijk",
@@ -914,7 +914,8 @@ export default function HomePage() {
   { id: 55, name: "Dwingeloo", slug: "dwingeloo", province_id: 9, seo_text: "", created_at: "2024-01-01" },
   { id: 56, name: "Hoogersmilde", slug: "hoogersmilde", province_id: 9, seo_text: "", created_at: "2024-01-01" },
   { id: 57, name: "Almelo", slug: "almelo", province_id: 10, seo_text: "", created_at: "2024-01-01" },
-  { id: 58, name: "Deventer", slug: "deventer", province_id: 10, seo_text: "", created_at: "2024-01-01" }
+  { id: 58, name: "Deventer", slug: "deventer", province_id: 10, seo_text: "", created_at: "2024-01-01" },
+  { id: 59, name: "Hellendoorn", slug: "hellendoorn", province_id: 10, seo_text: "", created_at: "2024-01-01" }
 ]
 
   // Filter logic when filters change
