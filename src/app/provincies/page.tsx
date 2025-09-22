@@ -15,7 +15,8 @@ export default function ProvinciesPage() {
     { name: 'Zuid-Holland', slug: 'zuid-holland', description: 'Randstad met stedelijke wellness hotels' },
     { name: 'Utrecht', slug: 'utrecht', description: 'Centraal gelegen met boutique hotels' },
     { name: 'Noord-Brabant', slug: 'noord-brabant', description: 'Gezellige provincie met sfeervolle accommodaties' },
-    { name: 'Zeeland', slug: 'zeeland', description: 'Kustprovincie met strandhotels en wellness aan zee' }
+    { name: 'Zeeland', slug: 'zeeland', description: 'Kustprovincie met strandhotels en wellness aan zee' },
+    { name: 'Groningen', slug: 'groningen', description: 'Noordelijke provincie met landgoedhotels en rustgevende wellness' }
   ]
 
   return (
