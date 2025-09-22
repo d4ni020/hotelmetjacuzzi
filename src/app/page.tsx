@@ -667,7 +667,7 @@ const mockHotels: Hotel[] = [
       price_range: "Vanaf €149",
       facilities: ["Jacuzzi kamers", "Restaurant", "Wellness faciliteiten", "Gratis WiFi", "Parkeren", "Bar"],
       affiliate_link: "https://booking.com/van-der-valk-wolvega-heerenveen",
-      image_url: "/images/Van der Valk Wolvega - Heerenveen.jpg",
+      image_url: "/images/van-der-valk-hotel-wolvega.jpg",
       rating: 4.3,
       created_at: "2024-01-01"
     },

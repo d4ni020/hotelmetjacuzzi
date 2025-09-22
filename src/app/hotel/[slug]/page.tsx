@@ -765,7 +765,7 @@ const mockHotels: Record<string, Hotel> = {
     facilities: ['Jacuzzi kamers', 'Restaurant', 'Wellness faciliteiten', 'Gratis WiFi', 'Parkeren', 'Bar', 'Friese gastvrijheid'],
     rating: 4.3,
     reviewCount: 267,
-    heroImage: '/images/Van der Valk Wolvega - Heerenveen.jpg',
+    heroImage: '/images/van-der-valk-hotel-wolvega.jpg',
     description: 'Comfortabel Van der Valk hotel tussen Wolvega en Heerenveen met moderne jacuzzi kamers en rustige ligging in het Friese landschap. Ideaal voor een ontspannen verblijf in de natuurlijke schoonheid van Friesland.',
     coordinates: [6.0023, 52.8732],
     address: 'Industrieweg 15, 8471 JB Wolvega',
@@ -774,7 +774,7 @@ const mockHotels: Record<string, Hotel> = {
       {
         id: 1,
         name: 'Van der Valk Friese Comfort',
-        image: '/images/Van der Valk Wolvega - Heerenveen.jpg',
+        image: '/images/van-der-valk-hotel-wolvega.jpg',
         description: 'Comfortabele kamer met jacuzzi en typisch Friese sfeer. Perfect voor een rustig verblijf.',
         features: ['Jacuzzi bad', 'Friese inrichting', 'Landelijke uitzicht', 'Koffie/thee faciliteiten', 'Gratis WiFi', 'Parkeerplaats'],
         priceRange: '€149 - €169',
@@ -783,7 +783,7 @@ const mockHotels: Record<string, Hotel> = {
       {
         id: 2,
         name: 'Van der Valk Wellness Plus',
-        image: '/images/Van der Valk Wolvega - Heerenveen.jpg',
+        image: '/images/van-der-valk-hotel-wolvega.jpg',
         description: 'Wellness kamer met verbeterde jacuzzi en toegang tot wellness faciliteiten.',
         features: ['Wellness jacuzzi', 'Spa toegang', 'Balkon', 'Room service', 'Premium beddengoed', 'Wellness faciliteiten'],
         priceRange: '€179 - €199',
