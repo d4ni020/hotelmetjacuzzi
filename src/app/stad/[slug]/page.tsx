@@ -774,7 +774,7 @@ function generateCityContent(city: City & { provinces?: Province }) {
 // City-specific hero images
 const getCityHeroImage = (citySlug: string) => {
   const images = {
-    'groningen-stad': '/images/Groningen - Hero.jpg', // Local Groningen city hero image
+    'groningen-stad': '/images/Groningen-Hero.jpg', // Local Groningen city hero image
   }
   return images[citySlug as keyof typeof images] || null
 }
