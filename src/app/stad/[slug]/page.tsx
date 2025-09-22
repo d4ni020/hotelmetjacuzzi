@@ -803,55 +803,55 @@ export default async function CityPage({ params }: CityPageProps) {
       <WavePattern />
 
       {/* Hero Section */}
-      <section className="relative bg-brand-navy-900 text-pure-white py-16 overflow-hidden">
-        {heroImage && (
-          <>
-            <div className="absolute inset-0">
-              <Image
-                src={heroImage}
-                alt={`${cityName} hero achtergrond`}
-                fill
-                className="object-cover opacity-30"
-                sizes="100vw"
-                priority
-              />
-              <div className="absolute inset-0 bg-brand-navy-900" style={{opacity: 0.7}}></div>
+      <section className="relative bg-brand-navy-900 text-pure-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <nav className="mb-8">
+                <ol className="flex items-center space-x-2 text-sm">
+                  <li><Link href="/" className="text-brand-navy-200 hover:text-pure-white">Home</Link></li>
+                  <li className="text-brand-navy-300">/</li>
+                  <li><Link href={`/provincie/${city.provinces?.name?.toLowerCase().replace(' ', '-')}`} className="text-brand-navy-200 hover:text-pure-white">{provinceName}</Link></li>
+                  <li className="text-brand-navy-300">/</li>
+                  <li className="text-pure-white font-semibold">{cityName}</li>
+                </ol>
+              </nav>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                Hotels met jacuzzi in {cityName}
+              </h1>
+              <p className="text-xl md:text-2xl text-brand-navy-200 mb-8 leading-relaxed">
+                Ontdek de mooiste <strong>accommodaties met jacuzzi</strong> in {cityName}, {provinceName}. 
+                Van luxe wellness hotels tot romantische boutique accommodaties.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="#hotels"
+                  className="bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
+                >
+                  Bekijk alle hotels
+                </a>
+                <Link 
+                  href="/" 
+                  className="border-2 border-brand-orange-600 text-brand-orange-600 hover:bg-brand-orange-600 hover:text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
+                >
+                  Alle steden
+                </Link>
+              </div>
             </div>
-          </>
-        )}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          {/* Breadcrumb */}
-          <nav className="text-sm text-brand-navy-200 mb-6">
-            <Link href="/" className="hover:text-brand-orange-600 transition-colors">Home</Link>
-            <span className="mx-2">/</span>
-            <Link href={`/provincie/${city.provinces?.name?.toLowerCase().replace(' ', '-')}`} className="hover:text-brand-orange-600 transition-colors">
-              {provinceName}
-            </Link>
-            <span className="mx-2">/</span>
-            <span className="text-pure-white font-medium">{cityName}</span>
-          </nav>
-          
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Hotels met jacuzzi in {cityName}
-          </h1>
-          
-          <p className="text-xl text-brand-navy-200 mb-8 max-w-3xl">
-            Ontdek de mooiste accommodaties met jacuzzi in {cityName}, {provinceName}. Van luxe wellness hotels tot romantische boutique accommodaties.
-          </p>
-
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center text-brand-navy-200">
-              <svg width="20" height="20" viewBox="0 0 20 20" className="mr-2 text-brand-orange-600">
-                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" fill="currentColor"/>
-              </svg>
-              {cityName}, {provinceName}
-            </div>
-            <div className="flex items-center text-brand-navy-200">
-              <svg width="20" height="20" viewBox="0 0 20 20" className="mr-2 text-brand-orange-600">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" fill="currentColor"/>
-              </svg>
-              {hotels?.length || 0} hotel{(hotels?.length || 0) !== 1 ? 's' : ''} beschikbaar
-            </div>
+            {heroImage && (
+              <div className="relative">
+                <Image
+                  src={heroImage}
+                  alt={`${cityName} - Hotels met jacuzzi en wellness`}
+                  width={600}
+                  height={400}
+                  className="rounded-2xl shadow-2xl"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                  priority
+                />
+              </div>
+            )}
           </div>
         </div>
       </section>
