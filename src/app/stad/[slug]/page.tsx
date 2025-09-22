@@ -3,6 +3,7 @@ import { City, Hotel, Province } from '@/lib/supabase'
 import HotelCard from '@/components/HotelCard'
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface CityPageProps {
   params: Promise<{
@@ -770,6 +771,14 @@ function generateCityContent(city: City & { provinces?: Province }) {
   return contentTemplates[city.slug as keyof typeof contentTemplates] || defaultTemplate
 }
 
+// City-specific hero images
+const getCityHeroImage = (citySlug: string) => {
+  const images = {
+    'groningen-stad': '/images/Groningen - Hero.jpg', // Local Groningen city hero image
+  }
+  return images[citySlug as keyof typeof images] || null
+}
+
 export default async function CityPage({ params }: CityPageProps) {
   const awaited = await params
   
@@ -786,6 +795,7 @@ export default async function CityPage({ params }: CityPageProps) {
   const cityContent = generateCityContent(city)
   const cityName = city.name
   const provinceName = city.provinces?.name || ''
+  const heroImage = getCityHeroImage(city.slug)
 
   return (
     <div className="min-h-screen bg-light-gray">
@@ -793,7 +803,22 @@ export default async function CityPage({ params }: CityPageProps) {
       <WavePattern />
 
       {/* Hero Section */}
-      <section className="relative bg-brand-navy-900 text-pure-white py-16">
+      <section className="relative bg-brand-navy-900 text-pure-white py-16 overflow-hidden">
+        {heroImage && (
+          <>
+            <div className="absolute inset-0">
+              <Image
+                src={heroImage}
+                alt={`${cityName} hero achtergrond`}
+                fill
+                className="object-cover opacity-30"
+                sizes="100vw"
+                priority
+              />
+              <div className="absolute inset-0 bg-brand-navy-900" style={{opacity: 0.7}}></div>
+            </div>
+          </>
+        )}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           {/* Breadcrumb */}
           <nav className="text-sm text-brand-navy-200 mb-6">
