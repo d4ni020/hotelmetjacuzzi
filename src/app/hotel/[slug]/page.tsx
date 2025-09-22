@@ -1013,6 +1013,155 @@ const mockHotels: Record<string, Hotel> = {
         affiliateLink: 'https://booking.com/van-der-valk-almere-luxury'
       }
     ]
+  },
+  'fletcher-hotel-restaurant-de-zeegser-duinen': {
+    id: 125,
+    name: 'Fletcher Hotel-Restaurant De Zeegser Duinen',
+    location: 'Emmen, Drenthe',
+    city: 'Emmen',
+    province: 'Drenthe',
+    priceRange: '€129 - €179',
+    jacuzziType: 'Comfortabele jacuzzi kamers',
+    facilities: ['Jacuzzi kamers', 'Restaurant', 'Natuuromgeving', 'Gratis WiFi', 'Parkeren', 'Wandelpaden', 'Drentse natuur'],
+    rating: 4.1,
+    reviewCount: 198,
+    heroImage: '/images/Fletcher Hotel-Restaurant De Zeegser Duinen.jpg',
+    description: 'Prachtig Fletcher hotel gelegen tussen de karakteristieke Zeegser Duinen met comfortabele jacuzzi kamers en natuurlijke omgeving. Perfect voor een ontspannen verblijf in de unieke natuur van Drenthe.',
+    coordinates: [6.8978, 52.7845],
+    address: 'Zeegserduinen 5, 7812 AA Emmen',
+    affiliateLink: 'https://booking.com/fletcher-hotel-de-zeegser-duinen',
+    rooms: [
+      {
+        id: 1,
+        name: 'Fletcher Drenthe Comfort',
+        image: '/images/Fletcher Hotel-Restaurant De Zeegser Duinen.jpg',
+        description: 'Comfortabele kamer met jacuzzi en uitzicht op de prachtige Zeegser Duinen.',
+        features: ['Jacuzzi bad', 'Natuur uitzicht', 'Drentse sfeer', 'Koffie/thee faciliteiten', 'Gratis WiFi', 'Parkeerplaats'],
+        priceRange: '€129 - €149',
+        affiliateLink: 'https://booking.com/fletcher-hotel-de-zeegser-duinen-comfort'
+      },
+      {
+        id: 2,
+        name: 'Fletcher Nature Plus',
+        image: '/images/Fletcher Hotel-Restaurant De Zeegser Duinen.jpg',
+        description: 'Verbeterde kamer met wellness jacuzzi en directe toegang tot wandelpaden.',
+        features: ['Wellness jacuzzi', 'Natuur toegang', 'Wandelpaden', 'Room service', 'Premium beddengoed', 'Balkon'],
+        priceRange: '€159 - €179',
+        affiliateLink: 'https://booking.com/fletcher-hotel-de-zeegser-duinen-nature'
+      }
+    ]
+  },
+  'hotel-restaurant-langewold': {
+    id: 126,
+    name: 'Hotel-Restaurant Langewold',
+    location: 'Assen, Drenthe',
+    city: 'Assen',
+    province: 'Drenthe',
+    priceRange: '€119 - €169',
+    jacuzziType: 'Traditionele jacuzzi kamers',
+    facilities: ['Jacuzzi kamers', 'Traditioneel restaurant', 'Lokale specialiteiten', 'Gratis WiFi', 'Landelijke rust', 'Drentse gastvrijheid'],
+    rating: 4.0,
+    reviewCount: 156,
+    heroImage: '/images/Hotel-Restaurant Langewold.jpg',
+    description: 'Authentiek hotel-restaurant in het hart van Drenthe met traditionele jacuzzi kamers en lokale gastvrijheid. Ideaal voor gasten die zoeken naar rust en authentieke Drentse ervaring.',
+    coordinates: [6.5606, 52.9957],
+    address: 'Langewold 12, 9401 HJ Assen',
+    affiliateLink: 'https://booking.com/hotel-restaurant-langewold',
+    rooms: [
+      {
+        id: 1,
+        name: 'Langewold Traditional',
+        image: '/images/Hotel-Restaurant Langewold.jpg',
+        description: 'Traditionele kamer met jacuzzi en authentieke Drentse inrichting.',
+        features: ['Traditionele jacuzzi', 'Drentse inrichting', 'Landelijke rust', 'Lokale charme', 'Gratis WiFi', 'Ontbijt'],
+        priceRange: '€119 - €139',
+        affiliateLink: 'https://booking.com/hotel-restaurant-langewold-traditional'
+      },
+      {
+        id: 2,
+        name: 'Langewold Superior',
+        image: '/images/Hotel-Restaurant Langewold.jpg',
+        description: 'Superior kamer met verbeterde jacuzzi en extra comfort in landelijke setting.',
+        features: ['Superior jacuzzi', 'Extra comfort', 'Landelijke sfeer', 'Room service', 'Premium voorzieningen', 'Tuinzicht'],
+        priceRange: '€149 - €169',
+        affiliateLink: 'https://booking.com/hotel-restaurant-langewold-superior'
+      }
+    ]
+  },
+  'wellness-hotel-de-hunzebergen': {
+    id: 127,
+    name: 'Wellness-Hotel De Hunzebergen',
+    location: 'Dwingeloo, Drenthe',
+    city: 'Dwingeloo',
+    province: 'Drenthe',
+    priceRange: '€189 - €289',
+    jacuzziType: 'Premium jacuzzi suites',
+    facilities: ['Premium jacuzzi suites', 'Uitgebreide spa', 'Wellness centrum', 'Massage behandelingen', 'Natuur wandelingen', 'Fine dining'],
+    rating: 4.5,
+    reviewCount: 287,
+    heroImage: '/images/Wellness-Hotel De Hunzebergen.jpg',
+    description: 'Luxe wellness hotel gelegen aan de Hunzebergen met uitgebreide spa faciliteiten en premium jacuzzi suites. Perfect voor een complete wellness ervaring in de prachtige natuur van Drenthe.',
+    coordinates: [6.3667, 52.8333],
+    address: 'Hunzebergweg 8, 7991 PD Dwingeloo',
+    affiliateLink: 'https://booking.com/wellness-hotel-de-hunzebergen',
+    popularThisMonth: true,
+    rooms: [
+      {
+        id: 1,
+        name: 'Hunzebergen Wellness Suite',
+        image: '/images/Wellness-Hotel De Hunzebergen.jpg',
+        description: 'Luxe wellness suite met premium jacuzzi en toegang tot alle spa faciliteiten.',
+        features: ['Premium spa jacuzzi', 'Wellness toegang', 'Massage faciliteiten', 'Natuur balkon', 'Butler service', 'Fine dining'],
+        priceRange: '€189 - €229',
+        affiliateLink: 'https://booking.com/wellness-hotel-de-hunzebergen-wellness'
+      },
+      {
+        id: 2,
+        name: 'Hunzebergen Royal Suite',
+        image: '/images/Wellness-Hotel De Hunzebergen.jpg',
+        description: 'Royal suite met exclusieve jacuzzi en privé wellness behandelingen.',
+        features: ['Exclusieve jacuzzi', 'Privé wellness', 'Separate woonkamer', 'Personal trainer', 'Gourmet dining', 'Natuur wandelingen'],
+        priceRange: '€249 - €289',
+        affiliateLink: 'https://booking.com/wellness-hotel-de-hunzebergen-royal'
+      }
+    ]
+  },
+  'van-der-valk-emmen': {
+    id: 128,
+    name: 'Van der Valk Emmen',
+    location: 'Emmen, Drenthe',
+    city: 'Emmen',
+    province: 'Drenthe',
+    priceRange: '€149 - €199',
+    jacuzziType: 'Stijlvolle jacuzzi kamers',
+    facilities: ['Stijlvolle jacuzzi kamers', 'Restaurant', 'Bar', 'Fitness', 'Gratis WiFi', 'Business center'],
+    rating: 4.2,
+    reviewCount: 245,
+    heroImage: '/images/Van der Valk Emmen.jpg',
+    description: 'Modern Van der Valk hotel in Emmen met stijlvolle jacuzzi kamers en alle moderne faciliteiten. Uitstekende uitvalsbasis voor het verkennen van Drenthe en nabijgelegen attracties.',
+    coordinates: [6.9065, 52.7891],
+    address: 'Noordbargeres 3, 7812 AA Emmen',
+    affiliateLink: 'https://booking.com/van-der-valk-emmen',
+    rooms: [
+      {
+        id: 1,
+        name: 'Van der Valk Emmen Standard',
+        image: '/images/Van der Valk Emmen.jpg',
+        description: 'Moderne standaard kamer met jacuzzi en alle comfort voor een aangenaam verblijf.',
+        features: ['Moderne jacuzzi', 'Stijlvol design', 'Stad uitzicht', 'Business facilities', 'Gratis WiFi', 'Fitness toegang'],
+        priceRange: '€149 - €169',
+        affiliateLink: 'https://booking.com/van-der-valk-emmen-standard'
+      },
+      {
+        id: 2,
+        name: 'Van der Valk Emmen Superior',
+        image: '/images/Van der Valk Emmen.jpg',
+        description: 'Superior kamer met luxe jacuzzi en extra voorzieningen voor meer comfort.',
+        features: ['Luxe jacuzzi', 'Superior comfort', 'Balkon', 'Room service', 'Premium amenities', 'Business lounge'],
+        priceRange: '€179 - €199',
+        affiliateLink: 'https://booking.com/van-der-valk-emmen-superior'
+      }
+    ]
   }
 }
 

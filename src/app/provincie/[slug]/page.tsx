@@ -15,6 +15,7 @@ const mockProvinces: Province[] = [
   { id: 6, name: "Noord-Brabant", slug: "noord-brabant", seo_text: "Ontdek de perfecte hotels met jacuzzi in Noord-Brabant", created_at: "2024-01-01" },
   { id: 7, name: "Groningen", slug: "groningen", seo_text: "Ontdek de perfecte hotels met jacuzzi in Groningen, waar de rust van het noorden samenvalt met luxe wellness faciliteiten. Van landgoederen tot stadshotels, vind uw ideale romantische uitje.", created_at: "2024-01-01" },
   { id: 8, name: "Flevoland", slug: "flevoland", seo_text: "Ontdek de perfecte hotels met jacuzzi in Flevoland, de jongste provincie van Nederland met moderne steden en unieke poldernatuur. Van Almere tot Emmeloord, geniet van innovatieve wellness accommodaties.", created_at: "2024-01-01" },
+  { id: 9, name: "Drenthe", slug: "drenthe", seo_text: "Ontdek de perfecte hotels met jacuzzi in Drenthe, waar de rust van de natuur samenvalt met authentieke gastvrijheid. Van Emmen tot Assen, geniet van wellness in het groene hart van het noorden.", created_at: "2024-01-01" },
   { id: 11, name: "Zeeland", slug: "zeeland", seo_text: "Ontdek de perfecte hotels met jacuzzi in Zeeland, waar de rust van de kust samenvloeit met luxe wellness faciliteiten. Van Renesse tot Middelburg, vind uw ideale romantische uitje aan zee.", created_at: "2024-01-01" },
   { id: 12, name: "Friesland", slug: "friesland", seo_text: "Ontdek de perfecte hotels met jacuzzi in Friesland, waar de natuurlijke schoonheid van meren en weilanden samenkomt met authentieke Friese gastvrijheid. Van Leeuwarden tot Sneek, geniet van unieke wellness ervaringen.", created_at: "2024-01-01" }
 ]
@@ -61,7 +62,11 @@ const mockCities: City[] = [
   { id: 49, name: "Drachten", slug: "drachten", province_id: 12, seo_text: "", created_at: "2024-01-01" },
   { id: 50, name: "Wolvega", slug: "wolvega", province_id: 12, seo_text: "", created_at: "2024-01-01" },
   { id: 51, name: "Emmeloord", slug: "emmeloord", province_id: 8, seo_text: "", created_at: "2024-01-01" },
-  { id: 52, name: "Almere", slug: "almere", province_id: 8, seo_text: "", created_at: "2024-01-01" }
+  { id: 52, name: "Almere", slug: "almere", province_id: 8, seo_text: "", created_at: "2024-01-01" },
+  { id: 53, name: "Emmen", slug: "emmen", province_id: 9, seo_text: "", created_at: "2024-01-01" },
+  { id: 54, name: "Assen", slug: "assen", province_id: 9, seo_text: "", created_at: "2024-01-01" },
+  { id: 55, name: "Dwingeloo", slug: "dwingeloo", province_id: 9, seo_text: "", created_at: "2024-01-01" },
+  { id: 56, name: "Hoogersmilde", slug: "hoogersmilde", province_id: 9, seo_text: "", created_at: "2024-01-01" }
 ]
 
 const mockHotels: Hotel[] = [
@@ -812,6 +817,63 @@ const mockHotels: Hotel[] = [
     affiliate_link: "https://booking.com/van-der-valk-almere",
     image_url: "/images/Van der Valk Almere.jpg",
     rating: 4.3,
+    created_at: "2024-01-01"
+  },
+  {
+    id: 125,
+    name: "Fletcher Hotel-Restaurant De Zeegser Duinen",
+    slug: "fletcher-hotel-restaurant-de-zeegser-duinen",
+    description: "Prachtig Fletcher hotel gelegen tussen de karakteristieke Zeegser Duinen met comfortabele jacuzzi kamers en natuurlijke omgeving. Perfect voor een ontspannen verblijf in Drenthe.",
+    province_id: 9,
+    city_id: 53,
+    price_range: "Vanaf €129",
+    facilities: ["Jacuzzi kamers", "Restaurant", "Natuuromgeving", "Gratis WiFi", "Parkeren", "Wandelpaden"],
+    affiliate_link: "https://booking.com/fletcher-hotel-de-zeegser-duinen",
+    image_url: "/images/Fletcher Hotel-Restaurant De Zeegser Duinen.jpg",
+    rating: 4.1,
+    created_at: "2024-01-01"
+  },
+  {
+    id: 126,
+    name: "Hotel-Restaurant Langewold",
+    slug: "hotel-restaurant-langewold",
+    description: "Authentiek hotel-restaurant in het hart van Drenthe met traditionele jacuzzi kamers en lokale gastvrijheid. Ideaal voor gasten die zoeken naar rust en authentieke Drentse ervaring.",
+    province_id: 9,
+    city_id: 54,
+    price_range: "Vanaf €119",
+    facilities: ["Jacuzzi kamers", "Traditioneel restaurant", "Lokale specialiteiten", "Gratis WiFi", "Landelijke rust", "Drentse gastvrijheid"],
+    affiliate_link: "https://booking.com/hotel-restaurant-langewold",
+    image_url: "/images/Hotel-Restaurant Langewold.jpg",
+    rating: 4.0,
+    created_at: "2024-01-01"
+  },
+  {
+    id: 127,
+    name: "Wellness-Hotel De Hunzebergen",
+    slug: "wellness-hotel-de-hunzebergen",
+    description: "Luxe wellness hotel gelegen aan de Hunzebergen met uitgebreide spa faciliteiten en premium jacuzzi suites. Perfect voor een complete wellness ervaring in de Drentse natuur.",
+    province_id: 9,
+    city_id: 55,
+    price_range: "Vanaf €189",
+    facilities: ["Premium jacuzzi suites", "Uitgebreide spa", "Wellness centrum", "Massage behandelingen", "Natuur wandelingen", "Fine dining"],
+    affiliate_link: "https://booking.com/wellness-hotel-de-hunzebergen",
+    image_url: "/images/Wellness-Hotel De Hunzebergen.jpg",
+    rating: 4.5,
+    popular: true,
+    created_at: "2024-01-01"
+  },
+  {
+    id: 128,
+    name: "Van der Valk Emmen",
+    slug: "van-der-valk-emmen",
+    description: "Modern Van der Valk hotel in Emmen met stijlvolle jacuzzi kamers en alle moderne faciliteiten. Uitstekende uitvalsbasis voor het verkennen van Drenthe en nabijgelegen attracties.",
+    province_id: 9,
+    city_id: 53,
+    price_range: "Vanaf €149",
+    facilities: ["Stijlvolle jacuzzi kamers", "Restaurant", "Bar", "Fitness", "Gratis WiFi", "Business center"],
+    affiliate_link: "https://booking.com/van-der-valk-emmen",
+    image_url: "/images/Van der Valk Emmen.jpg",
+    rating: 4.2,
     created_at: "2024-01-01"
   }
 ]

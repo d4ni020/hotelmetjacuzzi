@@ -47,7 +47,11 @@ export default function StedenPage() {
     { name: 'Drachten', slug: 'drachten', province: 'Friesland', provinceSlug: 'friesland', description: 'Bruisende Friese stad met moderne jacuzzi hotels en business faciliteiten' },
     { name: 'Wolvega', slug: 'wolvega', province: 'Friesland', provinceSlug: 'friesland', description: 'Rustige Friese gemeente met landelijke charme en wellness hotels' },
     { name: 'Emmeloord', slug: 'emmeloord', province: 'Flevoland', provinceSlug: 'flevoland', description: 'Centraal gelegen poldergemeente met moderne accommodaties en poldernatuur' },
-    { name: 'Almere', slug: 'almere', province: 'Flevoland', provinceSlug: 'flevoland', description: 'Innovatieve planstad met hedendaagse hotels en unieke architectuur' }
+    { name: 'Almere', slug: 'almere', province: 'Flevoland', provinceSlug: 'flevoland', description: 'Innovatieve planstad met hedendaagse hotels en unieke architectuur' },
+    { name: 'Emmen', slug: 'emmen', province: 'Drenthe', provinceSlug: 'drenthe', description: 'Groene stad in Drenthe met natuur en karakteristieke Zeegser Duinen' },
+    { name: 'Assen', slug: 'assen', province: 'Drenthe', provinceSlug: 'drenthe', description: 'Hoofdstad van Drenthe met authentieke Drentse gastvrijheid en charme' },
+    { name: 'Dwingeloo', slug: 'dwingeloo', province: 'Drenthe', provinceSlug: 'drenthe', description: 'Rustig dorp bij de Hunzebergen met wellness en prachtige natuur' },
+    { name: 'Hoogersmilde', slug: 'hoogersmilde', province: 'Drenthe', provinceSlug: 'drenthe', description: 'Kleine gemeente met landelijke charme en ontspanning in het groen' }
   ]
 
   // Group cities by province
