@@ -66,7 +66,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €225",
     facilities: ["Privé Jacuzzi", "Spa", "Restaurant", "Wellness"],
     affiliate_link: "https://booking.com/kasteel-bloemendal",
-    image_url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Kasteel Bloemendal.jpg",
     rating: 4.8,
     created_at: "2024-01-01"
   },
@@ -80,7 +80,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €189",
     facilities: ["Bubbelbad", "Sauna", "Fitness", "Restaurant"],
     affiliate_link: "https://booking.com/van-der-valk-amsterdam",
-    image_url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Van der Valk Akersloot.jpg",
     rating: 4.6,
     created_at: "2024-01-01"
   },
@@ -94,7 +94,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €189",
     facilities: ["Privé Jacuzzi", "Spa", "Restaurant", "Fitness", "Strand"],
     affiliate_link: "https://booking.com/landgoed-hotel-renesse",
-    image_url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Langoed hotel Renesse.jpg",
     rating: 4.6,
     created_at: "2024-01-01"
   },
@@ -108,7 +108,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €215",
     facilities: ["Jacuzzi Suites", "Zeezicht", "Strand", "Spa", "Wellness"],
     affiliate_link: "https://booking.com/zuiderduin-beachhotel",
-    image_url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/zuiderduin beachhotel.jpg",
     rating: 4.7,
     created_at: "2024-01-01"
   },
@@ -122,7 +122,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €159",
     facilities: ["Jacuzzi Kamers", "Wellness", "Restaurant", "Bar", "Fitness"],
     affiliate_link: "https://booking.com/van-der-valk-middelburg",
-    image_url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Hotel-Restaurant Nautisch Kwartier.jpg",
     rating: 4.5,
     created_at: "2024-01-01"
   },
@@ -136,7 +136,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €149",
     facilities: ["Jacuzzi Kamers", "Restaurant", "Bar", "Fitness", "Gratis WiFi"],
     affiliate_link: "https://booking.com/van-der-valk-goes",
-    image_url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Hotel-Restaurant Nautisch Kwartier.jpg",
     rating: 4.4,
     created_at: "2024-01-01"
   },
@@ -151,7 +151,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €179",
     facilities: ["Privé Jacuzzi", "Wellness Center", "Restaurant", "Fietsenverhuur"],
     affiliate_link: "https://booking.com/fletcher-mallejan",
-    image_url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Kasteel Bloemendal.jpg",
     rating: 4.6,
     created_at: "2024-01-01"
   },
@@ -165,7 +165,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €225",
     facilities: ["Bubbelbad Suites", "Landgoed", "Fine Dining", "Wellness", "Natuur"],
     affiliate_link: "https://booking.com/landgoed-de-rosep",
-    image_url: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Hotel-Restaurant Heiloo.jpg",
     rating: 4.8,
     created_at: "2024-01-01"
   },
@@ -179,7 +179,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €165",
     facilities: ["Jacuzzi Kamers", "Restaurant", "Bar", "Fitness", "Gratis WiFi"],
     affiliate_link: "https://booking.com/van-der-valk-nijmegen",
-    image_url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Van der Valk Wieringermeer.jpg",
     rating: 4.5,
     created_at: "2024-01-01"
   },
@@ -194,7 +194,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €169",
     facilities: ["Jacuzzi Kamers", "Wellness", "Restaurant", "Bar", "Fitness"],
     affiliate_link: "https://booking.com/van-der-valk-akersloot",
-    image_url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Kasteel Bloemendal.jpg",
     rating: 4.5,
     created_at: "2024-01-01"
   },
@@ -208,7 +208,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €185",
     facilities: ["Jacuzzi Suites", "Wellness", "Restaurant", "Bar", "Natuur"],
     affiliate_link: "https://booking.com/van-der-valk-wieringermeer",
-    image_url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Van der Valk Wieringermeer.jpg",
     rating: 4.6,
     created_at: "2024-01-01"
   },
@@ -222,7 +222,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €199",
     facilities: ["Privé Jacuzzi", "Wellness", "Restaurant", "Bar", "Stad"],
     affiliate_link: "https://booking.com/olympic-hotel",
-    image_url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Van der Valk Akersloot.jpg",
     rating: 4.7,
     created_at: "2024-01-01"
   },
@@ -236,7 +236,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €219",
     facilities: ["Jacuzzi Kamers", "Design", "Restaurant", "Bar", "Centrum"],
     affiliate_link: "https://booking.com/inntel-hotels-amsterdam-centre",
-    image_url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Kasteel Bloemendal.jpg",
     rating: 4.8,
     created_at: "2024-01-01"
   },
@@ -250,7 +250,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €179",
     facilities: ["Jacuzzi Kamers", "Restaurant", "Persoonlijke Service", "Romantisch"],
     affiliate_link: "https://booking.com/hotel-restaurant-spaarnwoude",
-    image_url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Van der Valk Wieringermeer.jpg",
     rating: 4.6,
     created_at: "2024-01-01"
   },
@@ -264,7 +264,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €189",
     facilities: ["Jacuzzi Kamers", "Nautisch Thema", "Restaurant", "Bar"],
     affiliate_link: "https://booking.com/hotel-restaurant-nautisch-kwartier",
-    image_url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Hotel-Restaurant Nautisch Kwartier.jpg",
     rating: 4.5,
     created_at: "2024-01-01"
   },
@@ -278,7 +278,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €169",
     facilities: ["Jacuzzi Kamers", "Historisch", "Restaurant", "Charme"],
     affiliate_link: "https://booking.com/hotel-restaurant-de-cooghen",
-    image_url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Van der Valk Akersloot.jpg",
     rating: 4.4,
     created_at: "2024-01-01"
   },
@@ -292,7 +292,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €159",
     facilities: ["Jacuzzi Kamers", "Restaurant", "Keuken", "Gastvrijheid"],
     affiliate_link: "https://booking.com/hotel-restaurant-heiloo",
-    image_url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Van der Valk Wieringermeer.jpg",
     rating: 4.5,
     created_at: "2024-01-01"
   },
@@ -306,7 +306,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €199",
     facilities: ["Jacuzzi Suites", "Duinzicht", "Wellness", "Restaurant", "Natuur"],
     affiliate_link: "https://booking.com/fletcher-hotel-restaurant-jan-van-scorel",
-    image_url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Kasteel Bloemendal.jpg",
     rating: 4.7,
     created_at: "2024-01-01"
   },
@@ -320,7 +320,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €189",
     facilities: ["Jacuzzi Kamers", "Airport Hotel", "Wellness", "Restaurant", "Business"],
     affiliate_link: "https://booking.com/van-der-valk-schiphol",
-    image_url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Hotel-Restaurant Nautisch Kwartier.jpg",
     rating: 4.6,
     created_at: "2024-01-01"
   },
@@ -335,7 +335,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €165",
     facilities: ["Historisch klooster", "Privé Jacuzzi", "Wellness", "Restaurant", "Kapel", "Rustige ligging"],
     affiliate_link: "https://booking.com/kloosterhotel-willibrordhaeghe",
-    image_url: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Kloosterhotel Willibrordhaeghe.jpg",
     rating: 4.6,
     created_at: "2024-01-01"
   },
@@ -349,7 +349,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €195",
     facilities: ["Uitgebreide spa", "Privé Jacuzzi", "Zwembad", "Sauna", "Massages", "Fitness"],
     affiliate_link: "https://booking.com/wellness-hotel-trivium",
-    image_url: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Wellness-Hotel Trivium.jpg",
     rating: 4.7,
     created_at: "2024-01-01"
   },
@@ -363,7 +363,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €175",
     facilities: ["Van der Valk kwaliteit", "Jacuzzi suites", "Restaurant", "Fitness", "Vergaderzalen", "Terras"],
     affiliate_link: "https://booking.com/vandervalk-gilze-tilburg",
-    image_url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Kasteel Bloemendal.jpg",
     rating: 4.5,
     created_at: "2024-01-01"
   },
@@ -377,7 +377,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €185",
     facilities: ["Natuurlijke omgeving", "Jacuzzi", "Wellness", "Restaurant", "Terras", "Business center"],
     affiliate_link: "https://booking.com/vandervalk-vught",
-    image_url: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Van der Valk Vught.jpg",
     rating: 4.6,
     created_at: "2024-01-01"
   },
@@ -391,7 +391,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €169",
     facilities: ["Stadscentrum", "Jacuzzi kamers", "Restaurant", "Bar", "Fitness", "Parking"],
     affiliate_link: "https://booking.com/vandervalk-tilburg",
-    image_url: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Van der Valk Tilburg.jpg",
     rating: 4.4,
     created_at: "2024-01-01"
   },
@@ -405,7 +405,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €275",
     facilities: ["Wellness Suite", "Design Jacuzzi", "Spa", "Outdoor Terras"],
     affiliate_link: "https://booking.com/eindhoven-design",
-    image_url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop",
+    image_url: "/images/Van der Valk Gilze - Tilburg.jpg",
     rating: 4.7,
     created_at: "2024-01-01"
   },
