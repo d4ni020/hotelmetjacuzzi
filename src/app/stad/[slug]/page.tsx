@@ -883,6 +883,7 @@ const getCityHeroImage = (citySlug: string) => {
     'groningen': '/images/Groningen-Hero.jpg', // Local Groningen city hero image
     'amsterdam': '/images/Amsterdam - Hero.jpg', // Local Amsterdam city hero image
     'leeuwarden': '/images/Leeuwarden - Hero.jpg', // Local Leeuwarden city hero image
+    'sneek': '/images/Sneek - Hero.jpg', // Local Sneek city hero image
   }
   return images[citySlug as keyof typeof images] || null
 }
