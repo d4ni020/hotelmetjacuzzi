@@ -170,28 +170,14 @@ const Navbar = () => {
                 aria-label="Bekijk alle hotels met jacuzzi - Direct naar hotel overzicht"
               >
                 <div className="relative flex items-center space-x-2">
-                  <svg width="16" height="16" viewBox="0 0 16 16" className="text-pure-white">
-                    <path d="M2 4h12v8H2V4zm0-1h12c.5 0 1 .5 1 1v8c0 .5-.5 1-1 1H2c-.5 0-1-.5-1-1V4c0-.5.5-1 1-1z" fill="currentColor"/>
-                    <path d="M5 6h1v1H5V6zm3 0h1v1H8V6zm3 0h1v1h-1V6zM5 8h1v1H5V8zm3 0h1v1H8V8zm3 0h1v1h-1V8z" fill="currentColor" opacity="0.7"/>
-                  </svg>
                   <span>Bekijk Hotels</span>
                   <svg width="16" height="16" viewBox="0 0 16 16" className="group-hover:translate-x-1 transition-transform">
-                    <path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                    <path fill="currentColor" d="M11.293 10.707a.999.999 0 00-.707-.293H9.5L8.914 9.414A5.969 5.969 0 0010 6c0-3.309-2.691-6-6-6S-2 2.691-2 6s2.691 6 6 6c1.414 0 2.707-.488 3.75-1.282L9.414 10.5h1.086c.276 0 .5.224.5.5zm-5.293-1.414a3.978 3.978 0 01-4-4c0-2.206 1.794-4 4-4s4 1.794 4 4a3.978 3.978 0 01-4 4z"/>
                   </svg>
                 </div>
                 
                 {/* Subtle background pattern */}
                 <div className="absolute inset-0 opacity-20">
-                  <svg width="100%" height="100%">
-                    <defs>
-                      <pattern id="cta-pattern" patternUnits="userSpaceOnUse" width="20" height="20">
-                        <circle cx="10" cy="10" r="1" fill="white" opacity="0.3"/>
-                        <circle cx="5" cy="5" r="0.5" fill="white" opacity="0.2"/>
-                        <circle cx="15" cy="15" r="0.5" fill="white" opacity="0.2"/>
-                      </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#cta-pattern)"/>
-                  </svg>
                 </div>
               </Link>
             </div>
@@ -258,13 +244,10 @@ const Navbar = () => {
                   aria-label="Bekijk alle hotels met jacuzzi"
                 >
                   <div className="flex items-center justify-center space-x-2">
-                    <svg width="20" height="20" viewBox="0 0 20 20" className="text-pure-white">
-                      <circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.6"/>
-                      <circle cx="7" cy="9" r="1.5" fill="currentColor"/>
-                      <circle cx="13" cy="9" r="1.5" fill="currentColor"/>
-                      <circle cx="10" cy="13" r="0.8" fill="currentColor"/>
-                    </svg>
                     <span>Bekijk Hotels</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" className="text-pure-white">
+                      <path fill="currentColor" d="M15.293 14.707a.999.999 0 00-.707-.293H13.5L12.914 13.414A7.969 7.969 0 0016 8c0-4.418-3.582-8-8-8S0 3.582 0 8s3.582 8 8 8c1.889 0 3.633-.67 5.006-1.794L13.414 14.5h1.086c.276 0 .5.224.5.5zm-5.293-2.414a5.978 5.978 0 01-6-6c0-3.309 2.691-6 6-6s6 2.691 6 6a5.978 5.978 0 01-6 6z"/>
+                    </svg>
                   </div>
                 </Link>
               </div>
