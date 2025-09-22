@@ -13,10 +13,11 @@ const mockProvinces = [
   { id: 5, name: "Utrecht" },
   { id: 6, name: "Noord-Brabant" },
   { id: 7, name: "Groningen" },
-  { id: 8, name: "Friesland" },
+  { id: 8, name: "Flevoland" },
   { id: 9, name: "Drenthe" },
   { id: 10, name: "Overijssel" },
-  { id: 11, name: "Zeeland" }
+  { id: 11, name: "Zeeland" },
+  { id: 12, name: "Friesland" }
 ]
 
 const mockCities = [
@@ -34,18 +35,44 @@ const mockCities = [
   { id: 12, name: "Haarlem", province_id: 2 },
   { id: 13, name: "Den Haag", province_id: 4 },
   { id: 14, name: "Tilburg", province_id: 6 },
-  { id: 15, name: "Apeldoorn", province_id: 3 },
+  { id: 15, name: "Den Haag", province_id: 4 },
   { id: 16, name: "Nijmegen", province_id: 3 },
   { id: 17, name: "Renesse", province_id: 11 },
-  { id: 18, name: "Goes", province_id: 11 },
-  { id: 19, name: "Middelburg", province_id: 11 },
+  { id: 18, name: "Middelburg", province_id: 11 },
+  { id: 19, name: "Goes", province_id: 11 },
   { id: 20, name: "Akersloot", province_id: 2 },
   { id: 21, name: "Wieringermeer", province_id: 2 },
   { id: 22, name: "Spaarnwoude", province_id: 2 },
   { id: 23, name: "Heiloo", province_id: 2 },
   { id: 24, name: "Schiphol", province_id: 2 },
   { id: 25, name: "Groningen", province_id: 7 },
-  { id: 26, name: "Leeuwarden", province_id: 8 }
+  { id: 26, name: "Hilversum", province_id: 5 },
+  { id: 27, name: "Vianen", province_id: 5 },
+  { id: 28, name: "Houten", province_id: 5 },
+  { id: 29, name: "Breukelen", province_id: 5 },
+  { id: 30, name: "Tilburg", province_id: 6 },
+  { id: 31, name: "Vught", province_id: 6 },
+  { id: 32, name: "Gilze", province_id: 6 },
+  { id: 33, name: "Deurne", province_id: 6 },
+  { id: 34, name: "De Bilt", province_id: 5 },
+  { id: 35, name: "Amersfoort", province_id: 5 },
+  { id: 36, name: "Utrecht", province_id: 5 },
+  { id: 37, name: "Veluwe", province_id: 3 },
+  { id: 38, name: "Oosterbeek", province_id: 3 },
+  { id: 39, name: "Nijmegen", province_id: 3 },
+  { id: 40, name: "Sassenheim", province_id: 4 },
+  { id: 41, name: "Leiden", province_id: 4 },
+  { id: 42, name: "Wassenaar", province_id: 4 },
+  { id: 43, name: "Nootdorp", province_id: 4 },
+  { id: 44, name: "Ridderkerk", province_id: 4 },
+  { id: 45, name: "Dordrecht", province_id: 4 },
+  { id: 46, name: "Leeuwarden", province_id: 12 },
+  { id: 47, name: "Sneek", province_id: 12 },
+  { id: 48, name: "Heerenveen", province_id: 12 },
+  { id: 49, name: "Drachten", province_id: 12 },
+  { id: 50, name: "Wolvega", province_id: 12 },
+  { id: 51, name: "Emmeloord", province_id: 8 },
+  { id: 52, name: "Almere", province_id: 8 }
 ]
 
 export default function HotelCard({ hotel }: HotelCardProps) {
