@@ -888,8 +888,8 @@ const mockHotels: Record<string, Hotel> = {
         id: 1,
         name: 'Deluxe Tweepersoonskamer met Uitzicht op de Tuin',
         image: '/images/Deluxe Tweepersoonskamer met Uitzicht op de Tuin.jpg',
-        description: 'Kamer met jacuzzi en prachtig uitzicht op de Friese meren. Perfect voor waterliefhebbers.',
-        features: ['Meren jacuzzi', 'Water uitzicht', 'Watersport toegang', 'Balkon', 'Gratis WiFi', 'Bootje verhuur'],
+        description: 'Ruime 44 m² tweepersoonskamer met bubbelbad en prachtig uitzicht op de tuin. Deze luxe kamer is voorzien van airconditioning, een minibar, een terras met tuinzicht en een eigen badkamer met inloopdouche. De kamer heeft 1 groot tweepersoonsbed en comfortabele bedden met een score van 9,2 gebaseerd op 250 beoordelingen.',
+        features: ['Bubbelbad', 'Uitzicht op de tuin', 'Balkon', 'Terras', 'Airconditioning', 'Minibar', 'Flatscreen-tv', 'Gratis WiFi', 'Koffiezetapparaat', 'Eigen badkamer', 'Inloopdouche', 'Gratis toiletartikelen', 'Föhn', 'Stopcontact bij het bed', 'Bureau', 'Zithoek', 'Koelkast', 'Satellietzenders', 'Extra lange bedden', 'Laptopkluisje', 'Rolstoeltoegankelijk'],
         priceRange: '€169 - €189',
         affiliateLink: 'https://booking.com/van-der-valk-sneek-water',
         thumbnails: [
