@@ -814,7 +814,7 @@ export default async function ProvincePage({ params }: { params: Promise<{ slug:
       'Gelderland': 'https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=1600&auto=format&fit=crop', // Hoge Veluwe National Park - verified working
       'Noord-Holland': 'https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?q=80&w=1600&auto=format&fit=crop', // Amsterdam canal golden hour - verified working
       'Limburg': 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop', // Historic Dutch architecture - verified working
-      'Zeeland': 'https://images.unsplash.com/photo-1519452575417-564c1401ecc0?q=80&w=1600&auto=format&fit=crop', // Dutch coastal dunes - verified working
+      'Zeeland': '/images/Zeeland-Hero.jpg', // Local Zeeland hero image
       'Zuid-Holland': 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1600&auto=format&fit=crop', // Dutch nature landscape - verified working
       'Utrecht': 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop', // Historic Dutch architecture - verified working
       'Noord-Brabant': 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop' // Historic Dutch architecture - verified working
