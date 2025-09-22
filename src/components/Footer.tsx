@@ -142,7 +142,7 @@ const Footer = () => {
               
               {/* Email */}
               <div className="flex items-start space-x-3">
-                <div className="bg-brand-orange-600 p-2 rounded-lg mt-0.5">
+                <div className="bg-brand-navy-200 p-2 rounded-lg mt-0.5">
                   <svg width="16" height="16" viewBox="0 0 16 16" className="text-pure-white">
                     <path d="M2 2a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2H2zM0 4l8 5 8-5v8H0V4z" fill="currentColor"/>
                   </svg>
@@ -150,28 +150,10 @@ const Footer = () => {
                 <div>
                   <p className="text-sm text-brand-navy-300 mb-1">Email ons</p>
                   <a
-                    href="mailto:info@jacuzzihotels.nl"
+                    href="mailto:info@hotelmetjacuzzi.net"
                     className="text-pure-white hover:text-brand-orange-600 transition-colors duration-300 font-medium"
                   >
-                    info@jacuzzihotels.nl
-                  </a>
-                </div>
-              </div>
-
-              {/* Telefoon */}
-              <div className="flex items-start space-x-3">
-                <div className="bg-brand-orange-600 p-2 rounded-lg mt-0.5">
-                  <svg width="16" height="16" viewBox="0 0 16 16" className="text-pure-white">
-                    <path d="M3.654 1.328a.678.678 0 00-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 004.168 6.608 17.569 17.569 0 006.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 00-.063-1.015l-2.307-1.794a.678.678 0 00-.58-.122L9.98 10.98s-.015.002-.059.006l-.078.01c-.278.035-.448.198-.698.417-.265.232-.618.403-1.094.403-1.325 0-3.5-2.175-3.5-3.5 0-.476.171-.829.403-1.094.219-.25.382-.42.417-.698l.01-.078c.004-.044.006-.058.006-.058l.549-1.803a.678.678 0 00-.122-.58L3.654 1.328z" fill="currentColor"/>
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-sm text-brand-navy-300 mb-1">Bel ons</p>
-                  <a
-                    href="tel:+31207001122"
-                    className="text-pure-white hover:text-brand-orange-600 transition-colors duration-300 font-medium"
-                  >
-                    020 - 700 1122
+                    info@hotelmetjacuzzi.net
                   </a>
                 </div>
               </div>
