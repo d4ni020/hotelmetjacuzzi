@@ -811,7 +811,7 @@ export default async function ProvincePage({ params }: { params: Promise<{ slug:
   // Province-specific hero images - using verified working URLs
   const getProvinceHeroImage = (provinceName: string) => {
     const images = {
-      'Gelderland': 'https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=1600&auto=format&fit=crop', // Hoge Veluwe National Park - verified working
+      'Gelderland': '/images/Veluwe - hero.jpg', // Local Gelderland Veluwe hero image
       'Noord-Holland': 'https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?q=80&w=1600&auto=format&fit=crop', // Amsterdam canal golden hour - verified working
       'Limburg': 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop', // Historic Dutch architecture - verified working
       'Zeeland': '/images/Zeeland-Hero.jpg', // Local Zeeland hero image
