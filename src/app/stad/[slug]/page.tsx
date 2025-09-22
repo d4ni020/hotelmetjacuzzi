@@ -55,7 +55,12 @@ const mockCities: (City & { provinces?: Province })[] = [
   { id: 17, name: "Renesse", slug: "renesse", province_id: 11, seo_text: "", created_at: "2024-01-01", provinces: { id: 11, name: "Zeeland", slug: "zeeland", seo_text: "", created_at: "2024-01-01" } },
   { id: 18, name: "Middelburg", slug: "middelburg", province_id: 11, seo_text: "", created_at: "2024-01-01", provinces: { id: 11, name: "Zeeland", slug: "zeeland", seo_text: "", created_at: "2024-01-01" } },
   { id: 19, name: "Goes", slug: "goes", province_id: 11, seo_text: "", created_at: "2024-01-01", provinces: { id: 11, name: "Zeeland", slug: "zeeland", seo_text: "", created_at: "2024-01-01" } },
-  { id: 25, name: "Groningen", slug: "groningen", province_id: 7, seo_text: "", created_at: "2024-01-01", provinces: { id: 7, name: "Groningen", slug: "groningen", seo_text: "", created_at: "2024-01-01" } }
+  { id: 25, name: "Groningen", slug: "groningen", province_id: 7, seo_text: "", created_at: "2024-01-01", provinces: { id: 7, name: "Groningen", slug: "groningen", seo_text: "", created_at: "2024-01-01" } },
+  { id: 46, name: "Leeuwarden", slug: "leeuwarden", province_id: 12, seo_text: "", created_at: "2024-01-01", provinces: { id: 12, name: "Friesland", slug: "friesland", seo_text: "", created_at: "2024-01-01" } },
+  { id: 47, name: "Sneek", slug: "sneek", province_id: 12, seo_text: "", created_at: "2024-01-01", provinces: { id: 12, name: "Friesland", slug: "friesland", seo_text: "", created_at: "2024-01-01" } },
+  { id: 48, name: "Heerenveen", slug: "heerenveen", province_id: 12, seo_text: "", created_at: "2024-01-01", provinces: { id: 12, name: "Friesland", slug: "friesland", seo_text: "", created_at: "2024-01-01" } },
+  { id: 49, name: "Drachten", slug: "drachten", province_id: 12, seo_text: "", created_at: "2024-01-01", provinces: { id: 12, name: "Friesland", slug: "friesland", seo_text: "", created_at: "2024-01-01" } },
+  { id: 50, name: "Wolvega", slug: "wolvega", province_id: 12, seo_text: "", created_at: "2024-01-01", provinces: { id: 12, name: "Friesland", slug: "friesland", seo_text: "", created_at: "2024-01-01" } }
 ]
 
 const mockHotels: Hotel[] = [
@@ -665,6 +670,77 @@ const mockHotels: Hotel[] = [
     image_url: "/images/Van der Valk Dordrecht.jpg",
     rating: 4.5,
     popular: true,
+    created_at: "2024-01-01"
+  },
+  {
+    id: 118,
+    name: "Van der Valk Wolvega - Heerenveen",
+    slug: "van-der-valk-wolvega-heerenveen",
+    description: "Comfortabel Van der Valk hotel tussen Wolvega en Heerenveen met moderne jacuzzi kamers en rustige ligging in het Friese landschap.",
+    province_id: 12,
+    city_id: 50,
+    price_range: "Vanaf €149",
+    facilities: ["Jacuzzi kamers", "Restaurant", "Wellness faciliteiten", "Gratis WiFi", "Parkeren", "Bar"],
+    affiliate_link: "https://booking.com/van-der-valk-wolvega-heerenveen",
+    image_url: "/images/Van der Valk Wolvega - Heerenveen.jpg",
+    rating: 4.3,
+    created_at: "2024-01-01"
+  },
+  {
+    id: 119,
+    name: "Van der Valk Drachten",
+    slug: "van-der-valk-drachten",
+    description: "Modern Van der Valk hotel in Drachten met stijlvolle jacuzzi suites en uitstekende wellness voorzieningen.",
+    province_id: 12,
+    city_id: 49,
+    price_range: "Vanaf €159",
+    facilities: ["Jacuzzi suites", "Wellness centrum", "Restaurant", "Fitness", "Gratis WiFi", "Vergaderzalen"],
+    affiliate_link: "https://booking.com/van-der-valk-drachten",
+    image_url: "/images/Van der Valk Drachten.jpg",
+    rating: 4.4,
+    created_at: "2024-01-01"
+  },
+  {
+    id: 120,
+    name: "Hotel-Paleis Stadhouderlijk Hof",
+    slug: "hotel-paleis-stadhouderlijk-hof",
+    description: "Historisch paleis hotel in het hart van Leeuwarden met luxe jacuzzi kamers en koninklijke ambiance.",
+    province_id: 12,
+    city_id: 46,
+    price_range: "Vanaf €189",
+    facilities: ["Luxe jacuzzi kamers", "Historisch paleis", "Fine dining", "Spa behandelingen", "Gratis WiFi", "Cultureel centrum"],
+    affiliate_link: "https://booking.com/hotel-paleis-stadhouderlijk-hof",
+    image_url: "/images/Hotel-Paleis Stadhouderlijk Hof.jpg",
+    rating: 4.6,
+    popular: true,
+    created_at: "2024-01-01"
+  },
+  {
+    id: 121,
+    name: "Van der Valk Sneek",
+    slug: "van-der-valk-sneek",
+    description: "Elegant Van der Valk hotel aan de Friese meren met panoramische jacuzzi suites en watersport faciliteiten.",
+    province_id: 12,
+    city_id: 47,
+    price_range: "Vanaf €169",
+    facilities: ["Panoramische jacuzzi suites", "Watersport faciliteiten", "Restaurant", "Wellness", "Gratis WiFi", "Fietsverhuur"],
+    affiliate_link: "https://booking.com/van-der-valk-sneek",
+    image_url: "/images/Van der Valk Sneek.jpg",
+    rating: 4.5,
+    created_at: "2024-01-01"
+  },
+  {
+    id: 122,
+    name: "Van der Valk Leeuwarden",
+    slug: "van-der-valk-leeuwarden",
+    description: "Stadshotel Van der Valk in culturele hoofdstad Leeuwarden met moderne jacuzzi kamers en centrale ligging.",
+    province_id: 12,
+    city_id: 46,
+    price_range: "Vanaf €179",
+    facilities: ["Moderne jacuzzi kamers", "Stadscentrum", "Restaurant", "Wellness centrum", "Gratis WiFi", "Culturele attracties"],
+    affiliate_link: "https://booking.com/van-der-valk-leeuwarden",
+    image_url: "/images/Van der Valk Leeuwarden.jpg",
+    rating: 4.4,
     created_at: "2024-01-01"
   }
 ]

@@ -40,7 +40,12 @@ export default function StedenPage() {
     { name: 'Schiphol', slug: 'schiphol', province: 'Noord-Holland', provinceSlug: 'noord-holland', description: 'Airport hotels met luxe wellness faciliteiten' },
     { name: 'Renesse', slug: 'renesse', province: 'Zeeland', provinceSlug: 'zeeland', description: 'Strand, duinen en luxe strandhotels met jacuzzi' },
     { name: 'Middelburg', slug: 'middelburg', province: 'Zeeland', provinceSlug: 'zeeland', description: 'Historische hoofdstad van Zeeland met wellness hotels' },
-    { name: 'Goes', slug: 'goes', province: 'Zeeland', provinceSlug: 'zeeland', description: 'Gezellige Zeeuwse stad met comfortabele hotels' }
+    { name: 'Goes', slug: 'goes', province: 'Zeeland', provinceSlug: 'zeeland', description: 'Gezellige Zeeuwse stad met comfortabele hotels' },
+    { name: 'Leeuwarden', slug: 'leeuwarden', province: 'Friesland', provinceSlug: 'friesland', description: 'Culturele hoofdstad van Friesland met authentieke wellness hotels' },
+    { name: 'Sneek', slug: 'sneek', province: 'Friesland', provinceSlug: 'friesland', description: 'Watersportstad aan de Friese meren met luxe jacuzzi hotels' },
+    { name: 'Heerenveen', slug: 'heerenveen', province: 'Friesland', provinceSlug: 'friesland', description: 'Modern centrum van Friesland met comfortabele wellness accommodaties' },
+    { name: 'Drachten', slug: 'drachten', province: 'Friesland', provinceSlug: 'friesland', description: 'Bruisende Friese stad met moderne jacuzzi hotels en business faciliteiten' },
+    { name: 'Wolvega', slug: 'wolvega', province: 'Friesland', provinceSlug: 'friesland', description: 'Rustige Friese gemeente met landelijke charme en wellness hotels' }
   ]
 
   // Group cities by province

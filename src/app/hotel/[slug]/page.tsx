@@ -753,6 +753,192 @@ const mockHotels: Record<string, Hotel> = {
         affiliateLink: 'https://booking.com/van-der-valk-dordrecht-wellness'
       }
     ]
+  },
+  'van-der-valk-wolvega-heerenveen': {
+    id: 118,
+    name: 'Van der Valk Wolvega - Heerenveen',
+    location: 'Wolvega, Friesland',
+    city: 'Wolvega',
+    province: 'Friesland',
+    priceRange: '€149 - €199',
+    jacuzziType: 'Comfortabele jacuzzi kamers',
+    facilities: ['Jacuzzi kamers', 'Restaurant', 'Wellness faciliteiten', 'Gratis WiFi', 'Parkeren', 'Bar', 'Friese gastvrijheid'],
+    rating: 4.3,
+    reviewCount: 267,
+    heroImage: '/images/Van der Valk Wolvega - Heerenveen.jpg',
+    description: 'Comfortabel Van der Valk hotel tussen Wolvega en Heerenveen met moderne jacuzzi kamers en rustige ligging in het Friese landschap. Ideaal voor een ontspannen verblijf in de natuurlijke schoonheid van Friesland.',
+    coordinates: [6.0023, 52.8732],
+    address: 'Industrieweg 15, 8471 JB Wolvega',
+    affiliateLink: 'https://booking.com/van-der-valk-wolvega-heerenveen',
+    rooms: [
+      {
+        id: 1,
+        name: 'Van der Valk Friese Comfort',
+        image: '/images/Van der Valk Wolvega - Heerenveen.jpg',
+        description: 'Comfortabele kamer met jacuzzi en typisch Friese sfeer. Perfect voor een rustig verblijf.',
+        features: ['Jacuzzi bad', 'Friese inrichting', 'Landelijke uitzicht', 'Koffie/thee faciliteiten', 'Gratis WiFi', 'Parkeerplaats'],
+        priceRange: '€149 - €169',
+        affiliateLink: 'https://booking.com/van-der-valk-wolvega-heerenveen-comfort'
+      },
+      {
+        id: 2,
+        name: 'Van der Valk Wellness Plus',
+        image: '/images/Van der Valk Wolvega - Heerenveen.jpg',
+        description: 'Wellness kamer met verbeterde jacuzzi en toegang tot wellness faciliteiten.',
+        features: ['Wellness jacuzzi', 'Spa toegang', 'Balkon', 'Room service', 'Premium beddengoed', 'Wellness faciliteiten'],
+        priceRange: '€179 - €199',
+        affiliateLink: 'https://booking.com/van-der-valk-wolvega-heerenveen-wellness'
+      }
+    ]
+  },
+  'van-der-valk-drachten': {
+    id: 119,
+    name: 'Van der Valk Drachten',
+    location: 'Drachten, Friesland',
+    city: 'Drachten',
+    province: 'Friesland',
+    priceRange: '€159 - €219',
+    jacuzziType: 'Stijlvolle jacuzzi suites',
+    facilities: ['Jacuzzi suites', 'Wellness centrum', 'Restaurant', 'Fitness', 'Gratis WiFi', 'Vergaderzalen', 'Modern design'],
+    rating: 4.4,
+    reviewCount: 298,
+    heroImage: '/images/Van der Valk Drachten.jpg',
+    description: 'Modern Van der Valk hotel in Drachten met stijlvolle jacuzzi suites en uitstekende wellness voorzieningen. Perfect gelegen voor verkenning van Friesland met alle moderne comfort.',
+    coordinates: [6.0989, 52.9987],
+    address: 'Zonnedauw 1, 9202 PA Drachten',
+    affiliateLink: 'https://booking.com/van-der-valk-drachten',
+    rooms: [
+      {
+        id: 1,
+        name: 'Van der Valk Modern Jacuzzi',
+        image: '/images/Van der Valk Drachten.jpg',
+        description: 'Modern ingerichte kamer met jacuzzi en eigentijds design. Ideaal voor moderne reizigers.',
+        features: ['Design jacuzzi', 'Modern interieur', 'Stad uitzicht', 'Business facilities', 'Gratis WiFi', 'Fitness toegang'],
+        priceRange: '€159 - €179',
+        affiliateLink: 'https://booking.com/van-der-valk-drachten-modern'
+      },
+      {
+        id: 2,
+        name: 'Van der Valk Executive Suite',
+        image: '/images/Van der Valk Drachten.jpg',
+        description: 'Executive suite met luxe jacuzzi en volledige business voorzieningen.',
+        features: ['Luxe jacuzzi', 'Executive inrichting', 'Separate woonkamer', 'Business center', 'Premium service', 'Meeting facilities'],
+        priceRange: '€199 - €219',
+        affiliateLink: 'https://booking.com/van-der-valk-drachten-executive'
+      }
+    ]
+  },
+  'hotel-paleis-stadhouderlijk-hof': {
+    id: 120,
+    name: 'Hotel-Paleis Stadhouderlijk Hof',
+    location: 'Leeuwarden, Friesland',
+    city: 'Leeuwarden',
+    province: 'Friesland',
+    priceRange: '€189 - €289',
+    jacuzziType: 'Luxe paleis jacuzzi kamers',
+    facilities: ['Luxe jacuzzi kamers', 'Historisch paleis', 'Fine dining', 'Spa behandelingen', 'Gratis WiFi', 'Cultureel centrum', 'Koninklijke ambiance'],
+    rating: 4.6,
+    reviewCount: 412,
+    heroImage: '/images/Hotel-Paleis Stadhouderlijk Hof.jpg',
+    description: 'Historisch paleis hotel in het hart van Leeuwarden met luxe jacuzzi kamers en koninklijke ambiance. Unieke combinatie van geschiedenis en moderne wellness in een authentiek Fries paleis.',
+    coordinates: [5.7980, 53.2012],
+    address: 'Tweebaksmarkt 52, 8911 KZ Leeuwarden',
+    affiliateLink: 'https://booking.com/hotel-paleis-stadhouderlijk-hof',
+    popularThisMonth: true,
+    rooms: [
+      {
+        id: 1,
+        name: 'Paleis Heritage Suite',
+        image: '/images/Hotel-Paleis Stadhouderlijk Hof.jpg',
+        description: 'Historische suite met jacuzzi in een authentiek paleis setting. Koninklijke ervaring gegarandeerd.',
+        features: ['Paleis jacuzzi', 'Historische inrichting', 'Antieke meubels', 'Koninklijke sfeer', 'Butler service', 'Culturele rondleiding'],
+        priceRange: '€189 - €229',
+        affiliateLink: 'https://booking.com/hotel-paleis-stadhouderlijk-hof-heritage'
+      },
+      {
+        id: 2,
+        name: 'Royal Wellness Suite',
+        image: '/images/Hotel-Paleis Stadhouderlijk Hof.jpg',
+        description: 'Luxe wellness suite met spa jacuzzi en toegang tot alle paleis faciliteiten.',
+        features: ['Royal spa jacuzzi', 'Wellness behandelingen', 'Paleis privileges', 'Fine dining', 'Concierge service', 'Premium amenities'],
+        priceRange: '€249 - €289',
+        affiliateLink: 'https://booking.com/hotel-paleis-stadhouderlijk-hof-royal'
+      }
+    ]
+  },
+  'van-der-valk-sneek': {
+    id: 121,
+    name: 'Van der Valk Sneek',
+    location: 'Sneek, Friesland',
+    city: 'Sneek',
+    province: 'Friesland',
+    priceRange: '€169 - €239',
+    jacuzziType: 'Panoramische jacuzzi suites',
+    facilities: ['Panoramische jacuzzi suites', 'Watersport faciliteiten', 'Restaurant', 'Wellness', 'Gratis WiFi', 'Fietsverhuur', 'Meren uitzicht'],
+    rating: 4.5,
+    reviewCount: 331,
+    heroImage: '/images/Van der Valk Sneek.jpg',
+    description: 'Elegant Van der Valk hotel aan de Friese meren met panoramische jacuzzi suites en watersport faciliteiten. Perfecte basis voor een actief of ontspannen verblijf aan het water.',
+    coordinates: [5.6581, 53.0321],
+    address: 'Burgemeester Rasterhoffweg 1, 8606 KZ Sneek',
+    affiliateLink: 'https://booking.com/van-der-valk-sneek',
+    rooms: [
+      {
+        id: 1,
+        name: 'Van der Valk Water View',
+        image: '/images/Van der Valk Sneek.jpg',
+        description: 'Kamer met jacuzzi en prachtig uitzicht op de Friese meren. Perfect voor waterliefhebbers.',
+        features: ['Meren jacuzzi', 'Water uitzicht', 'Watersport toegang', 'Balkon', 'Gratis WiFi', 'Bootje verhuur'],
+        priceRange: '€169 - €189',
+        affiliateLink: 'https://booking.com/van-der-valk-sneek-water'
+      },
+      {
+        id: 2,
+        name: 'Van der Valk Panorama Suite',
+        image: '/images/Van der Valk Sneek.jpg',
+        description: 'Panoramische suite met spa jacuzzi en 360° uitzicht over de meren.',
+        features: ['Panorama spa jacuzzi', '360° uitzicht', 'Wellness faciliteiten', 'Separate woonkamer', 'Premium service', 'Watersport packages'],
+        priceRange: '€209 - €239',
+        affiliateLink: 'https://booking.com/van-der-valk-sneek-panorama'
+      }
+    ]
+  },
+  'van-der-valk-leeuwarden': {
+    id: 122,
+    name: 'Van der Valk Leeuwarden',
+    location: 'Leeuwarden, Friesland',
+    city: 'Leeuwarden',
+    province: 'Friesland',
+    priceRange: '€179 - €249',
+    jacuzziType: 'Moderne jacuzzi kamers',
+    facilities: ['Moderne jacuzzi kamers', 'Stadscentrum', 'Restaurant', 'Wellness centrum', 'Gratis WiFi', 'Culturele attracties', 'Business facilities'],
+    rating: 4.4,
+    reviewCount: 387,
+    heroImage: '/images/Van der Valk Leeuwarden.jpg',
+    description: 'Stadshotel Van der Valk in culturele hoofdstad Leeuwarden met moderne jacuzzi kamers en centrale ligging. Ideaal voor cultuur en wellness combinatie in het hart van Friesland.',
+    coordinates: [5.7880, 53.2112],
+    address: 'Lynbaan 35, 8941 BR Leeuwarden',
+    affiliateLink: 'https://booking.com/van-der-valk-leeuwarden',
+    rooms: [
+      {
+        id: 1,
+        name: 'Van der Valk City Comfort',
+        image: '/images/Van der Valk Leeuwarden.jpg',
+        description: 'Comfort kamer met jacuzzi in het centrum van Leeuwarden. Perfect voor cultuurliefhebbers.',
+        features: ['Stad jacuzzi', 'Centrum locatie', 'Culturele toegang', 'Modern comfort', 'Gratis WiFi', 'Walking distance'],
+        priceRange: '€179 - €199',
+        affiliateLink: 'https://booking.com/van-der-valk-leeuwarden-city'
+      },
+      {
+        id: 2,
+        name: 'Van der Valk Cultural Suite',
+        image: '/images/Van der Valk Leeuwarden.jpg',
+        description: 'Luxe suite met wellness jacuzzi en toegang tot culturele voorzieningen.',
+        features: ['Cultural wellness jacuzzi', 'Suite inrichting', 'Museum toegang', 'Concierge service', 'Premium facilities', 'Cultural packages'],
+        priceRange: '€219 - €249',
+        affiliateLink: 'https://booking.com/van-der-valk-leeuwarden-cultural'
+      }
+    ]
   }
 }
 
