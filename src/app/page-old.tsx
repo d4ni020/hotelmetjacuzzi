@@ -1243,7 +1243,7 @@ export default function HomePage() {
             description: 'Specialist in romantische hotels met jacuzzi. Vind de perfecte wellness accommodatie voor een onvergetelijk verblijf.',
             url: 'https://jacuzzihotels.nl',
             telephone: '+31-20-123-4567',
-            email: 'info@jacuzzihotels.nl',
+            email: 'info@hotelmetjacuzzi.net',
             address: {
               '@type': 'PostalAddress',
               addressCountry: 'NL',

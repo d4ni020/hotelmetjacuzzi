@@ -142,7 +142,7 @@ const Footer = () => {
               
               {/* Email */}
               <div className="flex items-start space-x-3">
-                <div className="bg-brand-navy-200 p-2 rounded-lg mt-0.5">
+                <div className="bg-brand-orange-600 p-2 rounded-lg mt-0.5">
                   <svg width="16" height="16" viewBox="0 0 16 16" className="text-pure-white">
                     <path d="M2 2a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2H2zM0 4l8 5 8-5v8H0V4z" fill="currentColor"/>
                   </svg>

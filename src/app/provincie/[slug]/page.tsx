@@ -35,7 +35,7 @@ const mockCities: City[] = [
   { id: 45, name: "Dordrecht", slug: "dordrecht", province_id: 4, seo_text: "", created_at: "2024-01-01" },
   { id: 5, name: "Utrecht", slug: "utrecht-stad", province_id: 5, seo_text: "", created_at: "2024-01-01" },
   { id: 34, name: "Hilversum", slug: "hilversum", province_id: 5, seo_text: "", created_at: "2024-01-01" },
-  { id: 35, name: "Vianen", slug: "vianen", province_id: 5, seo_text: "", created_at: "2024-01-01" },
+  { id: 28, name: "Vianen", slug: "vianen", province_id: 5, seo_text: "", created_at: "2024-01-01" },
   { id: 36, name: "Houten", slug: "houten", province_id: 5, seo_text: "", created_at: "2024-01-01" },
   { id: 37, name: "Breukelen", slug: "breukelen", province_id: 5, seo_text: "", created_at: "2024-01-01" },
   { id: 38, name: "De Bilt", slug: "de-bilt", province_id: 5, seo_text: "", created_at: "2024-01-01" },
@@ -45,11 +45,15 @@ const mockCities: City[] = [
   { id: 31, name: "Vught", slug: "vught", province_id: 6, seo_text: "", created_at: "2024-01-01" },
   { id: 32, name: "Gilze", slug: "gilze", province_id: 6, seo_text: "", created_at: "2024-01-01" },
   { id: 33, name: "Deurne", slug: "deurne", province_id: 6, seo_text: "", created_at: "2024-01-01" },
+  { id: 60, name: "Oisterwijk", slug: "oisterwijk", province_id: 6, seo_text: "", created_at: "2024-01-01" }, // Added Oisterwijk
   { id: 20, name: "Akersloot", slug: "akersloot", province_id: 2, seo_text: "", created_at: "2024-01-01" },
   { id: 21, name: "Wieringermeer", slug: "wieringermeer", province_id: 2, seo_text: "", created_at: "2024-01-01" },
   { id: 22, name: "Spaarnwoude", slug: "spaarnwoude", province_id: 2, seo_text: "", created_at: "2024-01-01" },
   { id: 23, name: "Heiloo", slug: "heiloo", province_id: 2, seo_text: "", created_at: "2024-01-01" },
   { id: 24, name: "Schiphol", slug: "schiphol", province_id: 2, seo_text: "", created_at: "2024-01-01" },
+  { id: 26, name: "Huizen", slug: "huizen", province_id: 2, seo_text: "", created_at: "2024-01-01" },
+  { id: 27, name: "De Koog", slug: "de-koog", province_id: 2, seo_text: "", created_at: "2024-01-01" },
+  { id: 29, name: "Schoorl", slug: "schoorl", province_id: 2, seo_text: "", created_at: "2024-01-01" },
   { id: 17, name: "Renesse", slug: "renesse", province_id: 11, seo_text: "", created_at: "2024-01-01" },
   { id: 18, name: "Middelburg", slug: "middelburg", province_id: 11, seo_text: "", created_at: "2024-01-01" },
   { id: 19, name: "Goes", slug: "goes", province_id: 11, seo_text: "", created_at: "2024-01-01" },
@@ -111,7 +115,7 @@ const mockHotels: Hotel[] = [
     price_range: "Vanaf €189",
     facilities: ["Privé Jacuzzi", "Spa", "Restaurant", "Fitness", "Strand"],
     affiliate_link: "https://booking.com/landgoed-hotel-renesse",
-    image_url: "/images/Langoed hotel Renesse.jpg",
+    image_url: "/images/Landgoed Hotel Renesse.jpg",
     rating: 4.6,
     created_at: "2024-01-01"
   },
@@ -178,7 +182,7 @@ const mockHotels: Hotel[] = [
     slug: "landgoed-de-rosep",
     description: "Exclusief landgoed hotel in Oosterbeek met romantische suites uitgerust met bubbelbaden en wellness faciliteiten.",
     province_id: 3,
-    city_id: 8,
+    city_id: 60, // Changed from 8 to 60 for Oisterwijk
     price_range: "Vanaf €225",
     facilities: ["Bubbelbad Suites", "Landgoed", "Fine Dining", "Wellness", "Natuur"],
     affiliate_link: "https://booking.com/landgoed-de-rosep",
@@ -277,7 +281,7 @@ const mockHotels: Hotel[] = [
     slug: "hotel-restaurant-nautisch-kwartier",
     description: "Maritiem getint hotel met nautische charme en jacuzzi faciliteiten. Unieke sfeer in een prachtige Noord-Hollandse setting.",
     province_id: 2,
-    city_id: 2,
+    city_id: 26,
     price_range: "Vanaf €189",
     facilities: ["Jacuzzi Kamers", "Nautisch Thema", "Restaurant", "Bar"],
     affiliate_link: "https://booking.com/hotel-restaurant-nautisch-kwartier",
@@ -291,7 +295,7 @@ const mockHotels: Hotel[] = [
     slug: "hotel-restaurant-de-cooghen",
     description: "Karakteristiek hotel met traditionele charme en moderne jacuzzi faciliteiten. Perfecte mix van historie en comfort.",
     province_id: 2,
-    city_id: 2,
+    city_id: 27,
     price_range: "Vanaf €169",
     facilities: ["Jacuzzi Kamers", "Historisch", "Restaurant", "Charme"],
     affiliate_link: "https://booking.com/hotel-restaurant-de-cooghen",
@@ -319,7 +323,7 @@ const mockHotels: Hotel[] = [
     slug: "fletcher-hotel-restaurant-jan-van-scorel",
     description: "Uniek hotel met uitzicht op de Schoorlse Duinen en luxe jacuzzi suites. Perfecte combinatie van natuur en wellness.",
     province_id: 2,
-    city_id: 2,
+    city_id: 29,
     price_range: "Vanaf €199",
     facilities: ["Jacuzzi Suites", "Duinzicht", "Wellness", "Restaurant", "Natuur"],
     affiliate_link: "https://booking.com/fletcher-hotel-restaurant-jan-van-scorel",
@@ -447,7 +451,7 @@ const mockHotels: Hotel[] = [
     slug: "van-der-valk-vianen",
     description: "Modern Van der Valk hotel in Vianen met comfortabele jacuzzi suites en uitstekende faciliteiten. Strategisch gelegen tussen Amsterdam en Utrecht.",
     province_id: 5,
-    city_id: 35,
+    city_id: 28,
     price_range: "Vanaf €175",
     facilities: ["Jacuzzi suites", "Restaurant", "Bar", "Fitness", "Vergaderzalen", "Parking"],
     affiliate_link: "https://booking.com/vandervalk-vianen",
@@ -1021,7 +1025,8 @@ export default async function ProvincePage({ params }: { params: Promise<{ slug:
       'Utrecht': '/images/Domtoren-Utrecht-Hero.jpg', // Local Utrecht Domtoren hero image
       'Groningen': '/images/Groningen-Hero.jpg', // Local Groningen hero image
       'Friesland': '/images/Leeuwarden - Hero.jpg', // Local Friesland Leeuwarden hero image
-      'Noord-Brabant': 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop' // Historic Dutch architecture - verified working
+      'Noord-Brabant': 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop', // Historic Dutch architecture - verified working
+      'Overijssel': '/images/Overijssel - Hero.jpg' // Local Overijssel hero image
     }
     return images[provinceName as keyof typeof images] || images['Noord-Brabant']
   }

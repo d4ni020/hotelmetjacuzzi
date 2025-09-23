@@ -52,34 +52,6 @@ export default function HotelsPage() {
       created_at: "2024-01-01"
     },
     {
-      id: 4,
-      name: "Rotterdam Marina Hotel",
-      slug: "rotterdam-marina-hotel",
-      description: "Modern boutique hotel met uitzicht op de Maas, luxe suites met bubbelbaden en wellness faciliteiten.",
-      province_id: 4,
-      city_id: 4,
-      price_range: "Vanaf €195",
-      facilities: ["Bubbelbad", "Balkon", "Restaurant", "Fitness"],
-      affiliate_link: "https://booking.com/rotterdam-marina",
-      image_url: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1600&auto=format&fit=crop",
-      rating: 4.4,
-      created_at: "2024-01-01"
-    },
-    {
-      id: 5,
-      name: "Utrecht Central Wellness",
-      slug: "utrecht-central-wellness",
-      description: "Stijlvol hotel in het centrum van Utrecht met privé jacuzzi's en complete wellness ervaring.",
-      province_id: 5,
-      city_id: 5,
-      price_range: "Vanaf €175",
-      facilities: ["Privé Jacuzzi", "Sauna", "Spa", "Restaurant"],
-      affiliate_link: "https://booking.com/utrecht-central",
-      image_url: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1600&auto=format&fit=crop",
-      rating: 4.6,
-      created_at: "2024-01-01"
-    },
-    {
       id: 6,
       name: "Eindhoven Design Hotel",
       slug: "eindhoven-design-hotel",

@@ -181,7 +181,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-brand-navy-900">E-mail</h3>
-                    <p className="text-brand-navy-600">info@jacuzzihotels.nl</p>
+                    <p className="text-brand-navy-600">info@hotelmetjacuzzi.net</p>
                     <p className="text-sm text-brand-navy-500">We reageren binnen 24 uur</p>
                   </div>
                 </div>
@@ -194,7 +194,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-brand-navy-900">Social Media</h3>
-                    <p className="text-brand-navy-600">@HotelmetjacuzziNL</p>
+                    <p className="text-brand-navy-600">@Hotelmetjacuzzi.net</p>
                     <p className="text-sm text-brand-navy-500">Volg ons voor daily inspiration</p>
                   </div>
                 </div>

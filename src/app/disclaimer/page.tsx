@@ -134,7 +134,7 @@ export default function DisclaimerPage() {
               Voor vragen over deze disclaimer kunt u contact opnemen via:
             </p>
             <div className="mt-4 p-4 bg-brand-navy-50 rounded-lg">
-              <p><strong>E-mail:</strong> info@jacuzzihotels.nl</p>
+              <p><strong>E-mail:</strong> info@hotelmetjacuzzi.net</p>
               <p><strong>Website:</strong> www.jacuzzihotels.nl</p>
             </div>
           </div>

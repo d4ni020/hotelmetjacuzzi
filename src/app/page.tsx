@@ -19,7 +19,7 @@ const mockHotels: Hotel[] = [
       price_range: "Vanaf €225",
       facilities: ["Privé Jacuzzi", "Spa", "Restaurant", "Wellness"],
       affiliate_link: "https://booking.com/kasteel-bloemendal",
-      image_url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
+      image_url: "/images/Kasteel Bloemendal.jpg",
       rating: 4.8,
       created_at: "2024-01-01"
     },
@@ -42,7 +42,7 @@ const mockHotels: Hotel[] = [
       id: 3,
       name: "Fletcher Wellness Hotel",
       slug: "fletcher-wellness-hotel",
-      description: "Ontspanning pur sang in dit wellness hotel met jacuzzi kamers en uitgebreide spa faciliteiten.",
+      description: "Landgoed hotel in een bosrijke omgeving met wellness faciliteiten en luxe suites.",
       province_id: 3,
       city_id: 3,
       price_range: "Vanaf €159",
@@ -50,34 +50,6 @@ const mockHotels: Hotel[] = [
       affiliate_link: "https://booking.com/fletcher-wellness",
       image_url: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop",
       rating: 4.5,
-      created_at: "2024-01-01"
-    },
-    {
-      id: 4,
-      name: "Rotterdam Marina Hotel",
-      slug: "rotterdam-marina-hotel",
-      description: "Modern boutique hotel met uitzicht op de Maas, luxe suites met bubbelbaden en wellness faciliteiten.",
-      province_id: 4,
-      city_id: 4,
-      price_range: "Vanaf €195",
-      facilities: ["Bubbelbad", "Balkon", "Restaurant", "Fitness"],
-      affiliate_link: "https://booking.com/rotterdam-marina",
-      image_url: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1600&auto=format&fit=crop",
-      rating: 4.4,
-      created_at: "2024-01-01"
-    },
-    {
-      id: 5,
-      name: "Utrecht Central Wellness",
-      slug: "utrecht-central-wellness",
-      description: "Stijlvol hotel in het centrum van Utrecht met privé jacuzzi's en complete wellness ervaring.",
-      province_id: 5,
-      city_id: 5,
-      price_range: "Vanaf €175",
-      facilities: ["Privé Jacuzzi", "Sauna", "Spa", "Restaurant"],
-      affiliate_link: "https://booking.com/utrecht-central",
-      image_url: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1600&auto=format&fit=crop",
-      rating: 4.6,
       created_at: "2024-01-01"
     },
     {
@@ -102,10 +74,10 @@ const mockHotels: Hotel[] = [
       province_id: 11,
       city_id: 17,
       price_range: "Vanaf €169",
-      facilities: ["Spa & Wellness", "Jacuzzi", "Strand nabij", "Landgoed", "Fine dining", "Natuur"],
+      facilities: ["Privé Jacuzzi", "Spa", "Restaurant", "Fitness", "Strand"],
       affiliate_link: "https://booking.com/landgoed-hotel-renesse",
-      image_url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1600&auto=format&fit=crop",
-      rating: 4.5,
+      image_url: "/images/Landgoed Hotel Renesse.jpg",
+      rating: 4.6,
       created_at: "2024-01-01"
     },
     {
@@ -116,9 +88,9 @@ const mockHotels: Hotel[] = [
       province_id: 11,
       city_id: 17,
       price_range: "Vanaf €195",
-      facilities: ["Strand access", "Jacuzzi", "Zee uitzicht", "Wellness center", "Restaurant", "Thalasso"],
+      facilities: ["Jacuzzi Suites", "Zeezicht", "Strand", "Spa", "Wellness"],
       affiliate_link: "https://booking.com/zuiderduin-beachhotel",
-      image_url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1600&auto=format&fit=crop",
+      image_url: "/images/zuiderduin beachhotel.jpg",
       rating: 4.7,
       created_at: "2024-01-01"
     },
@@ -130,10 +102,10 @@ const mockHotels: Hotel[] = [
       province_id: 11,
       city_id: 18,
       price_range: "Vanaf €149",
-      facilities: ["Spa faciliteiten", "Jacuzzi", "Historisch centrum", "Restaurant", "Bar", "Gratis parkeren"],
-      affiliate_link: "https://booking.com/vandervalk-middelburg",
-      image_url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1600&auto=format&fit=crop",
-      rating: 4.4,
+      facilities: ["Jacuzzi Kamers", "Wellness spa", "Historisch centrum", "Restaurant", "Bar", "Fitness"],
+      affiliate_link: "https://booking.com/van-der-valk-middelburg",
+      image_url: "/images/Van-der-Valk-Middelburg.jpg", // Corrected image URL with specific image
+      rating: 4.5,
       created_at: "2024-01-01"
     },
     {
@@ -146,7 +118,7 @@ const mockHotels: Hotel[] = [
       price_range: "Vanaf €139",
       facilities: ["Wellness", "Jacuzzi", "Sauna", "Restaurant", "Fitness", "Gratis WiFi"],
       affiliate_link: "https://booking.com/vandervalk-goes",
-      image_url: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1600&auto=format&fit=crop",
+      image_url: "/images/Van der Valk - Goes.jpg",
       rating: 4.3,
       created_at: "2024-01-01"
     },
@@ -226,7 +198,7 @@ const mockHotels: Hotel[] = [
       slug: "hotel-restaurant-nautisch-kwartier",
       description: "Uniek nautisch hotel met maritieme wellness faciliteiten en jacuzzi. Een bijzondere ervaring voor zeeliefhebbers.",
       province_id: 2,
-      city_id: 2,
+      city_id: 26,
       price_range: "Vanaf €175",
       facilities: ["Nautisch Theme", "Jacuzzi", "Restaurant", "Haven locatie", "Uniek design", "Wellness"],
       affiliate_link: "https://booking.com/nautisch-kwartier",
@@ -240,7 +212,7 @@ const mockHotels: Hotel[] = [
       slug: "hotel-restaurant-de-cooghen",
       description: "Traditioneel hotel-restaurant De Cooghen met moderne wellness en jacuzzi faciliteiten. Perfect voor een culinaire en ontspannende ervaring.",
       province_id: 2,
-      city_id: 2,
+      city_id: 27,
       price_range: "Vanaf €165",
       facilities: ["Fine Dining", "Jacuzzi", "Traditioneel", "Wellness", "Culinair", "Bar"],
       affiliate_link: "https://booking.com/de-cooghen",
@@ -268,7 +240,7 @@ const mockHotels: Hotel[] = [
       slug: "fletcher-hotel-restaurant-jan-van-scorel",
       description: "Historisch Fletcher hotel vernoemd naar de beroemde schilder, met moderne wellness en jacuzzi. Kunst en ontspanning in harmonie.",
       province_id: 2,
-      city_id: 2,
+      city_id: 29,
       price_range: "Vanaf €179",
       facilities: ["Historisch", "Jacuzzi", "Kunst theme", "Restaurant", "Wellness", "Centraal"],
       affiliate_link: "https://booking.com/fletcher-jan-van-scorel",
@@ -381,7 +353,7 @@ const mockHotels: Hotel[] = [
       slug: "van-der-valk-vianen",
       description: "Modern Van der Valk hotel in Vianen met comfortabele jacuzzi suites en uitstekende faciliteiten. Strategisch gelegen tussen Amsterdam en Utrecht.",
       province_id: 5,
-      city_id: 35,
+      city_id: 28,
       price_range: "Vanaf €175",
       facilities: ["Jacuzzi suites", "Restaurant", "Bar", "Fitness", "Vergaderzalen", "Parking"],
       affiliate_link: "https://booking.com/vandervalk-vianen",
@@ -841,6 +813,20 @@ const mockHotels: Hotel[] = [
       image_url: "/images/Theaterhotel Almelo.jpg",
       rating: 4.1,
       created_at: "2024-01-01"
+    },
+    {
+      id: 112,
+      name: "Inntel Hotels Amsterdam Centre",
+      slug: "inntel-hotels-amsterdam-centre",
+      description: "Modern stadshotel met unieke design kamers en luxueuze wellness faciliteiten in het hart van Amsterdam.",
+      province_id: 1,
+      city_id: 1,
+      price_range: "Vanaf €195",
+      facilities: ["Jacuzzi Suite", "Wellness Center", "Centrum locatie", "Restaurant"],
+      affiliate_link: "https://booking.com/inntel-hotels-amsterdam-centre",
+      image_url: "/images/Inntel Hotels Amsterdam Centre.jpg",
+      rating: 4.3,
+      created_at: "2024-01-01"
     }
   ]
 
@@ -883,7 +869,7 @@ export default function HomePage() {
     { id: 45, name: "Dordrecht", slug: "dordrecht", province_id: 4, seo_text: "", created_at: "2024-01-01" },
     { id: 5, name: "Utrecht", slug: "utrecht-stad", province_id: 5, seo_text: "", created_at: "2024-01-01" },
     { id: 34, name: "Hilversum", slug: "hilversum", province_id: 5, seo_text: "", created_at: "2024-01-01" },
-    { id: 35, name: "Vianen", slug: "vianen", province_id: 5, seo_text: "", created_at: "2024-01-01" },
+    { id: 28, name: "Vianen", slug: "vianen", province_id: 5, seo_text: "", created_at: "2024-01-01" },
     { id: 36, name: "Houten", slug: "houten", province_id: 5, seo_text: "", created_at: "2024-01-01" },
     { id: 37, name: "Breukelen", slug: "breukelen", province_id: 5, seo_text: "", created_at: "2024-01-01" },
     { id: 38, name: "De Bilt", slug: "de-bilt", province_id: 5, seo_text: "", created_at: "2024-01-01" },
@@ -901,6 +887,9 @@ export default function HomePage() {
     { id: 22, name: "Spaarnwoude", slug: "spaarnwoude", province_id: 2, seo_text: "", created_at: "2024-01-01" },
     { id: 23, name: "Heiloo", slug: "heiloo", province_id: 2, seo_text: "", created_at: "2024-01-01" },
     { id: 24, name: "Schiphol", slug: "schiphol", province_id: 2, seo_text: "", created_at: "2024-01-01" },
+    { id: 26, name: "Huizen", slug: "huizen", province_id: 2, seo_text: "", created_at: "2024-01-01" },
+    { id: 27, name: "De Koog", slug: "de-koog", province_id: 2, seo_text: "", created_at: "2024-01-01" },
+    { id: 29, name: "Schoorl", slug: "schoorl", province_id: 2, seo_text: "", created_at: "2024-01-01" },
     { id: 25, name: "Groningen", slug: "groningen", province_id: 7, seo_text: "", created_at: "2024-01-01" },
     { id: 46, name: "Leeuwarden", slug: "leeuwarden", province_id: 12, seo_text: "", created_at: "2024-01-01" },
     { id: 47, name: "Sneek", slug: "sneek", province_id: 12, seo_text: "", created_at: "2024-01-01" },
@@ -1052,7 +1041,7 @@ export default function HomePage() {
             </p>
             </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Goedkoop hotel met jacuzzi */}
             <Link href="/goedkoop-hotel-met-jacuzzi" className="group">
               <div className="bg-pure-white border-2 border-brand-navy-200 hover:border-brand-orange-600 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
@@ -1155,6 +1144,80 @@ export default function HomePage() {
                   <div className="mt-auto">
                     <span className="inline-flex items-center bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-3 px-4 rounded-lg transition-colors duration-300 w-full justify-center group-hover:shadow-lg">
                       Plan romantiek
+                      <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Hotelkamer met jacuzzi */}
+            <Link href="/hotelkamer-met-jacuzzi" className="group">
+              <div className="bg-pure-white border-2 border-brand-navy-200 hover:border-brand-orange-600 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=600&auto=format&fit=crop"
+                    alt="Hotelkamer met jacuzzi - Luxe kamers met privé jacuzzi"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 20vw"
+                  />
+                  <div className="absolute top-3 left-3">
+                    <span className="bg-brand-navy-900 text-pure-white px-3 py-1 rounded-full text-xs font-semibold">
+                      Luxe Kamers
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300">
+                    Hotelkamer met jacuzzi
+                  </h3>
+                  <p className="text-brand-navy-600 mb-6 line-clamp-2 flex-1">
+                    Ontdek de mooiste hotelkamers met privé jacuzzi in Nederland. Van romantische suites tot 
+                    luxe wellness kamers - vind jouw perfecte jacuzzi ervaring.
+                  </p>
+                  <div className="mt-auto">
+                    <span className="inline-flex items-center bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-3 px-4 rounded-lg transition-colors duration-300 w-full justify-center group-hover:shadow-lg">
+                      Bekijk kamers
+                      <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Hotelkamer met jacuzzi en sauna */}
+            <Link href="/hotelkamer-met-jacuzzi-en-sauna" className="group">
+              <div className="bg-pure-white border-2 border-brand-navy-200 hover:border-brand-orange-600 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600&auto=format&fit=crop"
+                    alt="Hotelkamer met jacuzzi en sauna - Complete wellness ervaring"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 20vw"
+                  />
+                  <div className="absolute top-3 left-3">
+                    <span className="bg-brand-orange-600 text-pure-white px-3 py-1 rounded-full text-xs font-semibold">
+                      Premium Wellness
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300">
+                    Hotelkamer met jacuzzi en sauna
+                  </h3>
+                  <p className="text-brand-navy-600 mb-6 line-clamp-2 flex-1">
+                    De ultieme wellness ervaring met zowel jacuzzi als sauna op de kamer. Complete ontspanning 
+                    in één ruimte voor de perfecte wellness getaway.
+                  </p>
+                  <div className="mt-auto">
+                    <span className="inline-flex items-center bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-3 px-4 rounded-lg transition-colors duration-300 w-full justify-center group-hover:shadow-lg">
+                      Bekijk wellness kamers
                       <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
@@ -1597,7 +1660,7 @@ export default function HomePage() {
               <div className="flex flex-col lg:flex-row">
                 <div className="lg:w-1/3 h-48 lg:h-auto relative">
                   <Image
-                    src="/images/Van der Valk De Bilt - Utrecht.jpg"
+                    src="/images/Van der Valk Akersloot.jpg"
                     alt="Van der Valk Hotel Amsterdam - Jacuzzi op kamer"
                     fill
                     className="object-cover"

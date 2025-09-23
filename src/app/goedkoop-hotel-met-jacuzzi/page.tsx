@@ -164,7 +164,7 @@ const budgetJacuzziHotels: Hotel[] = [
     created_at: "2024-01-01"
   },
   {
-    id: 108,
+    id: 111,
     name: "Stadshotel Den Haag",
     slug: "stadshotel-den-haag",
     description: "Modern stadshotel in Den Haag met comfortabele wellness kamers en jacuzzi faciliteiten. Uitstekende uitvalsbasis voor het verkennen van de hofstad.",
@@ -178,7 +178,7 @@ const budgetJacuzziHotels: Hotel[] = [
     created_at: "2024-01-01"
   },
   {
-    id: 109,
+    id: 112,
     name: "Van der Valk Sassenheim-Leiden",
     slug: "van-der-valk-sassenheim-leiden",
     description: "Comfortabel Van der Valk hotel nabij Leiden met moderne wellness faciliteiten en jacuzzi kamers. Ideaal voor zowel zakelijke als leisure gasten.",
@@ -192,7 +192,7 @@ const budgetJacuzziHotels: Hotel[] = [
     created_at: "2024-01-01"
   },
   {
-    id: 110,
+    id: 113,
     name: "Van der Valk Ridderkerk",
     slug: "van-der-valk-ridderkerk",
     description: "Centraal gelegen Van der Valk hotel in Ridderkerk met jacuzzi kamers en uitstekende faciliteiten. Perfect voor zowel business als leisure.",
@@ -206,7 +206,7 @@ const budgetJacuzziHotels: Hotel[] = [
     created_at: "2024-01-01"
   },
   {
-    id: 111,
+    id: 114,
     name: "Van der Valk Den Haag - Nootdorp",
     slug: "van-der-valk-den-haag-nootdorp",
     description: "Comfortabel Van der Valk hotel in Nootdorp met moderne wellness kamers en jacuzzi faciliteiten. Ideale uitvalsbasis voor Den Haag en omgeving.",

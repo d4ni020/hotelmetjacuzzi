@@ -125,7 +125,7 @@ export default function AffiliateDisclaimerPage() {
               Neem gerust contact met ons op:
             </p>
             <div className="mt-4 p-4 bg-brand-navy-50 rounded-lg">
-              <p><strong>E-mail:</strong> info@jacuzzihotels.nl</p>
+              <p><strong>E-mail:</strong> info@hotelmetjacuzzi.net</p>
               <p><strong>Onderwerp:</strong> Affiliate vraag</p>
             </div>
 

@@ -72,14 +72,15 @@ export default function RomantischHotelMetJacuzziPage() {
   const romanticJacuzziHotels = [
     {
       id: 1,
-      name: "Kasteel Bloemendal",
-      city: "Maastricht",
-      province: "Limburg", 
-      price_range: "Vanaf €225",
-      rating: 4.8,
-      description: "Historisch kasteel uit de 18e eeuw met luxueuze suites en privé jacuzzi's. Een sprookjesachtige setting voor uw romantische uitje.",
-      image_url: "/images/Kasteel Bloemendal.jpg",
-      facilities: ["Privé jacuzzi", "Kasteel ambiance", "Fine dining", "Romantisch", "Historisch"]
+      name: "Landgoed Hotel Renesse",
+      slug: "landgoed-hotel-renesse",
+      image_url: "/images/Landgoed Hotel Renesse.jpg",
+      city: "Renesse",
+      province: "Zeeland",
+      price_range: "Vanaf €179",
+      rating: 4.4,
+      description: "Romantisch strandhotel in Zeeland met luxe jacuzzi suites en adembenemend zeezicht.",
+      facilities: ["Zeezicht", "Romantisch", "Strandlocatie", "Jacuzzi suites", "Wellness"]
     },
     {
       id: 5,
