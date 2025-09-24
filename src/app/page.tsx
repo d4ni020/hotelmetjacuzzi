@@ -34,7 +34,7 @@ const mockHotels: Hotel[] = [
       price_range: "Vanaf €189",
       facilities: ["Bubbelbad", "Sauna", "Fitness", "Restaurant"],
       affiliate_link: "https://booking.com/van-der-valk-amsterdam",
-      image_url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1600&auto=format&fit=crop",
+      image_url: "/images/Kasteel Bloemendal.jpg",
       rating: 4.6,
       popular: true,
       created_at: "2024-01-01"
@@ -49,7 +49,7 @@ const mockHotels: Hotel[] = [
       price_range: "Vanaf €159",
       facilities: ["Wellness Suite", "Jacuzzi", "Massages", "Zwembad"],
       affiliate_link: "https://booking.com/fletcher-wellness",
-      image_url: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop",
+      image_url: "/images/Amsterdam - Hero.jpg",
       rating: 4.5,
       created_at: "2024-01-01"
     },
@@ -63,7 +63,7 @@ const mockHotels: Hotel[] = [
       price_range: "Vanaf €275",
       facilities: ["Wellness Suite", "Design Jacuzzi", "Spa", "Outdoor Terras"],
       affiliate_link: "https://booking.com/eindhoven-design",
-      image_url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop",
+      image_url: "/images/Utrecht - Domtoren - Hero.jpg",
       rating: 4.7,
       created_at: "2024-01-01"
     },
@@ -1003,13 +1003,14 @@ export default function HomePage() {
       </div>
             <div className="relative">
               <Image
-                src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop"
+                src="/images/Amsterdam - Hero.jpg"
                 alt="Luxe hotelkamer met jacuzzi - Romantisch verblijf Nederland"
                 width={600}
                 height={400}
                 className="rounded-2xl shadow-2xl"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
+                quality={90}
               />
               <div className="absolute -bottom-6 -right-6 bg-brand-orange-600 text-pure-white p-6 rounded-2xl shadow-xl">
                 <div className="text-2xl font-bold">250+</div>
@@ -1049,7 +1050,7 @@ export default function HomePage() {
               <div className="bg-pure-white border-2 border-brand-navy-200 hover:border-brand-orange-600 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Utrecht - Domtoren - Hero.jpg"
                     alt="Goedkoop hotel met jacuzzi - Budget vriendelijke wellness"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -1086,7 +1087,7 @@ export default function HomePage() {
               <div className="bg-pure-white border-2 border-brand-navy-200 hover:border-brand-orange-600 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Maastricht - Hero.jpg"
                     alt="Wellness hotel met jacuzzi in Nederland - Complete spa ervaring"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -1123,7 +1124,7 @@ export default function HomePage() {
               <div className="bg-pure-white border-2 border-brand-navy-200 hover:border-brand-orange-600 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Amsterdam - Hero.jpg"
                     alt="Romantisch hotel met jacuzzi - Intieme wellness ervaring"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -1160,7 +1161,7 @@ export default function HomePage() {
               <div className="bg-pure-white border-2 border-brand-navy-200 hover:border-brand-orange-600 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Utrecht - Domtoren - Hero.jpg"
                     alt="Hotelkamer met jacuzzi - Luxe kamers met privé jacuzzi"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -1197,7 +1198,7 @@ export default function HomePage() {
               <div className="bg-pure-white border-2 border-brand-navy-200 hover:border-brand-orange-600 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Maastricht - Hero.jpg"
                     alt="Hotelkamer met jacuzzi en sauna - Complete wellness ervaring"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -1520,7 +1521,7 @@ export default function HomePage() {
               <article className="bg-pure-white rounded-2xl shadow-lg hover:shadow-xl border-2 border-brand-navy-200 hover:border-brand-orange-600 transition-all duration-300 overflow-hidden h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=800&auto=format&fit=crop"
+                    src="/images/Amsterdam - Hero.jpg"
                     alt="De 10 Beste Jacuzzi Hotels van Nederland in 2024"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -1562,7 +1563,7 @@ export default function HomePage() {
               <article className="bg-pure-white rounded-2xl shadow-lg hover:shadow-xl border-2 border-brand-navy-200 hover:border-brand-orange-600 transition-all duration-300 overflow-hidden h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=800&auto=format&fit=crop"
+                    src="/images/Utrecht - Domtoren - Hero.jpg"
                     alt="Romantisch Weekend: Tips voor de Perfecte Jacuzzi Date"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -1604,7 +1605,7 @@ export default function HomePage() {
               <article className="bg-pure-white rounded-2xl shadow-lg hover:shadow-xl border-2 border-brand-navy-200 hover:border-brand-orange-600 transition-all duration-300 overflow-hidden h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop"
+                    src="/images/Maastricht - Hero.jpg"
                     alt="Wellness Trends 2024: Wat is Hot in Spa Hotels?"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
