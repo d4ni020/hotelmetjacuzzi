@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { HotelCardProps } from '@/types'
+import OptimizedImage from './OptimizedImage'
 
 // Mock data voor provincies en steden (voor lokale lookup)
 const mockProvinces = [
@@ -133,12 +134,14 @@ export default function HotelCard({ hotel }: HotelCardProps) {
       )}
 
       <div className="relative h-56 overflow-hidden rounded-t-2xl">
-        <Image
+        <OptimizedImage
           src={hotel.image_url}
           alt={hotel.name}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          width={400}
+          height={224}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority={isTop10Hotel && hotelRanking <= 3}
         />
         <div className="absolute inset-0 bg-brand-navy-900" style={{opacity: 0.2}}></div>
         <div className="absolute inset-0 bg-brand-navy-900 opacity-0 group-hover:opacity-10 transition-all duration-300"></div>

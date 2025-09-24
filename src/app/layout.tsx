@@ -4,8 +4,14 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
+import CriticalCSS from '@/components/CriticalCSS'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+  fallback: ['system-ui', 'arial']
+})
 
 export const metadata: Metadata = {
   title: 'Hotels met Jacuzzi | Beste hoteltips & deals',
@@ -42,6 +48,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nl" suppressHydrationWarning={true}>
+      <head>
+        <CriticalCSS />
+        <link rel="preload" href="/images/Amsterdam - Hero.jpg" as="image" />
+        <link rel="preload" href="/images/Utrecht - Domtoren - Hero.jpg" as="image" />
+        <link rel="preload" href="/images/Maastricht - Hero.jpg" as="image" />
+      </head>
       <body className={inter.className}>
         {/* Professional Sticky Navbar */}
         <Navbar />

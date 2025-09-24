@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import HotelCard from '@/components/HotelCard'
 import { DotGridPattern } from '@/components/SVGPattern'
+import LazyWrapper from '@/components/LazyWrapper'
 import { Hotel, Province, City } from '@/lib/supabase'
 
 // Mock data voor development (later vervangen door Supabase calls)
@@ -1020,7 +1021,8 @@ export default function HomePage() {
       </section>
 
       {/* Categories Section */}
-      <section className="py-16 bg-pure-white relative overflow-hidden">
+      <LazyWrapper>
+        <section className="py-16 bg-pure-white relative overflow-hidden">
         {/* Subtle SVG Background Pattern */}
         <div 
           className="absolute inset-0 pointer-events-none"
@@ -1228,7 +1230,8 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+        </section>
+      </LazyWrapper>
 
       {/* Featured Hotels - Same style as /hotels */}
       <section className="py-16 bg-light-gray">

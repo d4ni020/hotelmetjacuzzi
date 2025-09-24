@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 31536000, // 1 year
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   env: {
     NEXT_PUBLIC_MAPBOX_TOKEN: 'pk.eyJ1IjoiZGFuaWVsbTg2ZGFuaWVsIiwiYSI6ImNtZmgzcXh3ZzA2amMyanF3MGtjbWFpa2sifQ.a8JrNOMPgc_LzLvT-wU3eQ',
@@ -17,6 +21,15 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react'],
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  poweredByHeader: false,
+  compress: true,
 };
 
 export default nextConfig;
