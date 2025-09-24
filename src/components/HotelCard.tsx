@@ -173,10 +173,25 @@ export default function HotelCard({ hotel }: HotelCardProps) {
             </p>
           )}
           <p className="text-sm mb-2" style={{ color: '#4A6A8A' }}>
-            {hotel.city_id && hotel.province_id ? 
-              `${mockCities.find(c => c.id === hotel.city_id)?.name || 'Unknown City'}, ${mockProvinces.find(p => p.id === hotel.province_id)?.name || 'Unknown Province'}` 
-              : 'Location not available'
-            }
+            {hotel.city_id && hotel.province_id ? (
+              <>
+                <Link 
+                  href={`/stad/${mockCities.find(c => c.id === hotel.city_id)?.name.toLowerCase().replace(/ /g, '-') || 'unknown-city'}`}
+                  className="hover:text-brand-orange-600 transition-colors duration-200"
+                >
+                  {mockCities.find(c => c.id === hotel.city_id)?.name || 'Unknown City'}
+                </Link>
+                {', '}
+                <Link 
+                  href={`/provincie/${mockProvinces.find(p => p.id === hotel.province_id)?.name.toLowerCase().replace(/ /g, '-') || 'unknown-province'}`}
+                  className="hover:text-brand-orange-600 transition-colors duration-200"
+                >
+                  {mockProvinces.find(p => p.id === hotel.province_id)?.name || 'Unknown Province'}
+                </Link>
+              </>
+            ) : (
+              'Location not available'
+            )}
           </p>
         </Link>
         
