@@ -1124,7 +1124,7 @@ export default function HomePage() {
               <div className="bg-pure-white border-2 border-brand-navy-200 hover:border-brand-orange-600 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/Amsterdam - Hero.jpg"
+                    src="/images/romantisch - afbeelding.jpg"
                     alt="Romantisch hotel met jacuzzi - Intieme wellness ervaring"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
