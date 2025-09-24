@@ -22,7 +22,6 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['lucide-react'],
   },
   compiler: {
