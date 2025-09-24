@@ -18,35 +18,41 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom color definitions voor donkerblauw/oranje schema */
+/* Custom color definitions voor donkerblauw/oranje schema - WCAG AA compliant */
 :root {
-  /* Brand Navy Colors */
-  --brand-navy-50: #f1f3f6;
-  --brand-navy-100: #e2e7ed;
-  --brand-navy-200: #c8d1dc;
-  --brand-navy-300: #a5b3c4;
-  --brand-navy-400: #7d8fa7;
-  --brand-navy-500: #5f728b;
-  --brand-navy-600: #4d5c73;
-  --brand-navy-700: #3f4a5e;
-  --brand-navy-800: #36404f;
+  /* Brand Navy Colors - Improved contrast */
+  --brand-navy-50: #f8f9fa;
+  --brand-navy-100: #e9ecef;
+  --brand-navy-200: #dee2e6;
+  --brand-navy-300: #ced4da;
+  --brand-navy-400: #adb5bd;
+  --brand-navy-500: #6c757d;
+  --brand-navy-600: #495057;
+  --brand-navy-700: #343a40;
+  --brand-navy-800: #212529;
   --brand-navy-900: #1A2637;
   
-  /* Brand Orange Colors */
-  --brand-orange-50: #fef7f3;
-  --brand-orange-100: #fdece4;
-  --brand-orange-200: #fad7c4;
-  --brand-orange-300: #f6b894;
-  --brand-orange-400: #f19062;
-  --brand-orange-500: #ed713b;
+  /* Brand Orange Colors - Improved contrast */
+  --brand-orange-50: #fff5f0;
+  --brand-orange-100: #ffe8dc;
+  --brand-orange-200: #ffd4c2;
+  --brand-orange-300: #ffb8a3;
+  --brand-orange-400: #ff8c69;
+  --brand-orange-500: #ff6b35;
   --brand-orange-600: #F36F21;
-  --brand-orange-700: #c54a1a;
-  --brand-orange-800: #9e3d1a;
-  --brand-orange-900: #80341a;
+  --brand-orange-700: #d63031;
+  --brand-orange-800: #b71c1c;
+  --brand-orange-900: #8b0000;
   
   /* Base Colors */
-  --light-gray: #F5F5F5;
+  --light-gray: #f8f9fa;
   --pure-white: #FFFFFF;
+  
+  /* High contrast text colors */
+  --text-primary: #212529;
+  --text-secondary: #495057;
+  --text-muted: #6c757d;
+  --text-light: #adb5bd;
 }
 
 /* CSS klassen voor de custom kleuren */
@@ -119,6 +125,17 @@ body {
 .bg-light-gray { background-color: var(--light-gray) !important; }
 .bg-pure-white { background-color: var(--pure-white) !important; }
 .text-pure-white { color: var(--pure-white) !important; }
+
+/* High contrast text classes */
+.text-primary { color: var(--text-primary) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+.text-muted { color: var(--text-muted) !important; }
+.text-light { color: var(--text-light) !important; }
+
+/* Improved contrast combinations */
+.text-on-light { color: var(--text-primary) !important; }
+.text-on-white { color: var(--text-primary) !important; }
+.text-on-gray { color: var(--text-secondary) !important; }
 
 /* Hover states */
 .hover\:bg-brand-navy-100:hover { background-color: var(--brand-navy-100) !important; }

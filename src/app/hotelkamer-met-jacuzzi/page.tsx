@@ -345,7 +345,7 @@ export default function HotelkamerMetJacuzziPage() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Province filter */}
               <div>
-                <label htmlFor="province-filter-rooms" className="block text-sm font-semibold text-brand-navy-800 mb-2">
+                <label htmlFor="province-filter-rooms" className="block text-sm font-semibold text-primary mb-2">
                   Provincie
                 </label>
                 <select
@@ -365,7 +365,7 @@ export default function HotelkamerMetJacuzziPage() {
 
               {/* City filter */}
               <div>
-                <label htmlFor="city-filter-rooms" className="block text-sm font-semibold text-brand-navy-800 mb-2">
+                <label htmlFor="city-filter-rooms" className="block text-sm font-semibold text-primary mb-2">
                   Stad
                 </label>
                 <select
@@ -385,7 +385,7 @@ export default function HotelkamerMetJacuzziPage() {
 
               {/* Price filter */}
               <div>
-                <label htmlFor="price-filter-rooms" className="block text-sm font-semibold text-brand-navy-800 mb-2">
+                <label htmlFor="price-filter-rooms" className="block text-sm font-semibold text-primary mb-2">
                   Prijsklasse
                 </label>
                 <select

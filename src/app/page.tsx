@@ -1237,10 +1237,10 @@ export default function HomePage() {
       <section className="py-16 bg-light-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
               Uitgelichte Hotels met Jacuzzi
           </h2>
-            <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
+            <p className="text-lg text-secondary max-w-3xl mx-auto">
               Onze top selectie van romantische hotels voor een perfecte wellness overnachting ({filteredHotels.length} hotels)
             </p>
         </div>
@@ -1251,7 +1251,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Province filter */}
               <div>
-                <label htmlFor="province-filter" className="block text-sm font-semibold text-brand-navy-800 mb-2">
+                <label htmlFor="province-filter" className="block text-sm font-semibold text-primary mb-2">
                   Provincie
                 </label>
                 <select
@@ -1271,7 +1271,7 @@ export default function HomePage() {
 
               {/* City filter */}
               <div>
-                <label htmlFor="city-filter" className="block text-sm font-semibold text-brand-navy-800 mb-2">
+                <label htmlFor="city-filter" className="block text-sm font-semibold text-primary mb-2">
                   Stad
                 </label>
                 <select
@@ -1291,7 +1291,7 @@ export default function HomePage() {
 
               {/* Price filter */}
               <div>
-                <label htmlFor="price-filter" className="block text-sm font-semibold text-brand-navy-800 mb-2">
+                <label htmlFor="price-filter" className="block text-sm font-semibold text-primary mb-2">
                   Prijsklasse
                 </label>
                 <select

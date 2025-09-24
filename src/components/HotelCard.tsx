@@ -166,16 +166,16 @@ export default function HotelCard({ hotel }: HotelCardProps) {
           href={`/hotel/${hotel.slug}`}
           className="group/link mb-3"
         >
-          <h3 className="text-xl font-bold text-brand-navy-900 mb-2 leading-tight group-hover/link:text-brand-orange-600 transition-colors duration-300 cursor-pointer">
+          <h3 className="text-xl font-bold text-primary mb-2 leading-tight group-hover/link:text-brand-orange-600 transition-colors duration-300 cursor-pointer">
             {hotel.name}
           </h3>
           {/* Ranking subtiele tekst */}
           {isTop10Hotel && hotelRanking && (
-            <p className="text-xs mb-2 italic" style={{ color: '#6B7280' }}>
+            <p className="text-xs mb-2 italic text-muted">
               Dit hotel staat op positie #{hotelRanking} in de top 10 jacuzzi hotels van Nederland
             </p>
           )}
-          <p className="text-sm mb-2" style={{ color: '#4A6A8A' }}>
+          <p className="text-sm mb-2 text-secondary">
             {hotel.city_id && hotel.province_id ? (
               <>
                 <span 
@@ -233,15 +233,15 @@ export default function HotelCard({ hotel }: HotelCardProps) {
         <div className="mb-6 p-4 bg-brand-navy-50 rounded-xl border border-brand-navy-200">
           <div className="flex items-center justify-between">
             <div>
-              <span className="text-sm text-brand-navy-600 block">Vanaf</span>
-              <span className="text-2xl font-bold text-brand-navy-900">
+              <span className="text-sm text-secondary block">Vanaf</span>
+              <span className="text-2xl font-bold text-primary">
                 {hotel.price_range.replace('Vanaf ', '')}
               </span>
             </div>
             <div className="text-right">
-              <span className="text-sm text-brand-orange-600 font-semibold">✓ Beste prijs</span>
+              <span className="text-sm text-brand-orange-700 font-semibold">✓ Beste prijs</span>
               <br />
-              <span className="text-xs text-brand-navy-500">Gegarandeerd</span>
+              <span className="text-xs text-secondary">Gegarandeerd</span>
             </div>
           </div>
         </div>
