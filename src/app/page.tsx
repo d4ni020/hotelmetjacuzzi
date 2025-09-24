@@ -1003,7 +1003,7 @@ export default function HomePage() {
       </div>
             <div className="relative">
               <Image
-                src="/images/Amsterdam - Hero.jpg"
+                src="/images/hero - afbeelding.jpg"
                 alt="Luxe hotelkamer met jacuzzi - Romantisch verblijf Nederland"
                 width={600}
                 height={400}
