@@ -19,10 +19,34 @@ interface Room {
   rating: number
 }
 
-// Mock room data - starting with Inntel Hotels Amsterdam Centre rooms
+// Mock room data - Rooms with jacuzzi
 const jacuzziRooms: Room[] = [
   {
     id: 1,
+    name: "Classic Suite",
+    hotelName: "Van der Valk Emmeloord",
+    city: "Emmeloord",
+    province: "Flevoland",
+    image: "/images/Van der Valk - Emmeloord - Classic - Suite.jpg",
+    description: "De Classic Suite heeft een stijlvolle, klassieke uitstraling en combineert ruimte met comfort. De suite is voorzien van een royaal kingsize bed, een flatscreen-tv en een comfortabele zithoek. In de luxe badkamer vindt u een rond bubbelbad, dubbele douche, dubbele wastafel en een apart toilet – ideaal om volledig te ontspannen.",
+    priceFrom: "€159",
+    affiliateLink: "https://booking.com/van-der-valk-emmeloord-classic-suite",
+    rating: 4.6
+  },
+  {
+    id: 2,
+    name: "Junior Suite",
+    hotelName: "Van der Valk Emmeloord",
+    city: "Emmeloord",
+    province: "Flevoland",
+    image: "/images/Van der Valk - Emmeloord - Junior Suite.jpg",
+    description: "De Junior Suite is ideaal voor wie luxe en comfort wil combineren. Deze kamer beschikt over een eigen balkon, een stijlvol ingericht interieur en een royaal kingsize bed met flatscreen-tv. In de luxe badkamer vindt u een tweepersoons bubbelbad en een ruime inloopdouche.",
+    priceFrom: "€139",
+    affiliateLink: "https://booking.com/van-der-valk-emmeloord-junior-suite",
+    rating: 4.6
+  },
+  {
+    id: 3,
     name: "Spa Kamer",
     hotelName: "Inntel Hotels Amsterdam Centre",
     city: "Amsterdam",
@@ -34,7 +58,7 @@ const jacuzziRooms: Room[] = [
     rating: 4.3
   },
   {
-    id: 2,
+    id: 4,
     name: "Wellness Kamer",
     hotelName: "Inntel Hotels Amsterdam Centre",
     city: "Amsterdam",
@@ -51,7 +75,7 @@ const jacuzziRooms: Room[] = [
     rating: 4.3
   },
   {
-    id: 3,
+    id: 5,
     name: "Suite",
     hotelName: "Inntel Hotels Amsterdam Centre",
     city: "Amsterdam",
@@ -63,7 +87,7 @@ const jacuzziRooms: Room[] = [
     rating: 4.3
   },
   {
-    id: 4,
+    id: 6,
     name: "Monumentale Suite",
     hotelName: "Inntel Hotels Amsterdam Centre",
     city: "Amsterdam",

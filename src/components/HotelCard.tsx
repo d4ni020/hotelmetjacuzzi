@@ -122,13 +122,13 @@ export default function HotelCard({ hotel }: HotelCardProps) {
 
 
   return (
-    <article className="group relative bg-pure-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-brand-navy-200 hover:border-brand-orange-600 hover:-translate-y-1 flex flex-col h-full">
+    <article className="group relative bg-pure-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-brand-navy-200 hover:border-[#FF6600] hover:-translate-y-1 flex flex-col h-full">
       
       {/* Ranking Badge - Rechtsboven op de card */}
       {isTop10Hotel && hotelRanking && (
         <div className="absolute top-4 right-4 z-20">
-          <div className="bg-brand-orange-600 hover:bg-[#D95E1B] text-pure-white rounded-full w-12 h-12 flex items-center justify-center transition-colors duration-300">
-            <span className="text-lg font-bold">#{hotelRanking}</span>
+          <div className="bg-[#1a2637] text-[#FF6600] rounded-full px-2 py-0.5 flex items-center justify-center transition-colors duration-300 shadow-sm">
+            <span className="text-sm font-bold">#{hotelRanking}</span>
           </div>
         </div>
       )}
@@ -139,7 +139,7 @@ export default function HotelCard({ hotel }: HotelCardProps) {
           alt={hotel.name}
           width={400}
           height={224}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
           priority={isTop10Hotel && hotelRanking <= 3}
         />
@@ -148,38 +148,33 @@ export default function HotelCard({ hotel }: HotelCardProps) {
         
         <div className={`absolute top-4 left-4 ${isTop10Hotel ? 'right-20' : 'right-4'} flex justify-between items-start`}>
           {hotel.popular && (
-            <div className="bg-brand-orange-600 text-pure-white rounded-lg px-2 py-1 shadow-lg">
-              <span className="text-xs font-bold uppercase">Meest geboekt deze maand</span>
-            </div>
-          )}
-          {/* Direct boekbaar badge - alleen tonen als hotel NIET in Top 10 staat */}
-          {!isTop10Hotel && (
-            <div className="bg-pure-white text-brand-navy-800 rounded-lg px-3 py-1 shadow-lg" style={{opacity: 0.95}}>
-              <span className="text-sm font-semibold">Direct boekbaar</span>
+            <div className="bg-[#1a2637] text-pure-white rounded-xl px-2 py-0.5 shadow-sm">
+              <span className="text-xs font-bold uppercase tracking-wide">Meest geboekt deze maand</span>
             </div>
           )}
         </div>
       </div>
       
-      <div className="relative p-6 flex flex-col flex-1">
+      <div className="relative p-6 flex flex-col flex-1 space-y-3">
         <Link 
           href={`/hotel/${hotel.slug}`}
-          className="group/link mb-3"
+          className="group/link"
         >
-          <h3 className="text-xl font-bold text-primary mb-2 leading-tight group-hover/link:text-brand-orange-600 transition-colors duration-300 cursor-pointer">
+          <h3 className="text-xl font-bold text-primary leading-tight group-hover/link:text-[#FF6600] transition-colors duration-300 cursor-pointer">
             {hotel.name}
           </h3>
+          
           {/* Ranking subtiele tekst */}
           {isTop10Hotel && hotelRanking && (
-            <p className="text-xs mb-2 italic text-muted">
+            <p className="text-xs italic text-gray-500 mt-1">
               Dit hotel staat op positie #{hotelRanking} in de top 10 jacuzzi hotels van Nederland
             </p>
           )}
-          <p className="text-sm mb-2 text-secondary">
+          <p className="text-sm text-gray-600">
             {hotel.city_id && hotel.province_id ? (
               <>
                 <span 
-                  className="hover:text-brand-orange-600 transition-colors duration-200 cursor-pointer"
+                  className="hover:text-[#FF6600] transition-colors duration-200 cursor-pointer"
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
@@ -190,7 +185,7 @@ export default function HotelCard({ hotel }: HotelCardProps) {
                 </span>
                 {', '}
                 <span 
-                  className="hover:text-brand-orange-600 transition-colors duration-200 cursor-pointer"
+                  className="hover:text-[#FF6600] transition-colors duration-200 cursor-pointer"
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
@@ -206,49 +201,49 @@ export default function HotelCard({ hotel }: HotelCardProps) {
           </p>
         </Link>
         
-        
-        <p className="text-brand-navy-600 text-base mb-6 leading-relaxed line-clamp-3 flex-1">
+        <p className="text-gray-700 text-base leading-relaxed line-clamp-3 flex-1">
           {hotel.description}
         </p>
         
-        <div className="mb-6">
-          <h4 className="text-sm font-semibold text-brand-navy-700 mb-3">Faciliteiten</h4>
-          <div className="flex flex-wrap gap-2">
+        <div>
+          <h4 className="text-sm font-semibold text-gray-800 mb-2">Faciliteiten</h4>
+          <div className="flex flex-wrap gap-1 text-sm">
             {hotel.facilities.slice(0, 3).map((facility, index) => (
               <span
                 key={index}
-                className="px-3 py-1 bg-brand-navy-50 text-brand-navy-700 text-sm rounded-lg font-medium border border-brand-navy-200"
+                className="px-3 py-1 bg-gray-50 text-gray-700 text-sm rounded-lg font-medium border border-gray-200"
               >
                 {facility}
               </span>
             ))}
             {hotel.facilities.length > 3 && (
-              <span className="px-3 py-1 bg-light-gray text-brand-navy-600 text-sm rounded-lg font-medium">
+              <span className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-lg font-medium">
                 +{hotel.facilities.length - 3} meer
               </span>
             )}
           </div>
         </div>
         
-        <div className="mb-6 p-4 bg-brand-navy-50 rounded-xl border border-brand-navy-200">
+        <div className="bg-gray-50 rounded-lg p-3">
           <div className="flex items-center justify-between">
             <div>
-              <span className="text-sm text-secondary block">Vanaf</span>
-              <span className="text-2xl font-bold text-primary">
+              <span className="text-xs text-gray-500 block">vanaf</span>
+              <span className="text-2xl font-bold text-gray-900">
                 {hotel.price_range.replace('Vanaf ', '')}
               </span>
+              <span className="text-xs text-gray-500 block">per nacht</span>
             </div>
             <div className="text-right">
-              <span className="text-sm text-brand-orange-700 font-semibold">✓ Beste prijs</span>
+              <span className="text-sm text-[#FF6600] font-semibold">✓ Beste prijs</span>
               <br />
-              <span className="text-xs text-secondary">Gegarandeerd</span>
+              <span className="text-xs text-gray-600">Gegarandeerd</span>
             </div>
           </div>
         </div>
         
         <button
           onClick={handleAffiliateClick}
-          className="w-full bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-6 rounded-xl transition-colors duration-300 shadow-lg hover:shadow-xl"
+          className="w-full bg-[#FF6600] hover:bg-[#E55A00] text-pure-white h-11 text-base font-medium rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-[1.02] hover:brightness-110"
         >
           Bekijk Beschikbaarheid & Prijzen
         </button>

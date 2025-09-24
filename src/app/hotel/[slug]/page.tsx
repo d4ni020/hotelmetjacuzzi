@@ -973,21 +973,106 @@ const mockHotels: Record<string, Hotel> = {
     rooms: [
       {
         id: 1,
-        name: 'Van der Valk Polder Comfort',
-        image: '/images/Van der Valk Emmeloord.jpg',
-        description: 'Comfortabele kamer met jacuzzi en uitzicht op de unieke poldernatuur van Flevoland.',
-        features: ['Jacuzzi bad', 'Polderuitzicht', 'Modern comfort', 'Koffie/thee faciliteiten', 'Gratis WiFi', 'Parkeerplaats'],
-        priceRange: '€139 - €159',
-        affiliateLink: 'https://booking.com/van-der-valk-emmeloord-comfort'
+        name: 'Wellness Suite',
+        image: '/images/Van der Valk - Emmeloord - Welness Suite.jpg',
+        description: 'De Wellness Suite biedt alle ruimte om in luxe te ontspannen. Deze suite beschikt over een royaal terras, een kingsize bed en een comfortabele zithoek met bank. De badkamer is uitgerust met een vrijstaand rond bubbelbad, een dubbele inloopdouche, een privé sauna, een dubbele wastafel en een apart toilet – alles wat nodig is voor een complete wellnesservaring.',
+        features: [
+          'Tweepersoons bubbelbad',
+          'Privé sauna',
+          'Privé wellness',
+          'Privé spa',
+          'Kingsize tweepersoonsbed',
+          '2-persoons bank',
+          'Bureau en zithoek',
+          'Royaal terras',
+          'Dubbele rainshower met aparte handdouche',
+          'Dubbele wastafel',
+          'Apart toilet',
+          'Badjas & slippers',
+          'Föhn',
+          'Kleine koelkast',
+          'Koffie- en theefaciliteiten',
+          'Nespresso koffiemachine',
+          'Stopcontacten naast bed',
+          'Telefoon',
+          'Guest supplies',
+          'Kledinghangers',
+          'Kofferrek',
+          'Laptop kluis',
+          'Sauna',
+          'Strijkijzer met strijkplank',
+          'Televisie',
+          'Verduisterende gordijnen'
+        ],
+        priceRange: '€189 - €219',
+        affiliateLink: 'https://booking.com/van-der-valk-emmeloord-wellness-suite'
       },
       {
         id: 2,
-        name: 'Van der Valk Wellness Plus',
-        image: '/images/Van der Valk Emmeloord.jpg',
-        description: 'Wellness kamer met verbeterde jacuzzi en toegang tot alle wellness faciliteiten.',
-        features: ['Wellness jacuzzi', 'Spa toegang', 'Balkon', 'Room service', 'Premium beddengoed', 'Wellness faciliteiten'],
-        priceRange: '€169 - €189',
-        affiliateLink: 'https://booking.com/van-der-valk-emmeloord-wellness'
+        name: 'Classic Suite',
+        image: '/images/Van der Valk - Emmeloord - Classic - Suite.jpg',
+        description: 'De Classic Suite heeft een stijlvolle, klassieke uitstraling en combineert ruimte met comfort. De suite is voorzien van een royaal kingsize bed, een flatscreen-tv en een comfortabele zithoek. In de luxe badkamer vindt u een rond bubbelbad, dubbele douche, dubbele wastafel en een apart toilet – ideaal om volledig te ontspannen.',
+        features: [
+          'Tweepersoons bubbelbad',
+          'Apart toilet',
+          'Dubbele wastafel',
+          'Semi open badkamer',
+          'Inloopdouche',
+          'Geen balkon',
+          'Gezellig zitje',
+          'Televisie',
+          'Verduisterende gordijnen',
+          'Kledinghangers',
+          'Kofferrek',
+          'Laptop kluis',
+          'Strijkijzer met strijkplank',
+          'Badjas & slippers',
+          'Föhn',
+          'Guest supplies',
+          'Kleine koelkast',
+          'Koffie- en theefaciliteiten',
+          'Nespresso koffiemachine',
+          'Stopcontacten naast bed',
+          'Telefoon'
+        ],
+        priceRange: '€159 - €189',
+        affiliateLink: 'https://booking.com/van-der-valk-emmeloord-classic-suite'
+      },
+      {
+        id: 3,
+        name: 'Junior Suite',
+        image: '/images/Van der Valk - Emmeloord - Junior Suite.jpg',
+        description: 'De Junior Suite is ideaal voor wie luxe en comfort wil combineren. Deze kamer beschikt over een eigen balkon, een stijlvol ingericht interieur en een royaal kingsize bed met flatscreen-tv. In de luxe badkamer vindt u een tweepersoons bubbelbad en een ruime inloopdouche.',
+        features: [
+          'Tweepersoons bubbelbad',
+          'Balkon',
+          'Kingsize tweepersoonsbed',
+          'Dubbele rainshower met aparte handdouche',
+          'Apart toilet',
+          'Semi open badkamer',
+          'Dubbele wastafel',
+          'Elektrisch haardvuur',
+          'Nespresso koffiemachine',
+          'Koffie- en theefaciliteiten',
+          'Kleine koelkast',
+          'Televisie',
+          '2-persoons bank',
+          'Hoekbank',
+          'Bureau met stoel',
+          'Badjas & slippers',
+          'Föhn',
+          'Make-up spiegel',
+          'Strijkijzer met strijkplank',
+          'Kledinghangers',
+          'Kofferrek',
+          'Laptop kluis',
+          'Stopcontacten naast bed',
+          'Telefoon',
+          'Verduisterende gordijnen',
+          'Guest supplies'
+        ],
+        priceRange: '€139 - €169',
+        affiliateLink: 'https://booking.com/van-der-valk-emmeloord-junior-suite'
       }
     ]
   },
@@ -2184,9 +2269,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${hotel.name} | 4-sterren wellnesshotel Utrecht met jacuzzi & spa`,
-    description: `Ontdek ${hotel.name} - een stijlvol 4-sterren wellnesshotel in Utrecht naast Fort De Bilt. Gratis wellness, moderne kamers en binnen 10 minuten in het centrum. Boek nu!`,
-    keywords: [`${hotel.name}`, `wellness hotel Utrecht`, `hotel met jacuzzi Utrecht`, `Fort De Bilt hotel`, `4 sterren hotel Utrecht`, `wellnessfaciliteiten Utrecht`, 'jacuzzi kamer Utrecht', 'spa hotel Utrecht'],
+    title: `${hotel.name} | Hotel met jacuzzi in ${hotel.city}, ${hotel.province}`,
+    description: `Ontdek ${hotel.name} - een luxe hotel met jacuzzi in ${hotel.city}, ${hotel.province}. Moderne kamers met privé jacuzzi, uitstekende faciliteiten en perfecte ligging. Boek nu!`,
+    keywords: [`${hotel.name}`, `hotel met jacuzzi ${hotel.city}`, `hotel ${hotel.province}`, `jacuzzi kamer ${hotel.city}`, `wellness hotel ${hotel.province}`, `luxe hotel ${hotel.city}`, 'jacuzzi suite', 'romantisch hotel'],
     openGraph: {
       title: `${hotel.name} - Luxe hotel met jacuzzi`,
       description: hotel.description.substring(0, 155),
@@ -2301,7 +2386,7 @@ export default async function HotelDetailPage({ params }: Props) {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {hotel.rooms.map((room) => (
                 <RoomCard key={room.id} room={room} />
               ))}
@@ -2343,8 +2428,7 @@ export default async function HotelDetailPage({ params }: Props) {
                 Ontdek {hotel.name}
               </h2>
               <p className="text-xl text-brand-navy-600 max-w-3xl mx-auto leading-relaxed">
-                Een stijlvol 4-sterren wellnesshotel in Utrecht, gelegen naast het historische Fort De Bilt. 
-                Hier combineer je rust en natuur met de nabijheid van het bruisende stadscentrum.
+                {hotel.description}
               </p>
             </div>
             
@@ -2352,22 +2436,20 @@ export default async function HotelDetailPage({ params }: Props) {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
               {/* Main Description */}
               <div className="lg:col-span-2 bg-pure-white rounded-2xl shadow-lg border border-brand-navy-200 p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">Over Hotel Mitland</h3>
+                <h3 className="text-2xl font-bold text-brand-navy-900 mb-6">Over {hotel.name}</h3>
                 <div className="space-y-6 text-brand-navy-700 leading-relaxed">
                   <p>
-                    Hotel Mitland is een stijlvol 4-sterren hotel in Utrecht, gelegen naast het historische Fort De Bilt. 
-                    Hier combineer je rust en natuur met de nabijheid van het bruisende stadscentrum. Binnen tien minuten 
-                    ben je in hartje Utrecht, terwijl je in en rond het hotel geniet van wellness, moderne faciliteiten en een groene omgeving.
+                    {hotel.description}
                   </p>
                   <p>
-                    Wie wil overnachten in Utrecht en toch de drukte van de stad vermijden, zit goed bij Hotel Mitland. 
-                    Het hotel biedt ruime, comfortabele kamers en een rustige ligging. Dankzij de combinatie van ontspanning 
-                    en centrale bereikbaarheid is het geschikt voor zowel een stedentrip als een zakelijk verblijf.
+                    {hotel.name} biedt luxe accommodatie met moderne faciliteiten en uitstekende service. 
+                    Het hotel is perfect gelegen voor zowel zakelijke als romantische verblijven, 
+                    met gemakkelijke toegang tot de belangrijkste bezienswaardigheden en activiteiten in de regio.
                   </p>
                   <p>
-                    Hotel Mitland ligt direct naast Fort De Bilt, een historische locatie die onderdeel is van de Nieuwe Hollandse Waterlinie. 
-                    De groene omgeving nodigt uit tot wandelen of fietsen. Toch ben je in korte tijd in het centrum van Utrecht, 
-                    waar de grachten, de Domtoren, het Spoorwegmuseum en het Centraal Museum wachten.
+                    Geniet van de comfortabele kamers met jacuzzi faciliteiten en moderne voorzieningen. 
+                    Het hotel combineert rust en ontspanning met de nabijheid van interessante locaties 
+                    en activiteiten in {hotel.province}.
                   </p>
                 </div>
               </div>
@@ -2383,8 +2465,8 @@ export default async function HotelDetailPage({ params }: Props) {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-semibold text-brand-navy-900">Afstand tot centrum</p>
-                      <p className="text-brand-navy-600">10 minuten rijden</p>
+                      <p className="font-semibold text-brand-navy-900">Locatie</p>
+                      <p className="text-brand-navy-600">{hotel.city}, {hotel.province}</p>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -2394,20 +2476,19 @@ export default async function HotelDetailPage({ params }: Props) {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-semibold text-brand-navy-900">Sterren</p>
-                      <p className="text-brand-navy-600">4 sterren</p>
+                      <p className="font-semibold text-brand-navy-900">Beoordeling</p>
+                      <p className="text-brand-navy-600">{hotel.rating} ⭐ ({hotel.reviewCount} reviews)</p>
                     </div>
                   </div>
                   <div className="flex items-center">
                     <div className="w-8 h-8 bg-brand-orange-100 rounded-lg flex items-center justify-center mr-3">
                       <svg className="w-4 h-4 text-brand-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                       </svg>
                     </div>
                     <div>
-                      <p className="font-semibold text-brand-navy-900">Locatie</p>
-                      <p className="text-brand-navy-600">Naast Fort De Bilt</p>
+                      <p className="font-semibold text-brand-navy-900">Prijs</p>
+                      <p className="text-brand-navy-600">{hotel.priceRange}</p>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -2417,8 +2498,8 @@ export default async function HotelDetailPage({ params }: Props) {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-semibold text-brand-navy-900">Wellness</p>
-                      <p className="text-brand-navy-600">Gratis toegankelijk</p>
+                      <p className="font-semibold text-brand-navy-900">Jacuzzi</p>
+                      <p className="text-brand-navy-600">{hotel.jacuzziType}</p>
                     </div>
                   </div>
                 </div>
@@ -2494,7 +2575,7 @@ export default async function HotelDetailPage({ params }: Props) {
             <div className="mb-16">
               <div className="bg-gradient-to-br from-brand-orange-50 to-brand-orange-100 rounded-2xl border-2 border-brand-orange-200 p-8 md:p-10 shadow-lg">
                 <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-8 text-center">
-                  Waarom kiezen voor Hotel Mitland?
+                  Waarom kiezen voor {hotel.name}?
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div className="flex items-center space-x-4">
@@ -2503,7 +2584,7 @@ export default async function HotelDetailPage({ params }: Props) {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="font-semibold text-brand-navy-700">Groene ligging naast Fort De Bilt</span>
+                    <span className="font-semibold text-brand-navy-700">Perfecte ligging in {hotel.city}, {hotel.province}</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="flex-shrink-0 w-8 h-8 bg-brand-orange-500 rounded-full flex items-center justify-center">
@@ -2511,7 +2592,7 @@ export default async function HotelDetailPage({ params }: Props) {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="font-semibold text-brand-navy-700">Binnen tien minuten in Utrecht centrum</span>
+                    <span className="font-semibold text-brand-navy-700">Luxe kamers met {hotel.jacuzziType}</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="flex-shrink-0 w-8 h-8 bg-brand-orange-500 rounded-full flex items-center justify-center">
@@ -2519,7 +2600,7 @@ export default async function HotelDetailPage({ params }: Props) {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="font-semibold text-brand-navy-700">Luxe kamers met moderne faciliteiten</span>
+                    <span className="font-semibold text-brand-navy-700">Uitstekende beoordeling: {hotel.rating} ⭐</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="flex-shrink-0 w-8 h-8 bg-brand-orange-500 rounded-full flex items-center justify-center">
@@ -2527,7 +2608,7 @@ export default async function HotelDetailPage({ params }: Props) {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="font-semibold text-brand-navy-700">Gratis wellness met zwembad, sauna en stoombad</span>
+                    <span className="font-semibold text-brand-navy-700">Moderne faciliteiten en comfort</span>
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="flex-shrink-0 w-8 h-8 bg-brand-orange-500 rounded-full flex items-center justify-center">
@@ -2535,7 +2616,7 @@ export default async function HotelDetailPage({ params }: Props) {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="font-semibold text-brand-navy-700">Bowling en fitness voor ontspanning</span>
+                    <span className="font-semibold text-brand-navy-700">Romantisch verblijf met jacuzzi</span>
                   </div>
                 </div>
               </div>
@@ -2544,62 +2625,62 @@ export default async function HotelDetailPage({ params }: Props) {
             {/* FAQ Section */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-8 text-center">
-                Veelgestelde vragen over Hotel Mitland Utrecht
+                Veelgestelde vragen over {hotel.name}
               </h2>
               <div className="max-w-4xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <details className="bg-pure-white rounded-xl border border-brand-navy-200 shadow-sm overflow-hidden">
                     <summary className="p-6 cursor-pointer hover:bg-brand-navy-50 transition-colors duration-200 font-semibold text-lg text-brand-navy-900 flex items-center justify-between">
-                      <span>Waar ligt Hotel Mitland precies?</span>
+                      <span>Waar ligt {hotel.name} precies?</span>
                       <svg className="w-5 h-5 text-brand-orange-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </summary>
                     <div className="px-6 pb-6 pt-0">
                       <p className="text-brand-navy-700 leading-relaxed">
-                        Hotel Mitland ligt aan de rand van Utrecht, naast het historische Fort De Bilt. Vanuit het hotel ben je binnen tien minuten rijden in het centrum van de stad.
+                        {hotel.name} ligt in {hotel.city}, {hotel.province}. Het hotel is perfect gelegen voor een ontspannen verblijf met gemakkelijke toegang tot de belangrijkste bezienswaardigheden in de regio.
                       </p>
                     </div>
                   </details>
 
                   <details className="bg-pure-white rounded-xl border border-brand-navy-200 shadow-sm overflow-hidden">
                     <summary className="p-6 cursor-pointer hover:bg-brand-navy-50 transition-colors duration-200 font-semibold text-lg text-brand-navy-900 flex items-center justify-between">
-                      <span>Heeft Hotel Mitland wellnessfaciliteiten?</span>
+                      <span>Heeft {hotel.name} jacuzzi faciliteiten?</span>
                       <svg className="w-5 h-5 text-brand-orange-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </summary>
                     <div className="px-6 pb-6 pt-0">
                       <p className="text-brand-navy-700 leading-relaxed">
-                        Ja, gasten kunnen gratis gebruikmaken van de wellness. Er is een verwarmd binnenzwembad, een Finse sauna en een Turks stoombad.
+                        Ja, {hotel.name} biedt luxe kamers met {hotel.jacuzziType}. Perfect voor een romantisch verblijf of ontspannend wellness weekend.
                       </p>
                     </div>
                   </details>
 
                   <details className="bg-pure-white rounded-xl border border-brand-navy-200 shadow-sm overflow-hidden">
                     <summary className="p-6 cursor-pointer hover:bg-brand-navy-50 transition-colors duration-200 font-semibold text-lg text-brand-navy-900 flex items-center justify-between">
-                      <span>Kan ik parkeren bij Hotel Mitland?</span>
+                      <span>Wat zijn de prijzen van {hotel.name}?</span>
                       <svg className="w-5 h-5 text-brand-orange-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </summary>
                     <div className="px-6 pb-6 pt-0">
                       <p className="text-brand-navy-700 leading-relaxed">
-                        Het hotel beschikt over eigen parkeergelegenheid, zodat je je auto veilig en dichtbij kunt parkeren.
+                        De prijzen bij {hotel.name} variëren van {hotel.priceRange}. De exacte prijzen zijn afhankelijk van het seizoen en de beschikbaarheid. Bekijk de actuele prijzen via onze affiliate partners.
                       </p>
                     </div>
                   </details>
 
                   <details className="bg-pure-white rounded-xl border border-brand-navy-200 shadow-sm overflow-hidden">
                     <summary className="p-6 cursor-pointer hover:bg-brand-navy-50 transition-colors duration-200 font-semibold text-lg text-brand-navy-900 flex items-center justify-between">
-                      <span>Hoe ver is Hotel Mitland van het centrum?</span>
+                      <span>Is {hotel.name} geschikt voor romantische verblijven?</span>
                       <svg className="w-5 h-5 text-brand-orange-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </summary>
                     <div className="px-6 pb-6 pt-0">
                       <p className="text-brand-navy-700 leading-relaxed">
-                        Met de auto of fiets ben je in ongeveer tien minuten in het centrum van Utrecht. Ook met het openbaar vervoer is de verbinding eenvoudig.
+                        Absoluut! {hotel.name} is perfect voor romantische verblijven met luxe kamers, jacuzzi faciliteiten en een ontspannen sfeer. Ideaal voor een romantisch weekend weg.
                       </p>
                     </div>
                   </details>

@@ -56,7 +56,7 @@ const Navbar = () => {
             <div className="flex-shrink-0">
               <Link 
                 href="/" 
-                className="group flex items-center space-x-3"
+                className="group flex items-center space-x-4"
                 aria-label="Hotelmetjacuzzi.net - Terug naar startpagina"
               >
                 <div className="relative">

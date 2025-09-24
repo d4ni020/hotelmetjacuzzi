@@ -980,22 +980,22 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Hotels met Jacuzzi in Nederland
+                Vind de mooiste hotels met jacuzzi op de kamer in Nederland
               </h1>
               <p className="text-xl md:text-2xl text-brand-navy-200 mb-8 leading-relaxed">
                 Ontdek de meest romantische wellness overnachtingen. Van luxe hotels tot intieme bed & breakfasts - 
                 vind het perfecte hotel met jacuzzi voor een onvergetelijke ervaring.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-6">
                 <button 
                   onClick={() => document.getElementById('filters')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
+                  className="bg-[#FF6600] hover:bg-[#E55A00] text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   Vind jouw hotel
                 </button>
                 <a 
                   href="#provincies" 
-                  className="border-2 border-brand-orange-600 text-brand-orange-600 hover:bg-brand-orange-600 hover:text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
+                  className="bg-white text-[#FF6600] border border-[#FF6600] hover:bg-[#FF6600] hover:text-white font-medium py-4 px-8 rounded-lg transition-colors duration-300 text-center"
                 >
                   Ontdek per regio
                 </a>
@@ -1012,7 +1012,9 @@ export default function HomePage() {
                 priority
                 quality={75}
               />
-              <div className="absolute -bottom-6 -right-6 bg-brand-orange-600 text-pure-white p-6 rounded-2xl shadow-xl">
+              {/* Subtiele overlay voor betere tekstcontrast */}
+              <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-black/30 rounded-2xl"></div>
+              <div className="absolute -bottom-6 -right-6 bg-[#FF6600] text-pure-white p-6 rounded-2xl shadow-xl">
                 <div className="text-2xl font-bold">250+</div>
                 <div className="text-sm">Hotels beschikbaar</div>
               </div>
@@ -1404,12 +1406,12 @@ export default function HomePage() {
               <Link 
                 key={province.id}
                 href={`/provincie/${province.slug}`}
-                className="group bg-brand-navy-50 hover:bg-brand-navy-100 border-2 border-brand-navy-200 hover:border-brand-orange-600 rounded-xl p-6 transition-all duration-300 text-center"
+                className="group bg-white hover:bg-gray-50 border border-gray-200 hover:border-[#FF6600] rounded-xl p-6 transition-all duration-300 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
               >
-                <div className="text-2xl font-bold text-brand-navy-900 mb-2 group-hover:text-brand-orange-600 transition-colors">
+                <div className="text-2xl font-bold text-[#1a2637] mb-2 group-hover:text-[#FF6600] transition-colors duration-300">
                   {province.name}
-    </div>
-                <div className="text-brand-navy-600 text-sm">
+                </div>
+                <div className="text-gray-600 text-sm group-hover:text-gray-700 transition-colors duration-300">
                   Ontdek hotels →
                 </div>
               </Link>
@@ -1418,9 +1420,9 @@ export default function HomePage() {
             {/* CTA Card to view all provinces */}
             <Link 
               href="/provincies"
-              className="group bg-pure-white hover:bg-brand-orange-50 border-2 border-brand-orange-200 hover:border-brand-orange-600 rounded-xl p-6 transition-all duration-300 text-center flex flex-col justify-center min-h-[120px]"
+              className="group bg-white hover:bg-orange-50 border border-orange-200 hover:border-[#FF6600] rounded-xl p-6 transition-all duration-300 text-center flex flex-col justify-center min-h-[120px] shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
             >
-              <div className="flex items-center justify-center space-x-2 text-brand-orange-600 group-hover:text-brand-orange-700 transition-colors">
+              <div className="flex items-center justify-center space-x-2 text-[#FF6600] group-hover:text-[#E55A00] transition-colors duration-300">
                 <span className="text-lg font-semibold">Bekijk alle provincies</span>
                 <svg 
                   width="20" 
@@ -1437,7 +1439,7 @@ export default function HomePage() {
                   />
                 </svg>
               </div>
-              <div className="text-brand-navy-500 text-sm mt-2">
+              <div className="text-gray-500 text-sm mt-2 group-hover:text-gray-600 transition-colors duration-300">
                 Ontdek alle {mockProvinces.length} provincies
               </div>
             </Link>
@@ -1462,12 +1464,12 @@ export default function HomePage() {
               <Link 
                 key={city.id}
                 href={`/stad/${city.slug}`}
-                className="group bg-pure-white hover:bg-brand-navy-50 border-2 border-brand-navy-200 hover:border-brand-orange-600 rounded-xl p-6 transition-all duration-300 text-center shadow-md hover:shadow-lg"
+                className="group bg-white hover:bg-gray-50 border border-gray-200 hover:border-[#FF6600] rounded-xl p-6 transition-all duration-300 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
               >
-                <div className="text-xl font-bold text-brand-navy-900 mb-2 group-hover:text-brand-orange-600 transition-colors">
+                <div className="text-xl font-bold text-[#1a2637] mb-2 group-hover:text-[#FF6600] transition-colors duration-300">
                   {city.name}
                 </div>
-                <div className="text-brand-navy-600 text-sm">
+                <div className="text-gray-600 text-sm group-hover:text-gray-700 transition-colors duration-300">
                   Bekijk hotels →
                 </div>
               </Link>
@@ -1476,9 +1478,9 @@ export default function HomePage() {
             {/* CTA Card to view all cities */}
             <Link 
               href="/steden"
-              className="group bg-pure-white hover:bg-brand-orange-50 border-2 border-brand-orange-200 hover:border-brand-orange-600 rounded-xl p-6 transition-all duration-300 text-center flex flex-col justify-center min-h-[120px] shadow-md hover:shadow-lg"
+              className="group bg-white hover:bg-orange-50 border border-orange-200 hover:border-[#FF6600] rounded-xl p-6 transition-all duration-300 text-center flex flex-col justify-center min-h-[120px] shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
             >
-              <div className="flex items-center justify-center space-x-2 text-brand-orange-600 group-hover:text-brand-orange-700 transition-colors">
+              <div className="flex items-center justify-center space-x-2 text-[#FF6600] group-hover:text-[#E55A00] transition-colors duration-300">
                 <span className="text-lg font-semibold">Bekijk alle steden</span>
                 <svg 
                   width="20" 
@@ -1495,7 +1497,7 @@ export default function HomePage() {
                   />
                 </svg>
               </div>
-              <div className="text-brand-navy-500 text-sm mt-2">
+              <div className="text-gray-500 text-sm mt-2 group-hover:text-gray-600 transition-colors duration-300">
                 Ontdek alle {mockCities.length} steden
               </div>
             </Link>

@@ -19,10 +19,30 @@ interface Room {
   rating: number
 }
 
-// Mock room data - Inntel Hotels Amsterdam Centre rooms with jacuzzi and sauna
+// Mock room data - Rooms with jacuzzi and sauna
 const jacuzziSaunaRooms: Room[] = [
   {
     id: 1,
+    name: "Wellness Suite",
+    hotelName: "Van der Valk Emmeloord",
+    city: "Emmeloord",
+    province: "Flevoland",
+    image: "/images/Van der Valk - Emmeloord - Welness Suite.jpg",
+    description: "De Wellness Suite biedt alle ruimte om in luxe te ontspannen. Deze suite beschikt over een royaal terras, een kingsize bed en een comfortabele zithoek met bank. De badkamer is uitgerust met een vrijstaand rond bubbelbad, een dubbele inloopdouche, een privé sauna, een dubbele wastafel en een apart toilet – alles wat nodig is voor een complete wellnesservaring.",
+    facilities: [
+      { icon: "🛁", name: "Tweepersoons bubbelbad" },
+      { icon: "🧖", name: "Privé sauna" },
+      { icon: "🏖️", name: "Royaal terras" },
+      { icon: "🚿", name: "Dubbele inloopdouche" },
+      { icon: "👘", name: "Badjas & slippers" },
+      { icon: "☕", name: "Nespresso koffiemachine" }
+    ],
+    priceFrom: "€189",
+    affiliateLink: "https://booking.com/van-der-valk-emmeloord-wellness-suite",
+    rating: 4.6
+  },
+  {
+    id: 2,
     name: "Wellness Kamer",
     hotelName: "Inntel Hotels Amsterdam Centre",
     city: "Amsterdam",
@@ -42,7 +62,7 @@ const jacuzziSaunaRooms: Room[] = [
     rating: 4.3
   },
   {
-    id: 2,
+    id: 3,
     name: "Suite",
     hotelName: "Inntel Hotels Amsterdam Centre",
     city: "Amsterdam",
@@ -62,7 +82,7 @@ const jacuzziSaunaRooms: Room[] = [
     rating: 4.3
   },
   {
-    id: 3,
+    id: 4,
     name: "Monumentale Suite",
     hotelName: "Inntel Hotels Amsterdam Centre",
     city: "Amsterdam",

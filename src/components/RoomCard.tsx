@@ -20,6 +20,7 @@ interface RoomCardProps {
 
 export default function RoomCard({ room }: RoomCardProps) {
   const [currentImage, setCurrentImage] = useState(room.image)
+  const [isExpanded, setIsExpanded] = useState(false)
   
   const handleBooking = () => {
     // Track affiliate click
@@ -28,6 +29,10 @@ export default function RoomCard({ room }: RoomCardProps) {
   
   const handleThumbnailClick = (thumbnailImage: string) => {
     setCurrentImage(thumbnailImage)
+  }
+  
+  const toggleExpanded = () => {
+    setIsExpanded(!isExpanded)
   }
 
   return (
@@ -119,9 +124,19 @@ export default function RoomCard({ room }: RoomCardProps) {
           </h3>
         </div>
         
-        <p className="text-brand-navy-600 text-base mb-6 leading-relaxed line-clamp-3 flex-1">
-          {room.description}
-        </p>
+        <div className="mb-6 flex-1">
+          <p className={`text-brand-navy-600 text-base leading-relaxed ${isExpanded ? '' : 'line-clamp-3'}`}>
+            {room.description}
+          </p>
+          {room.description.length > 150 && (
+            <button
+              onClick={toggleExpanded}
+              className="text-brand-orange-600 hover:text-brand-orange-700 font-semibold text-sm mt-2 transition-colors duration-200"
+            >
+              {isExpanded ? 'Lees minder' : 'Lees meer'}
+            </button>
+          )}
+        </div>
         
         {/* Features */}
         <div className="mb-6">
