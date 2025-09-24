@@ -175,19 +175,27 @@ export default function HotelCard({ hotel }: HotelCardProps) {
           <p className="text-sm mb-2" style={{ color: '#4A6A8A' }}>
             {hotel.city_id && hotel.province_id ? (
               <>
-                <Link 
-                  href={`/stad/${mockCities.find(c => c.id === hotel.city_id)?.name.toLowerCase().replace(/ /g, '-') || 'unknown-city'}`}
-                  className="hover:text-brand-orange-600 transition-colors duration-200"
+                <span 
+                  className="hover:text-brand-orange-600 transition-colors duration-200 cursor-pointer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    window.location.href = `/stad/${mockCities.find(c => c.id === hotel.city_id)?.name.toLowerCase().replace(/ /g, '-') || 'unknown-city'}`;
+                  }}
                 >
                   {mockCities.find(c => c.id === hotel.city_id)?.name || 'Unknown City'}
-                </Link>
+                </span>
                 {', '}
-                <Link 
-                  href={`/provincie/${mockProvinces.find(p => p.id === hotel.province_id)?.name.toLowerCase().replace(/ /g, '-') || 'unknown-province'}`}
-                  className="hover:text-brand-orange-600 transition-colors duration-200"
+                <span 
+                  className="hover:text-brand-orange-600 transition-colors duration-200 cursor-pointer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    window.location.href = `/provincie/${mockProvinces.find(p => p.id === hotel.province_id)?.name.toLowerCase().replace(/ /g, '-') || 'unknown-province'}`;
+                  }}
                 >
                   {mockProvinces.find(p => p.id === hotel.province_id)?.name || 'Unknown Province'}
-                </Link>
+                </span>
               </>
             ) : (
               'Location not available'
