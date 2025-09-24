@@ -115,7 +115,7 @@ const RoomCard = ({ room }: { room: Room }) => {
         </p>
         {(() => {
           const descriptionText = Array.isArray(room.description) ? room.description.join(' ') : room.description
-          return descriptionText.length > 150 && (
+          return descriptionText.length > 120 && (
             <button
               onClick={() => setIsExpanded(!isExpanded)}
               className="text-brand-orange-600 hover:text-brand-orange-700 font-semibold text-sm mt-2 transition-colors duration-200"
