@@ -111,16 +111,19 @@ const RoomCard = ({ room }: { room: Room }) => {
 
       <div className="mb-6 flex-1">
         <p className={`text-brand-navy-600 text-base leading-relaxed ${isExpanded ? '' : 'line-clamp-3'}`}>
-          {room.description}
+          {Array.isArray(room.description) ? room.description.join(' ') : room.description}
         </p>
-        {room.description.length > 150 && (
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="text-brand-orange-600 hover:text-brand-orange-700 font-semibold text-sm mt-2 transition-colors duration-200"
-          >
-            {isExpanded ? 'Lees minder' : 'Lees meer'}
-          </button>
-        )}
+        {(() => {
+          const descriptionText = Array.isArray(room.description) ? room.description.join(' ') : room.description
+          return descriptionText.length > 150 && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-brand-orange-600 hover:text-brand-orange-700 font-semibold text-sm mt-2 transition-colors duration-200"
+            >
+              {isExpanded ? 'Lees minder' : 'Lees meer'}
+            </button>
+          )
+        })()}
       </div>
 
       <div className="mb-6 p-4 bg-brand-navy-50 rounded-xl border border-brand-navy-200">
