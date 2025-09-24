@@ -374,10 +374,10 @@ export default function HotelkamerMetJacuzziEnSaunaPage() {
                 Geniet van de ultieme wellness ervaring met zowel jacuzzi als sauna op je kamer. 
                 Complete ontspanning in één ruimte.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-6">
                 <button 
                   onClick={() => document.getElementById('filters')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center"
+                  className="bg-[#FF6600] hover:bg-[#E55A00] text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   Vind jouw kamer →
                 </button>
@@ -393,7 +393,9 @@ export default function HotelkamerMetJacuzziEnSaunaPage() {
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
-              <div className="absolute -bottom-6 -right-6 bg-brand-orange-600 text-pure-white p-6 rounded-2xl shadow-xl">
+              {/* Subtiele overlay voor betere tekstcontrast */}
+              <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-black/30 rounded-2xl"></div>
+              <div className="absolute -bottom-6 -right-6 bg-[#FF6600] text-pure-white p-6 rounded-2xl shadow-xl">
                 <div className="text-2xl font-bold">Vanaf €169</div>
                 <div className="text-sm">per nacht</div>
               </div>
