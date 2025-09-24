@@ -72,7 +72,7 @@ export default function OptimizedImage({
         blurDataURL={blurDataURL || defaultBlurDataURL}
         onLoad={handleLoad}
         onError={handleError}
-        quality={85}
+        quality={75}
         loading={priority ? 'eager' : 'lazy'}
       />
     </div>

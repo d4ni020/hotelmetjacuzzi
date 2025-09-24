@@ -1008,9 +1008,9 @@ export default function HomePage() {
                 width={600}
                 height={400}
                 className="rounded-2xl shadow-2xl"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
                 priority
-                quality={90}
+                quality={75}
               />
               <div className="absolute -bottom-6 -right-6 bg-brand-orange-600 text-pure-white p-6 rounded-2xl shadow-xl">
                 <div className="text-2xl font-bold">250+</div>
@@ -1054,7 +1054,7 @@ export default function HomePage() {
                     alt="Goedkoop hotel met jacuzzi - Budget vriendelijke wellness"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute top-3 left-3">
                     <span className="bg-brand-navy-900 text-pure-white px-3 py-1 rounded-full text-xs font-semibold">
@@ -1091,7 +1091,7 @@ export default function HomePage() {
                     alt="Wellness hotel met jacuzzi in Nederland - Complete spa ervaring"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute top-3 left-3">
                     <span className="bg-brand-orange-600 text-pure-white px-3 py-1 rounded-full text-xs font-semibold">
@@ -1128,7 +1128,7 @@ export default function HomePage() {
                     alt="Romantisch hotel met jacuzzi - Intieme wellness ervaring"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute top-3 left-3">
                     <span className="bg-pink-500 text-pure-white px-3 py-1 rounded-full text-xs font-semibold">
@@ -1525,7 +1525,7 @@ export default function HomePage() {
                     alt="De 10 Beste Jacuzzi Hotels van Nederland in 2024"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute top-3 left-3">
                     <span className="bg-brand-navy-900 text-pure-white px-3 py-1 rounded-full text-xs font-semibold">
@@ -1567,7 +1567,7 @@ export default function HomePage() {
                     alt="Romantisch Weekend: Tips voor de Perfecte Jacuzzi Date"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute top-3 left-3">
                     <span className="bg-brand-orange-600 text-pure-white px-3 py-1 rounded-full text-xs font-semibold">
@@ -1609,7 +1609,7 @@ export default function HomePage() {
                     alt="Wellness Trends 2024: Wat is Hot in Spa Hotels?"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute top-3 left-3">
                     <span className="bg-brand-navy-700 text-pure-white px-3 py-1 rounded-full text-xs font-semibold">
@@ -1690,7 +1690,7 @@ export default function HomePage() {
                     alt="Van der Valk Hotel Amsterdam - Jacuzzi op kamer"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute top-3 left-3">
                     <div className="bg-brand-orange-600 text-pure-white rounded-lg px-2 py-1 shadow-lg">
@@ -1735,7 +1735,7 @@ export default function HomePage() {
                     alt="Olympic Hotel - Jacuzzi op kamer"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
@@ -1775,7 +1775,7 @@ export default function HomePage() {
                     alt="Kasteel Bloemendal - Jacuzzi op kamer"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
@@ -1815,7 +1815,7 @@ export default function HomePage() {
                     alt="Fletcher Wellness Hotel - Jacuzzi op kamer"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
@@ -1855,7 +1855,7 @@ export default function HomePage() {
                     alt="Inntel Hotels Amsterdam Centre - Jacuzzi op kamer"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
@@ -1895,7 +1895,7 @@ export default function HomePage() {
                     alt="Rotterdam Marina Hotel - Jacuzzi op kamer"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
@@ -1935,7 +1935,7 @@ export default function HomePage() {
                     alt="Utrecht Central Wellness - Jacuzzi op kamer"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
@@ -1975,7 +1975,7 @@ export default function HomePage() {
                     alt="Van der Valk Akersloot - Jacuzzi op kamer"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
@@ -2015,7 +2015,7 @@ export default function HomePage() {
                     alt="Eindhoven Design Hotel - Jacuzzi op kamer"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
@@ -2055,7 +2055,7 @@ export default function HomePage() {
                     alt="Van der Valk Schiphol - Jacuzzi op kamer"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">

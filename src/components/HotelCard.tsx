@@ -140,7 +140,7 @@ export default function HotelCard({ hotel }: HotelCardProps) {
           width={400}
           height={224}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
           priority={isTop10Hotel && hotelRanking <= 3}
         />
         <div className="absolute inset-0 bg-brand-navy-900" style={{opacity: 0.2}}></div>

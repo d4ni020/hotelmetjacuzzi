@@ -19,7 +19,7 @@ export default function HotelsPage() {
       price_range: "Vanaf €225",
       facilities: ["Privé Jacuzzi", "Spa", "Restaurant", "Wellness"],
       affiliate_link: "https://booking.com/kasteel-bloemendal",
-      image_url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
+      image_url: "/images/Van-der-Valk-Middelburg.jpg",
       rating: 4.8,
       created_at: "2024-01-01"
     },
@@ -33,7 +33,7 @@ export default function HotelsPage() {
       price_range: "Vanaf €189",
       facilities: ["Bubbelbad", "Sauna", "Fitness", "Restaurant"],
       affiliate_link: "https://booking.com/van-der-valk-amsterdam",
-      image_url: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=1600&auto=format&fit=crop",
+      image_url: "/images/Kasteel Bloemendal.jpg",
       rating: 4.6,
       created_at: "2024-01-01"
     },
@@ -47,7 +47,7 @@ export default function HotelsPage() {
       price_range: "Vanaf €159",
       facilities: ["Wellness Suite", "Jacuzzi", "Massages", "Zwembad"],
       affiliate_link: "https://booking.com/fletcher-wellness",
-      image_url: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1600&auto=format&fit=crop",
+      image_url: "/images/Amsterdam - Hero.jpg",
       rating: 4.5,
       created_at: "2024-01-01"
     },
@@ -61,7 +61,7 @@ export default function HotelsPage() {
       price_range: "Vanaf €275",
       facilities: ["Wellness Suite", "Design Jacuzzi", "Spa", "Outdoor Terras"],
       affiliate_link: "https://booking.com/eindhoven-design",
-      image_url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop",
+      image_url: "/images/Utrecht - Domtoren - Hero.jpg",
       rating: 4.7,
       created_at: "2024-01-01"
     }
