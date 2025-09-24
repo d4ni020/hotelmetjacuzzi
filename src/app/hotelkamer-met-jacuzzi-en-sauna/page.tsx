@@ -1,6 +1,5 @@
 'use client'
 
-import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react'
@@ -331,21 +330,6 @@ export default function HotelkamerMetJacuzziEnSaunaPage() {
 
   return (
     <>
-      <head>
-        <title>Hotels met Jacuzzi en Sauna op de Kamer in Nederland | Hotelmetjacuzzi.net</title>
-        <meta name="description" content="Ontdek de beste hotels met zowel jacuzzi als sauna op de kamer in Nederland. Complete wellness ervaring in één kamer. Boek nu vanaf €169 per nacht!" />
-        <meta name="keywords" content="hotel met jacuzzi en sauna, jacuzzi sauna kamer, wellness kamer met jacuzzi en sauna, hotel kamer met jacuzzi en sauna" />
-        <link rel="canonical" href="/hotelkamer-met-jacuzzi-en-sauna" />
-        <meta property="og:title" content="Hotels met Jacuzzi en Sauna op de Kamer in Nederland" />
-        <meta property="og:description" content="Geniet van de ultieme wellness ervaring met zowel jacuzzi als sauna op je kamer. Complete ontspanning in één ruimte." />
-        <meta property="og:url" content="/hotelkamer-met-jacuzzi-en-sauna" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1600&auto=format&fit=crop" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Hotels met Jacuzzi en Sauna op de Kamer in Nederland" />
-        <meta name="twitter:description" content="Geniet van de ultieme wellness ervaring met zowel jacuzzi als sauna op je kamer. Complete ontspanning in één ruimte." />
-        <meta name="twitter:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1600&auto=format&fit=crop" />
-      </head>
       <main className="min-h-screen bg-light-gray">
       {/* Professional Diamond Pattern Background */}
       <DiamondPattern />
@@ -381,7 +365,7 @@ export default function HotelkamerMetJacuzziEnSaunaPage() {
             </div>
             <div className="relative">
               <Image
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1600&auto=format&fit=crop"
+                src="/images/zuiderduin beachhotel.jpg"
                 alt="Hotel kamer met jacuzzi en sauna"
                 width={600}
                 height={400}
@@ -671,7 +655,7 @@ export default function HotelkamerMetJacuzziEnSaunaPage() {
               <div className="bg-pure-white border-2 border-brand-navy-200 hover:border-brand-orange-600 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Van-der-Valk-Middelburg.jpg"
                     alt="Goedkoop hotel met jacuzzi - Budget vriendelijke wellness"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -708,7 +692,7 @@ export default function HotelkamerMetJacuzziEnSaunaPage() {
               <div className="bg-pure-white border-2 border-brand-navy-200 hover:border-brand-orange-600 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Maastricht - Hero.jpg"
                     alt="Wellness hotel met jacuzzi in Nederland - Complete spa ervaring"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -745,7 +729,7 @@ export default function HotelkamerMetJacuzziEnSaunaPage() {
               <div className="bg-pure-white border-2 border-brand-navy-200 hover:border-brand-orange-600 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Amsterdam - Hero.jpg"
                     alt="Romantisch hotel met jacuzzi - Intieme wellness ervaring"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -782,7 +766,7 @@ export default function HotelkamerMetJacuzziEnSaunaPage() {
               <div className="bg-pure-white border-2 border-brand-navy-200 hover:border-brand-orange-600 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=600&auto=format&fit=crop"
+                    src="/images/Utrecht - Domtoren - Hero.jpg"
                     alt="Hotelkamer met jacuzzi - Luxe kamers met privé jacuzzi"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
