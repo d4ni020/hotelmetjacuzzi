@@ -450,53 +450,75 @@ export default function HotelkamerMetJacuzziEnSaunaPage() {
           <div id="filters" className="bg-pure-white rounded-2xl shadow-lg p-6 mb-8 border border-brand-navy-200">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Province filter */}
-              <select
-                value={filters.province}
-                onChange={(e) => setFilters({ ...filters, province: e.target.value })}
-                className="px-4 py-3 border-2 border-brand-navy-200 rounded-lg focus:outline-none focus:border-brand-orange-600"
-              >
-                <option value="">Alle provincies</option>
-                {mockProvinces.map((province) => (
-                  <option key={province.id} value={province.id}>
-                    {province.name}
-                  </option>
-                ))}
-              </select>
+              <div>
+                <label htmlFor="province-filter-sauna" className="block text-sm font-semibold text-brand-navy-800 mb-2">
+                  Provincie
+                </label>
+                <select
+                  id="province-filter-sauna"
+                  value={filters.province}
+                  onChange={(e) => setFilters({ ...filters, province: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-brand-navy-200 rounded-lg focus:outline-none focus:border-brand-orange-600"
+                >
+                  <option value="">Alle provincies</option>
+                  {mockProvinces.map((province) => (
+                    <option key={province.id} value={province.id}>
+                      {province.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
 
               {/* City filter */}
-              <select
-                value={filters.city}
-                onChange={(e) => setFilters({ ...filters, city: e.target.value })}
-                className="px-4 py-3 border-2 border-brand-navy-200 rounded-lg focus:outline-none focus:border-brand-orange-600"
-              >
-                <option value="">Alle steden</option>
-                {mockCities.filter(city => 
-                  filters.province === '' || city.province_id === parseInt(filters.province)
-                ).map((city) => (
-                  <option key={city.id} value={city.id}>
-                    {city.name}
-                  </option>
-                ))}
-              </select>
+              <div>
+                <label htmlFor="city-filter-sauna" className="block text-sm font-semibold text-brand-navy-800 mb-2">
+                  Stad
+                </label>
+                <select
+                  id="city-filter-sauna"
+                  value={filters.city}
+                  onChange={(e) => setFilters({ ...filters, city: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-brand-navy-200 rounded-lg focus:outline-none focus:border-brand-orange-600"
+                >
+                  <option value="">Alle steden</option>
+                  {mockCities.filter(city => 
+                    filters.province === '' || city.province_id === parseInt(filters.province)
+                  ).map((city) => (
+                    <option key={city.id} value={city.id}>
+                      {city.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
 
               {/* Price filter */}
-              <select
-                value={filters.priceRange}
-                onChange={(e) => setFilters({ ...filters, priceRange: e.target.value })}
-                className="px-4 py-3 border-2 border-brand-navy-200 rounded-lg focus:outline-none focus:border-brand-orange-600"
-              >
-                <option value="">Alle prijzen</option>
-                <option value="budget">€200-€250</option>
-                <option value="mid">€250-€300</option>
-                <option value="luxury">€300+</option>
-              </select>
+              <div>
+                <label htmlFor="price-filter-sauna" className="block text-sm font-semibold text-brand-navy-800 mb-2">
+                  Prijsklasse
+                </label>
+                <select
+                  id="price-filter-sauna"
+                  value={filters.priceRange}
+                  onChange={(e) => setFilters({ ...filters, priceRange: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-brand-navy-200 rounded-lg focus:outline-none focus:border-brand-orange-600"
+                >
+                  <option value="">Alle prijzen</option>
+                  <option value="budget">€200-€250</option>
+                  <option value="mid">€250-€300</option>
+                  <option value="luxury">€300+</option>
+                </select>
+              </div>
 
               {/* Filter button */}
-              <button
-                className="bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-3 px-6 rounded-lg transition-colors duration-300"
-              >
-                Filter kamers ({filteredRooms.length})
-              </button>
+              <div className="flex items-end">
+                <button
+                  onClick={() => setFilters({ province: '', city: '', priceRange: '' })}
+                  className="w-full bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-3 px-6 rounded-lg transition-colors duration-300"
+                  aria-label="Reset alle filters"
+                >
+                  Reset filters
+                </button>
+              </div>
             </div>
           </div>
 
