@@ -1563,7 +1563,7 @@ export default function HomePage() {
               <article className="bg-pure-white rounded-2xl shadow-lg hover:shadow-xl border-2 border-brand-navy-200 hover:border-brand-orange-600 transition-all duration-300 overflow-hidden h-full flex flex-col">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/Utrecht - Domtoren - Hero.jpg"
+                    src="/images/romantische - blog.jpg"
                     alt="Romantisch Weekend: Tips voor de Perfecte Jacuzzi Date"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
