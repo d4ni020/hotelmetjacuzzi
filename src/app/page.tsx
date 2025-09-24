@@ -273,7 +273,7 @@ const mockHotels: Hotel[] = [
       price_range: "Vanaf €165",
       facilities: ["Historisch klooster", "Privé Jacuzzi", "Wellness", "Restaurant", "Kapel", "Rustige ligging"],
       affiliate_link: "https://booking.com/kloosterhotel-willibrordhaeghe",
-      image_url: "https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=1600&auto=format&fit=crop",
+      image_url: "/images/Landgoed Hotel Renesse.jpg",
       rating: 4.6,
       created_at: "2024-01-01"
     },
@@ -287,7 +287,7 @@ const mockHotels: Hotel[] = [
       price_range: "Vanaf €195",
       facilities: ["Uitgebreide spa", "Privé Jacuzzi", "Zwembad", "Sauna", "Massages", "Fitness"],
       affiliate_link: "https://booking.com/wellness-hotel-trivium",
-      image_url: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1600&auto=format&fit=crop",
+      image_url: "/images/zuiderduin beachhotel.jpg",
       rating: 4.7,
       created_at: "2024-01-01"
     },
@@ -301,7 +301,7 @@ const mockHotels: Hotel[] = [
       price_range: "Vanaf €175",
       facilities: ["Van der Valk kwaliteit", "Jacuzzi suites", "Restaurant", "Fitness", "Vergaderzalen", "Terras"],
       affiliate_link: "https://booking.com/vandervalk-gilze-tilburg",
-      image_url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop",
+      image_url: "/images/Van-der-Valk-Middelburg.jpg",
       rating: 4.5,
       created_at: "2024-01-01"
     },
@@ -315,7 +315,7 @@ const mockHotels: Hotel[] = [
       price_range: "Vanaf €185",
       facilities: ["Natuurlijke omgeving", "Jacuzzi", "Wellness", "Restaurant", "Terras", "Business center"],
       affiliate_link: "https://booking.com/vandervalk-vught",
-      image_url: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1600&auto=format&fit=crop",
+      image_url: "/images/Van der Valk - Goes.jpg",
       rating: 4.6,
       created_at: "2024-01-01"
     },
@@ -329,7 +329,7 @@ const mockHotels: Hotel[] = [
       price_range: "Vanaf €169",
       facilities: ["Stadscentrum", "Jacuzzi kamers", "Restaurant", "Bar", "Fitness", "Parking"],
       affiliate_link: "https://booking.com/vandervalk-tilburg",
-      image_url: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1600&auto=format&fit=crop",
+      image_url: "/images/Van der Valk Akersloot.jpg",
       rating: 4.4,
       created_at: "2024-01-01"
     },
