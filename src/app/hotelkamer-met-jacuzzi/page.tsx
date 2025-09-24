@@ -340,32 +340,6 @@ export default function HotelkamerMetJacuzziPage() {
             </p>
           </div>
 
-
-          {/* Current Date Widget - Left aligned */}
-          <div className="flex items-center mb-8">
-            <div className="bg-pure-white border border-brand-navy-200 rounded-lg px-4 py-2 shadow-sm">
-              <div className="flex items-center space-x-2 text-brand-navy-600">
-                <svg width="16" height="16" viewBox="0 0 16 16" className="text-brand-orange-600">
-                  <path 
-                    fill="currentColor" 
-                    d="M3.5 0a.5.5 0 01.5.5V1h8V.5a.5.5 0 011 0V1h1a2 2 0 012 2v11a2 2 0 01-2 2H2a2 2 0 01-2-2V3a2 2 0 012-2h1V.5a.5.5 0 01.5 0zM2 2a1 1 0 00-1 1v1h14V3a1 1 0 00-1-1H2zM1 5v9a1 1 0 001 1h12a1 1 0 001-1V5H1z"
-                  />
-                  <path 
-                    fill="currentColor" 
-                    d="M4.5 7a.5.5 0 01.5.5v1a.5.5 0 01-1 0v-1a.5.5 0 01.5-.5zm3 0a.5.5 0 01.5.5v1a.5.5 0 01-1 0v-1a.5.5 0 01.5-.5zm3 0a.5.5 0 01.5.5v1a.5.5 0 01-1 0v-1a.5.5 0 01.5-.5z"
-                  />
-                </svg>
-                <span className="text-sm font-medium">
-                  Laatst bijgewerkt: {new Date().toLocaleDateString('nl-NL', { 
-                    day: 'numeric', 
-                    month: 'long', 
-                    year: 'numeric' 
-                  })}
-                </span>
-              </div>
-            </div>
-          </div>
-
           {/* Filter Section */}
           <div id="filters" className="bg-pure-white rounded-2xl shadow-lg p-6 mb-8 border border-brand-navy-200">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -416,6 +390,31 @@ export default function HotelkamerMetJacuzziPage() {
               >
                 Reset filters
               </button>
+            </div>
+          </div>
+
+          {/* Current Date Widget - Left aligned */}
+          <div className="flex items-center mb-8">
+            <div className="bg-pure-white border border-brand-navy-200 rounded-lg px-4 py-2 shadow-sm">
+              <div className="flex items-center space-x-2 text-brand-navy-600">
+                <svg width="16" height="16" viewBox="0 0 16 16" className="text-brand-orange-600">
+                  <path 
+                    fill="currentColor" 
+                    d="M3.5 0a.5.5 0 01.5.5V1h8V.5a.5.5 0 011 0V1h1a2 2 0 012 2v11a2 2 0 01-2 2H2a2 2 0 01-2-2V3a2 2 0 012-2h1V.5a.5.5 0 01.5 0zM2 2a1 1 0 00-1 1v1h14V3a1 1 0 00-1-1H2zM1 5v9a1 1 0 001 1h12a1 1 0 001-1V5H1z"
+                  />
+                  <path 
+                    fill="currentColor" 
+                    d="M4.5 7a.5.5 0 01.5.5v1a.5.5 0 01-1 0v-1a.5.5 0 01.5-.5zm3 0a.5.5 0 01.5.5v1a.5.5 0 01-1 0v-1a.5.5 0 01.5-.5zm3 0a.5.5 0 01.5.5v1a.5.5 0 01-1 0v-1a.5.5 0 01.5-.5z"
+                  />
+                </svg>
+                <span className="text-sm font-medium">
+                  Laatst bijgewerkt: {new Date().toLocaleDateString('nl-NL', { 
+                    day: 'numeric', 
+                    month: 'long', 
+                    year: 'numeric' 
+                  })}
+                </span>
+              </div>
             </div>
           </div>
 
