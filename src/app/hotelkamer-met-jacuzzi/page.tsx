@@ -80,6 +80,8 @@ const jacuzziRooms: Room[] = [
 
 // Room Card Component
 const RoomCard = ({ room }: { room: Room }) => {
+  const [isExpanded, setIsExpanded] = useState(false)
+  
   return (
   <article className="group relative bg-pure-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-brand-navy-200 hover:border-brand-orange-600 hover:-translate-y-1 flex flex-col h-full">
     <div className="relative h-56 overflow-hidden rounded-t-2xl">
@@ -108,9 +110,17 @@ const RoomCard = ({ room }: { room: Room }) => {
       </div>
 
       <div className="mb-6 flex-1">
-        <p className="text-brand-navy-600 text-base leading-relaxed line-clamp-3">
+        <p className={`text-brand-navy-600 text-base leading-relaxed ${isExpanded ? '' : 'line-clamp-3'}`}>
           {room.description}
         </p>
+        {room.description.length > 150 && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="text-brand-orange-600 hover:text-brand-orange-700 font-semibold text-sm mt-2 transition-colors duration-200"
+          >
+            {isExpanded ? 'Lees minder' : 'Lees meer'}
+          </button>
+        )}
       </div>
 
       <div className="mb-6 p-4 bg-brand-navy-50 rounded-xl border border-brand-navy-200">
