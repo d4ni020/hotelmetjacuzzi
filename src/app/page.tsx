@@ -979,7 +979,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
                 Vind de mooiste hotels met jacuzzi op de kamer in Nederland
               </h1>
               <p className="text-xl md:text-2xl text-brand-navy-200 mb-8 leading-relaxed">
@@ -989,13 +989,13 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-6">
                 <button 
                   onClick={() => document.getElementById('filters')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-[#FF6600] hover:bg-[#E55A00] text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center shadow-lg hover:shadow-xl transform hover:scale-105"
+                  className="bg-[#FF6600] hover:bg-[#E55A00] text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center shadow-lg hover:shadow-xl transform hover:scale-105 text-lg leading-tight"
                 >
                   Vind jouw hotel
                 </button>
                 <a 
                   href="#provincies" 
-                  className="bg-white text-[#FF6600] border border-[#FF6600] hover:bg-[#FF6600] hover:text-white font-medium py-4 px-8 rounded-lg transition-colors duration-300 text-center"
+                  className="bg-white text-[#FF6600] border border-[#FF6600] hover:bg-[#FF6600] hover:text-white font-medium py-4 px-8 rounded-lg transition-colors duration-300 text-center text-lg leading-tight"
                 >
                   Ontdek per regio
                 </a>
@@ -1037,10 +1037,10 @@ export default function HomePage() {
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-6 leading-tight">
               Ontdek hotels met jacuzzi voor elk moment
             </h2>
-            <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
+            <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto leading-relaxed">
               Of je nu zoekt naar een <strong>goedkoop hotel met jacuzzi</strong>, een <strong>wellness hotel met jacuzzi in Nederland</strong>, 
               of een <strong>romantisch hotel met jacuzzi</strong> - wij hebben de perfecte accommodatie voor jouw droomvakantie.
             </p>
@@ -1065,7 +1065,7 @@ export default function HomePage() {
         </div>
                 </div>
                 <div className="p-8 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 leading-tight">
                     Goedkoop hotel met jacuzzi
                   </h3>
                   <p className="text-brand-navy-600 mb-6 line-clamp-2 flex-1">
@@ -1102,7 +1102,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="p-8 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 leading-tight">
                     Wellness hotel met jacuzzi in Nederland
                   </h3>
                   <p className="text-brand-navy-600 mb-6 line-clamp-2 flex-1">
@@ -1139,7 +1139,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="p-8 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 leading-tight">
                     Romantisch hotel met jacuzzi
                   </h3>
                   <p className="text-brand-navy-600 mb-6 line-clamp-2 flex-1">
@@ -1176,7 +1176,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="p-8 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 leading-tight">
                     Hotelkamer met jacuzzi
                   </h3>
                   <p className="text-brand-navy-600 mb-6 line-clamp-2 flex-1">
@@ -1213,7 +1213,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="p-8 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300">
+                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 leading-tight">
                     Hotelkamer met jacuzzi en sauna
                   </h3>
                   <p className="text-brand-navy-600 mb-6 line-clamp-2 flex-1">
@@ -1240,10 +1240,10 @@ export default function HomePage() {
       <section className="py-20 bg-light-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6 leading-tight">
               Uitgelichte Hotels met Jacuzzi
-          </h2>
-            <p className="text-lg text-secondary max-w-3xl mx-auto">
+            </h2>
+            <p className="text-lg text-secondary max-w-3xl mx-auto leading-relaxed">
               Onze top selectie van romantische hotels voor een perfecte wellness overnachting ({filteredHotels.length} hotels)
             </p>
         </div>
@@ -1393,10 +1393,10 @@ export default function HomePage() {
       <section id="provincies" className="py-20 bg-pure-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-6 leading-tight">
               Ontdek per Provincie
             </h2>
-            <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto">
+            <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto leading-relaxed">
               Verken de beste hotels met jacuzzi in elke provincie van Nederland
           </p>
         </div>
@@ -1408,7 +1408,7 @@ export default function HomePage() {
                 href={`/provincie/${province.slug}`}
                 className="group bg-white hover:bg-gray-50 border border-gray-200 hover:border-[#FF6600] rounded-xl p-8 transition-all duration-300 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
               >
-                <div className="text-2xl font-bold text-[#1a2637] mb-2 group-hover:text-[#FF6600] transition-colors duration-300">
+                <div className="text-2xl font-bold text-[#1a2637] mb-2 group-hover:text-[#FF6600] transition-colors duration-300 leading-tight">
                   {province.name}
                 </div>
                 <div className="text-gray-600 text-sm group-hover:text-gray-700 transition-colors duration-300">
@@ -1451,10 +1451,10 @@ export default function HomePage() {
       <section id="steden" className="py-20 bg-light-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-6 leading-tight">
               Populaire Steden
             </h2>
-            <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto">
+            <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto leading-relaxed">
               Ontdek jacuzzi hotels in de meest gewilde steden van Nederland
             </p>
           </div>
@@ -1466,7 +1466,7 @@ export default function HomePage() {
                 href={`/stad/${city.slug}`}
                 className="group bg-white hover:bg-gray-50 border border-gray-200 hover:border-[#FF6600] rounded-xl p-8 transition-all duration-300 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
               >
-                <div className="text-xl font-bold text-[#1a2637] mb-2 group-hover:text-[#FF6600] transition-colors duration-300">
+                <div className="text-xl font-bold text-[#1a2637] mb-2 group-hover:text-[#FF6600] transition-colors duration-300 leading-tight">
                   {city.name}
                 </div>
                 <div className="text-gray-600 text-sm group-hover:text-gray-700 transition-colors duration-300">
@@ -1509,10 +1509,10 @@ export default function HomePage() {
       <section className="py-20 bg-pure-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-6 leading-tight">
               Laatste Wellness Tips & Trends
             </h2>
-            <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto">
+            <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto leading-relaxed">
               Ontdek de nieuwste trends, tips en geheimen voor de perfecte wellness overnachting
             </p>
           </div>
@@ -1536,7 +1536,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="p-8 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 line-clamp-2">
+                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 line-clamp-2 leading-tight">
                     De 10 Beste Jacuzzi Hotels van Nederland in 2024
                   </h3>
                   <p className="text-brand-navy-600 mb-4 line-clamp-3 flex-1">
@@ -1578,7 +1578,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="p-8 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 line-clamp-2">
+                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 line-clamp-2 leading-tight">
                     Romantisch Weekend: Tips voor de Perfecte Jacuzzi Date
                   </h3>
                   <p className="text-brand-navy-600 mb-4 line-clamp-3 flex-1">
@@ -1620,7 +1620,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="p-8 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 line-clamp-2">
+                  <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 line-clamp-2 leading-tight">
                     Wellness Trends 2024: Wat is Hot in Spa Hotels?
                   </h3>
                   <p className="text-brand-navy-600 mb-4 line-clamp-3 flex-1">
@@ -1673,10 +1673,10 @@ export default function HomePage() {
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-6 leading-tight">
               Top 10 hotels met jacuzzi op de kamer
             </h2>
-            <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
+            <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto leading-relaxed">
               Ontdek de meest luxueuze <strong>hotels met jacuzzi op kamer</strong> in Nederland. 
               Deze exclusieve selectie biedt romantische wellness suites met privé jacuzzi faciliteiten voor de perfecte ontspanningservaring.
             </p>
@@ -1707,7 +1707,7 @@ export default function HomePage() {
                         #1
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1">Van der Valk Hotel Amsterdam</h3>
+                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1 leading-tight">Van der Valk Hotel Amsterdam</h3>
                         <p className="text-brand-navy-500 text-sm mb-3">Amsterdam, Noord-Holland</p>
                         <p className="text-brand-navy-600 leading-relaxed line-clamp-2">
                           Luxueus hotel in het hart van Amsterdam met elegante suites voorzien van private jacuzzi's. 
@@ -1747,7 +1747,7 @@ export default function HomePage() {
                         #2
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1">Olympic Hotel</h3>
+                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1 leading-tight">Olympic Hotel</h3>
                         <p className="text-brand-navy-500 text-sm mb-3">Amsterdam, Noord-Holland</p>
                         <p className="text-brand-navy-600 leading-relaxed line-clamp-2">
                           Stijlvol Olympic Hotel met luxe wellness faciliteiten en privé jacuzzi's. 
@@ -1787,7 +1787,7 @@ export default function HomePage() {
                         #3
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1">Kasteel Bloemendal</h3>
+                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1 leading-tight">Kasteel Bloemendal</h3>
                         <p className="text-brand-navy-500 text-sm mb-3">Maastricht, Limburg</p>
                         <p className="text-brand-navy-600 leading-relaxed line-clamp-2">
                           Historisch kasteel met moderne wellness suites en luxe jacuzzi's. 
@@ -1827,7 +1827,7 @@ export default function HomePage() {
                         #4
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1">Fletcher Wellness Hotel</h3>
+                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1 leading-tight">Fletcher Wellness Hotel</h3>
                         <p className="text-brand-navy-500 text-sm mb-3">Arnhem, Gelderland</p>
                         <p className="text-brand-navy-600 leading-relaxed line-clamp-2">
                           Ontspanning pur sang in dit wellness hotel met jacuzzi kamers en uitgebreide spa faciliteiten. 
@@ -1867,7 +1867,7 @@ export default function HomePage() {
                         #5
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1">Inntel Hotels Amsterdam Centre</h3>
+                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1 leading-tight">Inntel Hotels Amsterdam Centre</h3>
                         <p className="text-brand-navy-500 text-sm mb-3">Amsterdam, Noord-Holland</p>
                         <p className="text-brand-navy-600 leading-relaxed line-clamp-2">
                           Modern Inntel hotel in het centrum met elegante jacuzzi suites en wellness faciliteiten. 
@@ -1907,7 +1907,7 @@ export default function HomePage() {
                         #6
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1">Rotterdam Marina Hotel</h3>
+                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1 leading-tight">Rotterdam Marina Hotel</h3>
                         <p className="text-brand-navy-500 text-sm mb-3">Rotterdam, Zuid-Holland</p>
                         <p className="text-brand-navy-600 leading-relaxed line-clamp-2">
                           Modern boutique hotel met uitzicht op de Maas, luxe suites met bubbelbaden en wellness faciliteiten. 
@@ -1947,7 +1947,7 @@ export default function HomePage() {
                         #7
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1">Utrecht Central Wellness</h3>
+                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1 leading-tight">Utrecht Central Wellness</h3>
                         <p className="text-brand-navy-500 text-sm mb-3">Utrecht, Utrecht</p>
                         <p className="text-brand-navy-600 leading-relaxed line-clamp-2">
                           Stijlvol hotel in het centrum van Utrecht met privé jacuzzi's en complete wellness ervaring. 
@@ -1987,7 +1987,7 @@ export default function HomePage() {
                         #8
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1">Van der Valk Akersloot</h3>
+                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1 leading-tight">Van der Valk Akersloot</h3>
                         <p className="text-brand-navy-500 text-sm mb-3">Akersloot, Noord-Holland</p>
                         <p className="text-brand-navy-600 leading-relaxed line-clamp-2">
                           Luxe Van der Valk hotel met prachtige wellness faciliteiten en jacuzzi. 
@@ -2027,7 +2027,7 @@ export default function HomePage() {
                         #9
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1">Eindhoven Design Hotel</h3>
+                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1 leading-tight">Eindhoven Design Hotel</h3>
                         <p className="text-brand-navy-500 text-sm mb-3">Eindhoven, Noord-Brabant</p>
                         <p className="text-brand-navy-600 leading-relaxed line-clamp-2">
                           Innovatief design hotel met futuristische wellness suites en state-of-the-art jacuzzi faciliteiten. 
@@ -2067,7 +2067,7 @@ export default function HomePage() {
                         #10
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1">Van der Valk Schiphol</h3>
+                        <h3 className="text-xl font-bold text-brand-navy-900 mb-1 leading-tight">Van der Valk Schiphol</h3>
                         <p className="text-brand-navy-500 text-sm mb-3">Schiphol, Noord-Holland</p>
                         <p className="text-brand-navy-600 leading-relaxed line-clamp-2">
                           Praktisch Van der Valk hotel bij Schiphol met ultramoderne wellness en jacuzzi faciliteiten. 
@@ -2108,7 +2108,7 @@ export default function HomePage() {
       <section className="py-20 bg-brand-navy-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg prose-brand-navy mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 text-center mb-8 leading-tight">
               De Ultimate Gids voor Hotels met Jacuzzi in Nederland
             </h2>
             
@@ -2127,7 +2127,7 @@ export default function HomePage() {
                 wellness ervaring.
               </p>
 
-              <h3 className="text-2xl font-bold text-brand-navy-900 mt-8 mb-4">
+              <h3 className="text-2xl font-bold text-brand-navy-900 mt-8 mb-4 leading-tight">
                 Waarom Kiezen voor een Wellness Overnachting?
               </h3>
               
@@ -2144,7 +2144,7 @@ export default function HomePage() {
                 sauna's. Sommige suites beschikken over een apart wellness gedeelte met panoramische uitzichten.
               </p>
 
-              <h3 className="text-2xl font-bold text-brand-navy-900 mt-8 mb-4">
+              <h3 className="text-2xl font-bold text-brand-navy-900 mt-8 mb-4 leading-tight">
                 Populaire Bestemmingen voor Jacuzzi Hotels
               </h3>
               
@@ -2162,7 +2162,7 @@ export default function HomePage() {
                 ontspanningsmogelijkheden in historische steden als Delft en Leiden.
               </p>
 
-              <h3 className="text-2xl font-bold text-brand-navy-900 mt-8 mb-4">
+              <h3 className="text-2xl font-bold text-brand-navy-900 mt-8 mb-4 leading-tight">
                 Tips voor het Boeken van jouw Perfecte Hotel met Jacuzzi
               </h3>
               
@@ -2187,23 +2187,23 @@ export default function HomePage() {
       {/* Call to Action */}
       <section className="py-20 bg-brand-navy-900 text-pure-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
             Klaar voor jouw Perfecte Wellness Overnachting?
           </h2>
-          <p className="text-xl text-brand-navy-200 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-brand-navy-200 mb-8 max-w-2xl mx-auto leading-relaxed">
             Ontdek vandaag nog de meest romantische hotels met jacuzzi in Nederland. 
             Van luxe kastelen tot moderne wellness resorts - jouw droomverblijf wacht op je.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="#filters" 
-              className="bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-lg"
+              className="bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-lg leading-tight"
             >
               Zoek jouw hotel nu
             </a>
             <a 
               href="/contact" 
-              className="border-2 border-brand-orange-600 text-brand-orange-600 hover:bg-brand-orange-600 hover:text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-lg"
+              className="border-2 border-brand-orange-600 text-brand-orange-600 hover:bg-brand-orange-600 hover:text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-lg leading-tight"
             >
               Persoonlijk advies
             </a>
