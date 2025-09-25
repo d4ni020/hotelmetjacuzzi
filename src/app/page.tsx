@@ -1025,7 +1025,7 @@ export default function HomePage() {
 
       {/* Categories Section */}
       <LazyWrapper>
-        <section className="py-16 bg-pure-white relative overflow-hidden">
+        <section className="py-20 bg-pure-white relative overflow-hidden">
         {/* Subtle SVG Background Pattern */}
         <div 
           className="absolute inset-0 pointer-events-none"
@@ -1036,7 +1036,7 @@ export default function HomePage() {
         ></div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
               Ontdek hotels met jacuzzi voor elk moment
             </h2>
@@ -1237,7 +1237,7 @@ export default function HomePage() {
       </LazyWrapper>
 
       {/* Featured Hotels - Same style as /hotels */}
-      <section className="py-16 bg-light-gray">
+      <section className="py-20 bg-light-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
@@ -1390,9 +1390,9 @@ export default function HomePage() {
       </section>
 
       {/* Province Navigation */}
-      <section id="provincies" className="py-16 bg-pure-white">
+      <section id="provincies" className="py-20 bg-pure-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
               Ontdek per Provincie
             </h2>
@@ -1448,23 +1448,23 @@ export default function HomePage() {
       </section>
 
       {/* Popular Cities Navigation */}
-      <section id="steden" className="py-16 bg-light-gray">
+      <section id="steden" className="py-20 bg-light-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-6">
               Populaire Steden
             </h2>
-            <p className="text-lg text-brand-navy-600">
+            <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto">
               Ontdek jacuzzi hotels in de meest gewilde steden van Nederland
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {mockCities.slice(0, 8).map((city) => (
               <Link 
                 key={city.id}
                 href={`/stad/${city.slug}`}
-                className="group bg-white hover:bg-gray-50 border border-gray-200 hover:border-[#FF6600] rounded-xl p-6 transition-all duration-300 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
+                className="group bg-white hover:bg-gray-50 border border-gray-200 hover:border-[#FF6600] rounded-xl p-8 transition-all duration-300 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
               >
                 <div className="text-xl font-bold text-[#1a2637] mb-2 group-hover:text-[#FF6600] transition-colors duration-300">
                   {city.name}
@@ -1478,7 +1478,7 @@ export default function HomePage() {
             {/* CTA Card to view all cities */}
             <Link 
               href="/steden"
-              className="group bg-white hover:bg-orange-50 border border-orange-200 hover:border-[#FF6600] rounded-xl p-6 transition-all duration-300 text-center flex flex-col justify-center min-h-[120px] shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
+              className="group bg-white hover:bg-orange-50 border border-orange-200 hover:border-[#FF6600] rounded-xl p-8 transition-all duration-300 text-center flex flex-col justify-center min-h-[140px] shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
             >
               <div className="flex items-center justify-center space-x-2 text-[#FF6600] group-hover:text-[#E55A00] transition-colors duration-300">
                 <span className="text-lg font-semibold">Bekijk alle steden</span>
@@ -1506,9 +1506,9 @@ export default function HomePage() {
       </section>
 
       {/* Latest Blogs Section */}
-      <section className="py-16 bg-pure-white">
+      <section className="py-20 bg-pure-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
               Laatste Wellness Tips & Trends
             </h2>
@@ -1661,7 +1661,7 @@ export default function HomePage() {
       </section>
 
       {/* Top 10 Hotels met Jacuzzi op de Kamer */}
-      <section className="py-16 bg-light-gray relative overflow-hidden">
+      <section className="py-20 bg-light-gray relative overflow-hidden">
         {/* Subtle SVG Background Pattern */}
         <div 
           className="absolute inset-0 pointer-events-none"
@@ -1672,7 +1672,7 @@ export default function HomePage() {
         ></div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
               Top 10 hotels met jacuzzi op de kamer
             </h2>
@@ -2105,7 +2105,7 @@ export default function HomePage() {
       </section>
 
       {/* SEO Content Section */}
-      <section className="py-16 bg-brand-navy-50">
+      <section className="py-20 bg-brand-navy-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg prose-brand-navy mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 text-center mb-8">
@@ -2185,7 +2185,7 @@ export default function HomePage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-brand-navy-900 text-pure-white">
+      <section className="py-20 bg-brand-navy-900 text-pure-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Klaar voor jouw Perfecte Wellness Overnachting?
