@@ -1703,7 +1703,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
+                      <div className="bg-brand-navy-900 text-pure-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mr-4 shadow-lg">
                         #1
                       </div>
                       <div className="flex-1">
@@ -1743,7 +1743,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
+                      <div className="bg-brand-navy-900 text-pure-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mr-4 shadow-lg">
                         #2
                       </div>
                       <div className="flex-1">
@@ -1783,7 +1783,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
+                      <div className="bg-brand-navy-900 text-pure-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mr-4 shadow-lg">
                         #3
                       </div>
                       <div className="flex-1">
@@ -1823,7 +1823,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
+                      <div className="bg-brand-navy-900 text-pure-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mr-4 shadow-lg">
                         #4
                       </div>
                       <div className="flex-1">
@@ -1863,7 +1863,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
+                      <div className="bg-brand-navy-900 text-pure-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mr-4 shadow-lg">
                         #5
                       </div>
                       <div className="flex-1">
@@ -1903,7 +1903,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
+                      <div className="bg-brand-navy-900 text-pure-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mr-4 shadow-lg">
                         #6
                       </div>
                       <div className="flex-1">
@@ -1943,7 +1943,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
+                      <div className="bg-brand-navy-900 text-pure-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mr-4 shadow-lg">
                         #7
                       </div>
                       <div className="flex-1">
@@ -1983,7 +1983,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
+                      <div className="bg-brand-navy-900 text-pure-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mr-4 shadow-lg">
                         #8
                       </div>
                       <div className="flex-1">
@@ -2023,7 +2023,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
+                      <div className="bg-brand-navy-900 text-pure-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mr-4 shadow-lg">
                         #9
                       </div>
                       <div className="flex-1">
@@ -2063,7 +2063,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
+                      <div className="bg-brand-navy-900 text-pure-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mr-4 shadow-lg">
                         #10
                       </div>
                       <div className="flex-1">
