@@ -160,7 +160,7 @@ export default function HotelCard({ hotel }: HotelCardProps) {
           href={`/hotel/${hotel.slug}`}
           className="group/link"
         >
-          <h3 className="text-xl font-bold text-primary leading-tight group-hover/link:text-[#FF6600] transition-colors duration-300 cursor-pointer">
+          <h3 className="text-2xl font-bold text-primary leading-tight group-hover/link:text-[#FF6600] transition-colors duration-300 cursor-pointer">
             {hotel.name}
           </h3>
           
@@ -243,7 +243,7 @@ export default function HotelCard({ hotel }: HotelCardProps) {
         
         <button
           onClick={handleAffiliateClick}
-          className="w-full bg-[#FF6600] hover:bg-[#E55A00] text-pure-white h-11 text-base font-medium rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-[1.02] hover:brightness-110"
+          className="w-full bg-[#FF6600] hover:bg-[#E55A00] text-pure-white h-11 text-lg font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-[1.02] hover:brightness-110 leading-tight"
         >
           Bekijk Beschikbaarheid & Prijzen
         </button>
