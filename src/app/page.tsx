@@ -1244,7 +1244,7 @@ export default function HomePage() {
               Uitgelichte Hotels met Jacuzzi
             </h2>
             <p className="text-lg text-secondary max-w-3xl mx-auto leading-relaxed">
-              Onze top selectie van romantische hotels voor een perfecte wellness overnachting ({filteredHotels.length} hotels)
+              Onze top selectie van romantische wellness hotels ({filteredHotels.length} hotels)
             </p>
         </div>
 
