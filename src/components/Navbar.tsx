@@ -240,13 +240,14 @@ const Navbar = () => {
               <div className="pt-4 mt-4 border-t border-brand-navy-700">
                 <Link
                   href="/hotels"
-                  className="block w-full bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold text-center px-6 py-4 rounded-xl transition-all duration-300 shadow-lg"
+                  className="block w-full text-pure-white font-bold text-center px-6 py-4 transition-all duration-300 hover:text-brand-orange-600"
                   aria-label="Bekijk alle hotels met jacuzzi"
                 >
                   <div className="flex items-center justify-center space-x-2">
+                    <span>Bekijk Hotels</span>
                     <svg 
-                      width="18" 
-                      height="18" 
+                      width="16" 
+                      height="16" 
                       viewBox="0 0 24 24" 
                       fill="none" 
                       stroke="currentColor" 
@@ -254,10 +255,8 @@ const Navbar = () => {
                       strokeLinecap="round" 
                       strokeLinejoin="round"
                     >
-                      <circle cx="11" cy="11" r="8"/>
-                      <path d="m21 21-4.35-4.35"/>
+                      <path d="m9 18 6-6-6-6"/>
                     </svg>
-                    <span>Bekijk Hotels</span>
                   </div>
                 </Link>
               </div>

@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
+import TradeTrackerScript from '@/components/TradeTrackerScript'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -68,28 +69,7 @@ export default function RootLayout({
         <ScrollToTop />
         
         {/* TradeTracker PageTools Script */}
-        <script
-          type="text/javascript"
-          dangerouslySetInnerHTML={{
-            __html: `
-              var _TradeTrackerTagOptions = {
-                t: 'a',
-                s: '419242',
-                chk: '256eeadab49a5fdceb536aa840fbaf56f1507699',
-                overrideOptions: {}
-              };
-              
-              (function() {
-                var tt = document.createElement('script');
-                tt.type = 'text/javascript';
-                tt.async = true;
-                tt.src = (document.location.protocol === 'https:' ? 'https' : 'http') + '://tm.tradetracker.net/tag?t=' + _TradeTrackerTagOptions.t + '&s=' + _TradeTrackerTagOptions.s + '&chk=' + _TradeTrackerTagOptions.chk;
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(tt, s);
-              })();
-            `
-          }}
-        />
+        <TradeTrackerScript />
       </body>
     </html>
   )
