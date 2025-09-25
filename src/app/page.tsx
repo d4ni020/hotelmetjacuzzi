@@ -1703,7 +1703,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
                         #1
                       </div>
                       <div className="flex-1">
@@ -1719,7 +1719,7 @@ export default function HomePage() {
                   <div className="mt-4 lg:mt-0 lg:ml-4 w-full lg:w-auto">
                     <Link 
                       href="/hotel/van-der-valk-amsterdam"
-                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 w-full lg:w-auto text-lg leading-tight"
+                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 w-full lg:w-auto text-lg leading-tight shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       Bekijk hotel
                     </Link>
@@ -1743,7 +1743,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
                         #2
                       </div>
                       <div className="flex-1">
@@ -1759,7 +1759,7 @@ export default function HomePage() {
                   <div className="mt-4 lg:mt-0 lg:ml-4 w-full lg:w-auto">
                     <Link 
                       href="/hotel/olympic-hotel"
-                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 w-full lg:w-auto text-lg leading-tight"
+                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 w-full lg:w-auto text-lg leading-tight shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       Bekijk hotel
                     </Link>
@@ -1783,7 +1783,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
                         #3
                       </div>
                       <div className="flex-1">
@@ -1799,7 +1799,7 @@ export default function HomePage() {
                   <div className="mt-4 lg:mt-0 lg:ml-4 w-full lg:w-auto">
                     <Link 
                       href="/hotel/kasteel-bloemendal"
-                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 w-full lg:w-auto text-lg leading-tight"
+                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 w-full lg:w-auto text-lg leading-tight shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       Bekijk hotel
                     </Link>
@@ -1823,7 +1823,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
                         #4
                       </div>
                       <div className="flex-1">
@@ -1839,7 +1839,7 @@ export default function HomePage() {
                   <div className="mt-4 lg:mt-0 lg:ml-4 w-full lg:w-auto">
                     <Link 
                       href="/hotel/fletcher-wellness-hotel"
-                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 w-full lg:w-auto text-lg leading-tight"
+                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 w-full lg:w-auto text-lg leading-tight shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       Bekijk hotel
                     </Link>
@@ -1863,7 +1863,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
                         #5
                       </div>
                       <div className="flex-1">
@@ -1879,7 +1879,7 @@ export default function HomePage() {
                   <div className="mt-4 lg:mt-0 lg:ml-4 w-full lg:w-auto">
                     <Link 
                       href="/hotel/inntel-hotels-amsterdam-centre"
-                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 w-full lg:w-auto text-lg leading-tight"
+                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 w-full lg:w-auto text-lg leading-tight shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       Bekijk hotel
                     </Link>
@@ -1903,7 +1903,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
                         #6
                       </div>
                       <div className="flex-1">
@@ -1919,7 +1919,7 @@ export default function HomePage() {
                   <div className="mt-4 lg:mt-0 lg:ml-4 w-full lg:w-auto">
                     <Link 
                       href="/hotel/rotterdam-marina-hotel"
-                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 w-full lg:w-auto text-lg leading-tight"
+                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 w-full lg:w-auto text-lg leading-tight shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       Bekijk hotel
                     </Link>
@@ -1943,7 +1943,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
                         #7
                       </div>
                       <div className="flex-1">
@@ -1959,7 +1959,7 @@ export default function HomePage() {
                   <div className="mt-4 lg:mt-0 lg:ml-4 w-full lg:w-auto">
                     <Link 
                       href="/hotel/utrecht-central-wellness"
-                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 w-full lg:w-auto text-lg leading-tight"
+                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 w-full lg:w-auto text-lg leading-tight shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       Bekijk hotel
                     </Link>
@@ -1983,7 +1983,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
                         #8
                       </div>
                       <div className="flex-1">
@@ -1999,7 +1999,7 @@ export default function HomePage() {
                   <div className="mt-4 lg:mt-0 lg:ml-4 w-full lg:w-auto">
                     <Link 
                       href="/hotel/van-der-valk-akersloot"
-                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 w-full lg:w-auto text-lg leading-tight"
+                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 w-full lg:w-auto text-lg leading-tight shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       Bekijk hotel
                     </Link>
@@ -2023,7 +2023,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
                         #9
                       </div>
                       <div className="flex-1">
@@ -2039,7 +2039,7 @@ export default function HomePage() {
                   <div className="mt-4 lg:mt-0 lg:ml-4 w-full lg:w-auto">
                     <Link 
                       href="/hotel/eindhoven-design-hotel"
-                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 w-full lg:w-auto text-lg leading-tight"
+                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 w-full lg:w-auto text-lg leading-tight shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       Bekijk hotel
                     </Link>
@@ -2063,7 +2063,7 @@ export default function HomePage() {
                 <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
-                      <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                      <div className="bg-brand-navy-900 text-pure-white w-16 h-16 rounded-full flex items-center justify-center font-bold text-2xl mr-6 shadow-lg">
                         #10
                       </div>
                       <div className="flex-1">
@@ -2079,7 +2079,7 @@ export default function HomePage() {
                   <div className="mt-4 lg:mt-0 lg:ml-4 w-full lg:w-auto">
                     <Link 
                       href="/hotel/van-der-valk-schiphol"
-                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 w-full lg:w-auto text-lg leading-tight"
+                      className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 w-full lg:w-auto text-lg leading-tight shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       Bekijk hotel
                     </Link>
