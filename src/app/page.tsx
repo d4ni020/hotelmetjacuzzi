@@ -1064,7 +1064,7 @@ export default function HomePage() {
                     </span>
         </div>
                 </div>
-                <div className="p-6 flex flex-col flex-1">
+                <div className="p-8 flex flex-col flex-1">
                   <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300">
                     Goedkoop hotel met jacuzzi
                   </h3>
@@ -1101,7 +1101,7 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-6 flex flex-col flex-1">
+                <div className="p-8 flex flex-col flex-1">
                   <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300">
                     Wellness hotel met jacuzzi in Nederland
                   </h3>
@@ -1138,7 +1138,7 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-6 flex flex-col flex-1">
+                <div className="p-8 flex flex-col flex-1">
                   <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300">
                     Romantisch hotel met jacuzzi
                   </h3>
@@ -1175,7 +1175,7 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-6 flex flex-col flex-1">
+                <div className="p-8 flex flex-col flex-1">
                   <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300">
                     Hotelkamer met jacuzzi
                   </h3>
@@ -1212,7 +1212,7 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-6 flex flex-col flex-1">
+                <div className="p-8 flex flex-col flex-1">
                   <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300">
                     Hotelkamer met jacuzzi en sauna
                   </h3>
@@ -1250,8 +1250,8 @@ export default function HomePage() {
 
 
           {/* Filter Section */}
-          <div id="filters" className="bg-pure-white rounded-2xl shadow-lg p-6 mb-8 border border-brand-navy-200">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div id="filters" className="bg-pure-white rounded-2xl shadow-lg p-8 mb-12 border border-brand-navy-200">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {/* Province filter */}
               <div>
                 <label htmlFor="province-filter" className="block text-sm font-semibold text-primary mb-2">
@@ -1393,20 +1393,20 @@ export default function HomePage() {
       <section id="provincies" className="py-20 bg-pure-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-6">
               Ontdek per Provincie
             </h2>
-            <p className="text-lg text-brand-navy-600">
+            <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto">
               Verken de beste hotels met jacuzzi in elke provincie van Nederland
           </p>
         </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             {mockProvinces.map((province) => (
               <Link 
                 key={province.id}
                 href={`/provincie/${province.slug}`}
-                className="group bg-white hover:bg-gray-50 border border-gray-200 hover:border-[#FF6600] rounded-xl p-6 transition-all duration-300 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
+                className="group bg-white hover:bg-gray-50 border border-gray-200 hover:border-[#FF6600] rounded-xl p-8 transition-all duration-300 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
               >
                 <div className="text-2xl font-bold text-[#1a2637] mb-2 group-hover:text-[#FF6600] transition-colors duration-300">
                   {province.name}
@@ -1420,7 +1420,7 @@ export default function HomePage() {
             {/* CTA Card to view all provinces */}
             <Link 
               href="/provincies"
-              className="group bg-white hover:bg-orange-50 border border-orange-200 hover:border-[#FF6600] rounded-xl p-6 transition-all duration-300 text-center flex flex-col justify-center min-h-[120px] shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
+              className="group bg-white hover:bg-orange-50 border border-orange-200 hover:border-[#FF6600] rounded-xl p-8 transition-all duration-300 text-center flex flex-col justify-center min-h-[140px] shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
             >
               <div className="flex items-center justify-center space-x-2 text-[#FF6600] group-hover:text-[#E55A00] transition-colors duration-300">
                 <span className="text-lg font-semibold">Bekijk alle provincies</span>
@@ -1509,7 +1509,7 @@ export default function HomePage() {
       <section className="py-20 bg-pure-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-6">
               Laatste Wellness Tips & Trends
             </h2>
             <p className="text-lg text-brand-navy-600 max-w-2xl mx-auto">
@@ -1517,7 +1517,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {/* Blog Post 1 */}
             <Link href="/blog/beste-jacuzzi-hotels-2024" className="group">
               <article className="bg-pure-white rounded-2xl shadow-lg hover:shadow-xl border-2 border-brand-navy-200 hover:border-brand-orange-600 transition-all duration-300 overflow-hidden h-full flex flex-col">
@@ -1535,7 +1535,7 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-6 flex flex-col flex-1">
+                <div className="p-8 flex flex-col flex-1">
                   <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 line-clamp-2">
                     De 10 Beste Jacuzzi Hotels van Nederland in 2024
                   </h3>
@@ -1577,7 +1577,7 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-6 flex flex-col flex-1">
+                <div className="p-8 flex flex-col flex-1">
                   <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 line-clamp-2">
                     Romantisch Weekend: Tips voor de Perfecte Jacuzzi Date
                   </h3>
@@ -1619,7 +1619,7 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-6 flex flex-col flex-1">
+                <div className="p-8 flex flex-col flex-1">
                   <h3 className="text-xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 line-clamp-2">
                     Wellness Trends 2024: Wat is Hot in Spa Hotels?
                   </h3>
@@ -1673,7 +1673,7 @@ export default function HomePage() {
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy-900 mb-6">
               Top 10 hotels met jacuzzi op de kamer
             </h2>
             <p className="text-lg text-brand-navy-600 max-w-3xl mx-auto">
@@ -1682,7 +1682,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-8">
             {/* Hotel #1 - Van der Valk Hotel Amsterdam */}
             <div className="bg-pure-white rounded-2xl shadow-lg border-2 border-brand-navy-200 overflow-hidden hover:shadow-xl hover:border-brand-orange-600 transition-all duration-300">
               <div className="flex flex-col lg:flex-row">
@@ -1700,7 +1700,7 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-                <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
+                <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
                       <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
@@ -1740,7 +1740,7 @@ export default function HomePage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
+                <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
                       <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
@@ -1780,7 +1780,7 @@ export default function HomePage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
+                <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
                       <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
@@ -1820,7 +1820,7 @@ export default function HomePage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
+                <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
                       <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
@@ -1860,7 +1860,7 @@ export default function HomePage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
+                <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
                       <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
@@ -1900,7 +1900,7 @@ export default function HomePage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
+                <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
                       <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
@@ -1940,7 +1940,7 @@ export default function HomePage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
+                <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
                       <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
@@ -1980,7 +1980,7 @@ export default function HomePage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
+                <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
                       <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
@@ -2020,7 +2020,7 @@ export default function HomePage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
+                <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
                       <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
@@ -2060,7 +2060,7 @@ export default function HomePage() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                <div className="lg:w-2/3 p-6 flex flex-col lg:flex-row lg:items-center">
+                <div className="lg:w-2/3 p-8 flex flex-col lg:flex-row lg:items-center">
                   <div className="flex-1">
                     <div className="flex items-start justify-between mb-3">
                       <div className="bg-brand-navy-900 text-pure-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg mr-4">
@@ -2209,16 +2209,16 @@ export default function HomePage() {
             </a>
           </div>
           
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="bg-brand-navy-800 rounded-xl p-6">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+            <div className="bg-brand-navy-800 rounded-xl p-8">
               <div className="text-2xl font-bold text-brand-orange-600 mb-2">250+</div>
               <div className="text-brand-navy-200">Beschikbare Hotels</div>
             </div>
-            <div className="bg-brand-navy-800 rounded-xl p-6">
+            <div className="bg-brand-navy-800 rounded-xl p-8">
               <div className="text-2xl font-bold text-brand-orange-600 mb-2">4.8★</div>
               <div className="text-brand-navy-200">Gemiddelde Beoordeling</div>
             </div>
-            <div className="bg-brand-navy-800 rounded-xl p-6">
+            <div className="bg-brand-navy-800 rounded-xl p-8">
               <div className="text-2xl font-bold text-brand-orange-600 mb-2">24/7</div>
               <div className="text-brand-navy-200">Klantenservice</div>
             </div>
