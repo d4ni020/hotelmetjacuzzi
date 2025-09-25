@@ -51,6 +51,23 @@ export default function RootLayout({
         <link rel="preload" href="/images/Amsterdam - Hero.jpg" as="image" />
         <link rel="preload" href="/images/Utrecht - Domtoren - Hero.jpg" as="image" />
         <link rel="preload" href="/images/Maastricht - Hero.jpg" as="image" />
+        
+        {/* TradeTracker SuperTag Code */}
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var _TradeTrackerTagOptions = {
+                  t: 'a',
+                  s: '419242',
+                  chk: 'f3396db487437dacd2e6e2815167fc57',
+                  overrideOptions: {}
+              };
+
+              (function() {var tt = document.createElement('script'), s = document.getElementsByTagName('script')[0]; tt.setAttribute('type', 'text/javascript'); tt.setAttribute('src', (document.location.protocol == 'https:' ? 'https' : 'http') + '://tm.tradetracker.net/tag?t=' + _TradeTrackerTagOptions.t + '&s=' + _TradeTrackerTagOptions.s + '&chk=' + _TradeTrackerTagOptions.chk); s.parentNode.insertBefore(tt, s);})();
+            `
+          }}
+        />
       </head>
       <body className={inter.className}>
         {/* Professional Sticky Navbar */}
