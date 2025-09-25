@@ -166,7 +166,7 @@ const Navbar = () => {
             <div className="hidden lg:block">
               <Link
                 href="/hotels"
-                className="group relative bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 overflow-hidden"
+                className="group relative text-pure-white font-bold px-6 py-3 transition-all duration-300 hover:text-brand-orange-600 overflow-hidden"
                 aria-label="Bekijk alle hotels met jacuzzi - Direct naar hotel overzicht"
               >
                 <div className="relative flex items-center space-x-2">
