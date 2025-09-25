@@ -2114,15 +2114,15 @@ export default function HomePage() {
             
             <div className="text-brand-navy-700 leading-relaxed space-y-6">
               <p>
-                Een <strong>hotel met jacuzzi</strong> boeken in Nederland is de perfecte manier om te ontspannen en 
-                te genieten van een luxueuze wellness overnachting. Of je nu zoekt naar een romantisch weekend weg 
+                Een <strong><Link href="/hotel-met-jacuzzi" className="text-brand-orange-600 hover:text-brand-orange-700 underline">hotel met jacuzzi</Link></strong> boeken in Nederland is de perfecte manier om te ontspannen en 
+                te genieten van een luxueuze wellness overnachting. Of je nu zoekt naar een <strong><Link href="/romantisch-hotel-met-jacuzzi" className="text-brand-orange-600 hover:text-brand-orange-700 underline">romantisch weekend weg</Link></strong> 
                 of gewoon wilt ontsnappen aan de dagelijkse stress, Nederland biedt een uitgebreide selectie van 
                 hotels met privé jacuzzi's, bubbelbaden en wellness faciliteiten.
               </p>
 
               <p>
-                Van historische kastelen in Limburg tot moderne design hotels in Amsterdam - er is voor elke 
-                smaak en budget wel een geschikt <strong>romantisch hotel</strong> te vinden. Veel hotels combineren 
+                Van historische kastelen in <strong><Link href="/provincie/limburg" className="text-brand-orange-600 hover:text-brand-orange-700 underline">Limburg</Link></strong> tot moderne design hotels in <strong><Link href="/stad/amsterdam" className="text-brand-orange-600 hover:text-brand-orange-700 underline">Amsterdam</Link></strong> - er is voor elke 
+                smaak en budget wel een geschikt <strong><Link href="/romantisch-hotel-met-jacuzzi" className="text-brand-orange-600 hover:text-brand-orange-700 underline">romantisch hotel</Link></strong> te vinden. Veel hotels combineren 
                 hun jacuzzi faciliteiten met uitgebreide spa's, sauna's en massagebehandelingen voor een complete 
                 wellness ervaring.
               </p>
@@ -2132,7 +2132,7 @@ export default function HomePage() {
               </h3>
               
               <p>
-                Een <strong>wellness overnachting</strong> in een hotel met jacuzzi biedt veel meer dan alleen een 
+                Een <strong><Link href="/hotelkamer-met-jacuzzi" className="text-brand-orange-600 hover:text-brand-orange-700 underline">wellness overnachting</Link></strong> in een hotel met jacuzzi biedt veel meer dan alleen een 
                 comfortabele slaapplaats. Het is een investering in je welzijn en relatie. De warme, bruisende 
                 bubbels van een jacuzzi helpen bij het verlichten van spierspanning, verbeteren de doorbloeding 
                 en zorgen voor diepe ontspanning.
@@ -2149,17 +2149,17 @@ export default function HomePage() {
               </h3>
               
               <p>
-                <strong>Amsterdam</strong> staat bekend om zijn boutique hotels met designbadkamers en luxe 
+                <strong><Link href="/stad/amsterdam" className="text-brand-orange-600 hover:text-brand-orange-700 underline">Amsterdam</Link></strong> staat bekend om zijn boutique hotels met designbadkamers en luxe 
                 wellness faciliteiten. Voor een meer landelijke setting bieden provincies zoals 
-                <strong>Gelderland</strong> en <strong>Limburg</strong> prachtige kasteel hotels en wellness 
+                <strong><Link href="/provincie/gelderland" className="text-brand-orange-600 hover:text-brand-orange-700 underline">Gelderland</Link></strong> en <strong><Link href="/provincie/limburg" className="text-brand-orange-600 hover:text-brand-orange-700 underline">Limburg</Link></strong> prachtige kasteel hotels en wellness 
                 resorts omgeven door natuur.
               </p>
 
               <p>
-                De <strong>Veluwe</strong> herbergt enkele van Nederland's meest luxueuze spa hotels, terwijl 
-                de kustprovincies zoals <strong>Zeeland</strong> en <strong>Noord-Holland</strong> hotels bieden 
-                met zeezicht en thalassotherapie. Zuid-Holland combineert stedelijke sophistication met 
-                ontspanningsmogelijkheden in historische steden als Delft en Leiden.
+                De <strong><Link href="/provincie/gelderland" className="text-brand-orange-600 hover:text-brand-orange-700 underline">Veluwe</Link></strong> herbergt enkele van Nederland's meest luxueuze spa hotels, terwijl 
+                de kustprovincies zoals <strong><Link href="/provincie/zeeland" className="text-brand-orange-600 hover:text-brand-orange-700 underline">Zeeland</Link></strong> en <strong><Link href="/provincie/noord-holland" className="text-brand-orange-600 hover:text-brand-orange-700 underline">Noord-Holland</Link></strong> hotels bieden 
+                met zeezicht en thalassotherapie. <strong><Link href="/provincie/zuid-holland" className="text-brand-orange-600 hover:text-brand-orange-700 underline">Zuid-Holland</Link></strong> combineert stedelijke sophistication met 
+                ontspanningsmogelijkheden in historische steden als <strong><Link href="/stad/delft" className="text-brand-orange-600 hover:text-brand-orange-700 underline">Delft</Link></strong> en <strong><Link href="/stad/leiden" className="text-brand-orange-600 hover:text-brand-orange-700 underline">Leiden</Link></strong>.
               </p>
 
               <h3 className="text-2xl font-bold text-brand-navy-900 mt-8 mb-4 leading-tight">
@@ -2170,7 +2170,8 @@ export default function HomePage() {
                 Controleer altijd of de jacuzzi privé is op je kamer of gedeeld met andere gasten. Veel hotels 
                 bieden verschillende opties: van intieme twee-persoons bubbelbaden tot luxe suites met complete 
                 wellness ruimtes. Lees reviews van andere gasten om een goed beeld te krijgen van de kwaliteit 
-                en netheid van de faciliteiten.
+                en netheid van de faciliteiten. Voor een complete wellness ervaring kun je ook overwegen een 
+                <strong><Link href="/hotelkamer-met-jacuzzi-en-sauna" className="text-brand-orange-600 hover:text-brand-orange-700 underline">hotelkamer met jacuzzi en sauna</Link></strong> te boeken.
               </p>
 
               <p>
