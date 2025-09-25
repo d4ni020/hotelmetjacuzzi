@@ -80,6 +80,23 @@ export default function RootLayout({
 
         {/* Scroll to Top Button */}
         <ScrollToTop />
+        
+        {/* TradeTracker PageTools Script */}
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var tt = document.createElement('script');
+                tt.type = 'text/javascript';
+                tt.async = true;
+                tt.src = 'https://tm.tradetracker.net/tag?t=a&s=419242&chk=f3396db487437dacd2e6e2815167fc57';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(tt, s);
+              })();
+            `
+          }}
+        />
       </body>
     </html>
   )
