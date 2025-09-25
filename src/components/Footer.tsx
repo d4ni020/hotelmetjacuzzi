@@ -241,6 +241,7 @@ const Footer = () => {
                     <circle cx="60" cy="65" r="1.2" fill="currentColor" opacity="0.9"/>
                     <circle cx="50" cy="68" r="1" fill="currentColor" opacity="0.6"/>
                   </svg>
+                {/* Updated branding */}
                 <span className="font-medium">Hotelmetjacuzzi.net</span>
               </div>
             </div>
