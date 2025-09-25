@@ -53,7 +53,7 @@ export default function RootLayout({
         <link rel="preload" href="/images/Maastricht - Hero.jpg" as="image" />
         
         {/* TradeTracker Verification Meta Tag */}
-        <meta name="tradetracker-site-verification" content="f3396db487437dacd2e6e2815167fc57" />
+        <meta name="tradetracker-site-verification" content="256eeadab49a5fdceb536aa840fbaf56f1507699" />
       </head>
       <body className={inter.className}>
         {/* Professional Sticky Navbar */}
@@ -75,7 +75,7 @@ export default function RootLayout({
               var _TradeTrackerTagOptions = {
                 t: 'a',
                 s: '419242',
-                chk: 'f3396db487437dacd2e6e2815167fc57',
+                chk: '256eeadab49a5fdceb536aa840fbaf56f1507699',
                 overrideOptions: {}
               };
               
