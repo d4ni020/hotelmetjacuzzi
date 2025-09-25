@@ -1046,7 +1046,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
             {/* Goedkoop hotel met jacuzzi */}
             <Link href="/goedkoop-hotel-met-jacuzzi" className="group">
               <div className="bg-pure-white border-2 border-brand-navy-200 hover:border-brand-orange-600 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
@@ -1064,7 +1064,7 @@ export default function HomePage() {
                     </span>
         </div>
                 </div>
-                <div className="p-4 sm:p-6 lg:p-8 flex flex-col flex-1">
+                <div className="p-4 md:p-6 lg:p-8 flex flex-col flex-1">
                   <h3 className="text-2xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 leading-tight">
                     Goedkoop hotel met jacuzzi
                   </h3>
@@ -1101,7 +1101,7 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-4 sm:p-6 lg:p-8 flex flex-col flex-1">
+                <div className="p-4 md:p-6 lg:p-8 flex flex-col flex-1">
                   <h3 className="text-2xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 leading-tight">
                     Wellness hotel met jacuzzi in Nederland
                   </h3>
@@ -1138,7 +1138,7 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-4 sm:p-6 lg:p-8 flex flex-col flex-1">
+                <div className="p-4 md:p-6 lg:p-8 flex flex-col flex-1">
                   <h3 className="text-2xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 leading-tight">
                     Romantisch hotel met jacuzzi
                   </h3>
@@ -1175,7 +1175,7 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-4 sm:p-6 lg:p-8 flex flex-col flex-1">
+                <div className="p-4 md:p-6 lg:p-8 flex flex-col flex-1">
                   <h3 className="text-2xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 leading-tight">
                     Hotelkamer met jacuzzi
                   </h3>
@@ -1212,7 +1212,7 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-4 sm:p-6 lg:p-8 flex flex-col flex-1">
+                <div className="p-4 md:p-6 lg:p-8 flex flex-col flex-1">
                   <h3 className="text-2xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 leading-tight">
                     Hotelkamer met jacuzzi en sauna
                   </h3>
@@ -1401,12 +1401,12 @@ export default function HomePage() {
           </p>
         </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
             {mockProvinces.map((province) => (
               <Link 
                 key={province.id}
                 href={`/provincie/${province.slug}`}
-                className="group bg-white hover:bg-gray-50 border border-gray-200 hover:border-[#FF6600] rounded-xl p-4 sm:p-6 lg:p-8 transition-all duration-300 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
+                className="group bg-white hover:bg-gray-50 border border-gray-200 hover:border-[#FF6600] rounded-xl p-4 md:p-6 lg:p-8 transition-all duration-300 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
               >
                 <div className="text-2xl font-bold text-[#1a2637] mb-2 group-hover:text-[#FF6600] transition-colors duration-300 leading-tight">
                   {province.name}
@@ -1420,7 +1420,7 @@ export default function HomePage() {
             {/* CTA Card to view all provinces */}
             <Link 
               href="/provincies"
-              className="group bg-white hover:bg-orange-50 border border-orange-200 hover:border-[#FF6600] rounded-xl p-4 sm:p-6 lg:p-8 transition-all duration-300 text-center flex flex-col justify-center min-h-[120px] sm:min-h-[140px] shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
+              className="group bg-white hover:bg-orange-50 border border-orange-200 hover:border-[#FF6600] rounded-xl p-4 md:p-6 lg:p-8 transition-all duration-300 text-center flex flex-col justify-center min-h-[120px] md:min-h-[140px] shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
             >
               <div className="flex items-center justify-center space-x-2 text-[#FF6600] group-hover:text-[#E55A00] transition-colors duration-300">
                 <span className="text-lg font-semibold">Bekijk alle provincies</span>
@@ -1459,12 +1459,12 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {mockCities.slice(0, 8).map((city) => (
               <Link 
                 key={city.id}
                 href={`/stad/${city.slug}`}
-                className="group bg-white hover:bg-gray-50 border border-gray-200 hover:border-[#FF6600] rounded-xl p-4 sm:p-6 lg:p-8 transition-all duration-300 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
+                className="group bg-white hover:bg-gray-50 border border-gray-200 hover:border-[#FF6600] rounded-xl p-4 md:p-6 lg:p-8 transition-all duration-300 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
               >
                 <div className="text-2xl font-bold text-[#1a2637] mb-2 group-hover:text-[#FF6600] transition-colors duration-300 leading-tight">
                   {city.name}
@@ -1478,7 +1478,7 @@ export default function HomePage() {
             {/* CTA Card to view all cities */}
             <Link 
               href="/steden"
-              className="group bg-white hover:bg-orange-50 border border-orange-200 hover:border-[#FF6600] rounded-xl p-4 sm:p-6 lg:p-8 transition-all duration-300 text-center flex flex-col justify-center min-h-[120px] sm:min-h-[140px] shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
+              className="group bg-white hover:bg-orange-50 border border-orange-200 hover:border-[#FF6600] rounded-xl p-4 md:p-6 lg:p-8 transition-all duration-300 text-center flex flex-col justify-center min-h-[120px] md:min-h-[140px] shadow-sm hover:shadow-lg hover:-translate-y-1 cursor-pointer"
             >
               <div className="flex items-center justify-center space-x-2 text-[#FF6600] group-hover:text-[#E55A00] transition-colors duration-300">
                 <span className="text-lg font-semibold">Bekijk alle steden</span>
@@ -1535,7 +1535,7 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-4 sm:p-6 lg:p-8 flex flex-col flex-1">
+                <div className="p-4 md:p-6 lg:p-8 flex flex-col flex-1">
                   <h3 className="text-2xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 line-clamp-2 leading-tight">
                     De 10 Beste Jacuzzi Hotels van Nederland in 2024
                   </h3>
@@ -1577,7 +1577,7 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-4 sm:p-6 lg:p-8 flex flex-col flex-1">
+                <div className="p-4 md:p-6 lg:p-8 flex flex-col flex-1">
                   <h3 className="text-2xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 line-clamp-2 leading-tight">
                     Romantisch Weekend: Tips voor de Perfecte Jacuzzi Date
                   </h3>
@@ -1619,7 +1619,7 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-                <div className="p-4 sm:p-6 lg:p-8 flex flex-col flex-1">
+                <div className="p-4 md:p-6 lg:p-8 flex flex-col flex-1">
                   <h3 className="text-2xl font-bold text-brand-navy-900 mb-3 group-hover:text-brand-orange-600 transition-colors duration-300 line-clamp-2 leading-tight">
                     Wellness Trends 2024: Wat is Hot in Spa Hotels?
                   </h3>
