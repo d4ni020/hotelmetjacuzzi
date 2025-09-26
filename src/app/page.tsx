@@ -1758,7 +1758,7 @@ export default function HomePage() {
                   </div>
                   <div className="mt-4 lg:mt-0 lg:ml-4 w-full lg:w-auto">
                     <Link 
-                      href="https://www.hotelspecials.nl/olympic-hotel?si=185958"
+                      href="https://www.hotelspecials.nl/hotel/?tt=686_12_419229_&r=%2Folympic-hotel"
                       className="block text-center lg:inline-block bg-brand-orange-600 hover:bg-brand-orange-700 text-pure-white font-bold py-4 px-8 rounded-xl transition-all duration-300 w-full lg:w-auto text-lg leading-tight shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       Bekijk hotel
