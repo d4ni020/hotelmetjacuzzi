@@ -55,7 +55,7 @@ export default function RootLayout({
         <link rel="preload" href="/images/Maastricht - Hero.jpg" as="image" />
         
         {/* TradeTracker Verification Meta Tag */}
-        <meta name="tradetracker-site-verification" content="256eeadab49a5fdceb536aa840fbaf56f1507699" />
+        <meta name="tradetracker-site-verification" content="98cb79314f92c840730ff384ea4176777522ec95" />
       </head>
       <body className={inter.className}>
         {/* Professional Sticky Navbar */}
