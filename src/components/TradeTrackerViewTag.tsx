@@ -10,7 +10,7 @@ export default function TradeTrackerViewTag() {
     script.innerHTML = `
       var _viewTagOptions = {
         type: 'a',
-        site: 419229,
+        site: 419242,
         version: 1
       };
 
@@ -28,7 +28,7 @@ export default function TradeTrackerViewTag() {
 
     // Add noscript fallback
     const noscript = document.createElement('noscript')
-    noscript.innerHTML = '<img src="https://tm.tradetracker.net/pageview?t=a&s=419229&v=1" alt="" />'
+    noscript.innerHTML = '<img src="https://tm.tradetracker.net/pageview?t=a&s=419242&v=1" alt="" />'
     
     document.head.appendChild(noscript)
   }, [])
