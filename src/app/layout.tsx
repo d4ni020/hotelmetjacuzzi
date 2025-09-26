@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
 import TradeTrackerScript from '@/components/TradeTrackerScript'
+import TradeTrackerViewTag from '@/components/TradeTrackerViewTag'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -70,6 +71,9 @@ export default function RootLayout({
         
         {/* TradeTracker PageTools Script */}
         <TradeTrackerScript />
+        
+        {/* TradeTracker ViewTag Script */}
+        <TradeTrackerViewTag />
       </body>
     </html>
   )

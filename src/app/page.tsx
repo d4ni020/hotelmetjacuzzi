@@ -989,13 +989,13 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-6">
                 <button 
                   onClick={() => document.getElementById('filters')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="bg-[#FF6600] hover:bg-[#E55A00] text-pure-white font-bold py-4 px-8 rounded-lg transition-colors duration-300 text-center shadow-lg hover:shadow-xl transform hover:scale-105 text-lg leading-tight"
+                  className="bg-[#FF6600] hover:bg-[#E55A00] text-pure-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center shadow-md hover:shadow-lg transform hover:scale-105 text-lg leading-tight"
                 >
                   Vind jouw hotel
                 </button>
                 <a 
                   href="#provincies" 
-                  className="bg-white text-[#FF6600] border border-[#FF6600] hover:bg-[#FF6600] hover:text-white font-medium py-4 px-8 rounded-lg transition-colors duration-300 text-center text-lg leading-tight"
+                  className="bg-white text-[#FF6600] border border-[#FF6600] hover:bg-[#FF6600] hover:text-white font-medium py-4 px-8 rounded-lg transition-all duration-300 text-center text-lg leading-tight shadow-sm hover:shadow-md"
                 >
                   Ontdek per regio
                 </a>
